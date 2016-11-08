@@ -28,5 +28,12 @@ github_username:  jekyll
 markdown: kramdown
 theme: minima
 exclude:
+  - lib
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - bower.json
+  - "*.sh"
+  - README.md
+  - gulffile.js
+  - package.json

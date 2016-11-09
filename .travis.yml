@@ -12,7 +12,7 @@ before_install:
 before_script:
 - npm install -g gulp
 - npm install -g bower
-- gem install gh-pages
+- gem install github-pages
 - gem install html-proofer
 - chmod +x ./build.sh
 script: "./build.sh"

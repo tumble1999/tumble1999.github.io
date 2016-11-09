@@ -16,5 +16,8 @@
     "gulp-util": "^3.0.7",
     "minimist": "^1.2.0"
   },
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "bower install"
+  }
 }

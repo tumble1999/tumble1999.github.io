@@ -30,8 +30,9 @@ env:
   - REPO_TARGET_BRANCH: gh-pages
 
 before_deploy:
-#  - git config --global user.email "builds@travis-ci.com"
-#  - git config --global user.name "Travis CI"
+  - git config github-oauth.github.com ${GH_TOKEN}
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push -q "https://${GH_TOKEN}${GITHUB_REPO}" --tags
@@ -43,4 +44,4 @@ deploy:
   #file: "FILE TO UPLOAD"
   skip_cleanup: true
   on:
-    tags: true
+    tags: false

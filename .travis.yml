@@ -13,6 +13,7 @@ script: ./script/cibuild
 # after building, copy the site into the gh-pages branch
 # and push back to Github
  after_success:
+ - git config github-oauth.github.com ${GH_TOKEN}
  - git config user.name "Travis CI"
  - git config user.email ${EMAIL}
  - rsync -az --delete --exclude '.git*' ../_site/ .

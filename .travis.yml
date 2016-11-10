@@ -21,25 +21,25 @@ script: ./script/cibuild
  - touch .nojekyll
  - git add -A .
  - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
- - git push --force "https://${GH_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+# - git push --force "https://${GH_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
  
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/tumble1999/tumble1999.github.io.git
-#  - REPO_TARGET_BRANCH: gh-pages
+  - REPO_TARGET_BRANCH: gh-pages
 
 before_deploy:
 #  - git config --global user.email "builds@travis-ci.com"
 #  - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q "https://${GH_TOKEN}@${GITHUB_REPO}" --tags
+  - git push -q "https://${GH_TOKEN}${GITHUB_REPO}" --tags
   - ls -R
   
 deploy:
   provider: releases
-  #api_key: "GITHUB OAUTH TOKEN"
+  api_key: ${GH_TOKEN}
   #file: "FILE TO UPLOAD"
   skip_cleanup: true
   on:

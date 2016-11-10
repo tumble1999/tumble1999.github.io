@@ -4,6 +4,7 @@ rvm:
 - 2.2
 
 before_script:
+ - echo GH_TOKEN ${GH_TOKEN}
  - bundle update
  - chmod +x ./script/cibuild # or do this locally and commit
 
@@ -22,7 +23,7 @@ script: ./script/cibuild
  - git add -A .
  - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
 # - git push --force "https://${GH_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
- 
+
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -37,7 +38,7 @@ before_deploy:
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push -q "https://${GH_TOKEN}${GITHUB_REPO}" --tags
   - ls -R
-  
+
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}

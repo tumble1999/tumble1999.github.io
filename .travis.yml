@@ -12,20 +12,17 @@ script: ./script/cibuild
 
 # after building, copy the site into the gh-pages branch
 # and push back to Github
-after_success:
-- git clone https://$GITHUB_REPO
-- cd $(basename ${GITHUB_REPO%.git})
-- git config --global user.email "builds@travis-ci.com"
-- git config --global user.name "Travis CI"
-- export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
-- rsync -az --delete --exclude '.git*' ../_site/ .
-- touch .nojekyll
-- git add -A .
-- git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-- git push -q "https://${DEPLOY_KEY}@${GITHUB_REPO}" --tags
-- ls -R
+ after_success:
+ - git clone https://$GITHUB_REPO
+ - cd $(basename ${GITHUB_REPO%.git})
+ - git config user.name "Travis CI"
+ - git config user.email ${EMAIL}
+ - rsync -az --delete --exclude '.git*' ../_site/ .
+ - touch .nojekyll
+ - git add -A .
+ - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+ - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+ 
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

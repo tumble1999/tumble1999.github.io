@@ -28,3 +28,11 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/tumble1999/tumble1999.gothub.io.git
   - REPO_TARGET_BRANCH: gh-pages
+  
+deploy:
+  provider: releases
+  #api_key: "GITHUB OAUTH TOKEN"
+  #file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true

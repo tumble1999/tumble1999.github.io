@@ -1,8 +1,7 @@
 language: ruby
-rvm: 2.1
-
-script: bundle exec rake test
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+script: "./build.sh" # execute this script on each commit
+branches:
+  only:
+  - jekyll # only take into account `jekyll' branch
+rvm:
+- 2.1.2 # version of `ruby'

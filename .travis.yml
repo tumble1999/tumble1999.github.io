@@ -2,5 +2,5 @@ language: ruby
 rvm: 2.2
 
 install:
- - gem install jekyll bundler github-pages
+ - gem install jekyll bundler github-pages rake
  - bundle install

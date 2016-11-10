@@ -18,13 +18,14 @@ after_success:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
 - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
 - rsync -az --delete --exclude '.git*' ../_site/ .
 - touch .nojekyll
 - git add -A .
 - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
 - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git push -q "https://${DEPLOY_KEY}@${GITHUB_REPO}" --tags
+- ls -R
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

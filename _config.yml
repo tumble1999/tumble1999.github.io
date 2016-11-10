@@ -37,6 +37,6 @@ exclude:
   - README.md
   - gulffile.js
   - package.json
-  - vender
+  - vendor
   
   

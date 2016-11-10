@@ -5,6 +5,9 @@ rvm:
 
 before_script:
  - echo GH_TOKEN ${GH_TOKEN}
+ - echo EMAIL ${EMAIL}
+ - echo TRAVIS_BUILD_NUMBER ${TRAVIS_BUILD_NUMBER}
+ - echo GITHUB_REPO ${GITHUB_REPO}
  - bundle update
  - chmod +x ./script/cibuild # or do this locally and commit
 
@@ -28,7 +31,7 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/tumble1999/tumble1999.github.io.git
-  - REPO_TARGET_BRANCH: gh-pages
+  - REPO_TARGET_BRANCH: master
 
 before_deploy:
   - git config github-oauth.github.com ${GH_TOKEN}

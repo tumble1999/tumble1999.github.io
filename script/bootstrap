@@ -1,0 +1,2 @@
+gem install jekyll bundler github-pages rake html-proofer
+bundle install

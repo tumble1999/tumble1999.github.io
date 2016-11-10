@@ -1,0 +1,30 @@
+# tell Travis to spin up a ruby 2.2.0 environment
+language: ruby
+rvm:
+- 2.2
+
+before_script:
+ - chmod +x ./script/cibuild # or do this locally and commit
+
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script: ./script/cibuild
+
+# after building, copy the site into the gh-pages branch
+# and push back to Github
+after_success:
+- git clone https://$GITHUB_REPO
+- cd $(basename ${GITHUB_REPO%.git})
+- git config user.name "Travis CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/tumble1999/tumble1999.gothub.io.git
+  - REPO_TARGET_BRANCH: gh-pages

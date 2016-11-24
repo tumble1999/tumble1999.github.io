@@ -12,10 +12,11 @@ install:
   - gem install minima -v "~> 2.0"
   - bundle install
   - git init
-  - git config --global user.email "${TRAVIS_EMAIL}"
-  - git config --global user.name "Travis"
+  - git config github-oauth.github.com ${GH_TOKEN}
+  - git config --global user.email "${EMAIL}"
+  - git config --global user.name "Travis CI"
   - git add .
-  - git commit -m "Travis"
+  - git commit -m "Travis CI"
   - git push origin ${TRAVIS_BRANCH}
 
 before_script:

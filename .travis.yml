@@ -13,8 +13,8 @@ install:
   - bundle install
 #  - git init
   - git config github-oauth.github.com ${GH_TOKEN}
-  - git config --global user.email "${EMAIL}"
-  - git config --global user.name "Travis CI"
+  - git config user.email ${EMAIL}
+  - git config user.name "Travis CI"
   - cat .git/config
 #  - git add .
 #  - git commit -m "Travis CI"

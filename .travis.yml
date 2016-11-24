@@ -7,7 +7,6 @@ install:
   # Bundler downgrade should be removed when the issue is fixed upstream
   - gem uninstall bundler -x
   - gem install bundler -v "=1.10.6"
-  - gem install jekyll
   - gem install github-pages -v "104"
   - gem install rake
   - gem install html-proofer

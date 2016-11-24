@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-gem install jekyll
-gem install 'github-pages'
 echo "JEKYLL BUILD"
 bundle exec jekyll build
 

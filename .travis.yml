@@ -12,6 +12,8 @@ install:
   - gem install minima -v "~> 2.0"
   - bundle install
   - git init
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
   - git add .
   - git commit -m "Travis"
   - git push origin master

@@ -12,7 +12,7 @@ install:
   - gem install minima -v "~> 2.0"
   - bundle install
 #  - git init
-  - echo "Email: ${EMAIL}"
+  - echo "${EMAIL}"
   - git config --global user.email "${EMAIL}"
   - git config --global user.name "Travis CI"
   - git config credential.helper "store --file=.git/credentials"

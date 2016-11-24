@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-print "JEKYLL BUILD"
+echo "JEKYLL BUILD"
 bundle exec jekyll build
 
-print ""
-print "HTML PROOFER"
+echo ""
+echo "HTML PROOFER"
 bundle exec htmlproofer ./_site --disable-external

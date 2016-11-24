@@ -18,7 +18,6 @@ install:
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - cat .git/config
-  - cat .git/credentials
   - git add .
   - git commit -m "Travis CI"
   - git push origin ${TRAVIS_BRANCH}

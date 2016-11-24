@@ -6,10 +6,10 @@ install:
   # Bundler downgrade should be removed when the issue is fixed upstream
  # - gem uninstall bundler -x
  # - gem install bundler -v "=1.10.6"
-  - gem install github-pages -v "104"
-  - gem install rake
-  - gem install html-proofer
-  - gem install minima -v "~> 2.0"
+#  - gem install github-pages -v "104"
+#  - gem install rake
+#  - gem install html-proofer
+#  - gem install minima -v "~> 2.0"
   - bundle install
 #  - git init
   - echo "${EMAIL}"

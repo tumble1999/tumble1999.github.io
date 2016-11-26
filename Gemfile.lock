@@ -153,6 +153,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 104)
   html-proofer
+  minima (~> 2.0)
 
 RUBY VERSION
    ruby 2.3.0p0

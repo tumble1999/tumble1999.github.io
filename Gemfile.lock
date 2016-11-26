@@ -152,6 +152,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  ffi
   github-pages (= 104)
   html-proofer
   minima (~> 2.0)

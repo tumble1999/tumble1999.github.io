@@ -4,10 +4,8 @@
 [![Test Coverage](https://codeclimate.com/github/tumble1999/tumble1999.github.io/badges/coverage.svg)](https://codeclimate.com/github/tumble1999/tumble1999.github.io/coverage)
 [![Issue Count](https://codeclimate.com/github/tumble1999/tumble1999.github.io/badges/issue_count.svg)](https://codeclimate.com/github/tumble1999/tumble1999.github.io)
 [![codecov](https://codecov.io/gh/tumble1999/tumble1999.github.io/branch/master/graph/badge.svg)](https://codecov.io/gh/tumble1999/tumble1999.github.io)
-
-### Continuous Intergration
 [![Build Status](https://travis-ci.org/tumble1999/tumble1999.github.io.svg?branch=master)](https://travis-ci.org/tumble1999/tumble1999.github.io)
-[![Gitter chat](https://badges.gitter.im/tumblenet/tumblenet-home-beta.png)](https://gitter.im/tumble1999/tumble1999.github.io)
+[![Gitter chat](https://badges.gitter.im/tumble1999/tumble1999.github.io.png)](https://gitter.im/tumble1999/tumble1999.github.io)
 
 TODO: Write a project description
 

@@ -18,9 +18,7 @@ gem "minima", "~> 2.0"
 gem 'github-pages', '104', group: :jekyll_plugins
 
 
-
 group :test do
   gem 'rake'
   gem 'html-proofer'
-  gem 'ffi'
 end

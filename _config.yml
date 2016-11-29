@@ -27,7 +27,7 @@ github_username:  tumble1999
 collections:
 projects:
 output: true
-permalink: /projects/:name
+permalink: /projects/:title/
 
 # Build settings
 markdown: kramdown

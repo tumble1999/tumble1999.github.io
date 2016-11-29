@@ -23,11 +23,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tumble1999.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TumbleGamer
 github_username:  tumble1999
+permalink: pretty
 
 collections:
 projects:
 output: true
-permalink: /projects/:title/
 
 # Build settings
 markdown: kramdown

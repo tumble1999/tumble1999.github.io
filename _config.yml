@@ -24,6 +24,10 @@ url: "http://tumble1999.github.io" # the base hostname & protocol for your site,
 twitter_username: TumbleGamer
 github_username:  tumble1999
 
+collections:
+projects:
+output: true
+
 # Build settings
 markdown: kramdown
 theme: minima

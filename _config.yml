@@ -26,8 +26,8 @@ github_username:  tumble1999
 permalink: pretty
 
 collections:
-projects:
-output: true
+ projects:
+  output: true
 
 # Build settings
 markdown: kramdown

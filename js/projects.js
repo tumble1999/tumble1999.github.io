@@ -24,10 +24,10 @@ jQuery.fn.projects = function() {
         var user=d.dataset.user;
         ghdiv.html("repo:" + repo + "  user:" + user)
 
-        //githubAPI("repos/" + user + "/" + repo, function(data) {
-        //        var repos = data.data; // JSON Parsing
+        githubAPI("repos/" + user + "/" + repo, function(data) {
+                data;
                 
-        //});
+        });
 }
 
 function githubAPI(location, callback) {

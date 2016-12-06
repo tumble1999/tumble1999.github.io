@@ -1,11 +1,8 @@
 $(function() {
-        $('div#github').projects();
-});
-
-jQuery.fn.projects = function() {
+        $('div#github').each(function() {
         ghdiv=this;
         
-        var d=document.getElementById('github');
+        var d=document.getElementById(ghdiv);
 
         /*
         var mydiv=document.getElementById('githun')
@@ -32,6 +29,8 @@ jQuery.fn.projects = function() {
                 //ghdiv.children('h1.project-title').text(repo.full_name);
         });
 }
+);
+});
 
 function githubAPI(location, callback) {
   var url = "https://api.github.com/" + location + "?callback=?";

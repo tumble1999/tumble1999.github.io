@@ -16,7 +16,7 @@ mydiv.dataset.brand=null //removes "data-brand" attribute
 var repo=d.dataset.ghRepo
 var user=d.dataset.ghUser
 
-githubAPI("users/" + user + "/repos", function(data) {
+githubAPI("repos/" + user + "/" + repo, function(data) {
         var repos = data.data; // JSON Parsing
         sortByName(repos);
         text = text+"<a href='https://github.com/organizations/" + username + "/repositories/new'><button class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent' id='add'><i class='material-icons' role='presentation'>add</i><span class='visuallyhidden'>Add</span></button></a>";

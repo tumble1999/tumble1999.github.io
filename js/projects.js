@@ -18,6 +18,6 @@ var user=d.dataset.ghUser
 
 githubAPI("repos/" + user + "/" + repo, function(data) {
         var repos = data.data; // JSON Parsing
-        d.html("test")
+        $("div#github").html("test")
 });
 

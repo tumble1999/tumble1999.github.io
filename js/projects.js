@@ -26,7 +26,7 @@ jQuery.fn.projects = function() {
                 repo = data.data;
                 //PROJECT NAME = repo.full_name
                 //...
-                ghdiv.children('h1.project-title').text(repo.full_name)
+                ghdiv.children('h2.project-title').text(repo.full_name)
                 ghdiv.children('p.project-description').text(repo.description)
                 //ghdiv.children('h1.project-title').text(repo.full_name)
                 //ghdiv.children('h1.project-title').text(repo.full_name)

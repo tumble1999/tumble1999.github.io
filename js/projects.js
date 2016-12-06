@@ -22,10 +22,15 @@ jQuery.fn.projects = function() {
         */
         var repo=d.dataset.repo;
         var user=d.dataset.user;
-        ghdiv.html("repo:" + repo + "  user:" + user)
 
         githubAPI("repos/" + user + "/" + repo, function(data) {
-                data;
+                repo = data.data;
+                //PROJECT NAME = repo.full_name
+                //...
+                ghdiv.children('h1.project-title').text(repo.full_name)
+                ghdiv.children('p.project-description').text(repo.description)
+                //ghdiv.children('h1.project-title').text(repo.full_name)
+                //ghdiv.children('h1.project-title').text(repo.full_name)
                 
         });
 }

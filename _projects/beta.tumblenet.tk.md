@@ -1,6 +1,7 @@
 ---
 layout: project
 title: beta.tumblenet.tk
-github: tumblenet
+repo: beta.tumblenet.tk
+user: tumblenet
 ---
 

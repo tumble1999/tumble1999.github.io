@@ -4,7 +4,7 @@ title: Projects
 ---
 <head>
 <script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="https://raw.githubusercontent.com/tumblenet/TumbleNet-Resources/gh-pages/javascript/api/github/github.js"></script>
+<script src="http://resources.tumblenet.tk/javascript/api/github/github.js"></script>
 <script src="/js/projects.js"></script>
 </head>
 

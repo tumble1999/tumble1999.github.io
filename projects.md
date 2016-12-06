@@ -11,7 +11,7 @@ title: Projects
 
 {% for project in site.projects %}
 
-<div id="github" data-ghRepo="epq-project" data-ghUser="tumble1999">
+<div id="github" data-gh-repo="epq-project" data-gh-user="tumble1999">
 <h2 class="project-title">Project Title</h2>
 <p class="project-description">Project Description</p>
 </div>

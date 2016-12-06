@@ -1,5 +1,5 @@
 var d=document.getElementById('github')
-
+$("div#github").html("test")
 /*
 var mydiv=document.getElementById('githun')
 
@@ -18,6 +18,6 @@ var user=d.dataset.user;
 
 githubAPI("repos/" + user + "/" + repo, function(data) {
         var repos = data.data; // JSON Parsing
-        $("div#github").html("test")
+        
 });
 

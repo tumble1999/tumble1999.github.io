@@ -6,7 +6,6 @@ jQuery.fn.projects = function() {
         ghdiv=this;
         
         var d=document.getElementById('github')
-        ghdiv.html("test")
 
         /*
         var mydiv=document.getElementById('githun')

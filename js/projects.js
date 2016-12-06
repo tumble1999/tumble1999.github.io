@@ -13,8 +13,8 @@ var brand=mydiv.dataset.brand //returns "toyota"
 mydiv.dataset.brand='mazda' //changes "data-brand" to "mazda"
 mydiv.dataset.brand=null //removes "data-brand" attribute
 */
-var repo=d.dataset.ghRepo
-var user=d.dataset.ghUser
+var repo=d.dataset.repo;
+var user=d.dataset.user;
 
 githubAPI("repos/" + user + "/" + repo, function(data) {
         var repos = data.data; // JSON Parsing

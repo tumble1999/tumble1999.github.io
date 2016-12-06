@@ -5,7 +5,7 @@ $(function() {
 jQuery.fn.projects = function() {
         ghdiv=this;
         
-        var d=document.getElementById('github')
+        var d=document.getElementById('github');
 
         /*
         var mydiv=document.getElementById('githun')
@@ -26,11 +26,10 @@ jQuery.fn.projects = function() {
                 repo = data.data;
                 //PROJECT NAME = repo.full_name
                 //...
-                ghdiv.children('h2.project-title').text(repo.full_name)
-                ghdiv.children('p.project-description').text(repo.description)
-                //ghdiv.children('h1.project-title').text(repo.full_name)
-                //ghdiv.children('h1.project-title').text(repo.full_name)
-                
+                ghdiv.children('h2.project-title').text(repo.full_name);
+                ghdiv.children('p.project-description').text(repo.description);
+                //ghdiv.children('h1.project-title').text(repo.full_name);
+                //ghdiv.children('h1.project-title').text(repo.full_name);
         });
 }
 

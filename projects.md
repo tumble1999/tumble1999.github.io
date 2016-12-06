@@ -12,5 +12,7 @@ title: Projects
 {% for project in site.projects %}
 
 [{{ project.title }}]({{ project.url }})
-<p id="github" data-ghRepo=""></p>
+<div id="github" data-ghRepo="epq-project" data-ghUser="tumble1999">
+<h1
+</div>
 {% endfor %}

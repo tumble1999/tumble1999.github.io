@@ -11,7 +11,7 @@ title: Projects
 {% for project in site.projects %}
 
 <div id="github" data-repo="{{ project.repo }}" data-user="{{ project.user }}">
-<h2 class="project-title">Project Title</h2>
-<p class="project-description">Project Description</p>
+<h2 class="{{ project.repo }-title">Project Title</h2>
+<p class="{{ project.repo }-description">Project Description</p>
 </div>
 {% endfor %}

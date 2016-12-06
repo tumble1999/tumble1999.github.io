@@ -1,5 +1,5 @@
 var d=document.getElementById('github')
-jQuery("div#github").html("test")
+$('div#github').html("test")
 /*
 var mydiv=document.getElementById('githun')
 

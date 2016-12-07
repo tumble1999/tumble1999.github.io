@@ -1,4 +1,4 @@
-console.log($('div#github'))
+console.log($('div#github'));
 $('div#github').each(function() {
 	console.log(this);
 	console.log($(this));

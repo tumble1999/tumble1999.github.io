@@ -1,4 +1,3 @@
-console.clear();
 console.log($('div#github'))
 $('div#github').each(function() {
 	console.log(this);

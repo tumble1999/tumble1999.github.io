@@ -26,7 +26,7 @@ $('div#github').each(function() {
 	githubAPI("repos/" + user + "/" + repo, function(data) {
 		var repoInfo = data.data;
 		console.log(repoInfo);
-		//PROJECT NAME = repo.full_name
+		//PROJECT NAME = repoInfo.full_name
 		//...
 		$(this).children('h2.project-title').text(repoInfo.full_name);
 		$(this).children('p.project-description').text(repoInfo.description);

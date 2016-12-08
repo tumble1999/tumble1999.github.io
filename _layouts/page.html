@@ -1,4 +1,4 @@
-
+---
 layout: default
 ---
 <article class="post">
@@ -9,5 +9,6 @@ layout: default
 
   <div class="post-content">
     {{ content }}
-    {{ include staticman_comments.html }}
   </div>
+{% include staticman_comments.html %}
+</article>

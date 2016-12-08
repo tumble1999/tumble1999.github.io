@@ -1,41 +1,32 @@
-console.log($('div#github'));
-$('div#github').each(function() {
-	console.log(this);
-	console.log($(this));
+var ghDiv;
+var projectTitle;
+var projectDescription;
 
+console.clear();
+//console.log(ghDivs);
 
-	/*
-	var mydiv=document.getElementById('githun')
-	//Using DOM's getAttribute() property
-	var brand=mydiv.getAttribute("data-brand") //returns "toyota"
-	mydiv.setAttribute("data-brand", "mazda") //changes "data-brand" to "mazda"
-	mydiv.removeAttribute("data-brand") //removes "data-brand" attribute entirely
+$('div.github').each(function(id, object) {
+	console.log(object);
+	githubAPI("repos/" + this.dataset.user + "/" + this.dataset.repo,
+		function(data) {
+			$(object).children('.projectTitle').text(data.data.full_name);
+		$(object).children('.projectDescription').text(data.data.description);
+		});
 
-	//Using JavaScript's dataset property
-	var brand=mydiv.dataset.brand //returns "toyota"
-	mydiv.dataset.brand='mazda' //changes "data-brand" to "mazda"
-	mydiv.dataset.brand=null //removes "data-brand" attribute
-	*/
-
-	var repo=this.dataset.repo;
-	var user=this.dataset.user;
-	console.log("REPO: " + repo);
-	console.log("USER: " + user);
-
-	githubAPI("repos/" + user + "/" + repo, function(data) {
-		var repoInfo = data.data;
+	/* githubAPI("repos/" + user + "/" + repo, function(data) {
+		console.log("REPO: " + repo + "   USER: " + user);
+		repoInfo = data.data;
+		console.log("REPO_INFO");
 		console.log(repoInfo);
-		//PROJECT NAME = repoInfo.full_name
-		//...
-		$(this).children('h2.project-title').text(repoInfo.full_name);
-		$(this).children('p.project-description').text(repoInfo.description);
-		//ghdiv.children('h1.project-title').text(repo.full_name);
-		//ghdiv.children('h1.project-title').text(repo.full_name);
-	});
+		projectTitle = repoInfo.full_name;
+		projectDescription = repoInfo.description;
+		console.log(ghDiv.children(".projectTitle").text(projectTitle));
+	});*/
 
 });
 
 function githubAPI(location, callback) {
+	var jsondata;
 	var url = "https://api.github.com/" + location + "?client_id=7632e3d7c347ff4e8638&client_secret=1029673eec28561b7511fdf7c8547864ae412c58&callback=?";
-	jQuery.getJSON(url,callback);
+	$.getJSON(url, callback);
 }

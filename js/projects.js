@@ -8,10 +8,12 @@ console.clear();
 
 $('div.github').each(function(id, object) {
 	console.log(object);
+	console.log("USER:" + this.dataset.user + " REPO:" + this.dataset.repo);
 	githubAPI("repos/" + this.dataset.user + "/" + this.dataset.repo,
-		function(data) {
-			$(object).children('.projectTitle').text(data.data.full_name);
-		$(object).children('.projectDescription').text(data.data.description);
+		function(repoInfo) {
+		        console.log("NAME:" + repoInfo.data.full_name + " DESCRIPTION:" + repoInfo.data.description);
+			$(object).children('.projectTitle').text(repoInfo.data.full_name);
+		        $(object).children('.projectDescription').text(repoInfo.data.description);
 		});
 
 	/* githubAPI("repos/" + user + "/" + repo, function(data) {

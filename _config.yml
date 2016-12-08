@@ -50,7 +50,9 @@ comments:
   allowedFields: ["name", "email", "url", "message"]
   branch: "master"
   filename: "entry{@timestamp}"
-  format: "yaml"
+  format: "yml"
+  branch: master
+  commitMessage: "Hey human, here is a new entry."
   generatedFields:
     date:
       type: date

@@ -1,3 +1,4 @@
+$(function() {
 var ghDiv;
 var projectTitle;
 var projectDescription;
@@ -23,6 +24,7 @@ $('div.github').each(function(id, object) {
 		console.log(ghDiv.children(".projectTitle").text(projectTitle));
 	});*/
 
+});
 });
 
 function githubAPI(location, callback) {

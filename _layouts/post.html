@@ -15,7 +15,7 @@ layout: default
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
-  {% if site.comments %}
+  {% if page.comments %}
     {% include staticman_comments.html %}
   {% endif %}
 </article>

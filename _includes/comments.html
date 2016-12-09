@@ -1,17 +1,16 @@
-<div class="js-comments">
-{% assign comments = site.data.comments | sort %}
+<ul class="post-list">
+  {% assign comments = site.data.comments | sort %}
+    {% for comment in comments reversed %}
+   {% assign commentData = comment[1] %}
+  {% if commentData.url==page.url %}
+      <li>
+        <span class="post-meta">{{ commentData.date | date: "%b %-d, %Y" }}</span>
 
-{% for comment in comments reversed %}
-{% assign commentData = comment[1] %}
-{% if commentData.url==page.url %}
-<article>
-<div>
-<h2>{{ commentData.name }}</h2>
-</div>
-{{ commentData.message }}
-
-</div>
-</article>
-{% endif %}
-{% endfor %}
-</div>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ commentData.name | escape }}</a>
+        </h2>
+        <p>{{ commentData.message }}</p>
+      </li>
+  {% endif %}
+    {% endfor %}
+  </ul>

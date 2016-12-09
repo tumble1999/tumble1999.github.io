@@ -1,18 +1,18 @@
 <div class="js-comments">
-	{% assign comments = site.data.comments | sort %}
-	
-	{% for comment in comments reversed %}
-		{% assign commentData = comment[1] %}
-	{% if commentData.url==page.url %}
-		<article>
-		  <div>
-			  {{ page.url}} {{ commentData.url }}
-		    <h2>{{ commentData.name }}</h2>
-		  </div>
-      {{ commentData.message }}
-			
-		  </div>
-		</article>
+{% assign comments = site.data.comments | sort %}
+
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+{% if commentData.url==page.url %}
+<article>
+<div>
+{{ page.url}} {{ commentData.url }}
+<h2>{{ commentData.name }}</h2>
+</div>
+{{ commentData.message }}
+
+</div>
+</article>
 {% endif %}
-	{% endfor %}
+{% endfor %}
 </div>

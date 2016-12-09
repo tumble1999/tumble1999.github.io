@@ -4,8 +4,7 @@
    {% assign commentData = comment[1] %}
   {% if commentData.url==page.url %}
       <li>     
-        <h2>{{ commentData.name | escape }}</h2>
-        <span class="post-meta">{{ commentData.date | date: "%b %-d, %Y" }}</span>
+        <h2>{{ commentData.name | escape }}    <span class="post-meta">{{ commentData.date | date: "%b %-d, %Y" }}</span></h2>
         <p>{{ commentData.message }}</p>
       </li>
   {% endif %}

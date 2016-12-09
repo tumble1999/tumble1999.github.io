@@ -1,0 +1,14 @@
+<div class="js-comments">
+	{% assign comments = site.data.comments | sort %}
+	
+	{% for comment in comments reversed %}
+		{% assign commentData = comment[1] %}
+		<article>
+		  <div>
+		    <h2>{{ commentData.name }}</h2>
+		  </div>
+      {{ commentData.message }}
+		  </div>
+		</article>
+	{% endfor %}
+</div>

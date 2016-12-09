@@ -3,7 +3,6 @@
 	
 	{% for comment in comments reversed %}
 		{% assign commentData = comment[1] %}
-	{ if commentData==page.url %}
 		<article>
 		  <div>
 			  {{ page.url}} {{ commentData.url }}
@@ -13,6 +12,5 @@
 			
 		  </div>
 		</article>
-{% endif }
 	{% endfor %}
 </div>

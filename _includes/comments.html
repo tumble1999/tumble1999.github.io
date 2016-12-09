@@ -3,11 +3,13 @@
 	
 	{% for comment in comments reversed %}
 		{% assign commentData = comment[1] %}
+	{% if commentData==page.url %}
 		<article>
 		  <div>
 		    <h2>{{ commentData.name }}</h2>
 		  </div>
       {{ commentData.message }}
+			{% endif %}
 		  </div>
 		</article>
 	{% endfor %}

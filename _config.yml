@@ -51,7 +51,7 @@ staticman:
   branch: master
   filename: "entry{@timestamp}"
   format: yml
-  commitMessage: "Hey human, here is a new entry."
+  commitMessage: "New Comment"
   generatedFields:
     date:
       type: date

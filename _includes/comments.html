@@ -6,9 +6,7 @@
       <li>
         <span class="post-meta">{{ commentData.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ commentData.name | escape }}</a>
-        </h2>
+        <h2>{{ commentData.name | escape }}</h2>
         <p>{{ commentData.message }}</p>
       </li>
   {% endif %}

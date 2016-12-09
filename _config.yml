@@ -32,7 +32,7 @@ collections:
 # Build settings
 markdown: kramdown
 theme: minima
-excludes
+excludes:
   - lib
   - Gemfile
   - Gemfile.lock

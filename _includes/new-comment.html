@@ -2,10 +2,10 @@
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
-  <input name="data[url]" type="hidden" value="{{ site.url }}{{ page.url }}">
-  <label><input name="fields[name]" type="text">Name</label>
-  <label><input name="fields[email]" type="email">E-mail</label>
-  <label><textarea name="fields[message]"></textarea>Message</label>
+  <input name="fields[url]" type="hidden" value="{{ site.url }}{{ page.url }}">
+  <label>Name<input name="fields[name]" type="text"></label>
+  <label>Email<input name="fields[email]" type="email"></label>
+  <label>Message<textarea name="fields[message]"></textarea></label>
   
   <button type="submit">Go!</button>
 </form>

@@ -1,3 +1,4 @@
+{% unless page.comments==false %}
 <form method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">

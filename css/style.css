@@ -29,6 +29,10 @@
 	float: right;
 }
 
+.comments {
+	background-color: #EEE;
+}
+
 .comment__answers {
 	margin-left: 10%; 
 }

@@ -47,7 +47,7 @@ excludes:
   
 # STATICMAN
 staticman:
-  allowedFields: ["name", "email", "message", "url"]
+  allowedFields: ["name", "message", "url", "reply-to"]
   branch: master
   filename: "entry{@timestamp}"
   format: yml
@@ -59,4 +59,4 @@ staticman:
         format: "timestamp-seconds"
   moderation: true
   path: "_data/comments"
-  requiredFields: ["name", "email", "message", "url"]
+  requiredFields: ["name", "message", "url"]

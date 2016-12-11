@@ -1,14 +1,24 @@
 {% unless page.comments==false %}
-<form method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
+<form class="comment-new" method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   {% if include.reply-to %}<input name="fields[reply-to]" type="hidden" value="{{ include.reply-to }}">{% endif %}
   <input name="fields[url]" type="hidden" value="{{ page.url }}">
-  <label>Name<input name="fields[name]" type="text"></label><br>
-  <label>Email<input name="fields[email]" type="email"></label><br>
-  <label>Message<textarea name="fields[message]"></textarea></label><br>
-  
-  <button type="submit">Go!</button>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" name="fields[name]" type="text" id="username">
+    <label class="mdl-textfield__label" for="username">Username</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" name="fields[email]" type="text" id="email">
+    <label class="mdl-textfield__label" for="email" >Email</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <textarea class="mdl-textfield__input" type="text" rows="3" id="message"></textarea>
+    <label class="mdl-textfield__label" for="message" name="fields[message]">Message</label>
+  </div>
 </form>
+
+
+
 {% endunless %}

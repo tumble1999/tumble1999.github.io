@@ -1,6 +1,6 @@
 
 {% unless page.comments==false %}
- {% import new-comment.html %}
+ {% include new-comment.html %}
   {% assign comments = site.data.comments | sort %}
     {% for comment in comments reversed %}
    {% assign commentData = comment[1] %}
@@ -19,7 +19,7 @@
 							{{ commentData.message }}
 						</div>
 						<div class="share">
-              {% import new-comment.html reply-to=commentData.id %}
+              {% include new-comment.html reply-to=commentData.id %}
 						</div>
 						<div class="comment__answers">
 							{% for commentReply in comments reversed %}

@@ -3,6 +3,7 @@
 {% assign comments = site.data.comments | sort %}
 {% for comment in comments reversed %}
 {% assign commentData = comment[1] %}
+{% unless commentData.reply-to %}
 {% if commentData.url==page.url %}
 <div class="comment mdl-color-text--grey-700">
 	<header class="comment__header">
@@ -45,10 +46,8 @@
 		{% endif %}
 		{% endfor %}
 	</div>
-	{% endif %}
-	{% endfor %}
-	{% endunless %}
 </div>
 {% endif %}
+{% endunless %}
 {% endfor %}
 {% endunless %}

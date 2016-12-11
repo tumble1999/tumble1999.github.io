@@ -13,3 +13,92 @@ layout: default
 {% include new-comment.html %}
 {% include comments.html %}
 </article>
+
+
+<div class="mdl-card mdl-shadow--4dp post-container">
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
+				</div>
+				<div class="mdl-card__supporting-text post-meta">
+					<div class="user">
+						<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
+						<div class="user-info">
+							<span>{{ page.author }}</span>
+							<span>{{ page.date | date-to-string }</span>
+						</div>
+					</div>
+
+					<div class="mdl-layout-spacer"></div>
+
+					<div class="share">
+						<a class="mdl-button">
+							<i class="material-icons">share</i>
+						</a>
+						<a class="mdl-button" href="#comments">
+							<i class="material-icons">comment</i>
+						</a>
+					</div>
+
+				</div>
+				<div class="mdl-card__supporting-text post-content">
+					{{ content }}
+				</div>
+
+				<div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+					<a name="comments"></a>
+					<form lpformnum="1">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+							<textarea rows="1" class="mdl-textfield__input" id="comment"></textarea>
+							<label for="comment" class="mdl-textfield__label">Join the discussion</label>
+						</div>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
+                  <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>
+                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+					</form>
+					<div class="comment mdl-color-text--grey-700">
+						<header class="comment__header">
+							<div class="user">
+								<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
+								<div class="user-info">
+									<span>Name</span>
+									<span>2 days ago</span>
+								</div>
+							</div>
+						</header>
+						<div class="comment__text">
+							In in culpa nulla elit esse. Ex cillum enim aliquip sit sit ullamco ex eiusmod fugiat. Cupidatat ad minim officia mollit laborum magna dolor tempor cupidatat mollit. Est velit sit ad aliqua ullamco laborum excepteur dolore proident incididunt in labore
+							elit.
+						</div>
+						<div class="share">
+
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+									<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+      <i class="material-icons">comment</i>
+    </label>
+									<div class="mdl-textfield__expandable-holder">
+										<input class="mdl-textfield__input" type="text" id="sample6">
+										<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="comment__answers">
+							<div class="comment">
+								<header class="comment__header">
+									<div class="user">
+										<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
+										<div class="user-info">
+											<span>Name</span>
+											<span>2 days ago</span>
+										</div>
+									</div>
+								</header>
+								<div class="comment__text">
+									Yep, agree!
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>

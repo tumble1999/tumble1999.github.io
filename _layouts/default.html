@@ -1,28 +1,10 @@
----
-layout: null
----
-<!doctype html>
-<html>
-<head>
-<link rel="stylesheet" href="/css/normalize.css">
- <link rel="stylesheet" href="/css/material.min.css">
-<script src="/js/material.min.js"></script>
-	
-	
-
-<script src="/js/init.js"></script>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-  
-<body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 	<header class="mdl-layout__header">
 		<div class="mdl-layout-icon"></div>
 		<div class="mdl-layout__header-row">
 			<span class="mdl-layout__title">{{ site.title }}</span>
 			<div class="mdl-layout-spacer"></div>
+
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
 				<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
@@ -43,12 +25,12 @@ layout: null
 	</div>
 	<main class="mdl-layout__content">
 		<div class="mdl-grid tumble1999-max-width">
-		{{ content }}
+			{{ content }}
 		</div>
 	</main>
 	<footer class="mdl-mini-footer">
 		<div class="mdl-mini-footer__left-section">
-			<div class="mdl-logo">Title</div>
+			<div class="mdl-logo">{{ site.title }}</div>
 			<ul class="mdl-mini-footer__link-list">
 				<li><a href="/LICENSE">Licence</a></li>
 				<li><a href="#">Privacy & Terms</a></li>
@@ -56,5 +38,3 @@ layout: null
 		</div>
 	</footer>
 </div>
-</body>
-</html>

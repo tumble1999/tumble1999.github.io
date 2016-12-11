@@ -1,5 +1,6 @@
 
 {% unless page.comments==false %}
+ {% import new-comment.html %}
 <ul class="post-list">
   {% assign comments = site.data.comments | sort %}
     {% for comment in comments reversed %}

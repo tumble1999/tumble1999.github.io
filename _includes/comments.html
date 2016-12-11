@@ -20,14 +20,14 @@
 		{{ commentData.message }}
 	</div>
 	<div class="share">
-		{% include new-comment.html reply-to=commentData.id %}
+		{% include new-comment.html reply=commentData.id %}
 	</div>
 	<div class="comment__answers">
 		{% for commentReply in comments reversed %}
 		{% assign commentReplyData = commentReply[1] %}
 		{% if commentReplyData.url==page.url %}
-		{% if commentReplyData.reply-to %}
-		{% if commentReplyData.reply-to==commentData._id %}
+		{% if commentReplyData.reply %}
+		{% if commentReplyData.reply==commentData._id %}
 		<div class="comment mdl-color-text--grey-700">
 			<header class="comment__header">
 				<div class="user">

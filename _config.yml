@@ -47,7 +47,7 @@ excludes:
   
 # STATICMAN
 staticman:
-  allowedFields: ["name", "message", "url", "reply-to"]
+  allowedFields: ["name", "message", "email", "url", "reply-to"]
   branch: master
   filename: "entry{@timestamp}"
   format: yml

@@ -3,7 +3,7 @@
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
-  {% if include.reply-to %}<input name="fields[reply-to]" type="hidden" value="{{ include.reply-to }}">{% endif %}
+  {% if include.reply %}<input name="fields[reply]" type="hidden" value="{{ include.reply }}">{% endif %}
   <input name="fields[url]" type="hidden" value="{{ page.url }}">
   
   

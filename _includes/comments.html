@@ -24,7 +24,8 @@
 		{% for commentReply in comments reversed %}
 		{% assign commentReplyData = commentReply[1] %}
 		{% if commentReplyData.url==page.url %}
-		{% if commentReplyData.reply-to==commentData.id %}
+		{% if commentReplyData.reply-to %}
+		{% if commentReplyData.reply-to==commentData._id %}
 		<div class="comment mdl-color-text--grey-700">
 			<header class="comment__header">
 				<div class="user">
@@ -38,10 +39,11 @@
 			<div class="comment__text">
 				{{ commentReplyData.message }}
 			</div>
-			{% endif %}
-			{% endif %}
-			{% endfor %}
 		</div>
+		{% endif %}
+		{% endif %}
+		{% endif %}
+		{% endfor %}
 	</div>
 	{% endif %}
 	{% endfor %}

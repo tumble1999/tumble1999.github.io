@@ -4,58 +4,55 @@ layout: null
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="/css/normalize.css">
- <link rel="stylesheet" href="/css/material.min.css">
-<script src="/js/material.min.js"></script>
-	
-	
-
-<script src="/js/init.js"></script>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/material.min.css">
+	<script src="/js/material.min.js"></script>
+	<script src="/js/init.js"></script>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	<header class="mdl-layout__header">
-		<div class="mdl-layout-icon"></div>
-		<div class="mdl-layout__header-row">
-			<span class="mdl-layout__title">{{ site.title }}</span>
-			<div class="mdl-layout-spacer"></div>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout-icon"></div>
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout__title">{{ site.title }}</span>
+					<div class="mdl-layout-spacer"></div>
 
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-				<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-          <i class="material-icons">search</i>
-        </label>
-				<div class="mdl-textfield__expandable-holder">
-					<input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+											mdl-textfield--floating-label mdl-textfield--align-right">
+						<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+							<i class="material-icons">search</i>
+						</label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+						</div>
+					</div>
 				</div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout__title">{{ site.title}}</span>
+				<nav class="mdl-navigation">
+					{% for link in site.data.nav %}
+					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a> {% endfor %}
+				</nav>
 			</div>
+			<main class="mdl-layout__content">
+				<div class="mdl-grid tumble1999-max-width">
+					{{ content }}
+				</div>
+			</main>
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer__left-section">
+					<div class="mdl-logo">{{ site.title }}</div>
+					<ul class="mdl-mini-footer__link-list">
+						<li><a href="/LICENSE">Licence</a></li>
+						<li><a href="#">Privacy & Terms</a></li>
+					</ul>
+				</div>
+			</footer>
 		</div>
-	</header>
-	<div class="mdl-layout__drawer">
-		<span class="mdl-layout__title">{{ site.title}}</span>
-		<nav class="mdl-navigation">
-			{% for link in site.data.nav %}
-			<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a> {% endfor %}
-		</nav>
-	</div>
-	<main class="mdl-layout__content">
-		<div class="mdl-grid tumble1999-max-width">
-			{{ content }}
-		</div>
-	</main>
-	<footer class="mdl-mini-footer">
-		<div class="mdl-mini-footer__left-section">
-			<div class="mdl-logo">{{ site.title }}</div>
-			<ul class="mdl-mini-footer__link-list">
-				<li><a href="/LICENSE">Licence</a></li>
-				<li><a href="#">Privacy & Terms</a></li>
-			</ul>
-		</div>
-	</footer>
-</div>
 	</body>
 </html>

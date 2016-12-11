@@ -1,49 +1,52 @@
-
 {% unless page.comments==false %}
- {% include new-comment.html %}
-  {% assign comments = site.data.comments | sort %}
-    {% for comment in comments reversed %}
-   {% assign commentData = comment[1] %}
-  {% if commentData.url==page.url %}
-  <div class="comment mdl-color-text--grey-700">
-						<header class="comment__header">
-							<div class="user">
-								<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
-								<div class="user-info">
-									<span>{{ commentData.name | escape }}</span>
-									<span>{{ commentData.date | date: "%b %-d, %Y" }}</span>
-								</div>
-							</div>
-						</header>
-						<div class="comment__text">
-							{{ commentData.message }}
-						</div>
-						<div class="share">
-              {% include new-comment.html reply-to=commentData.id %}
-						</div>
-						<div class="comment__answers">
-							{% for commentReply in comments reversed %}
-   {% assign commentReplyData = commentReply[1] %}
-  {% if commentReplyData.url==page.url %}
-        {% if commentReplyData.reply-to==commentData.id %}      
-  <div class="comment mdl-color-text--grey-700">
-						<header class="comment__header">
-							<div class="user">
-								<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
-								<div class="user-info">
-									<span>{{ commentReplyData.name | escape }}</span>
-									<span>{{ commentReplyData.date | date: "%b %-d, %Y" }}</span>
-								</div>
-							</div>
-						</header>
-						<div class="comment__text">
-							{{ commentReplyData.message }}
-						</div>
-  {% endif %}
-    {% endif %}
-    {% endfor %}
-						</div>
+{% include new-comment.html %}
+{% assign comments = site.data.comments | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+{% if commentData.url==page.url %}
+<div class="comment mdl-color-text--grey-700">
+	<header class="comment__header">
+		<div class="user">
+			<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
+			<div class="user-info">
+				<span>{{ commentData.name | escape }}</span>
+				<span>{{ commentData.date | date: "%b %-d, %Y" }}</span>
+			</div>
+		</div>
+	</header>
+	<div class="comment__text">
+		{{ commentData.message }}
+	</div>
+	<div class="share">
+		{% include new-comment.html reply-to=commentData.id %}
+	</div>
+	<div class="comment__answers">
+		{% for commentReply in comments reversed %}
+		{% assign commentReplyData = commentReply[1] %}
+		{% if commentReplyData.url==page.url %}
+		{% if commentReplyData.reply-to==commentData.id %}
+		<div class="comment mdl-color-text--grey-700">
+			<header class="comment__header">
+				<div class="user">
+					<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
+					<div class="user-info">
+						<span>{{ commentReplyData.name | escape }}</span>
+						<span>{{ commentReplyData.date | date: "%b %-d, %Y" }}</span>
 					</div>
-  {% endif %}
-    {% endfor %}
+				</div>
+			</header>
+			<div class="comment__text">
+				{{ commentReplyData.message }}
+			</div>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+	{% endunless %}
+</div>
+{% endif %}
+{% endfor %}
 {% endunless %}

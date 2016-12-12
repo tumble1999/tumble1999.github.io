@@ -51,6 +51,7 @@ staticman:
   branch: master
   commitMessage: "New Comment"
   generatedFields:
+    id: "{@id}"
     date:
       type: date
       options:

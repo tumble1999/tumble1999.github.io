@@ -11,7 +11,7 @@
 		<div class="user">
 			<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
 			<div class="user-info">
-				<span>{{ commentData.name | escape }}</span>
+				<span><a href="http://github.com/{{ commentData.name | escape }}">{{ commentData.name | escape }}</a></span>
 				<span>{{ commentData.date | date: "%b %-d, %Y" }}</span>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 				<div class="user">
 					<img src="https://gravatar.com/avatar/e1c0d5510423a78555b6d07f96a94cec?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="user-avatar" alt="">
 					<div class="user-info">
-						<span>{{ commentReplyData.name | escape }}</span>
+						<span><a href="http://github.com/{{ commentReplyData.name | escape }}">{{ commentReplyData.name | escape }}</a></span>
 						<span>{{ commentReplyData.date | date: "%b %-d, %Y" }}</span>
 					</div>
 				</div>

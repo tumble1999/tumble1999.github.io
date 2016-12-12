@@ -18,10 +18,9 @@
 	</header>
 	<div class="comment__text">
 		{{ commentData.message }}
-		ID: {{ commentData._id }}
 	</div>
 	<div class="share">
-		{% include new-comment.html reply=commentData.id %}
+		{% include new-comment.html reply=commentData._id %}
 	</div>
 	<div class="comment__answers">
 		{% for commentReply in comments reversed %}

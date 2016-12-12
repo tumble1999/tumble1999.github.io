@@ -49,8 +49,6 @@ excludes:
 staticman:
   allowedFields: ["name", "message", "email", "url", "reply"]
   branch: master
-  filename: "entry{@timestamp}"
-  format: yml
   commitMessage: "New Comment"
   generatedFields:
     date:

@@ -18,6 +18,7 @@
 	</header>
 	<div class="comment__text">
 		{{ commentData.message }}
+		ID: {{ commentData }}
 	</div>
 	<div class="share">
 		{% include new-comment.html reply=commentData.id %}

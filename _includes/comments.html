@@ -9,7 +9,7 @@
 <div class="comment mdl-color-text--grey-700">
 	<header class="comment__header">
 		<div class="user githubAuthor" data-user="{{ commentData.name | escape }}">
-			<img src="https://github.com/identicons/{{{ commentData.name | escape }}.png" class="user-avatar userImg" alt="">
+			<img src="https://github.com/identicons/{{ commentData.name | escape }}.png" class="user-avatar userImg" alt="">
 			<div class="user-info">
 				<span><a href="http://github.com/{{ commentData.name | escape }}" class="userName">{{ commentData.name | escape }}</a></span>
 				<span>{{ commentData.date | date: "%b %-d, %Y" }}</span>
@@ -31,7 +31,7 @@
 		<div class="comment mdl-color-text--grey-700">
 			<header class="comment__header">
 				<div class="user githubAuthor" data-user="{{ commentReplyData.name | escape }}">
-					<img src="https://github.com/identicons/{{{ commentReplyData.name | escape }}.png" class="user-avatar userImg" alt="">
+					<img src="https://github.com/identicons/{{ commentReplyData.name | escape }}.png" class="user-avatar userImg" alt="">
 					<div class="user-info">
 						<span><a href="http://github.com/{{ commentReplyData.name | escape }}" class="userName">{{ commentReplyData.name | escape }}</a></span>
 						<span>{{ commentReplyData.date  | date: "%b %-d, %Y" }}</span>

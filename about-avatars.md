@@ -6,7 +6,7 @@ title: Avatar info
 The avatars are using github api, specificly [this page](https://developer.github.com/v3/users/).
 
 User Picture Test
-<div class="githubAuthor data-user="octocat">
+<div class="githubAuthor" data-user="octocat">
 <img class="userIMG" src="http://github.com/identicons/octocat.png">
 </div>
 

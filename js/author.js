@@ -28,9 +28,3 @@ $(function() {
 
 	});
 });
-
-function githubAPI(location, callback) {
-	var jsondata;
-	var url = "https://api.github.com/" + location + "?client_id=7632e3d7c347ff4e8638&client_secret=1029673eec28561b7511fdf7c8547864ae412c58&callback=?";
-	$.getJSON(url, callback);
-}

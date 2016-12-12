@@ -13,7 +13,7 @@ $(function() {
 				console.log(userInfo.data);
 
 				$(object).find('.userName').text(userInfo.data.name);
-				$(object).find('.userImg').text(userInfo.data.avatar_url);
+				$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
 			});
 
 		/* githubAPI("repos/" + user + "/" + repo, function(data) {

@@ -4,7 +4,7 @@
 {% assign comments = site.data.comments | sort %}
 {% for comment in comments reversed %}
 {% assign commentData = comment[1] %}
-{% unless commentData.reply-to %}
+{% unless commentData.reply %}
 {% if commentData.url==page.url %}
 <div class="comment mdl-color-text--grey-700">
 	<header class="comment__header">

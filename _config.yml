@@ -56,5 +56,8 @@ staticman:
       options:
         format: "timestamp-seconds"
   moderation: false
+  branch: master
+  filename: "{@id}"
+  format: yml
   path: "_data/comments"
   requiredFields: ["name", "message", "url"]

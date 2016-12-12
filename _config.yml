@@ -57,6 +57,6 @@ staticman:
       type: date
       options:
         format: "timestamp-seconds"
-  moderation: true
+  moderation: false
   path: "_data/comments"
   requiredFields: ["name", "message", "url"]

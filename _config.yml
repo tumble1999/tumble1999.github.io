@@ -51,13 +51,12 @@ staticman:
   branch: master
   commitMessage: "New Comment"
   generatedFields:
-    id: "{@id}"
     date:
       type: date
       options:
         format: "timestamp-seconds"
   moderation: false
-  filename: "{@id}"
+  filename: "entry{@timestamp}"
   format: yml
   path: "_data/comments"
   requiredFields: ["name", "message", "url"]

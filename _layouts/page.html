@@ -6,8 +6,8 @@ layout: default
 					<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 				</div>
 				<div class="mdl-card__supporting-text post-meta">
-					<div class="user githubAuthor">
-						<img src="https://github.com/identicons/{{ page.author }}.png" class="user-avatar userImg" alt="">
+					<div class="user githubAuthor" data-user="{{ pager.author | escape }}">
+						<img src="https://github.com/identicons/{{ page.author | escape }}.png" class="user-avatar userImg" alt="">
 						<div class="user-info">
 							<span><a href="http://github.com/{{ page.author }}" class="userName">{{ page.author }}</a></span>
 							<span>{{ page.date | date-to-string }}</span>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: ie
 comments: false
 title: Stop using IE/Edge
 ---

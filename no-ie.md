@@ -1,7 +1,7 @@
 ---
 layout: ie
 comments: false
-title: Browser not supported
+title: Your Browser Is Not Supported!
 ---
-<p>Please upgrade to <a href='http://getfirefox.com'>FireFox</a>, <a href='http://www.opera.com/download/'>Opera</a>, <a href='http://www.apple.com/safari/'>Safari</a> or <a href='http://www.microsoft.com/windows/downloads/ie/getitnow.mspx'>Internet Explorer 7 or 8</a>. Thank You!&nbsp;&nbsp;&nbsp;<a href="#" onClick="document.getElementById('warning').style.display = 'none';"><b>Close Window</b></a></p>
+<p>Please upgrade to [FireFox](http://getfirefox.com), [Opera](http://www.opera.com/download/), [Safari](http://www.apple.com/safari/) or [Chrome](https://www.google.com/chrome/browser/desktop/index.html). Thank You!
 

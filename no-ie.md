@@ -1,5 +1,6 @@
 ---
 layout: page
-title: Stop using IE/Chrome
+comments: false
+title: Stop using IE/Edge
 ---
 Use a better browser.

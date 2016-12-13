@@ -20,6 +20,8 @@ layout: null
 		<script src="/js/material.min.js"></script>
 		<script src="/js/github.js"></script>
 		<script src="/js/author.js"></script>
+		{% if page.url contains "/no-ie/" %}<script src="/js/no-ie.js"></script>
+		{% else %}<script src="/js/ie.js"></script>{% endif %}
 		<script src="/js/init.js"></script>
 	</head>
 

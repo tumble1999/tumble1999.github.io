@@ -2,11 +2,11 @@
 var version = detectIE();
 
 if (version === false) {
-  //document.getElementById('result').innerHTML = '<s>IE/Edge</s>';
+  //window.location.replace("/");
 } else if (version >= 12) {
-  window.location.replace("/no-ie");//edge
+  window.location.replace("/no-ie/");//edge
 } else {
-  window.location.replace("/no-ie"); //ie
+  window.location.replace("/no-ie/"); //ie
 }
 
 // add details to debug result

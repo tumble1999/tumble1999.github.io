@@ -26,7 +26,7 @@ layout: null
 	</head>
 
 	<body>
-		{% if page.url contains "/no-ie/" %}<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		{% unless page.url contains "/no-ie/" %}<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<header class="mdl-layout__header">
 				<div class="mdl-layout-icon"></div>
 				<div class="mdl-layout__header-row">
@@ -43,20 +43,21 @@ layout: null
 						</div>
 					</div>
 				</div>
-			</header>
+		</header>
 			<div class="mdl-layout__drawer">
 				<span class="mdl-layout__title">{{ site.title}}</span>
 				<nav class="mdl-navigation">
 					{% for link in site.data.nav %}
 					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a> {% endfor %}
 				</nav>
-			</div>{% endif %}
+			</div>
+		{% endif %}
 			<main class="mdl-layout__content">
 				<div class="mdl-grid tumble1999-max-width">
 					{{ content }}
 				</div>
 			</main>
-		{% if page.url contains "/no-ie/" %}
+		{% unless page.url contains "/no-ie/" %}
 			<footer class="mdl-mini-footer">
 				<div class="mdl-mini-footer__left-section">
 					<div class="mdl-logo">{{ site.title }}</div>

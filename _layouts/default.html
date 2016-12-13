@@ -51,7 +51,7 @@ layout: null
 					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a> {% endfor %}
 				</nav>
 			</div>
-		{% endif %}
+		{% endunless %}
 			<main class="mdl-layout__content">
 				<div class="mdl-grid tumble1999-max-width">
 					{{ content }}
@@ -67,7 +67,7 @@ layout: null
 					</ul>
 				</div>
 			</footer>
-		{% endif %}
+		{% endunless %}
 		</div>
 	</body>
 </html>

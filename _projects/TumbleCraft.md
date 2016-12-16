@@ -1,5 +1,5 @@
 ---
 layout: project
-user: tumblegamer
-repo: TumbleCraft
+author: tumblegamer
+user: TumbleCraft
 ---

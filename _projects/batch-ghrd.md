@@ -1,5 +1,5 @@
 ---
 layout: project
-user: tumblegamer
-repo: batch-ghrd
+author: tumblegamer
+title: batch-ghrd
 ---

@@ -5,12 +5,43 @@ layout: basic
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.5.1/showdown.min.js"></script>
 <script src="/js/projects.js"></script>
 </head>
-<div class="github" data-user="{{ page.author }}" data-repo="{{ page.title }}">
+<div class="github" data-user="{{ page.user }}" data-repo="{{ page.repo }}">
+    <div class="mdl-card__title">
 <h1 class="projectTitle"></h1>
+    </div>
+    <div class="mdl-card__supporting-text post-meta">
+	<div class="user githubAuthor" data-user="{{ page.user | escape }}">
+		<img src="https://github.com/identicons/{{ page.user | escape }}.png" class="user-avatar userImg" alt="">
+		<div class="user-info">
+			<span><a href="http://github.com/{{ page.user }}" class="userName">{{ page.user }}</a></span>
+			<span>{{ page.date | date-to-string }}</span>
+		</div>
+	</div>
+
+	<div class="mdl-layout-spacer"></div>
+
+	<div class="share">
+		<a class="mdl-button">
+			<i class="material-icons">share</i>
+		</a>
+		<a class="mdl-button" href="#comments">
+			<i class="material-icons">comment</i>
+		</a>
+	</div>
+
+</div>
+    <div class="mdl-card__supporting-text post-content">
 <p><span class="projectDescription"></span> | <a class="projectWebsite">Website</a> | <a class="projectGitHubURL">View On GitHub</a></p>
     <a class="projectLanguageURL"><span class="projectLanguage"></span></a> | 
    <a class="projectStarsURL">Stars: <span class="projectStars"></span></a> | 
   <a class="projectForksURL">Forks: <span class="projectForks"></span></a>
   <p>{{ content }}</p>
 <div class="projectReadMe"></div>
+    </div>
+</div>
+
+<div class="mdl-card__supporting-text comments">
+	<a name="comments"></a>
+
+{% include comments.html %}
 </div>

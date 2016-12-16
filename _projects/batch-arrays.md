@@ -1,5 +1,5 @@
 ---
 layout: project
-user: tumblegamer
-repo: batch-arrays
+author: tumblegamer
+title: batch-arrays
 ---

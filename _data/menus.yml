@@ -1,3 +1,4 @@
 ---
 - name: menu1
   role: primary
+  items:

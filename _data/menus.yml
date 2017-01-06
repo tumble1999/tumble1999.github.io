@@ -1,5 +1,4 @@
 --- 
 - name: menu1
-  role: primary
   - name: Home
     href: "/"

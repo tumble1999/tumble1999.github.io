@@ -1,8 +1,14 @@
 ---
-text-field: ''
-text-area: ''
+text-field: hello
+text-area: |-
+  Hello
+  Hello
 image-upload: ''
 image-gallery: 
-tag-list: []
-sortable-list: []
-date: 
+tag-list:
+- hi
+- hello
+sortable-list:
+- hi
+- hi
+date: '2017-01-06T00:00:00+00:00'

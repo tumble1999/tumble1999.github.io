@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Contact Me
-permalink: /contact-me/
+layout: page
+permalink: "/contact-me/"
 author: tumble1999
 ---
 Hello, You can contact me in these ways;

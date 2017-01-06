@@ -29,6 +29,30 @@ collections:
  projects:
   output: true
 
+defaults:
+  - scope:
+        path: ""
+        type: pages
+    values:
+        thumbnail: ""
+        categories: []
+        author: ""
+  - scope:
+        path: ""
+        type: post
+    values:
+        thumbnail: ""
+        categories: []
+        tags: []
+        author: ""
+        excerpt: >
+  - scope:
+        path: ""
+        type: projects
+    values:
+        user: ""
+        repo: ""
+
 # Build settings
 markdown: kramdown
 # theme: minima

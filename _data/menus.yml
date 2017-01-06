@@ -1,3 +1,5 @@
 ---
 - menu1:
-  - 
+  role: primary
+  - name: Hello
+    href: "/"

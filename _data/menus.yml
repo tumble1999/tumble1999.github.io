@@ -1,5 +1,3 @@
 ---
-main:
-- title: Title
-  identifier: title
-  url: url
+- menu1:
+  - 

@@ -1,4 +1,4 @@
----
-menus:
-  main:
-    url: "/custom-url"
+main:
+  - title: Title
+    identifier: title
+    url: url

@@ -1,0 +1,12 @@
+text: Hello
+array: [face,face,nose]
+list:
+ - textbox1: "hello"
+   property: hello
+ - textbox2: "face"
+   property: bob
+   sublist:
+   - hello: "hi"
+   
+- nameless-list: hello
+  item: "face"

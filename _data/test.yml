@@ -1,5 +1,6 @@
 ---
 textbox1: ''
-textbox2: |
-  ""
-array1: []
+textbox2: ''
+array1:
+- hi
+- hello

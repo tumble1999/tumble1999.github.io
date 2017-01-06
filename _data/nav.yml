@@ -1,7 +1,10 @@
 ---
-- name: Home
-  href: "/"
-- name: About
-  href: "/about/"
-- name: projects
-  href: "/projects/"
+
+- name: Main Nav
+  role: primary
+  - name: Home
+    href: "/"
+  - name: About
+    href: "/about/"
+  - name: projects
+    href: "/projects/"

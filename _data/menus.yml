@@ -1,6 +1,6 @@
---- 
+---
 - name: menu1
   role: primary
-  items: 
-  - name:
+  items:
+  - name: 
     href: 

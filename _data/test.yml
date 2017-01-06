@@ -12,8 +12,6 @@ sortable-list:
 - hi
 - hi
 date: '2017-01-06T00:00:00+00:00'
-
-
 list-of-lists:
 - list1:
   - item11

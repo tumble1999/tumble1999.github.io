@@ -1,4 +1,5 @@
+---
 main:
-  - title: Title
-    identifier: title
-    url: url
+- title: Title
+  identifier: title
+  url: url

@@ -1,5 +1,4 @@
 ---
-- name: "Nav"
-  role: primary
+- name: Nav
   - name: Hello
     href: "/"

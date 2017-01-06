@@ -1,8 +1,8 @@
 ---
-text-field: 
-text-area: 
-image-upload: 
+text-field: ''
+text-area: ''
+image-upload: ''
 image-gallery: 
-tag-list: 
-sortable-list: 
+tag-list: []
+sortable-list: []
 date: 

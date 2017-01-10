@@ -14,7 +14,7 @@ layout: search
 <script>
 		  window.store = {
 		    {% for item in site.documents %}
-		      "{{ post.url | slugify }}": {
+		      "{{ post.title | slugify }}": {
 			"title": "{{ item.title | xml_escape }}",
 			"author": "{{ item.author | xml_escape }}",
 			"category": "{{ item.category | xml_escape }}",

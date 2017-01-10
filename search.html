@@ -24,6 +24,7 @@ layout: search
 		      ,
 		    {% endfor %}
 		    {% for item in site.pages %}
+		    {% unless item.path == 'index.html' %}
 		      "{{ item.url | slugify }}": {
 			"title": "{{ item.title | xml_escape }}",
 			"author": "{{ item.author | xml_escape }}",
@@ -31,6 +32,7 @@ layout: search
 			"content": {{ item.content | strip_html | strip_newlines | jsonify }},
 			"url": "{{ item.url | xml_escape }}"
 		      }
+		     {% endunless %}
 		      {% unless forloop.last %},{% endunless %}
 		    {% endfor %}
 		  };

@@ -16,13 +16,13 @@ layout: search
 
 <script>
   window.store = {
-    {% for post in site.documents %}
+    {% for item in site.documents %}
       "{{ post.url | slugify }}": {
-        "title": "{{ post.title | xml_escape }}",
-        "author": "{{ post.author | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
+        "title": "{{ item.title | xml_escape }}",
+        "author": "{{ item.author | xml_escape }}",
+        "category": "{{ item.category | xml_escape }}",
+        "content": {{ item.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ item.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}

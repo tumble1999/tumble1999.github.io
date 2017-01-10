@@ -22,7 +22,7 @@ layout: basic
 		<a class="mdl-button" href="#comments">
 			<i class="material-icons">comment</i>
 		</a>
-		<a class="mdl-button" href="https://tumble1999.github.io/admin/#/pages/{{page.path |  replace: '-', '-' |  replace: '.', '-'}}/">
+		<a class="mdl-button" href="https://tumble1999.github.io/admin/#/pages/{{ page.url | slugify }}/">
 			<i class="material-icons">mode edit</i>
 		</a>
 	</div>

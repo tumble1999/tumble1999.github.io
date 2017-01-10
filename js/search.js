@@ -33,7 +33,7 @@
     }
   }
 
-  var searchTerm = getQueryVariable('query');
+  var searchTerm = getQueryVariable('q');
 
   //Perform the search
   if (searchTerm) {

@@ -24,7 +24,7 @@ layout: search
 		      ,
 		    {% endfor %}
 		    {% for item in site.pages %}
-		    {% unless item.path == 'index.html' %}
+		    {% unless item.path == 'index.html' or item.path == '404.html' %}
 		      "{{ item.url | slugify }}": {
 			"title": "{{ item.title | xml_escape }}",
 			"author": "{{ item.author | xml_escape }}",

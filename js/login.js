@@ -2,7 +2,7 @@ $(function() {
 	
 	var state = getQueryVariable('state');
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
-		var authCode = getQueryVariable('code');
+		var authCode = getAuthCode(window.location.href);
 		//var acJson = getAccessToken('dce7328a9a7ea4492070', '32a13ccd5f5d63f86229d1df56b4e4893e48f8f4', code, state);
 		$.getJSON('https://tumble1999-comments.herokuapp.com/login/oauth/access_token'+code, function(data) {
 		 console.log(data.token);

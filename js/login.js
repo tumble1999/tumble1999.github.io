@@ -2,7 +2,7 @@ $(function() {
 	var state = getQueryVariable('state');
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
 		var code = getQueryVariable('code');
-		window.location.replace("https://github.com/login/oauth/access_token?client_id=dce7328a9a7ea4492070&redirect_uri=http://www.example.com/oauth_redirect&client_secret=32a13ccd5f5d63f86229d1df56b4e4893e48f8f4&code=" + code);
+		window.location.replace("https://github.com/login/oauth/access_token?client_id=dce7328a9a7ea4492070&client_secret=32a13ccd5f5d63f86229d1df56b4e4893e48f8f4&code=" + code);
 	}
 });
 

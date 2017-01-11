@@ -51,16 +51,20 @@ layout: null
 						</div>
 					</form>
 					<!-- Right aligned menu below button -->
-					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect githubAuthor " id="demo-menu-lower-right" data-user="tumble1999">
+					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect githubAuthor " id="user-logged-in" data-user="tumble1999">
 						<img src="https://avatars.githubusercontent.com/u/15913224?v=3" class="user-avatar userImg" alt="">
 					</button>
-					<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect githubAuthor " id="demo-menu-lower-right" data-user="tumble1999">
+					<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="user-logged-out" >
 						<i class="material-icons">account_circle</i>
 					</button>
 
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-					    for="demo-menu-lower-right">
+					    for="user-logged-out">
 					  <li disabled class="mdl-menu__item"><a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=dce7328a9a7ea4492070">Login</a></li>
+					</ul>
+					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+					    for="user-logged-out">
+					  <li disabled class="mdl-menu__item"><a href="#">Logout</a></li>
 					</ul>
 					{% endunless %}
 				</div>

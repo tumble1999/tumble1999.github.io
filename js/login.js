@@ -5,7 +5,7 @@ $(function() {
 		var code = getQueryVariable('code');
 		alert("code");
 	} else {
-		window.location.replace("https://github.com/login/oauth/authorize?client_id=dce7328a9a7ea4492070&allow_signup=true&redirect_uri={{ site.url }}/login&state=bZ0TyBHhOCS6goHFQ8qj");
+		window.location.replace("https://github.com/login/oauth/authorize?client_id=dce7328a9a7ea4492070&allow_signup=true&redirect_uri=http://tumble1999.github.io/login&state=bZ0TyBHhOCS6goHFQ8qj");
 	}
 });
 

@@ -1,6 +1,5 @@
 ---
 - name: nav
-  role: navbar
   items:
   - name: 
     href: 

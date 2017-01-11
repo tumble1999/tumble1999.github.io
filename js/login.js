@@ -1,7 +1,7 @@
 $(function() {
 var face = getQueryVariable('code');
 alert(face);
-//window.location.replace("/");
+window.location.replace("/");
 });
 
 
@@ -17,3 +17,9 @@ function getQueryVariable(variable) {
       }
     }
   }
+
+function githubAPI(location, callback) {
+	var jsondata;
+	var url = "https://api.github.com/user?access_token=" +  + "&callback=?";
+	$.getJSON(url, callback);
+}

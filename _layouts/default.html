@@ -74,8 +74,13 @@ layout: null
 			<div class="mdl-layout__drawer">
 				<span class="mdl-layout__title">{{ site.title}}</span>
 				<nav class="mdl-navigation">
-					{% for link in site.data.nav %}
-					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a> {% endfor %}
+					{% for menu in site.data.menus %}
+					{% if menu.name == "Navbar" %}
+					{% for item in menu.items %}
+					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a>
+					{% endfor %}
+					{% endif %}
+					{% endfor %}
 				</nav>
 			</div>
 		{% endunless %}

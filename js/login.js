@@ -3,6 +3,8 @@ var face = getQueryVariable('code');
 alert(face);
 window.location.replace("/");
 });
+
+
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');

@@ -1,7 +1,7 @@
 $(function() {
 var face = getQueryVariable('code');
 alert(face);
-window.location.replace("/");
+//window.location.replace("/");
 });
 
 

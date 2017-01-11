@@ -30,6 +30,6 @@ function githubAPI(location, callback) {
 }
 
 function getAccessToken(clientId, clientSecret, code, state, callback) {
-	var url = "https://github.com/login/oauth/access_token?client_id=" + clientId + "&client_secret=" + clientSecret + "&code=" + code + "&state=" + state + "&callback=?";
+	var url = "https://github.com/login/oauth/access_token?client_id=" + clientId + "&client_secret=" + clientSecret + "&code=" + code + "&state=" + state;
 	$.getJSON(url, callback);
 }

@@ -1,7 +1,10 @@
 $(function() {
-var face = getQueryVariable('code');
-alert(face);
-window.location.replace("/");
+	var state = getQueryVariable('state');
+	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
+		var code = getQueryVariable('code');
+		alert(code);
+		window.location.replace("/");
+	}
 });
 
 

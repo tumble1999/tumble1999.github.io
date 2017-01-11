@@ -2,8 +2,7 @@ $(function() {
 	var state = getQueryVariable('state');
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
 		var code = getQueryVariable('code');
-		alert(code);
-		window.location.replace("/");
+		window.location.replace("https://github.com/login/oauth/access_token?client_id=dce7328a9a7ea4492070&redirect_uri=http://www.example.com/oauth_redirect&client_secret=...&code=" + code);
 	}
 });
 

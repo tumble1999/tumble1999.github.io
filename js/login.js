@@ -4,7 +4,7 @@ $(function() {
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
 		var code = getQueryVariable('code');
 		console.log("code:" + code);
-		$.getJSON('https://tumble1999-comments.herokuapp.com/authenticate/'+code, function(data) {
+		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
 			var url = "https://api.github.com/user?access_token=" + data.token + "?client_id=" + client_id + "&callback=?";
 			$.getJSON(url, function(currentUser) {
 				localStorage.setItem("loggedIn", "true");

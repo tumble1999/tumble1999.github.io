@@ -1,5 +1,5 @@
 $(function() {
-	var client_id =
+	var client_id = d303c3ac5d6e32f036a2;
 	var state = getQueryVariable('state');
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
 		var code = getQueryVariable('code');

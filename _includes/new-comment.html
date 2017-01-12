@@ -1,5 +1,5 @@
 {% unless page.comments==false %}
-<form class="comment-new js-form form" method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
+<form id="user-logged-in" class="comment-new js-form form" method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
@@ -29,6 +29,9 @@
   </fieldset>
 </form>
 
-
+<!-- Colored raised button -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored ">
+  Login with GitHub to comment
+</button>
 
 {% endunless %}

@@ -6,10 +6,9 @@
   {% if include.reply %}<input name="fields[reply]" type="hidden" value="{{ include.reply }}">{% endif %}
   <input name="fields[url]" type="hidden" value="{{ page.url }}">
   
-  
   <fieldset class="field-group">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" name="fields[name]" type="text" id="comment[name]">
+      <input class="mdl-textfield__input newCommentUsername" name="fields[name]" type="text" id="comment[name]" disabed>
       <label class="mdl-textfield__label" for="comment[name]">Name</label>
     </div>
   </fieldset>
@@ -30,7 +29,7 @@
 </form>
 
 <!-- Colored raised button -->
-<a href="/login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored ">
+<a href="/login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " id="user-logged-out">
   Login with GitHub to comment
 </a>
 

@@ -7,8 +7,8 @@ $(function() {
 	$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
 
 	  if(loggedIn=="true"){
-	    $('.user-logged-in, #user-logged-in').removeClass("hidden");
-	    $('.user-logged-out, #user-logged-out').addClass("hidden");
+	    $('.user-logged-in, #user-logged-in').show();
+	    $('.user-logged-out, #user-logged-out').hide();
 		  githubAPI("repos/tumble1999/tumble1999.github.io/contributors", function(data){
 			 	 data.data
 			  	private boolean userexists(data.data, String usernameToFind){
@@ -22,8 +22,8 @@ $(function() {
 //}
 
 	  } else {
-	    $('.user-logged-in, #user-logged-in').addClass("hidden");
-	    $('.user-logged-out, #user-logged-out').removeClass("hidden");
+	    $('.user-logged-in, #user-logged-in').hide();
+	    $('.user-logged-out, #user-logged-out').show();
 	  }
 	$('.newCommentUsername').val(loggedInUser);
    	$('.newCommentUsername').parent().addClass('is-dirty');

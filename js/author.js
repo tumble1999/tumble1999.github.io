@@ -1,4 +1,4 @@
-$(async function() {
+$(async function() { 
 	var loggedIn = localStorage.getItem("loggedIn");
 	  var loggedInUser = localStorage.getItem("loggedInUser");
 

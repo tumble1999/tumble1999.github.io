@@ -6,11 +6,11 @@ $(function() {
 	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
 
 	  if(loggedIn=="true"){
-	    $('#user-logged-in').removeClass("hidden");
-	    $('#user-logged-out').addClass("hidden");
+	    $('.user-logged-in').removeClass("hidden");
+	    $('.user-logged-out').addClass("hidden");
 	  } else {
-	    $('#user-logged-in').addClass("hidden");
-	    $('#user-logged-out').removeClass("hidden");
+	    $('.user-logged-in').addClass("hidden");
+	    $('.user-logged-out').removeClass("hidden");
 	  }
 	$('.newCommentUsername').val(loggedInUser);
    	$('.newCommentUsername').parent().addClass('is-dirty')

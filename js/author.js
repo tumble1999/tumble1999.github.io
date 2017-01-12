@@ -18,7 +18,6 @@ $(function() {
 	var ghDiv;
 	var user;
 
-	console.clear();
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {

@@ -1,4 +1,7 @@
-$(async function() { 
+$(function() { 
+	authorJsStart();
+});
+async function authorJsStart() {
 	var loggedIn = localStorage.getItem("loggedIn");
 	  var loggedInUser = localStorage.getItem("loggedInUser");
 
@@ -18,7 +21,7 @@ $(async function() {
 	var ghDiv;
 	var user;
 	
-	await sleepsleep(3000);
+	await sleepsleep(1000);
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {
@@ -43,12 +46,9 @@ $(async function() {
 		});*/
 
 	});
-});
-async function sleep(ms) {
-	await sleepsleep(ms);
 }
 
-function sleepsleep(ms) {
+function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 

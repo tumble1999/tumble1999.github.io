@@ -12,6 +12,8 @@ $(function() {
 	    $('#user-logged-in').addClass("hidden");
 	    $('#user-logged-out').removeClass("hidden");
 	  }
+	$('.newCommentUsername').val(loggedInUser);
+   	$('.newCommentUsername').parent().addClass('is-dirty')
 	
 	var ghDiv;
 	var user;

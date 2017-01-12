@@ -18,7 +18,7 @@ $(async function() {
 	var ghDiv;
 	var user;
 	
-	await sleep(3000);
+	await sleepsleep(3000);
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {

@@ -9,12 +9,6 @@ $(function() {
 	  if(loggedIn=="true"){
 	    $('.user-logged-in, #user-logged-in').show();
 	    $('.user-logged-out, #user-logged-out').hide();
-		  githubAPI("repos/tumble1999/tumble1999.github.io/contributors", function(data){
-			  	boolean userexists(data.data, String usernameToFind){
-			   	 	return jsonArray.toString().contains("\"login\":\""+loggedInUser+"\"");
-				}
-
-		  });
 		  
 		  //private boolean userexists(JSONArray jsonArray, String usernameToFind){
    // return jsonArray.toString().contains("\"username\":\""+usernameToFind+"\"");

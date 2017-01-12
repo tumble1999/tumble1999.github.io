@@ -60,12 +60,12 @@ layout: null
 
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 					    for="user-logged-out" >
-					  <li class="mdl-menu__item"><a href="/login">Login</a></li>
+					  <a href="/login"><li class="mdl-menu__item">Login</li></a>
 					</ul>
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 					    for="user-logged-in">
-					<li class="mdl-menu__item"><a href class="loggedInUserProfile">Profile</a></li>
-					  <li class="mdl-menu__item"><a href="/logout">Logout</a></li>
+					<a href class="loggedInUserProfile"><li class="mdl-menu__item">Profile</a></li>
+					<a href="/logout"><li class="mdl-menu__item">Logout</li></a>
 					</ul>
 					{% endunless %}
 				</div>

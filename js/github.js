@@ -1,5 +1,5 @@
 function githubAPI(location, callback) {
 	var jsondata;
-	var url = "https://api.github.com/" + location + "?client_id=d303c3ac5d6e32f036a2&client_secret=b27cf3e29e2654cd5b63e3c06ef54b6080883e14&callback=?";
+	var url = "https://api.github.com/" + location + "?access_token=6d824369f0aa243a2621c1ab88e5c2cde444c21a&callback=?";
 	$.getJSON(url, callback);
 }

@@ -19,6 +19,7 @@ $(function() {
 	    $('.user-logged-out, #user-logged-out').show();
 	  }
 	$('.newCommentUsername').val(loggedInUser);
+	$('.newCommentUsername').attr("value", loggedInUser );
    	$('.newCommentUsername').parent().addClass('is-dirty');
 	
 	var ghDiv;

@@ -9,6 +9,12 @@ $(function() {
 	  if(loggedIn=="true"){
 	    $('.user-logged-in, #user-logged-in').removeClass("hidden");
 	    $('.user-logged-out, #user-logged-out').addClass("hidden");
+		  githubAPI("repos/tumble1999/tumble1999.github.io/contributors")
+		  
+		  //private boolean userexists(JSONArray jsonArray, String usernameToFind){
+   // return jsonArray.toString().contains("\"username\":\""+usernameToFind+"\"");
+//}
+
 	  } else {
 	    $('.user-logged-in, #user-logged-in').addClass("hidden");
 	    $('.user-logged-out, #user-logged-out').removeClass("hidden");

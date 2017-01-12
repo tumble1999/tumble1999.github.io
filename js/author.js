@@ -6,7 +6,8 @@ $(function() {
     localStorge.setItem("loggedIn", loggedIn);
   }
   
-  $("#user-logged-in").attr("data-user", loggedInUser);
+  $('#user-logged-in').attr("data-user", loggedInUser);
+	$('#user-logged-in > img').attr("img", "https://github.com/identicons/" + loggedInUser + ".png")
   
   if(loggedIn=="false"){
     $('#user-logged-out').removeClass("hidden");

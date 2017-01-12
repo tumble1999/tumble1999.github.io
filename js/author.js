@@ -1,7 +1,4 @@
 $(function() { 
-	authorJsStart();
-});
-async function authorJsStart() {
 	var loggedIn = localStorage.getItem("loggedIn");
 	  var loggedInUser = localStorage.getItem("loggedInUser");
 
@@ -21,10 +18,9 @@ async function authorJsStart() {
 	var ghDiv;
 	var user;
 	
-	await sleep(1000);
 	//console.log(ghDivs);
 
-	$('div.githubAuthor').each(function(id, object) {
+	$('githubAuthor').each(function(id, object) {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
 		githubAPI("users/" + this.dataset.user,
@@ -46,9 +42,5 @@ async function authorJsStart() {
 		});*/
 
 	});
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+});
 

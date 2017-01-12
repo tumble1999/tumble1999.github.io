@@ -17,7 +17,8 @@ $(function() {
 	
 	var ghDiv;
 	var user;
-
+	
+	await sleep(3000);
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {
@@ -43,3 +44,8 @@ $(function() {
 
 	});
 });
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+

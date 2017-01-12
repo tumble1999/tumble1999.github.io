@@ -21,7 +21,7 @@ async function authorJsStart() {
 	var ghDiv;
 	var user;
 	
-	await sleepsleep(1000);
+	await sleep(1000);
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {

@@ -10,7 +10,8 @@ $(function() {
 				localStorage.setItem("loggedIn", "true");
 				localStorage.setItem("loggedInUser", currentUser.data.login);
 				console.log("currentUser.data.login: " + currentUser.data.login);
-				window.location.replace('/');
+				//window.location.replace('/');
+				history.back()
 			 });
 		});
 	} else {

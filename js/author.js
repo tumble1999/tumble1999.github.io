@@ -3,7 +3,8 @@ $(function() {
 	  var loggedInUser = localStorage.getItem("loggedInUser");
 
 	  $('#user-logged-in').attr("data-user", loggedInUser);
-	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
+	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+	$('#user-logged-in').find('.userName').attr("href", "http://github.com/" + loggedInUser);
 
 	  if(loggedIn=="true"){
 	    $('.user-logged-in, #user-logged-in').removeClass("hidden");
@@ -13,7 +14,7 @@ $(function() {
 	    $('.user-logged-out, #user-logged-out').removeClass("hidden");
 	  }
 	$('.newCommentUsername').val(loggedInUser);
-   	$('.newCommentUsername').parent().addClass('is-dirty')
+   	$('.newCommentUsername').parent().addClass('is-dirty');
 	
 	var ghDiv;
 	var user;

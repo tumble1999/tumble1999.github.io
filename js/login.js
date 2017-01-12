@@ -5,9 +5,11 @@ $(function() {
 		var code = getQueryVariable('code');
 		console.log(code);
 		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
-			$.getJSON('https://api.github.com/user?access_token='+data.token+, function(data) {
+			var url = "https://api.github.com/user?access_tpken=" + data.token + "&callback=?";
+			$.getJSON(url, function(currentUser) {
 				localStorage.setItem("loggedIn", "true");
-				localStorage.setItem("loggedInUser", data.login);
+				localStorage.setItem("loggedInUser", currentUser.data.login);
+				console.log("currentUser.data.login: " + currentUser.data.login);
 				window.location.replace('/');
 			 });
 		});

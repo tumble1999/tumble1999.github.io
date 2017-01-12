@@ -1,5 +1,9 @@
 ---
-- name: nav
+- name: Navbar
   items:
-  - name: 
-    href: 
+  - name: Projects
+    href: "/projects"
+  - name: About
+    href: "/about"
+  - name: Home
+    href: "/"

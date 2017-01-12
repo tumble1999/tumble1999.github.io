@@ -7,7 +7,7 @@ $(function() {
 	  }
 
 	  $('#user-logged-in').attr("data-user", loggedInUser);
-		$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
+	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
 
 	  if(loggedIn=="false"){
 	    $('#user-logged-out').removeClass("hidden");

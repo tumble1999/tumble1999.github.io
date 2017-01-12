@@ -1,5 +1,6 @@
 $(function() {
     localStorage.setItem("loggedIn", "false");
-    window.location.replace('/');
+    //window.location.replace('/');
+    history.back()
 });
 

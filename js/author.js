@@ -1,4 +1,4 @@
-$(function() {
+$(async function() {
 	var loggedIn = localStorage.getItem("loggedIn");
 	  var loggedInUser = localStorage.getItem("loggedInUser");
 
@@ -18,7 +18,7 @@ $(function() {
 	var ghDiv;
 	var user;
 	
-	sleep(3000);
+	await sleep(3000);
 	//console.log(ghDivs);
 
 	$('div.githubAuthor').each(function(id, object) {

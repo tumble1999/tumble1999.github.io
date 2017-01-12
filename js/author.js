@@ -1,21 +1,21 @@
 $(function() {
 	var loggedIn = localStorage.getItem("loggedIn");
-  var loggedInUser = localStorage.getItem("loggedInUser");
-  if(loggedIn=="") {
-    loggedIn = "false";
-    localStorge.setItem("loggedIn", loggedIn);
-  }
-  
-  $('#user-logged-in').attr("data-user", loggedInUser);
-	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
-  
-  if(loggedIn=="false"){
-    $('#user-logged-out').removeClass("hidden");
-    $('#user-logged-in').addClass("hidden");
-  } else {
-    $('#user-logged-out').addClass("hidden");
-    $('#user-logged-in').removeClass("hidden");
-  }
+	  var loggedInUser = localStorage.getItem("loggedInUser");
+	  if(loggedIn=="") {
+	    loggedIn = "false";
+	    localStorge.setItem("loggedIn", loggedIn);
+	  }
+
+	  $('#user-logged-in').attr("data-user", loggedInUser);
+		$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png")
+
+	  if(loggedIn=="false"){
+	    $('#user-logged-out').removeClass("hidden");
+	    $('#user-logged-in').addClass("hidden");
+	  } else {
+	    $('#user-logged-out').addClass("hidden");
+	    $('#user-logged-in').removeClass("hidden");
+	  }
 	
 	var ghDiv;
 	var user;

@@ -5,11 +5,12 @@
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   {% if include.reply %}<input name="fields[reply]" type="hidden" value="{{ include.reply }}">{% endif %}
   <input name="fields[url]" type="hidden" value="{{ page.url }}">
+  <input class="newCommentUsername" name="fields[name]" type="hidden" value="">
   
   <fieldset class="field-group">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input newCommentUsername" name="fields[name]" type="text" id="comment[name]" disabled value>
-      <label class="mdl-textfield__label" for="comment[name]">Name</label>
+      <input class="mdl-textfield__input newCommentUsername" name="fields[name]" type="text" id="commentName" disabled>
+      <label class="mdl-textfield__label" for="commentName">Name</label>
     </div>
   </fieldset>
     

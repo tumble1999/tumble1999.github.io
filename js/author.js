@@ -9,11 +9,11 @@ $(function() {
   $("#user-logged-in").attr("data-user", loggedInUser);
   
   if(loggedIn=="false"){
-    $('#user-logged-in').removeClass("hidden");
-    $('#user-logged-out').addClass("hidden");
-  } else {
-    $('#user-logged-in').addClass("hidden");
     $('#user-logged-out').removeClass("hidden");
+    $('#user-logged-in').addClass("hidden");
+  } else {
+    $('#user-logged-out').addClass("hidden");
+    $('#user-logged-in').removeClass("hidden");
   }
 	
 	var ghDiv;

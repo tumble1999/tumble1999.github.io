@@ -20,7 +20,7 @@ $(function() {
 	
 	//console.log(ghDivs);
 
-	$('githubAuthor').each(function(id, object) {
+	$('.githubAuthor').each(function(id, object) {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
 		githubAPI("users/" + this.dataset.user,

@@ -1,11 +1,11 @@
 $(function() {
-	
+	var client_id =
 	var state = getQueryVariable('state');
 	if (state=="bZ0TyBHhOCS6goHFQ8qj") {
 		var code = getQueryVariable('code');
 		console.log(code);
 		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
-			var url = "https://api.github.com/user?access_tpken=" + data.token + "&callback=?";
+			var url = "https://api.github.com/user?access_token=" + data.token + "&callback=?";
 			$.getJSON(url, function(currentUser) {
 				localStorage.setItem("loggedIn", "true");
 				localStorage.setItem("loggedInUser", currentUser.data.login);
@@ -14,7 +14,7 @@ $(function() {
 			 });
 		});
 	} else {
-		window.location.replace('https://github.com/login/oauth/authorize?client_id=d303c3ac5d6e32f036a2&allow_signup=true&redirect_uri=http://tumble1999.github.io/login&state=bZ0TyBHhOCS6goHFQ8qj');
+		window.location.replace('https://github.com/login/oauth/authorize?client_id=' + client_id + '&allow_signup=true&redirect_uri=http://tumble1999.github.io/login&state=bZ0TyBHhOCS6goHFQ8qj');
 	}
 });
 

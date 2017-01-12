@@ -5,7 +5,7 @@ $(function() {
 		var code = getQueryVariable('code');
 		console.log(code);
 		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
-			$getJSON('https://api.github.com/user?access_token='+data.token+'&callback=?', function(data) {
+			$.getJSON('https://api.github.com/user?access_token='+data.token+'&callback=?', function(data) {
 				localStorge.setItem("loggedIn", "true");
 				localStorge.setItem("loggedInUser", data.data.login);
 				window.location.replace('/');

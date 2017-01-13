@@ -26,15 +26,15 @@ layout: null
 		
 		<!---SEO -->
 		<title>{{ page.title }} - {{ site.title }}</title>
-		<meta name=”description” content=”{{ page.excerpt | truncatewords: 155 }}”>
+		<meta name="description" content="{{ page.excerpt | truncatewords: 155 }}">
 		
-		<link rel=”author” href="https://plus.google.com/111376563355559216421"/>
-		<link rel=”publisher” href=”https://plus.google.com/+TumbleGamerTK”/>
+		<link rel="author" href="https://plus.google.com/111376563355559216421"/>
+		<link rel="publisher" href="https://plus.google.com/+TumbleGamerTK"/>
 		
 		<!-- Facebook -->
-		<meta property="og:title” content=”{{ page.title }}”/>
+		<meta property="og:title" content="{{ page.title }}”/>
 		<meta property="og:type” content=”article”/>
-		<meta property="og:image” content=””/>
+		<meta property="og:image” content=”{{ page.thumbnail }}”/>
 		<meta property="og:url” content=”{{ page.url }}”/>
 		<meta property="og:description” content=”{{ page.excerpt }}”/>
 		<meta property="fb:admins” content=”USER_ID”/>
@@ -42,9 +42,9 @@ layout: null
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:url" content="{{ page.url }}">
-		<meta name="twitter:title" content=”{{ page.title }}">
+		<meta name="twitter:title" content="{{ page.title }}">
 		<meta name="twitter:description" content="{{ page.excerpt }}">
-		<meta name="twitter:image" content="">
+		<meta name="twitter:image" content="{{ page.thumbnail }}">
 		
 		
 		

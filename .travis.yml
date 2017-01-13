@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.0.0
+- 2.1.0
 
 install:
   # Bundler downgrade should be removed when the issue is fixed upstream

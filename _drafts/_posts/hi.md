@@ -1,6 +1,6 @@
 ---
 title: hi
-date: '2017-01-13 14:25:27'
+date: '2017-01-13 00:00:00'
 thumbnail: ''
 categories: []
 tags: []

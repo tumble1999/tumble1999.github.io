@@ -29,9 +29,9 @@
   </fieldset>
 </form>
 
-<!-- Colored raised button -->
-<a href="/login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored user-logged-out">
+{% unless comment.reply %} <!-- Colored raised button -->
+<a href="/login?ref={{ site.url }}{{ page.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored user-logged-out">
   Login with GitHub to comment
 </a>
-
+{% endunless%}
 {% endunless %}

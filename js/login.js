@@ -17,7 +17,7 @@ $(function() {
 		});
 	} else {
 		localStorage.setItem("ref",ref);
-		window.location.replace('https://github.com/login/oauth/authorize?client_id=' + client_id + '&allow_signup=true&redirect_uri=http://tumble1999.github.io/login?ref=' + ref&state=bZ0TyBHhOCS6goHFQ8qj');
+		window.location.replace('https://github.com/login/oauth/authorize?client_id=' + client_id + '&allow_signup=true&redirect_uri=http://tumble1999.github.io/login&state=bZ0TyBHhOCS6goHFQ8qj');
 	}
 });
 

@@ -78,7 +78,7 @@ layout: null
 					{% for menu in site.data.menus %}
 					{% if menu.name == "Navbar" %}
 					{% for item in menu.items %}
-					<a class="mdl-navigation__link" href="{{ link.href }}">{{ link.name }}</a>
+					<a class="mdl-navigation__link" href="{{ item.href }}">{{ item.name }}</a>
 					{% endfor %}
 					{% endif %}
 					{% endfor %}

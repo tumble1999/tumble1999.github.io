@@ -1,8 +1,9 @@
+var access_token
+var admin;
+var loggedIn;
+var loggedInUser;
 $(function() { 
-	var access_token
-	var admin;
-	var loggedIn;
-	var loggedInUser;
+	
 	
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	

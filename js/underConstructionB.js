@@ -1,3 +1,3 @@
-if ({{ site.underConstruction }} === false) {
+if (underConstruction === false) {
   window.location.replace("/");
 }

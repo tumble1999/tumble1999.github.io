@@ -30,7 +30,7 @@ $(function() {
 	
 	getUserInfo(url, admins_url, function() {
 		
-		if (admin=="true") {
+		if (admin) {
 			$('.user-admin-only, #user-admin-only').show();
 			//$('.user-logged-out, #user-logged-out').hide();
 

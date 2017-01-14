@@ -29,6 +29,17 @@ $(function() {
 	}
 	
 	getUserInfo(url, admins_url, function() {
+		
+		if (admin=="true") {
+			$('.user-admin-only, #user-admin-only').show();
+			//$('.user-logged-out, #user-logged-out').hide();
+
+		} else {
+			$('.user-admin-only, #user-admin-only').hide();
+			//$('.user-logged-out, #user-logged-out').show();
+		}
+		
+		
 		var ghDiv;
 		var user;
 

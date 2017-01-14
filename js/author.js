@@ -13,11 +13,6 @@ $(function() {
 	  if(loggedIn=="true"){
 	    $('.user-logged-in, #user-logged-in').show();
 	    $('.user-logged-out, #user-logged-out').hide();
-		  
-		  //private boolean userexists(JSONArray jsonArray, String usernameToFind){
-   // return jsonArray.toString().contains("\"username\":\""+usernameToFind+"\"");
-//}
-
 	  } else {
 	    $('.user-logged-in, #user-logged-in').hide();
 	    $('.user-logged-out, #user-logged-out').show();

@@ -1,25 +1,31 @@
 $(function() { 
 	var access_token
 	var url;
+	var admins_url;
+	
+	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
 	var loggedIn = localStorage.getItem("loggedIn");
 	console.log(loggedIn);
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
+		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + access_token;
 		$('.user-logged-in, #user-logged-in').show();
 		$('.user-logged-out, #user-logged-out').hide();
 		
 	} else {
 		access_token = "";
 		url = "";
+		admins_url = "";
+		
 		loggedIn = "false";
 		localStorage.setItem("loggedIn", loggedIn);
 		$('.user-logged-in, #user-logged-in').hide();
 		$('.user-logged-out, #user-logged-out').show();
 	}
 	
-	getUserInfo(url, function() {
+	getUserInfo(url, admins_url, function() {
 		var ghDiv;
 		var user;
 
@@ -50,7 +56,7 @@ $(function() {
 	});
 });
 
-function getUserInfo(url, callback) {
+function getUserInfo(url, admins_url, callback) {
 	
 	$.getJSON(url, function(currentUser) {
 		var loggedInUser = currentUser.login;
@@ -63,7 +69,11 @@ function getUserInfo(url, callback) {
 		$('.newCommentUsername').val(loggedInUser);
 		$('.newCommentUsername').attr("value", loggedInUser );
 		$('.newCommentUsername').parent().addClass('is-dirty');
-		callback();
+		%.getJSON(admins_url, function(admins) {
+			admin = admins.filter(function(admin){ return admin.Name === loggedInUser });
+			console.log("ADMIN: " + admin);
+			callback();
+		}
 	});
 		
 	

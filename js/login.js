@@ -7,13 +7,15 @@ $(function() {
 		ref = localStorage.getItem('ref');
 		console.log("code:" + code);
 		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
-			var url = "https://api.github.com/user?access_token=" + data.token + "&client_id=" + client_id + "&callback=?";
+			localStorage.setItem("loggedIn", "true");
+			localStorage.SetItem("access_token", data.token);
+			
+			/*var url = "https://api.github.com/user?access_token=" + data.token + "&client_id=" + client_id + "&callback=?";
 			$.getJSON(url, function(currentUser) {
-				localStorage.setItem("loggedIn", "true");
 				localStorage.setItem("loggedInUser", currentUser.data.login);
 				console.log("currentUser.data.login: " + currentUser.data.login);
-				window.location.replace(ref);
-			 });
+			 });*/
+			window.location.replace(ref);
 		});
 	} else {
 		localStorage.setItem("ref", ref);

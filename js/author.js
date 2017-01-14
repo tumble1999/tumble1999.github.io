@@ -4,7 +4,7 @@ $(function() {
 	if (access_token==null) {
 		localStorage.setItem("loggedIn", "false");
 	} else {
-		var url = "https://api.github.io/users?access_token=" + access_token;
+		var url = "https://api.github.io/user?access_token=" + access_token;
 		$.getJSON(url, function(currentUser) {
 	 		var loggedInUser = currentUser.data.login;
 		});

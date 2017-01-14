@@ -17,7 +17,7 @@ $(function() {
 		$('.user-logged-out, #user-logged-out').show();
 	}
 	
-	getUserInfo(function() {
+	getUserInfo(url, function() {
 		var ghDiv;
 		var user;
 
@@ -48,7 +48,7 @@ $(function() {
 	});
 });
 
-function getUserInfo(callback) {
+function getUserInfo(url, callback) {
 	
 	$.getJSON(url, function(currentUser) {
 		var loggedInUser = currentUser.login;

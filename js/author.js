@@ -2,8 +2,8 @@ $(function() {
 	var access_token
 	var url;
 	var admins_url;
-	var admin_code_1 = "303394a5b68d14393d0"
-	var admin_code_2 = "c8d89ea2a9287565369fe"
+	var admin_code_1 = "ab85ff5428f26f488cd0"
+	var admin_code_2 = "3d7057b8ee5e536a4d06"
 	
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
@@ -12,7 +12,7 @@ $(function() {
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
-		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_code=" + admin_code_1 + admin_code_2;
+		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
 		$('.user-logged-in, #user-logged-in').show();
 		$('.user-logged-out, #user-logged-out').hide();
 		

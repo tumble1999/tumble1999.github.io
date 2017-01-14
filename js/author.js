@@ -102,9 +102,9 @@ function getUserInfo(url, admins_url, callback) {
 			}
 			console.log("ADMIN: " + admin);
 			if (admin) {
-				admin();
+				userIsAdmin();
 			} else {
-				notAdmin();
+				userIsNotAdmin();
 			}
 			callback();
 		});

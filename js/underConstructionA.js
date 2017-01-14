@@ -1,3 +1,4 @@
-if ({{ site.underConstruction }} === true) {
+
+if (underConstruction === true) {
   window.location.replace("/under-construction/");
 }

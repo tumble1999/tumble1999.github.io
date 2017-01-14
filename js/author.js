@@ -5,10 +5,12 @@ $(function() {
 	var admin_code_1 = "ab85ff5428f26f488cd0"
 	var admin_code_2 = "3d7057b8ee5e536a4d06"
 	var admin;
+	var loggedIn;
+	var loggedInUser;
 	
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
-	var loggedIn = localStorage.getItem("loggedIn");
+	loggedIn = localStorage.getItem("loggedIn");
 	console.log("Logged In: " + loggedIn);
 	if(loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
@@ -73,7 +75,7 @@ $(function() {
 function getUserInfo(url, admins_url, callback) {
 	
 	$.getJSON(url, function(currentUser) {
-		var loggedInUser = currentUser.login;
+		loggedInUser = currentUser.login;
 		console.log("Logged in user: " + loggedInUser);
 		$('#user-logged-in').attr("data-user", loggedInUser);
 		$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");

@@ -9,7 +9,7 @@ $(function() {
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
 	var loggedIn = localStorage.getItem("loggedIn");
-	console.log("Logged In: "loggedIn);
+	console.log("Logged In: " + loggedIn);
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;

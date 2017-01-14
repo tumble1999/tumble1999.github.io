@@ -10,7 +10,7 @@ $(function() {
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
-		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + access_token;
+		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=01139fd4635a9c3c5e3965b91a14e46c3a8f0d6b";
 		$('.user-logged-in, #user-logged-in').show();
 		$('.user-logged-out, #user-logged-out').hide();
 		

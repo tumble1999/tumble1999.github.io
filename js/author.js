@@ -74,7 +74,13 @@ function getUserInfo(url, admins_url, callback) {
 		$('.newCommentUsername').parent().addClass('is-dirty');
 		$.getJSON(admins_url, function(colabs) {
 			console.log(colabs);
-			colabs.filter(function(colab){ admin = colab.Name === loggedInUser });
+			admin = false;
+			for(var i = 0; i < colabs.length; i++) {
+			    if (colabs[i].login == loggedInUser') {
+				admin = true;
+				break;
+			    }
+			}
 			console.log("ADMIN: " + admin);
 			callback();
 		});

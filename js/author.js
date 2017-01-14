@@ -1,13 +1,13 @@
 $(function() { 
-	var accessToken = localStorage.getItem("accessToken");
+	var access_token = localStorage.getItem("access_token");
 	var loggedInUser;
-	if (accessToken=="") {
+	if (access_token=="") {
 		localStorage.setItem("loggedIn", "false");
 		loggedInUser = "";
 	} else {
-		var url = "https://api.github.com/user?access_token=" + accessToken;
+		var url = "https://api.github.com/user?access_token=" + access_token;
 		$.getJSON(url, function(currentUser) {
-	 		loggedInUser = currentUser.data.login;
+	 		loggedInUser = currentUser.login;
 		});
 		
 	}

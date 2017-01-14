@@ -1,7 +1,7 @@
 $(function() { 
 	var accessToken = localStorage.getItem("accessToken");
 	var loggedInUser;
-	if (access_token=="") {
+	if (accessToken=="") {
 		localStorage.setItem("loggedIn", "false");
 		loggedInUser = "";
 	} else {

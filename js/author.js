@@ -1,11 +1,11 @@
 $(function() { 
-	var access_token = localStorage.getItem("access_token");
+	var accessToken = localStorage.getItem("accessToken");
 	var loggedInUser;
-	if (access_token==null) {
+	if (access_token=="") {
 		localStorage.setItem("loggedIn", "false");
 		loggedInUser = "";
 	} else {
-		var url = "https://api.github.io/user?access_token=" + access_token;
+		var url = "https://api.github.io/user?access_token=" + accessToken;
 		$.getJSON(url, function(currentUser) {
 	 		loggedInUser = currentUser.data.login;
 		});

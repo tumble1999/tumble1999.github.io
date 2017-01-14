@@ -1,8 +1,12 @@
 $(function() { 
+	var access_token = localStorage.getItem("access_token");
+	var url = "https://api.github.io/users?access_token=" + access_token;
 	var loggedIn = localStorage.getItem("loggedIn");
-	  var loggedInUser = localStorage.getItem("loggedInUser");
+	getJSON(url, function(currentUser) {
+	 	var loggedInUser = currentUser.data.login;
+	});
 
-	  $('#user-logged-in').attr("data-user", loggedInUser);
+	$('#user-logged-in').attr("data-user", loggedInUser);
 	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
 	$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
 

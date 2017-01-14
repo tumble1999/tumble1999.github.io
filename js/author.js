@@ -18,42 +18,7 @@ $(function() {
 		loggedOut();
 	}
 	
-	getUserInfo(url, admins_url, function() {
-		
-		if (admin) {
-			admin();
-		} else {
-			notAdmin();
-		}
-		
-		
-		var ghDiv;
-		var user;
-
-		//console.log(ghDivs);
-
-		$('.githubAuthor').each(function(id, object) {
-			console.log(object);
-			console.log("USER:" + this.dataset.user);
-			githubAPI("users/" + this.dataset.user,
-				function(userInfo) {
-					console.log(userInfo.data);
-
-					$(object).find('.userName').text(userInfo.data.name);
-					$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
-				});
-
-			/* githubAPI("repos/" + user + "/" + repo, function(data) {
-				console.log("REPO: " + repo + "   USER: " + user);
-				repoInfo = data.data;
-				console.log("REPO_INFO");
-				console.log(repoInfo);
-				projectTitle = repoInfo.full_name;
-				projectDescription = repoInfo.description;
-				console.log(ghDiv.children(".projectTitle").text(projectTitle));
-			});*/
-
-		});
+	getUserInfo(url, admins_url, );
 	});
 	
 	function getUserInfo(url, admins_url, callback) {
@@ -76,6 +41,11 @@ $(function() {
 				    }
 				}
 				console.log("ADMIN: " + admin);
+				if (admin) {
+					admin();
+				} else {
+					notAdmin();
+				}
 				callback();
 			});
 		});
@@ -115,4 +85,32 @@ $(function() {
 		$('.user-admin-only, #user-admin-only').show();
 		//$('.user-logged-out, #user-logged-out').hide();
 	}
+
+function refresh() {		
+	var ghDiv;
+	var user;
+
+	//console.log(ghDivs);
+
+	$('.githubAuthor').each(function(id, object) {
+		console.log(object);
+		console.log("USER:" + this.dataset.user);
+		githubAPI("users/" + this.dataset.user, function(userInfo) {
+				console.log(userInfo.data);
+
+				$(object).find('.userName').text(userInfo.data.name);
+				$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
+		});
+
+		/* githubAPI("repos/" + user + "/" + repo, function(data) {
+			console.log("REPO: " + repo + "   USER: " + user);
+			repoInfo = data.data;
+			console.log("REPO_INFO");
+			console.log(repoInfo);
+			projectTitle = repoInfo.full_name;
+			projectDescription = repoInfo.description;
+			console.log(ghDiv.children(".projectTitle").text(projectTitle));
+		});*/
+	});
+}
 

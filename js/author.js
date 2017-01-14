@@ -4,40 +4,26 @@ var loggedIn;
 var loggedInUser;
 $(function() { 
 	
+	var url;
+	var admins_url;
+	
 	
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
 	loggedIn = localStorage.getItem("loggedIn");
 	console.log("Logged In: " + loggedIn);
 	if(loggedIn=="true") {
-		access_token = localStorage.getItem("access_token");
-		var url = "https://api.github.com/user?access_token=" + access_token;
-		var admin_code_1 = "ab85ff5428f26f488cd0"
-		var admin_code_2 = "3d7057b8ee5e536a4d06"
-		var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
-		$('.user-logged-in, #user-logged-in').show();
-		$('.user-logged-out, #user-logged-out').hide();
-		
+		loggedIn();
 	} else {
-		access_token = "";
-		url = "";
-		admins_url = "";
-		
-		loggedIn = "false";
-		localStorage.setItem("loggedIn", loggedIn);
-		$('.user-logged-in, #user-logged-in').hide();
-		$('.user-logged-out, #user-logged-out').show();
+		loggedOut();
 	}
 	
 	getUserInfo(url, admins_url, function() {
 		
 		if (admin) {
-			$('.user-admin-only, #user-admin-only').show();
-			//$('.user-logged-out, #user-logged-out').hide();
-
+			admin();
 		} else {
-			$('.user-admin-only, #user-admin-only').hide();
-			//$('.user-logged-out, #user-logged-out').show();
+			notAdmin();
 		}
 		
 		
@@ -69,34 +55,64 @@ $(function() {
 
 		});
 	});
+	
+	function getUserInfo(url, admins_url, callback) {
+		$.getJSON(url, function(currentUser) {
+			loggedInUser = currentUser.login;
+			console.log("Logged in user: " + loggedInUser);
+			$('#user-logged-in').attr("data-user", loggedInUser);
+			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+
+			$('.newCommentUsername').val(loggedInUser);
+			$('.newCommentUsername').attr("value", loggedInUser );
+			$('.newCommentUsername').parent().addClass('is-dirty');
+			$.getJSON(admins_url, function(colabs) {
+				//console.log(colabs);
+				for(var i = 0; i < colabs.length; i++) {
+				    if (colabs[i].login == loggedInUser) {
+					admin = true;
+					break;
+				    }
+				}
+				console.log("ADMIN: " + admin);
+				callback();
+			});
+		});
+
+
+	}
+
+	
+
+	
 });
 
-function getUserInfo(url, admins_url, callback) {
-	
-	$.getJSON(url, function(currentUser) {
-		loggedInUser = currentUser.login;
-		console.log("Logged in user: " + loggedInUser);
-		$('#user-logged-in').attr("data-user", loggedInUser);
-		$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
-		$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
-
+	function loggedIn() {
+		access_token = localStorage.getItem("access_token");
+		url = "https://api.github.com/user?access_token=" + access_token;
+		var admin_code_1 = "ab85ff5428f26f488cd0"
+		var admin_code_2 = "3d7057b8ee5e536a4d06"
+		admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
+		$('.user-logged-in, #user-logged-in').show();
+		$('.user-logged-out, #user-logged-out').hide();
+	}
+	function loggedOut() {
+		access_token = "";
+		url = "";
+		admins_url = "";
 		
-		$('.newCommentUsername').val(loggedInUser);
-		$('.newCommentUsername').attr("value", loggedInUser );
-		$('.newCommentUsername').parent().addClass('is-dirty');
-		$.getJSON(admins_url, function(colabs) {
-			//console.log(colabs);
-			for(var i = 0; i < colabs.length; i++) {
-			    if (colabs[i].login == loggedInUser) {
-				admin = true;
-				break;
-			    }
-			}
-			console.log("ADMIN: " + admin);
-			callback();
-		});
-	});
-		
-	
-}
+		loggedIn = "false";
+		localStorage.setItem("loggedIn", loggedIn);
+		$('.user-logged-in, #user-logged-in').hide();
+		$('.user-logged-out, #user-logged-out').show();
+	}
+	function notAdmin() {
+		$('.user-admin-only, #user-admin-only').hide();
+		//$('.user-logged-out, #user-logged-out').show();
+	}
+	function admin() {
+		$('.user-admin-only, #user-admin-only').show();
+		//$('.user-logged-out, #user-logged-out').hide();
+	}
 

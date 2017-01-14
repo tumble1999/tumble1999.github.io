@@ -1,5 +1,5 @@
 var access_token
-var admin;
+var admin = false;
 var loggedIn;
 var loggedInUser;
 $(function() { 
@@ -86,7 +86,6 @@ function getUserInfo(url, admins_url, callback) {
 		$('.newCommentUsername').parent().addClass('is-dirty');
 		$.getJSON(admins_url, function(colabs) {
 			//console.log(colabs);
-			admin = false;
 			for(var i = 0; i < colabs.length; i++) {
 			    if (colabs[i].login == loggedInUser) {
 				admin = true;

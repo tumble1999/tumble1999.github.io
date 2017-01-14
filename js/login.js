@@ -8,7 +8,7 @@ $(function() {
 		console.log("code:" + code);
 		$.getJSON('https://tumble1999-login.herokuapp.com/authenticate/'+code, function(data) {
 			localStorage.setItem("loggedIn", "true");
-			localStorage.SetItem("access_token", data.token);
+			localStorage.setItem("access_token", data.token);
 			
 			/*var url = "https://api.github.com/user?access_token=" + data.token + "&client_id=" + client_id + "&callback=?";
 			$.getJSON(url, function(currentUser) {

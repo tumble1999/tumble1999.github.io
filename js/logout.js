@@ -1,7 +1,5 @@
 $(function() {
-    localStorage.setItem("loggedIn", "false");
-    localStorage.setItem("access_token", "");
-    localStorage.setItem("ref", "");
+    localStorage.clear();
     //window.location.replace('/');
     history.back()
 });

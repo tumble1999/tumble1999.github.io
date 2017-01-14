@@ -1,5 +1,6 @@
 $(function() { 
 	var access_token = localStorage.getItem("access_token");
+	console.log(access_token);
 	var loggedInUser;
 	if (access_token=="") {
 		localStorage.setItem("loggedIn", "false");
@@ -8,6 +9,7 @@ $(function() {
 		var url = "https://api.github.com/user?access_token=" + access_token;
 		$.getJSON(url, function(currentUser) {
 	 		loggedInUser = currentUser.login;
+			console.log(loggedInUser);
 		});
 		
 	}

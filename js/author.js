@@ -2,7 +2,7 @@ $(function() {
 	var access_token = localStorage.getItem("access_token");
 	var url = "https://api.github.io/users?access_token=" + access_token;
 	var loggedIn = localStorage.getItem("loggedIn");
-	getJSON(url, function(currentUser) {
+	$.getJSON(url, function(currentUser) {
 	 	var loggedInUser = currentUser.data.login;
 	});
 

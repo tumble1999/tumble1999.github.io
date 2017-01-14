@@ -94,10 +94,29 @@ function refresh() {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
 		githubAPI("users/" + this.dataset.user, function(userInfo) {
-				console.log(userInfo.data);
+			console.log(userInfo.data);
+			
+			function adminTest(username) {
+				var admin_code_1 = "ab85ff5428f26f488cd0";
+				var admin_code_2 = "3d7057b8ee5e536a4d06";
+				admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
+				$.getJSON(admins_url, function(colabs) {
+					admin = "";
+					for(var i = 0; i < colabs.length; i++) {
+					    if (colabs[i].login == username) {
+						admin = "[ADMIN]";
+						break;
+					    }
+					}
+					return admin;
+				}
+			}
+					  function authorTest(username) {}
+				
+		
 
-				$(object).find('.userName').text(userInfo.data.name);
-				$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
+			$(object).find('.userName').text(adminTest(userInfo.data.name) + authur(userInfo.data.name) + userInfo.data.name);
+			$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
 		});
 
 		/* githubAPI("repos/" + user + "/" + repo, function(data) {

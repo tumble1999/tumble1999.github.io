@@ -14,14 +14,14 @@ function UserInit(callback) {
 	loggedIn = localStorage.getItem("loggedIn");
 	console.log("Logged In: " + loggedIn);
 	if(loggedIn=="true") {
-		userLoggedIn(callback());
+		loggedIn(callback());
 	} else {
-		userLoggedOut();
+		loggedOut();
 		callback();
 	}
 }
 
-function userLoggedIn(callback) {
+function loggedIn(callback) {
 	access_token = localStorage.getItem("access_token");
 	url = "https://api.github.com/user?access_token=" + access_token;
 	var admin_code_1 = "ab85ff5428f26f488cd0";
@@ -40,7 +40,7 @@ function userLoggedIn(callback) {
 		callback();
 	});
 }
-function userloggedOut() {
+function loggedOut() {
 	access_token = "";
 	url = "";
 	admins_url = "";

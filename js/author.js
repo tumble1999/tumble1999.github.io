@@ -4,6 +4,7 @@ $(function() {
 	var admins_url;
 	var admin_code_1 = "ab85ff5428f26f488cd0"
 	var admin_code_2 = "3d7057b8ee5e536a4d06"
+	var admin;
 	
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
@@ -72,7 +73,7 @@ function getUserInfo(url, admins_url, callback) {
 		$('.newCommentUsername').attr("value", loggedInUser );
 		$('.newCommentUsername').parent().addClass('is-dirty');
 		$.getJSON(admins_url, function(colabs) {
-			admin = colabs.filter(function(colab){ return colab.Name === loggedInUser });
+			colabs.filter(function(colab){ admin = colab.Name === loggedInUser });
 			console.log("ADMIN: " + admin);
 			callback();
 		});

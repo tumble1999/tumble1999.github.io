@@ -13,6 +13,8 @@ $(function() {
 	} else {
 		access_token = "";
 		url = "";
+		loggedIn = "false";
+		localStorage.setItem("loggedIn", loggedIn);
 		$('.user-logged-in, #user-logged-in').hide();
 		$('.user-logged-out, #user-logged-out').show();
 	}

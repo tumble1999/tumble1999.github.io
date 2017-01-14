@@ -8,25 +8,25 @@ $(function() {
 		$.getJSON(url, function(currentUser) {
 	 		var loggedInUser = currentUser.login;
 			console.log(loggedInUser);
+			$('#user-logged-in').attr("data-user", loggedInUser);
+			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+			
+			if(loggedIn=="true"){
+		    		$('.user-logged-in, #user-logged-in').show();
+		    		$('.user-logged-out, #user-logged-out').hide();
+		  	} else {
+		    		$('.user-logged-in, #user-logged-in').hide();
+		    		$('.user-logged-out, #user-logged-out').show();
+		  	}
+			$('.newCommentUsername').val(loggedInUser);
+			$('.newCommentUsername').attr("value", loggedInUser );
+			$('.newCommentUsername').parent().addClass('is-dirty');
 		});
 		
 	}
 
-
-	$('#user-logged-in').attr("data-user", loggedInUser);
-	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
-	$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
-
-	  if(loggedIn=="true"){
-	    $('.user-logged-in, #user-logged-in').show();
-	    $('.user-logged-out, #user-logged-out').hide();
-	  } else {
-	    $('.user-logged-in, #user-logged-in').hide();
-	    $('.user-logged-out, #user-logged-out').show();
-	  }
-	$('.newCommentUsername').val(loggedInUser);
-	$('.newCommentUsername').attr("value", loggedInUser );
-   	$('.newCommentUsername').parent().addClass('is-dirty');
+	
 	
 	var ghDiv;
 	var user;

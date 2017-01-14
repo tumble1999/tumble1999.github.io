@@ -8,18 +8,18 @@ $(function() {
 	
 	UserInit(refresh());
 	
-	function UserInit(ui_callback) {
+	function UserInit(callback) {
 		loggedIn = localStorage.getItem("loggedIn");
 		console.log("Logged In: " + loggedIn);
 		if(loggedIn=="true") {
-			userLoggedIn(ui_callback());
+			userLoggedIn(callback);
 		} else {
 			userLoggedOut();
-			ui_callback();
+			callback();
 		}
 	}
 
-	function userLoggedIn(uli_callback) {
+	function userLoggedIn(callback) {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
 		var admin_code_1 = "ab85ff5428f26f488cd0";
@@ -35,7 +35,7 @@ $(function() {
 			$('.newCommentUsername').val(loggedInUser);
 			$('.newCommentUsername').attr("value", loggedInUser );
 			$('.newCommentUsername').parent().addClass('is-dirty');
-			uli_callback();
+			callback();
 		});
 	}
 	function userLoggedOut() {
@@ -56,7 +56,7 @@ $(function() {
 		$('.user-admin-only, #user-admin-only').show();
 		//$('.user-logged-out, #user-logged-out').hide();
 	}
-	function getUserInfo(url, admins_url, gui_callback) {
+	function getUserInfo(url, admins_url, callback) {
 	$.getJSON(url, function(currentUser) {
 		loggedInUser = currentUser.login;
 		console.log("Logged in user: " + loggedInUser);
@@ -75,7 +75,7 @@ $(function() {
 			} else {
 				userIsNotAdmin();
 			}
-			gui_callback();
+			callback();
 		});
 	});
 

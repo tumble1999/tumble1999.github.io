@@ -1,5 +1,6 @@
 $(function() { 
-	var access_token;
+	var access_token
+	var url;
 	
 	var loggedIn = localStorage.getItem("loggedIn");
 	console.log(loggedIn);
@@ -48,7 +49,6 @@ $(function() {
 });
 
 function getUserInfo(callback) {
-	var url;
 	
 	$.getJSON(url, function(currentUser) {
 		var loggedInUser = currentUser.login;

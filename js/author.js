@@ -73,7 +73,7 @@ function getUserInfo(url, admins_url, callback) {
 			admin = admins.filter(function(admin){ return admin.Name === loggedInUser });
 			console.log("ADMIN: " + admin);
 			callback();
-		}
+		});
 	});
 		
 	

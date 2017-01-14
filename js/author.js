@@ -34,7 +34,7 @@ $(function() {
 function getUserInfo(callback) {
 	var url;
 	var loggedIn = localStorage.getItem("loggedIn");
-	console.log(access_token);
+	console.log(loggedIn);
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;

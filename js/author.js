@@ -109,9 +109,9 @@ function refresh() {
 					    }
 					}
 					return admin;
-				}
+				});
 			}
-					  function authorTest(username) {}
+			function authorTest(username) {}
 				
 		
 

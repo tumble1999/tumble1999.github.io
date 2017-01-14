@@ -86,12 +86,13 @@ layout: null
 
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 					    for="user-logged-out" >
-					  <a href="/login?ref={{ site.url }}{{ page.url }}"><li class="mdl-menu__item">Login</li></a>
+					  <a href="/login?ref={{ site.url }}{{ page.url }}" class="mdl-menu__item">Login</a>
 					</ul>
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 					    for="user-logged-in">
-					<a href class="loggedInUserProfile"><li class="mdl-menu__item">Profile</li></a>
-					<a href="/logout" class="mdl-menu__item">Logout</a>
+						<a href class="loggedInUserProfile mdl-menu__item">Profile</a>
+						<a href="/admin" class="user-admin-only mdl-menu__item">Admin</a>
+						<a href="/logout" class="mdl-menu__item">Logout</a>
 					</ul>
 					{% endunless %}
 				</div>

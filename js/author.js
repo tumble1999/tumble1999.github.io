@@ -38,7 +38,7 @@ function loggedIn(callback) {
 		$('.newCommentUsername').attr("value", loggedInUser );
 		$('.newCommentUsername').parent().addClass('is-dirty');
 		callback()
-	}
+	});
 }
 function loggedOut() {
 	access_token = "";

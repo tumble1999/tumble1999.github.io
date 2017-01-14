@@ -1,18 +1,17 @@
 $(function() { 
-	var access_token = localStorage.getItem("access_token");
+	
+	var loggedIn = localStorage.getItem("loggedIn");
 	console.log(access_token);
-	var loggedInUser;
-	if (access_token=="") {
-		localStorage.setItem("loggedIn", "false");
-	} else {
+	if (loggedIn=="true")
+		var access_token = localStorage.getItem("access_token");
 		var url = "https://api.github.com/user?access_token=" + access_token;
 		$.getJSON(url, function(currentUser) {
-	 		loggedInUser = currentUser.login;
+	 		varloggedInUser = currentUser.login;
 			console.log(loggedInUser);
 		});
 		
 	}
-	var loggedIn = localStorage.getItem("loggedIn");
+
 
 	$('#user-logged-in').attr("data-user", loggedInUser);
 	$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");

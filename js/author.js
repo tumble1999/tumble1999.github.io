@@ -9,7 +9,7 @@ $(function() {
 	//https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=
 	
 	var loggedIn = localStorage.getItem("loggedIn");
-	console.log(loggedIn);
+	console.log("Logged In: "loggedIn);
 	if (loggedIn=="true") {
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
@@ -63,7 +63,7 @@ function getUserInfo(url, admins_url, callback) {
 	
 	$.getJSON(url, function(currentUser) {
 		var loggedInUser = currentUser.login;
-		console.log(loggedInUser);
+		console.log("Logged in user: " + loggedInUser);
 		$('#user-logged-in').attr("data-user", loggedInUser);
 		$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
 		$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
@@ -73,7 +73,7 @@ function getUserInfo(url, admins_url, callback) {
 		$('.newCommentUsername').attr("value", loggedInUser );
 		$('.newCommentUsername').parent().addClass('is-dirty');
 		$.getJSON(admins_url, function(colabs) {
-			console.log(colabs);
+			//console.log(colabs);
 			admin = false;
 			for(var i = 0; i < colabs.length; i++) {
 			    if (colabs[i].login == loggedInUser) {

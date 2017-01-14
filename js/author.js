@@ -76,7 +76,7 @@ function getUserInfo(url, admins_url, callback) {
 			console.log(colabs);
 			admin = false;
 			for(var i = 0; i < colabs.length; i++) {
-			    if (colabs[i].login == loggedInUser') {
+			    if (colabs[i].login == loggedInUser) {
 				admin = true;
 				break;
 			    }

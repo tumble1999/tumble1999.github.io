@@ -10,9 +10,9 @@ outside-content: |-
        </p>
      </div>
      <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-       <button type="button" class="mdl-button close">Cancel</button>
-       <button type="button" class="mdl-button close">GitHub</button>
-       <button type="button" class="mdl-button close">This Website</button>
+       <button type="button" class="mdl-button close githubLogout">GitHub</button>
+       <button type="button" class="mdl-button close websiteLogout">This Website</button>
+       <button type="button" class="mdl-button close cancelLogout">Cancel</button>
      </div>
    </dialog>"
 ---

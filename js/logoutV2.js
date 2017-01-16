@@ -6,4 +6,15 @@ $(function() {
 
 noDialog = function(){
     $('.noDialog').hide();
+    var logoutWant = confirm("Would you like to logout?");
+    if (logoutWant) {
+        var github = confirm("Would you like to logout of github too?");
+        if (github) {
+
+        } else {
+            
+        }
+    } else {
+        history.back();
+    }
 }

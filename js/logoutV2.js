@@ -47,8 +47,8 @@ githubLogout = function() {
     
     var cacheURL = logoutWindow.location;
     while(cacheURL !== "https//github.com") {
-        console.log("no");
         if(logoutWindow.location != cacheURL) {
+            console.log("no");
             cacheURL = logoutWindow.location;
         }
     }

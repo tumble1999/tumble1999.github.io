@@ -119,7 +119,7 @@ function refresh() {
 				    }
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
-					author = "[CURRENT PAGE AUTHOR]"
+					author = "[AUTHOR]"
 				}
 				
 				$(object).find('.userName').text(admin + author + userInfo.name);

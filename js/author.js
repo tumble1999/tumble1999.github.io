@@ -6,7 +6,6 @@ $(function() {
 	var url = "";
 	var admins_url = "";
 	
-	UserInit(refresh());
 	$.when(UserInit).then(refresh);
 	
 	function UserInit() {

@@ -51,7 +51,7 @@ $(function() {
 					$('.newCommentUsername').attr("value", loggedInUser );
 					$('.newCommentUsername').parent().addClass('is-dirty');
 					console.log("userLoggedIn pt2");
-					callback;
+					callback();
 				});
 			});
 		} else {
@@ -64,7 +64,7 @@ $(function() {
 			localStorage.setItem("loggedIn", loggedIn);
 			$('.user-logged-in, #user-logged-in').hide();
 			$('.user-logged-out, #user-logged-out').show();
-			callback;
+			callback();
 		}
 	}
 

@@ -15,8 +15,7 @@ $(function() {
 		if(loggedIn=="true") {
 			userLoggedIn(callback);
 		} else {
-			userLoggedOut();
-			callback;
+			userLoggedOut(callback);
 		}
 	}
 
@@ -45,7 +44,7 @@ $(function() {
 		admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
 		getUserInfo(url, admins_url, loggedInTwo, callback);
 	}
-	function userLoggedOut() {
+	function userLoggedOut(callback) {
 		console.log("user Logged out");
 		access_token = "";
 		url = "";
@@ -55,6 +54,7 @@ $(function() {
 		localStorage.setItem("loggedIn", loggedIn);
 		$('.user-logged-in, #user-logged-in').hide();
 		$('.user-logged-out, #user-logged-out').show();
+		callback;
 	}
 	function userIsNotAdmin() {
 		$('.user-admin-only, #user-admin-only').hide();

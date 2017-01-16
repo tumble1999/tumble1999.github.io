@@ -9,6 +9,7 @@ $(function() {
 	UserInit(refresh());
 	
 	function UserInit(callback) {
+		console.log("userInit");
 		loggedIn = localStorage.getItem("loggedIn");
 		console.log("Logged In: " + loggedIn);
 		if(loggedIn=="true") {
@@ -20,6 +21,8 @@ $(function() {
 	}
 
 	function userLoggedIn(callback) {
+		console.log("userLoggedIn");
+		
 		access_token = localStorage.getItem("access_token");
 		url = "https://api.github.com/user?access_token=" + access_token;
 		var admin_code_1 = "ab85ff5428f26f488cd0";
@@ -31,14 +34,16 @@ $(function() {
 			$('#user-logged-in').attr("data-user", loggedInUser);
 			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
 			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
-
+			
 			$('.newCommentUsername').val(loggedInUser);
 			$('.newCommentUsername').attr("value", loggedInUser );
 			$('.newCommentUsername').parent().addClass('is-dirty');
+			console.log("userLoggedIn pt2);
 			callback;			
 		});
 	}
 	function userLoggedOut() {
+		console.log("user Logged out");
 		access_token = "";
 		url = "";
 		admins_url = "";
@@ -115,7 +120,7 @@ function refresh() {
 				
 		
 
-			$(object).find('.userName').text(adminTest(userInfo.data.name) + authorTest(userInfo.data.name) + userInfo.data.name);
+			//$(object).find('.userName').text(adminTest(userInfo.data.name) + authorTest(userInfo.data.name) + userInfo.data.name);
 			$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
 		});
 

@@ -11,9 +11,9 @@ $(function() {
       dialog.close();
     });*/
     
-    $('.closeLogout').click(function(){
+    $('button.closeLogout').click(function(){
         history.back();
-        dialog.close();
+        //dialog.close();
     });
 });
 

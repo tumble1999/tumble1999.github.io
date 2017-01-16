@@ -105,36 +105,25 @@ function refresh() {
 		var admin_code_1 = "ab85ff5428f26f488cd0";
 			var admin_code_2 = "3d7057b8ee5e536a4d06";
 			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
-		
-		
+		var admin = "";
 		$.getJSON(url, function(userInfo) {
-			
-			
-			
 			console.log(userInfo);
 			
-			adminTest = function(username) {
-				var admin = "";
-				var admin_code_1 = "ab85ff5428f26f488cd0";
-				var admin_code_2 = "3d7057b8ee5e536a4d06";
-				var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
-				$.getJSON(admins_url, function(colabs) {
-					
-					for(var i = 0; i < colabs.length; i++) {
-					    if (colabs[i].login == username) {
-						admin =  "[ADMIN]";
-						break;
-					    }
-					}
-					return admin;
-					
-				});
-			}
+			var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
+			$.getJSON(admins_url, function(colabs) {
+				for(var i = 0; i < colabs.length; i++) {
+				    if (colabs[i].login == userInfo.login) {
+					admin =  "[ADMIN]";
+					break;
+				    }
+				}
 				
-		
+				$(object).find('.userName').text(admin + userInfo.name);
+				$(object).find('.userImg').attr("src", userInfo.avatar_url);
 
-			$(object).find('.userName').text(adminTest(userInfo.login) + userInfo.name);
-			$(object).find('.userImg').attr("src", userInfo.avatar_url);
+			});
+
+			
 		});
 
 		/* githubAPI("repos/" + user + "/" + repo, function(data) {

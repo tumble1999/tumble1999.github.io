@@ -122,7 +122,7 @@ function refresh() {
 					author = "[CURRENT PAGE AUTHOR]"
 				}
 				
-				$(object).find('.userName').text(admin + userInfo.name);
+				$(object).find('.userName').text(admin + author + userInfo.name);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
 
 			});

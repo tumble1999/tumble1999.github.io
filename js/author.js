@@ -7,19 +7,20 @@ $(function() {
 	var admins_url = "";
 	
 	UserInit(refresh());
+	$.when(UserInit).then(refresh);
 	
-	function UserInit(callback) {
+	function UserInit() {
 		console.log("userInit");
 		loggedIn = localStorage.getItem("loggedIn");
 		console.log("Logged In: " + loggedIn);
 		if(loggedIn=="true") {
-			userLoggedIn(callback);
+			userLoggedIn();
 		} else {
-			userLoggedOut(callback);
+			userLoggedOut();
 		}
 	}
 
-	function userLoggedIn(callback) {
+	function userLoggedIn() {
 		console.log("userLoggedIn");
 		
 		loggedInTwo = function() {
@@ -43,10 +44,9 @@ $(function() {
 			$('.newCommentUsername').attr("value", loggedInUser );
 			$('.newCommentUsername').parent().addClass('is-dirty');
 			console.log("userLoggedIn pt2");
-			callback;
 		});
 	}
-	function userLoggedOut(callback) {
+	function userLoggedOut() {
 		console.log("user Logged out");
 		access_token = "";
 		url = "";
@@ -56,7 +56,6 @@ $(function() {
 		localStorage.setItem("loggedIn", loggedIn);
 		$('.user-logged-in, #user-logged-in').hide();
 		$('.user-logged-out, #user-logged-out').show();
-		callback;
 	}
 	function userIsNotAdmin() {
 		$('.user-admin-only, #user-admin-only').hide();

@@ -23,17 +23,7 @@ $(function() {
 		console.log("userLoggedIn");
 		
 		loggedInTwo = function() {
-		$('.user-logged-in, #user-logged-in').show();
-			$('.user-logged-out, #user-logged-out').hide();
-			$('#user-logged-in').attr("data-user", loggedInUser);
-			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
-			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
-			
-			$('.newCommentUsername').val(loggedInUser);
-			$('.newCommentUsername').attr("value", loggedInUser );
-			$('.newCommentUsername').parent().addClass('is-dirty');
-			console.log("userLoggedIn pt2");
-			callback;
+		
 		}
 		
 		
@@ -42,7 +32,19 @@ $(function() {
 		var admin_code_1 = "ab85ff5428f26f488cd0";
 		var admin_code_2 = "3d7057b8ee5e536a4d06";
 		admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
-		getUserInfo(url, admins_url, loggedInTwo, callback);
+		getUserInfo(url, admins_url, function() {
+			$('.user-logged-in, #user-logged-in').show();
+			$('.user-logged-out, #user-logged-out').hide();
+			$('#user-logged-in').attr("data-user", loggedInUser);
+			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+
+			$('.newCommentUsername').val(loggedInUser);
+			$('.newCommentUsername').attr("value", loggedInUser );
+			$('.newCommentUsername').parent().addClass('is-dirty');
+			console.log("userLoggedIn pt2");
+			callback;
+		});
 	}
 	function userLoggedOut(callback) {
 		console.log("user Logged out");
@@ -64,7 +66,7 @@ $(function() {
 		$('.user-admin-only, #user-admin-only').show();
 		//$('.user-logged-out, #user-logged-out').hide();
 	}
-	function getUserInfo(url, admins_url, callback, callbackCallback) {
+	function getUserInfo(url, admins_url, callback) {
 	$.getJSON(url, function(currentUser) {
 		loggedInUser = currentUser.login;
 		console.log("Logged in user: " + loggedInUser);
@@ -83,7 +85,7 @@ $(function() {
 			} else {
 				userIsNotAdmin();
 			}
-			callback(callbackCallback);
+			callback;
 		});
 	});
 

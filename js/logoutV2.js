@@ -43,9 +43,14 @@ noDialog = function(){
 }
 
 githubLogout = function() {
-    logoutWindow = window.open("https://google.com", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=367,height=461");
+    logoutWindow = window.open("/logout/github", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=367,height=461");
     
-    var cacheURL = logoutWindow.location;
+    var pollTimer = window.setInterval(function() {
+    if (logoutWindow.closed !== false) { // !== is required for compatibility with Opera
+        window.clearInterval(pollTimer);
+        normalLogout()
+    }
+}, 200);
     
     
 }
@@ -53,9 +58,4 @@ githubLogout = function() {
 normalLogout = function() {
     localStorage.clear();
     history.back();
-}
-
-getURL = function() {
-console.log(logoutWindow.location);
-console.log(logoutWindow.location.href);
 }

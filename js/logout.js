@@ -53,16 +53,13 @@ githubLogout = function() {
 
     var left = ((width / 2) - (w / 2)) + dualScreenLeft;
     var top = ((height / 2) - (h / 2)) + dualScreenTop;
-    var newWindow = window.open(url, title, 'scrollbars=yes, width=367, height=461, top=' + top + ', left=' + left);
+    logoutWindow = window.open("/logout/github", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, width=367, height=461, top=' + top + ', left=' + left);
 
     // Puts focus on the newWindow
     if (window.focus) {
-        newWindow.focus();
+        logoutWindow.focus();
     }
     
-    
-    
-    logoutWindow = window.open("/logout/github", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=367,height=461");
     
     var pollTimer = window.setInterval(function() {
     if (logoutWindow.closed !== false) { // !== is required for compatibility with Opera

@@ -12,9 +12,13 @@ $(function() {
     });*/
     
     dialog.querySelector('.githubLogout').addEventListener('click', function() {
+        $('.noDialog').hide();
+        githubLogout();
         dialog.close();
     });
     dialog.querySelector('.websiteLogout').addEventListener('click', function() {
+        $('.noDialog').hide();
+        normalLogout();
         dialog.close();
     });
     dialog.querySelector('.cancelLogout').addEventListener('click', function() {

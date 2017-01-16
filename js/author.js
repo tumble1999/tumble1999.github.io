@@ -139,9 +139,9 @@ function refresh() {
 function amIAnAdmin() {
 	if(loggedIn == "true") {
 		if(admin) {
-			console.log("Yes" + loggedInUser +  ", you are!");
+			console.log("Yes " + loggedInUser +  ", you are!");
 		} else {
-			console.log("No" + loggedInUser +  ", stop begging.");
+			console.log("No " + loggedInUser +  ", stop begging.");
 		}
 	} else {
 		console.log("How would I know, your not even logged in!");

@@ -5,3 +5,6 @@ $(function() {
     history.back()
 });
 
+noDialog = function(){
+    $('.noDialog').hide();
+}

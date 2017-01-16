@@ -46,15 +46,10 @@ githubLogout = function() {
     logoutWindow = window.open("https://github.com/logout", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=367,height=461");
     
     var cacheURL = logoutWindow.location;
-    while(cacheURL !== "https//github.com") {
-        if(logoutWindow.location != cacheURL) {
-            console.log("no");
-            cacheURL = logoutWindow.location;
-        }
-    }
-    console.log("yes");
-    console.log(logoutWindow.location);
-    //normalLogout();
+    
+    logoutWindow.addEventListener('load', function() {
+        console.log("hi");
+    });
     
 }
 

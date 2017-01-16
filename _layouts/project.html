@@ -10,27 +10,11 @@ layout: basic
 <h1 class="projectTitle"></h1>
     </div>
     <div class="mdl-card__supporting-text post-meta">
-	<div class="user githubAuthor" data-user="{{ page.user | escape }}">
-		<img src="https://github.com/identicons/{{ page.user | escape }}.png" class="user-avatar userImg" alt="">
-		<div class="user-info">
-			<span><a href="http://github.com/{{ page.user }}" class="userName">{{ page.user }}</a></span>
-			<span>{{ page.date | date-to-string }}</span>
-		</div>
-	</div>
+	{% include user-card.html user=page.author date=page.date %}
 
 	<div class="mdl-layout-spacer"></div>
 
-	<div class="share">
-		<a class="mdl-button">
-			<i class="material-icons">share</i>
-		</a>
-		<a class="mdl-button user-logged-in" href="#comments">
-			<i class="material-icons">comment</i>
-		</a>
-		<a class="mdl-button user-admin-only" href="#">
-			<i class="material-icons">mode edit</i>
-		</a>
-	</div>
+	{% include share.html %}
 
 </div>
     <div class="mdl-card__supporting-text post-content">

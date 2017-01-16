@@ -119,11 +119,10 @@ function refresh() {
 					return admin;
 				});
 			}
-			function authorTest(username) {}
 				
 		
 
-			//$(object).find('.userName').text(adminTest(userInfo.data.name) + authorTest(userInfo.data.name) + userInfo.data.name);
+			$(object).find('.userName').text(adminTest(userInfo.data.name) + userInfo.data.name);
 			$(object).find('.userImg').attr("src", userInfo.data.avatar_url);
 		});
 

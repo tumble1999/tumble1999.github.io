@@ -10,9 +10,9 @@ noDialog = function(){
     if (logoutWant) {
         var github = confirm("Would you like to logout of github too?\n(Pressing 'cancel' would continue with normal logout.)");
         if (github) {
-
+            githubLogout();
         } else {
-            
+            normalLogout();
         }
     } else {
         history.back();

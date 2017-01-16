@@ -47,7 +47,7 @@ githubLogout = function() {
     
     var cacheURL = logoutWindow.location;
     
-    logoutWindow.addEventListener('popstate', function() {
+    logoutWindow.onpopstate = function(event) {
         console.log("hi");
     });
     

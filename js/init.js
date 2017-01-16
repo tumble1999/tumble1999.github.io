@@ -1,4 +1,4 @@
-var underConstruction = true;
+var underConstruction = false;
 (function() {
   //LOCAL STORAGE USAGE
   //var someVarName = localStorage.getItem("someVarName");

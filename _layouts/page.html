@@ -5,27 +5,11 @@ layout: basic
 	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 </div>
 <div class="mdl-card__supporting-text post-meta">
-	<div class="user githubAuthor" data-user="{{ page.author | escape }}">
-		<img src="https://github.com/identicons/{{ page.author | escape }}.png" class="user-avatar userImg" alt="">
-		<div class="user-info">
-			<span><a href="http://github.com/{{ page.author }}" class="userName">{{ page.author }}</a> - <a href="{{ site.data.authors[page.author].google+ }}?rel=author">Google+</a></span>
-			<span>{{ page.date | date-to-string }}</span>
-		</div>
-	</div>
+	{% include user-card.html user=page.author date=page.date %}
 
 	<div class="mdl-layout-spacer"></div>
 
-	<div class="share">
-		<a class="mdl-button">
-			<i class="material-icons">share</i>
-		</a>
-		<a class="mdl-button user-logged-in" href="#comments">
-			<i class="material-icons">comment</i>
-		</a>
-		<a class="mdl-button user-admin-only" href="#">
-			<i class="material-icons">mode edit</i>
-		</a>
-	</div>
+	{% include share.html %}
 
 </div>
 <div class="mdl-card__supporting-text post-content">

@@ -1,5 +1,5 @@
 ---
-title: Logging Out... (V2 Test)
+title: Logging Out..
 layout: search
 outside-content: |-
   "<dialog class="mdl-dialog">
@@ -20,7 +20,7 @@ outside-content: |-
 Please wait
 <a class="noDialog" href="javascript:noDialog()">Nothing is happening.</a>
 
-<script src="/js/logoutV2.js"></script>
+<script src="/js/logout.js"></script>
 
 
 

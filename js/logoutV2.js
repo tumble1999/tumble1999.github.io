@@ -55,7 +55,7 @@ normalLogout = function() {
     history.back();
 }
 
-getURL() {
+getURL = function() {
 console.log(logoutWindow.location);
 console.log(logoutWindow.location.href);
 }

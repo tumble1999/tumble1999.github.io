@@ -101,7 +101,7 @@ function refresh() {
 		githubAPI("users/" + this.dataset.user, function(userInfo) {
 			console.log(userInfo.data);
 			
-			function adminTest(username) {
+			adminTest = function(username) {
 				var admin_code_1 = "ab85ff5428f26f488cd0";
 				var admin_code_2 = "3d7057b8ee5e536a4d06";
 				admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
@@ -153,7 +153,7 @@ function amILoggedIn() {
 	if(loggedIn == "true") {
 		console.log("Yes.  Welcome " + loggedInUser + ".");
 	} else {
-		console.log("No. Go away strager");
+		console.log("No. Go away stranger");
 	}
 }
 

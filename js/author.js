@@ -15,7 +15,7 @@ $(function() {
 			userLoggedIn(callback);
 		} else {
 			userLoggedOut();
-			callback();
+			callback;
 		}
 	}
 

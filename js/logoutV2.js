@@ -7,12 +7,13 @@ $(function() {
       dialogPolyfill.registerDialog(dialog);
     }
       dialog.showModal();
-    dialog.querySelector('.close').addEventListener('click', function() {
+    /*dialog.querySelector('.close').addEventListener('click', function() {
       dialog.close();
-    });
+    });*/
     
     $('.closeLogout').click(function(){
-    history.back();
+        history.back();
+        dialog.close();
     });
 });
 

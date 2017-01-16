@@ -111,21 +111,23 @@ function refresh() {
 			
 			
 			
-			console.log(userInfo.data);
+			console.log(userInfo);
 			
 			adminTest = function(username) {
 				var admin_code_1 = "ab85ff5428f26f488cd0";
 				var admin_code_2 = "3d7057b8ee5e536a4d06";
 				var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
 				$.getJSON(admins_url, function(colabs) {
-					var admin = "";
+					
 					for(var i = 0; i < colabs.length; i++) {
 					    if (colabs[i].login == username) {
-						admin = "[ADMIN]";
+						return "[ADMIN]";
 						break;
 					    }
 					}
-					return admin;
+					return "";
+					break;
+					
 				});
 			}
 				
@@ -164,7 +166,7 @@ function amILoggedIn() {
 	if(loggedIn == "true") {
 		console.log("Yes.  Welcome " + loggedInUser + ".");
 	} else {
-		console.log("No. Go away stranger");
+		console.log("No. Go away stranger.");
 	}
 }
 

@@ -101,12 +101,19 @@ function refresh() {
 	$('.githubAuthor').each(function(id, object) {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
-		githubAPI("users/" + this.dataset.user, function(userInfo) {
+		
+		var admin_code_1 = "ab85ff5428f26f488cd0";
+			var admin_code_2 = "3d7057b8ee5e536a4d06";
+			url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/users/" + thjis.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
+		
+		
+		$.getJSON(url, function(userInfo) {
+			
+			
+			
 			console.log(userInfo.data);
 			
 			adminTest = function(username) {
-				var admin_code_1 = "ab85ff5428f26f488cd0";
-				var admin_code_2 = "3d7057b8ee5e536a4d06";
 				admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
 				$.getJSON(admins_url, function(colabs) {
 					admin = "";

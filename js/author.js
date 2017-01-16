@@ -5,17 +5,7 @@ var loggedInUser = "";
 $(function() {
 	var url = "";
 	var admins_url = "";
-	
-	$('.user-admin-only, #user-admin-only').hide();
-	console.log("user Logged out");
-	access_token = "";
-	url = "";
-	admins_url = "";
 
-	loggedIn = "false";
-	localStorage.setItem("loggedIn", loggedIn);
-	$('.user-logged-in, #user-logged-in').hide();
-	$('.user-logged-out, #user-logged-out').show();
 	UserInit(refresh);
 	
 	function UserInit(callback) {
@@ -73,6 +63,7 @@ $(function() {
 			localStorage.setItem("loggedIn", loggedIn);
 			$('.user-logged-in, #user-logged-in').hide();
 			$('.user-logged-out, #user-logged-out').show();
+			$('.user-admin-only, #user-admin-only').hide();
 			callback();
 		}
 	}

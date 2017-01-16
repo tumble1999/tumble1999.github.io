@@ -49,12 +49,7 @@ githubLogout = function() {
     
     logoutWindow.onpopstate = function(event) {
         console.log("hi");
-    });
-    
-    const pushUrl = (href) => {
-        history.pushState({}, '', href);
-        window.dispatchEvent(new Event('popstate'));
-};
+    }
     
 }
 

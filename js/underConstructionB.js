@@ -1,3 +1,3 @@
-if (underConstruction === false) {
+if (!underConstruction) {
   window.location.replace("/");
 }

@@ -106,6 +106,7 @@ function refresh() {
 			var admin_code_2 = "3d7057b8ee5e536a4d06";
 			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
 		var admin = "";
+		var author = "";
 		$.getJSON(url, function(userInfo) {
 			console.log(userInfo);
 			
@@ -113,9 +114,12 @@ function refresh() {
 			$.getJSON(admins_url, function(colabs) {
 				for(var i = 0; i < colabs.length; i++) {
 				    if (colabs[i].login == userInfo.login) {
-					admin =  "[ADMIN]";
+					admin =  "[ADMIN] ";
 					break;
 				    }
+				}
+				if(_PAGE_AUTHOR_ == userInfo.login) {
+					author = "[CURRENT PAGE AUTHOR]"
 				}
 				
 				$(object).find('.userName').text(admin + userInfo.name);

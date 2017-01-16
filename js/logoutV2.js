@@ -11,7 +11,9 @@ $(function() {
       dialog.close();
     });
     
-    $('.closeLogout').click(history.back);
+    $('.closeLogout').click(function(){
+    history.back();
+    });
 });
 
 noDialog = function(){

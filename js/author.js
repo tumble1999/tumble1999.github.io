@@ -6,6 +6,7 @@ $(function() {
 	var url = "";
 	var admins_url = "";
 	
+	$('.user-logged-in, #user-logged-in').hide();
 	UserInit(refresh);
 	
 	function UserInit(callback) {
@@ -34,10 +35,10 @@ $(function() {
 					}
 					console.log("ADMIN: " + admin);
 					if (admin) {
-						$('.user-admin-only, #user-admin-only').hide();
+						$('.user-admin-only, #user-admin-only').show();
 						//$('.user-logged-out, #user-logged-out').show();
 					} else {
-						$('.user-admin-only, #user-admin-only').show();
+						$('.user-admin-only, #user-admin-only').hide();
 						//$('.user-logged-out, #user-logged-out').hide();
 					}
 					$('.user-logged-in, #user-logged-in').show();

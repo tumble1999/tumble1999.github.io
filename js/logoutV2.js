@@ -11,9 +11,15 @@ $(function() {
       dialog.close();
     });*/
     
-    $('button.closeLogout').click(function(){
+    dialog.querySelector('.githubLogout').addEventListener('click', function() {
+        dialog.close();
+    });
+    dialog.querySelector('.websiteLogout').addEventListener('click', function() {
+        dialog.close();
+    });
+    dialog.querySelector('.cancelLogout').addEventListener('click', function() {
         history.back();
-        //dialog.close();
+        dialog.close();
     });
 });
 

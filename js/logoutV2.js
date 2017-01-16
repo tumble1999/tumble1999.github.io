@@ -6,7 +6,7 @@ noDialog = function(){
     $('.noDialog').hide();
     var logoutWant = confirm("Would you like to logout?");
     if (logoutWant) {
-        var github = confirm("Would you like to logout of github too?");
+        var github = confirm("Would you like to logout of github too?\n(Pressing 'cancel' would continue with normal logout.)");
         if (github) {
 
         } else {

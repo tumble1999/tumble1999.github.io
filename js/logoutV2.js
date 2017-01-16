@@ -10,6 +10,8 @@ $(function() {
     dialog.querySelector('.close').addEventListener('click', function() {
       dialog.close();
     });
+    
+    $('.closeLogout').click(history.back);
 });
 
 noDialog = function(){

@@ -51,6 +51,11 @@ githubLogout = function() {
         console.log("hi");
     });
     
+    const pushUrl = (href) => {
+        history.pushState({}, '', href);
+        window.dispatchEvent(new Event('popstate'));
+};
+    
 }
 
 normalLogout = function() {

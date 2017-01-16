@@ -9,7 +9,7 @@ outside-content: |-
         Would you like to sign out of [GitHub] and this website or just [this website].
        </p>
      </div>
-     <div class="mdl-dialog__actions">
+     <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
        <button type="button" class="mdl-button close">Cancel</button>
        <button type="button" class="mdl-button close">GitHub</button>
        <button type="button" class="mdl-button close">This Website</button>

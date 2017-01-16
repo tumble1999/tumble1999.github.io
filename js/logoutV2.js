@@ -47,13 +47,15 @@ githubLogout = function() {
     
     var cacheURL = logoutWindow.location;
     
-    logoutWindow.onpopstate = function(event) {
-        console.log("hi");
-    }
     
 }
 
 normalLogout = function() {
     localStorage.clear();
     history.back();
+}
+
+getURL() {
+console.log(logoutWindow.location);
+console.log(logoutWindow.location.href);
 }

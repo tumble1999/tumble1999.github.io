@@ -114,6 +114,7 @@ function refresh() {
 			console.log(userInfo);
 			
 			adminTest = function(username) {
+				var admin = "";
 				var admin_code_1 = "ab85ff5428f26f488cd0";
 				var admin_code_2 = "3d7057b8ee5e536a4d06";
 				var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
@@ -121,11 +122,11 @@ function refresh() {
 					
 					for(var i = 0; i < colabs.length; i++) {
 					    if (colabs[i].login == username) {
-						return "[ADMIN]";
+						admin =  "[ADMIN]";
 						break;
 					    }
 					}
-					return "";
+					return admin;
 					break;
 					
 				});

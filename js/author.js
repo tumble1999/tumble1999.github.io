@@ -104,7 +104,7 @@ function refresh() {
 		
 		var admin_code_1 = "ab85ff5428f26f488cd0";
 			var admin_code_2 = "3d7057b8ee5e536a4d06";
-			url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
+			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
 		
 		
 		$.getJSON(url, function(userInfo) {

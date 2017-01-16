@@ -127,7 +127,6 @@ function refresh() {
 					    }
 					}
 					return admin;
-					break;
 					
 				});
 			}

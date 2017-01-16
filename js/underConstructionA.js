@@ -1,4 +1,4 @@
 
-if (underConstruction === true) {
+if (underConstruction) {
   window.location.replace("/under-construction/");
 }

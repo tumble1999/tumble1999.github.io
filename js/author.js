@@ -38,7 +38,7 @@ $(function() {
 			$('.newCommentUsername').val(loggedInUser);
 			$('.newCommentUsername').attr("value", loggedInUser );
 			$('.newCommentUsername').parent().addClass('is-dirty');
-			console.log("userLoggedIn pt2);
+			console.log("userLoggedIn pt2");
 			callback;			
 		});
 	}

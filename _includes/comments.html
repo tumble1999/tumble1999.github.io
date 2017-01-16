@@ -15,6 +15,7 @@
 				<span>{{ commentData.date | date: "%b %-d, %Y" }}</span>
 			</div>
 		</div>
+		{% include user-card.html user=commentData.name date=commentData.date %}
 	</header>
 	<div class="comment__text">
 		{{ commentData.message }}
@@ -37,6 +38,7 @@
 						<span>{{ commentReplyData.date  | date: "%b %-d, %Y" }}</span>
 					</div>
 				</div>
+				{% include user-card.html user=commentReplyData.name date=commentReplyData.date %}
 				
 			</header>
 			<div class="comment__text">

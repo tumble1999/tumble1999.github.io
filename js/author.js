@@ -6,89 +6,83 @@ $(function() {
 	var url = "";
 	var admins_url = "";
 	
-	$.when(UserInit).then(refresh);
+	UserInit(refresh);
 	
-	function UserInit() {
+	function UserInit(callback) {
 		console.log("userInit");
 		loggedIn = localStorage.getItem("loggedIn");
 		console.log("Logged In: " + loggedIn);
 		if(loggedIn=="true") {
-			userLoggedIn();
+			console.log("userLoggedIn");
+
+			access_token = localStorage.getItem("access_token");
+			url = "https://api.github.com/user?access_token=" + access_token;
+			var admin_code_1 = "ab85ff5428f26f488cd0";
+			var admin_code_2 = "3d7057b8ee5e536a4d06";
+			admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
+			$.getJSON(url, function(currentUser) {
+				loggedInUser = currentUser.login;
+				console.log("Logged in user: " + loggedInUser);
+
+				$.getJSON(admins_url, function(colabs) {
+					//console.log(colabs);
+					for(var i = 0; i < colabs.length; i++) {
+					    if (colabs[i].login == loggedInUser) {
+						admin = true;
+						break;
+					    }
+					}
+					console.log("ADMIN: " + admin);
+					if (admin) {
+						$('.user-admin-only, #user-admin-only').hide();
+						//$('.user-logged-out, #user-logged-out').show();
+					} else {
+						$('.user-admin-only, #user-admin-only').show();
+						//$('.user-logged-out, #user-logged-out').hide();
+					}
+					$('.user-logged-in, #user-logged-in').show();
+					$('.user-logged-out, #user-logged-out').hide();
+					$('#user-logged-in').attr("data-user", loggedInUser);
+					$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+					$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+
+					$('.newCommentUsername').val(loggedInUser);
+					$('.newCommentUsername').attr("value", loggedInUser );
+					$('.newCommentUsername').parent().addClass('is-dirty');
+					console.log("userLoggedIn pt2");
+					callback;
+				});
+			});
 		} else {
-			userLoggedOut();
+			console.log("user Logged out");
+			access_token = "";
+			url = "";
+			admins_url = "";
+
+			loggedIn = "false";
+			localStorage.setItem("loggedIn", loggedIn);
+			$('.user-logged-in, #user-logged-in').hide();
+			$('.user-logged-out, #user-logged-out').show();
+			callback;
 		}
 	}
 
 	function userLoggedIn() {
-		console.log("userLoggedIn");
 		
-		loggedInTwo = function() {
-		
-		}
-		
-		
-		access_token = localStorage.getItem("access_token");
-		url = "https://api.github.com/user?access_token=" + access_token;
-		var admin_code_1 = "ab85ff5428f26f488cd0";
-		var admin_code_2 = "3d7057b8ee5e536a4d06";
-		admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
-		getUserInfo(url, admins_url, function() {
-			$('.user-logged-in, #user-logged-in').show();
-			$('.user-logged-out, #user-logged-out').hide();
-			$('#user-logged-in').attr("data-user", loggedInUser);
-			$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
-			$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
-
-			$('.newCommentUsername').val(loggedInUser);
-			$('.newCommentUsername').attr("value", loggedInUser );
-			$('.newCommentUsername').parent().addClass('is-dirty');
-			console.log("userLoggedIn pt2");
-		});
 	}
 	function userLoggedOut() {
-		console.log("user Logged out");
-		access_token = "";
-		url = "";
-		admins_url = "";
-
-		loggedIn = "false";
-		localStorage.setItem("loggedIn", loggedIn);
-		$('.user-logged-in, #user-logged-in').hide();
-		$('.user-logged-out, #user-logged-out').show();
+		
 	}
 	function userIsNotAdmin() {
-		$('.user-admin-only, #user-admin-only').hide();
-		//$('.user-logged-out, #user-logged-out').show();
+		
 	}
 	function userIsAdmin() {
-		$('.user-admin-only, #user-admin-only').show();
-		//$('.user-logged-out, #user-logged-out').hide();
+		
 	}
 	function getUserInfo(url, admins_url, callback) {
-	$.getJSON(url, function(currentUser) {
-		loggedInUser = currentUser.login;
-		console.log("Logged in user: " + loggedInUser);
+		
 
-		$.getJSON(admins_url, function(colabs) {
-			//console.log(colabs);
-			for(var i = 0; i < colabs.length; i++) {
-			    if (colabs[i].login == loggedInUser) {
-				admin = true;
-				break;
-			    }
-			}
-			console.log("ADMIN: " + admin);
-			if (admin) {
-				userIsAdmin();
-			} else {
-				userIsNotAdmin();
-			}
-			callback;
-		});
-	});
-
-
-}
+	}
 });
 
 

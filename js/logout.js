@@ -53,8 +53,8 @@ githubLogout = function() {
     var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
     var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
 
-    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var left = ((width / 2) - (367 / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (461 / 2)) + dualScreenTop;
     logoutWindow = window.open('/logout/github', '_blank', 'toolbar=no, scrollbars=yes, resizable=no, width=367, height=461, top=' + top + ', left=' + left);
 
     // Puts focus on the newWindow

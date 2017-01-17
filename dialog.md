@@ -2,32 +2,26 @@
 title: 
 layout: empty
 ---
+<!-- Square card -->
 <style>
-.demo-card-wide.mdl-card {
+.demo-card-square.mdl-card {
   width: 100%;
-  height: 100%;
+  height: 300%;
 }
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
+
 </style>
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">Update</h2>
   </div>
   <div class="mdl-card__supporting-text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
+    Aenan convallis.
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
+      View Updates
     </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
   </div>
 </div>

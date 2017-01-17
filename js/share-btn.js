@@ -8,6 +8,6 @@ if (! shareDialog.showModal) {
 }
 
 
-shareDdialog.querySelector('.doneButton').addEventListener('click', function() {
+shareDialog.querySelector('.doneButton').addEventListener('click', function() {
   shareDialog.close();
 });

@@ -3,19 +3,25 @@ title:
 layout: empty
 ---
 
-<div class="mdl-layout__obfuscator"></div>
-<!-- Flat button -->
-<button class="mdl-button mdl-js-button">
-  Button
-</button>
-<!-- Flat button with ripple -->
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-  Button
-</button>
-<!-- Disabled flat button -->
-<button class="mdl-button mdl-js-button" disabled>
-  Button
-</button>
+<div class="mdl-layout__container">
+  <div class="mdl-layout mdl-js-layout is-upgraded" data-upgraded=",MaterialLayout">
+			<header class="mdl-layout__header dialogTitle"></header>
+			<main class="mdl-layout__content dialogText">
+				<p>
+        Allowing us to collect data will let us get you the information you want faster.
+      </p>
+			</main>
+			<footer class="mdl-mini-footer dialogActions">
+        <button type="button" class="mdl-button">Agree</button>
+        <button type="button" class="mdl-button close">Disagree</button>
+			</footer>
+		<div class="mdl-layout__obfuscator"></div>
+  </div>
+</div>
+
+
+
+
 <script>
 $(function() {
   $(".cardTitle").text(getQueryVariable("title"));

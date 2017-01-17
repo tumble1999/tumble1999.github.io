@@ -18,7 +18,7 @@ openDialog = function(title, msg, h, w, linkTitles, linkUrls) {
         }
 
       var pollTimer = window.setInterval(function() {
-        if (newWindow closed !== false) { // !== is required for compatibility with Opera
+        if (newWindow.closed !== false) { // !== is required for compatibility with Opera
             window.clearInterval(pollTimer);
           callback()
         }

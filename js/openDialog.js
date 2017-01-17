@@ -1,4 +1,4 @@
-openDialog = function(title, msg, h, w, linkTitles, linkUrls) {
+openDialog = function(title, msg, h, w, linkTitles, linkUrls, callback) {
       // Fixes dual-screen position                         Most browsers      Firefox
         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
         var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
@@ -10,19 +10,19 @@ openDialog = function(title, msg, h, w, linkTitles, linkUrls) {
         var top = ((height / 2) - (h / 2)) + dualScreenTop;
         var newWindow = window.open("/dialog?title=" + title + "&text=" + msg, "_blank", "status=0,toolbar=0,location=0,menubar=0,directories=0,resizeable=0,scrollbars=0,width=" + w + ",height=" + h + ", top=" + top + ", left=" + left)
 
-        newWindow.fill(linkTitles, linkUrls);
-
         // Puts focus on the newWindow
         if (window.focus) {
             newWindow.focus();
         }
+      
+      return newWindow;
+}
 
+whenClosed = function(w, callback) {
       var pollTimer = window.setInterval(function() {
-        if (newWindow.closed !== false) { // !== is required for compatibility with Opera
+        if (w.closed !== false) { // !== is required for compatibility with Opera
             window.clearInterval(pollTimer);
           callback()
         }
     }, 200);
-
-
 }

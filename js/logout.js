@@ -1,29 +1,29 @@
 var logoutWindow;
 
 $(function() {
-    var dialog = document.querySelector('dialog.dialogLogout');
+    var dialogLogout = document.querySelector('dialog.dialogLogout');
     var showModalButton = document.querySelector('.show-modal');
     if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
+      dialogPolyfill.registerDialog(dialogLogout);
     }
-      dialog.showModal();
+       dialogLogout.showModal();
     /*dialog.querySelector('.close').addEventListener('click', function() {
       dialog.close();
     });*/
     
-    dialog.querySelector('.githubLogout').addEventListener('click', function() {
+    dialogLogout.querySelector('.githubLogout').addEventListener('click', function() {
         $('.noDialog').hide();
         githubLogout();
-        dialog.close();
+         dialogLogout.close();
     });
-    dialog.querySelector('.websiteLogout').addEventListener('click', function() {
+     dialogLogout.querySelector('.websiteLogout').addEventListener('click', function() {
         $('.noDialog').hide();
         normalLogout();
-        dialog.close();
+         dialogLogout.close();
     });
-    dialog.querySelector('.cancelLogout').addEventListener('click', function() {
+     dialogLogout.querySelector('.cancelLogout').addEventListener('click', function() {
         history.back();
-        dialog.close();
+         dialogLogout.close();
     });
 });
 

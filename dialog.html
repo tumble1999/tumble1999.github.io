@@ -22,16 +22,16 @@ layout: empty
 
 
 <script>
-$(function() {
+fill = function(dialogWindowLinkNames, dialogWindowLinkHref) {
   $(".dialogTitle").text(getQueryVariable("title"));
   $(".dialogText").text(getQueryVariable("text"));
-  $(".dialogActions").html(listLinks(window.opener.dialogWindowLinkNames, window.opener.dialogWindowLinkHref.length, index));
+  $(".dialogActions").html(listLinks(dialogWindowLinkNames, dialogWindowLinkHref, 0));
   
   // window.opener.dialogWindowLinkNames.length
   // window.opener.dialogWindowLinkHref.length
   
   
-});
+}
 
 getQueryVariable = function(variable) {
    var query = window.location.search.substring(1);

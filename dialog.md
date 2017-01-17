@@ -3,7 +3,6 @@ title:
 layout: empty
 ---
 
-<dialog class="mdl-dialog">
     <h4 class="mdl-dialog__title">Allow data collection?</h4>
     <div class="mdl-dialog__content">
       <p>
@@ -14,7 +13,6 @@ layout: empty
       <button type="button" class="mdl-button">Agree</button>
       <button type="button" class="mdl-button close">Disagree</button>
     </div>
-  </dialog>
 
 <script>
 $(function() {

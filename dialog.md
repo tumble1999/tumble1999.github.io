@@ -2,30 +2,20 @@
 title: 
 layout: empty
 ---
-<!-- Square card -->
-<style>
-.demo-card-square.mdl-card {
-  width: 100%;
-  height: 100%;
-}
 
-</style>
+<dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Allow data collection?</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Allowing us to collect data will let us get you the information you want faster.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button">Agree</button>
+      <button type="button" class="mdl-button close">Disagree</button>
+    </div>
+  </dialog>
 
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text cardTitle">CardTitle</h2>
-  </div>
-  <div class="mdl-card__supporting-text cardText">
-    CardText
-  </div>
-  <div class="mdl-card__actions mdl-card--border cardOptions">
-  <!--
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      View Updates
-    </a>
-    -->
-  </div>
-</div>
 <script>
 $(function() {
   $(".cardTitle").text(getQueryVariable("title"));

@@ -12,8 +12,6 @@ layout: empty
 		</p>
 	</main>
 	<footer class="mdl-dialog__actions dialogActions">
-		<button type="button" class="mdl-button">option1</button>
-		<button type="button" class="mdl-button close">option2</button>
 	</footer>
   </div>
 </div>
@@ -47,7 +45,7 @@ getQueryVariable = function(variable) {
  }
  
  listLinks = function(arrayNames, arrayHrefs, index) {
-   var output = "<a class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect' href='" + arrayHrefs[index] + "'>" + arrayNames[index] + "</a>";
+   var output = "<a class='mdl-button' href='" + arrayHrefs[index] + "'>" + arrayNames[index] + "</a>";
    return output + listLinks(arrayNames, arrayHrefs, index + 1);
  }
 

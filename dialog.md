@@ -4,11 +4,11 @@ layout: empty
 ---
 <style>
 .demo-card-wide.mdl-card {
-  width: 100%px;
+  width: 100%;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
-  height: 100%px;
+  height: 100%;
   background: url('../assets/demos/welcome_card.jpg') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {

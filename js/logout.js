@@ -3,7 +3,7 @@ var logoutWindow;
 $(function() {
     var dialogLogout = document.querySelector('dialog.dialogLogout');
     var showModalButton = document.querySelector('.show-modal');
-    if (! dialog.showModal) {
+    if (! dialogLogout.showModal) {
       dialogPolyfill.registerDialog(dialogLogout);
     }
        dialogLogout.showModal();

@@ -6,7 +6,7 @@ layout: empty
 <style>
 .demo-card-square.mdl-card {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 </style>

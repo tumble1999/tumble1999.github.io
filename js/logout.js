@@ -28,6 +28,7 @@ $(function() {
 });
 
 noDialog = function(){
+    console.log("noDialog");
     $('.noDialog').hide();
     var logoutWant = confirm("Would you like to logout?");
     if (logoutWant) {
@@ -43,6 +44,7 @@ noDialog = function(){
 }
 
 githubLogout = function() {
+    console.log("githubLogout");
     
      // Fixes dual-screen position                         Most browsers      Firefox
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
@@ -72,6 +74,7 @@ githubLogout = function() {
 }
 
 normalLogout = function() {
+    console.log("normalLogout");
     localStorage.clear();
     history.back();
 }

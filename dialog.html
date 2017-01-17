@@ -5,13 +5,13 @@ layout: empty
 
 <div class="mdl-layout__container">
   <div class="mdl-layout mdl-js-layout is-upgraded" data-upgraded=",MaterialLayout">
-	<h4 class="mdl-dialog__title">dialogTitle</h4>
+	<h4 class="mdl-dialog__title dialogTitle">dialogTitle</h4>
 	<main class="mdl-layout__content mdl-dialog__content">
-		<p>
+		<p class="dialogText">
 		dialog Text
 		</p>
 	</main>
-	<footer class="mdl-dialog__actions">
+	<footer class="mdl-dialog__actions dialogActions">
 		<button type="button" class="mdl-button">option1</button>
 		<button type="button" class="mdl-button close">option2</button>
 	</footer>
@@ -23,9 +23,9 @@ layout: empty
 
 <script>
 $(function() {
-  $(".cardTitle").text(getQueryVariable("title"));
-  $(".cardText").text(getQueryVariable("text"));
-  $(".cardTexOptions").html(listLinks(window.opener.dialogWindowLinkNames, window.opener.dialogWindowLinkHref.length, index));
+  $(".dialogTitle").text(getQueryVariable("title"));
+  $(".dialogText").text(getQueryVariable("text"));
+  $(".dialogActions").html(listLinks(window.opener.dialogWindowLinkNames, window.opener.dialogWindowLinkHref.length, index));
   
   // window.opener.dialogWindowLinkNames.length
   // window.opener.dialogWindowLinkHref.length

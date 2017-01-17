@@ -26,8 +26,8 @@ layout: empty
 </div>
 <script>
 $(function() {
-  $("cardTitle").text(getQueryVariable("title"));
-  $("cardText").text(getQueryVariable("text"));
+  $(".cardTitle").text(getQueryVariable("title"));
+  $(".cardText").text(getQueryVariable("text"));
   
   
 });

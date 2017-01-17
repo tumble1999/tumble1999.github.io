@@ -1,7 +1,7 @@
 var logoutWindow;
 
 $(function() {
-    var dialog = document.querySelector('dialogLogout');
+    var dialog = document.querySelector('dialog.dialogLogout');
     var showModalButton = document.querySelector('.show-modal');
     if (! dialog.showModal) {
       dialogPolyfill.registerDialog(dialog);

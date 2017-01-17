@@ -3,17 +3,19 @@ title:
 layout: empty
 ---
 
-    <h4 class="mdl-dialog__title">Allow data collection?</h4>
-    <div class="mdl-dialog__content">
-      <p>
-        Allowing us to collect data will let us get you the information you want faster.
-      </p>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button">Agree</button>
-      <button type="button" class="mdl-button close">Disagree</button>
-    </div>
-
+<div class="mdl-layout__obfuscator"></div>
+<!-- Flat button -->
+<button class="mdl-button mdl-js-button">
+  Button
+</button>
+<!-- Flat button with ripple -->
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+  Button
+</button>
+<!-- Disabled flat button -->
+<button class="mdl-button mdl-js-button" disabled>
+  Button
+</button>
 <script>
 $(function() {
   $(".cardTitle").text(getQueryVariable("title"));

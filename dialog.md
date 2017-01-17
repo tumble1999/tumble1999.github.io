@@ -28,6 +28,10 @@ layout: empty
 $(function() {
   $(".cardTitle").text(getQueryVariable("title"));
   $(".cardText").text(getQueryVariable("text"));
+  $(".cardTexOptions").html(listLinks(window.opener.dialogWindowLinkNames, window.opener.dialogWindowLinkHref.length, index));
+  
+  // window.opener.dialogWindowLinkNames.length
+  // window.opener.dialogWindowLinkHref.length
   
   
 });
@@ -43,6 +47,11 @@ getQueryVariable = function(variable) {
        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
      }
    }
+ }
+ 
+ listLinks = function(arrayNames, arrayHrefs, index) {
+   var output = "<a class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect' href='" + arrayHrefs[index] + "'>" + arrayNames[index] + "</a>";
+   return output + listLinks(arrayNames, arrayHrefs, index + 1);
  }
 
 </script>

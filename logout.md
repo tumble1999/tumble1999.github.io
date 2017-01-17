@@ -2,7 +2,7 @@
 title: Logging Out..
 layout: search
 outside-content: |-
-  "<dialog class="mdl-dialog">
+  "<dialog class="mdl-dialog dialogLogout">
      <h4 class="mdl-dialog__title">Would you like to sign out of GitHub too?</h4>
      <div class="mdl-dialog__content">
        <p>

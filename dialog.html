@@ -21,7 +21,7 @@ layout: empty
 
 
 <script>
-	var output = "";
+	var onClose;
 	$(function() {
 		  $(".dialogTitle").text(getQueryVariable("title"));
 		  $(".dialogText").text(getQueryVariable("text"));
@@ -55,8 +55,10 @@ layout: empty
 	 }
 
 	 buttonPress = function(buttonName) {
-		output = buttonName;
+		onClose(buttonName);
 	 	window.close();
 	 }
-	
+	setOnClose = function(callback) {
+		onClose = callback;
+	}
 </script>

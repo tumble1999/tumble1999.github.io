@@ -1,22 +1,20 @@
 openDialog = function(title, msg, h, w) {
-      var w_ = 0;
-      var h_ = 0;
-      console.log(w_);
+      var w_ = 243;
+      var h_ = 298;
+      
       if(w) {
-            w_ = w;
-            console.log(w_);
-      }
-      if(w_ < 243) {
-            w_ = 243;
-            console.log(w_);
+            if(w >= w_) {
+                  w_ = h;
+                  
+            }
       }
       
       if(h) {
-            h_ = h;
+            if(h >= h_) {
+                  h_ = h;
+            }
       }
-      if(h_ < 198) {
-            h_ = 198;
-      }
+      
          
       
       // Fixes dual-screen position                         Most browsers      Firefox

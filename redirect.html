@@ -5,7 +5,12 @@ layout: page
 Please wait...
 <script>
 $(function() {
-window.location.replace(getQueryVariable('url'));
+     if(getQueryVariable('message')) {
+          alert(getQueryVariable('message'));
+     }
+     if(getQueryVariable('url')) {
+          window.location.replace(getQueryVariable('url'));
+     }
 });
 
 function getQueryVariable(variable) {

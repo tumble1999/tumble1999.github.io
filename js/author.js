@@ -43,7 +43,9 @@ $(function() {
 					$('.user-logged-in, #user-logged-in').show();
 					$('.user-logged-out, #user-logged-out').hide();
 					$('#user-logged-in').attr("data-user", loggedInUser);
+					$('head').attr("data-user", loggedInUser);
 					$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+					$('.favicon').attr("href", "https://github.com/identicons/" + loggedInUser + ".png");
 					$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
 
 					$('.newCommentUsername').val(loggedInUser);

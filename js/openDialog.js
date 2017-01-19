@@ -40,7 +40,7 @@ whenClosed = function(w, callback) {
       var pollTimer = window.setInterval(function() {
         if (w.closed !== false) { // !== is required for compatibility with Opera
             window.clearInterval(pollTimer);
-          callback()
+          callback(w.output)
         }
     }, 200);
 }

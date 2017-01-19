@@ -1,17 +1,19 @@
 openDialog = function(title, msg, h, w) {
       var w_ = 0;
-      console.log(w_);
       var h_ = 0;
-      w_ = w;
-      console.log(w_);
-      h_ = h;
-      if(w_ < 243) {
-            w_ = 243;
+      
+      if(w) {
+            w_ = w;
+            if(w_ < 243) {
+                  w_ = 243;
+            }
       }
       
-      console.log(w_);
-      if(h_ < 198) {
-            h_ = 198;
+      if(h) {
+            h_ = h;
+            if(h_ < 198) {
+                  h_ = 198;
+            }
       }
          
       

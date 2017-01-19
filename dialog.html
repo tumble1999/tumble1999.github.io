@@ -5,13 +5,14 @@ layout: empty
 
 <div class="mdl-layout__container">
   <div class="mdl-layout mdl-js-layout is-upgraded" data-upgraded=",MaterialLayout">
-	<h4 class="mdl-dialog__title dialogTitle">dialogTitle</h4>
+	<h4 class="mdl-dialog__title dialogTitle"></h4>
 	<main class="mdl-layout__content mdl-dialog__content">
 		<p class="dialogText">
-		dialog Text
+		
 		</p>
 	</main>
 	<footer class="mdl-dialog__actions dialogActions">
+		<a class='mdl-button' href='window.close()'>Ok</a>
 	</footer>
   </div>
 </div>
@@ -44,9 +45,13 @@ getQueryVariable = function(variable) {
    }
  }
  
- listLinks = function(arrayNames, arrayHrefs, index) {
-   var output = "<a class='mdl-button' href='" + arrayHrefs[index] + "'>" + arrayNames[index] + "</a>";
+ listLinks = function(arrayNames, index) {
+   var output = "<a class='mdl-button' href='javascript:window.close(`" + arrayNames[index] + "`)'>" + arrayNames[index] + "</a>";
    return output + listLinks(arrayNames, arrayHrefs, index + 1);
+ }
+ 
+ buttonPress = function(buttonName) {
+ window.close();
  }
 
 </script>

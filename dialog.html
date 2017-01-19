@@ -24,7 +24,7 @@ layout: empty
 fill = function(dialogWindowLinkNames, dialogWindowLinkHref) {
   $(".dialogTitle").text(getQueryVariable("title"));
   $(".dialogText").text(getQueryVariable("text"));
-  $(".dialogActions").html(listLinks(dialogWindowLinkNames, dialogWindowLinkHref, 0));
+  $(".dialogActions").html(listLinks(dialogWindowLinkNames, 0));
   
   // window.opener.dialogWindowLinkNames.length
   // window.opener.dialogWindowLinkHref.length

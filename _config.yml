@@ -23,6 +23,8 @@ url: "http://tumble1999.github.io" # the base hostname & protocol for your site,
 twitter_username: TumbleGamer
 github_username:  tumble1999
 permalink: pretty
+production: true
+favicon: favicon.gif
 
 collections:
  projects:

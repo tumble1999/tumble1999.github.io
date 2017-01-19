@@ -1,6 +1,6 @@
 openDialog = function(title, msg, h, w) {
-      var w_ = 243;
-      var h_ = 194;
+      var w_ = 218;
+      var h_ = 192;
       
       if(w) {
             if(w >= w_) {

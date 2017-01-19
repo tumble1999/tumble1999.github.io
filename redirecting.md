@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Redirecting...
+layout: page
 ---
 Please wait...
 <script>

@@ -121,6 +121,7 @@ function refresh() {
 				
 				$(object).find('.userName').text(admin + author + userInfo.name);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
+				$(object).find('.userImg').attr("href", userInfo.avatar_url);
 
 			});
 

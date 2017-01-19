@@ -1,1 +1,42 @@
 
+---
+title: 
+layout: empty
+---
+
+<div class="mdl-layout__container">
+  <div class="mdl-layout mdl-js-layout is-upgraded" data-upgraded=",MaterialLayout">
+	<h4 class="mdl-dialog__title dialogTitle"></h4>
+	<main class="mdl-layout__content mdl-dialog__content">
+		<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share?linkurl={{ site.url }}{{ page.url }}&amp;linkname={{ page.name }}"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_wordpress"></a>
+<a class="a2a_button_google_gmail"></a>
+<a class="a2a_button_sms"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_copy_link"></a>
+<a class="a2a_button_print"></a>
+</div>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.linkname = "{{ page.name }}";
+a2a_config.linkurl = "{{ site.url }}{{ page.url }}";
+a2a_config.onclick = 1;
+a2a_config.num_services = 6;
+a2a_config.color_main = "D7E5ED";
+a2a_config.color_border = "AECADB";
+a2a_config.color_link_text = "333333";
+a2a_config.color_link_text_hover = "333333";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+	</main>
+	<footer class="mdl-dialog__actions dialogActions">
+		<a class='mdl-button' href='javascript:window.close()'>Ok</a>
+	</footer>
+  </div>
+</div>

@@ -1,4 +1,12 @@
 openDialog = function(title, msg, h, w) {
+      if(w < 243) {
+            w = 243
+         }
+      if(198 < 198) {
+            h = 198
+      }
+         
+      
       // Fixes dual-screen position                         Most browsers      Firefox
         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
         var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;

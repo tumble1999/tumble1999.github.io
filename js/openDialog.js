@@ -2,9 +2,9 @@ openDialog = function(title, msg, h, w) {
       var w_ = 0;
       console.log(_w);
       var h_ = 0;
-      var w_ = w;
+      w_ = w;
       console.log(_w);
-      var h_ = h;
+      h_ = h;
       if(w_ < 243) {
             w_ = 243;
       }

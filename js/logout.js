@@ -55,7 +55,7 @@ githubLogout = function() {
 
     var left = ((width / 2) - (367 / 2)) + dualScreenLeft;
     var top = ((height / 2) - (461 / 2)) + dualScreenTop;
-    logoutWindow = window.open('/redirect?url=https://github.com.logout', '_blank', 'toolbar=no, scrollbars=yes, resizable=no, width=367, height=461, top=' + top + ', left=' + left);
+    logoutWindow = window.open('/redirect?url=https://github.com/logout&message=Close this window when finished.', '_blank', 'toolbar=no, scrollbars=yes, resizable=no, width=367, height=461, top=' + top + ', left=' + left);
 
     // Puts focus on the newWindow
     if (window.focus) {

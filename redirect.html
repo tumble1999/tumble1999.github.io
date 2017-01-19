@@ -4,8 +4,9 @@ layout: page
 ---
 Please wait...
 <script>
+$(function() {
 window.location.replace(getQueryVariable('url'));
-
+});
 
 function getQueryVariable(variable) {
      var query = window.location.search.substring(1);

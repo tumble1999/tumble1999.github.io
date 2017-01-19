@@ -61,8 +61,8 @@ defaults:
         path: ""
         type: projects
     values:
-        user: ""
-        repo: ""
+        user: 
+        repo: 
 
 # Build settings
 markdown: kramdown

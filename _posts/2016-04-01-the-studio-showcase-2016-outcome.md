@@ -2,7 +2,7 @@
 title: The Studio Showcase 2016 - Outcome
 date: '2016-04-01 00:00:00'
 layout: post
-author: tumblegamer
+author: tumble1999
 comments: true
 categories:
 - featured

@@ -29,6 +29,8 @@ favicon: favicon.gif
 collections:
  projects:
   output: true
+ portfolio:
+  output: true
 
 gems:
    - jekyll-mentions

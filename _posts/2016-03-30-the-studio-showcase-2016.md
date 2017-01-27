@@ -1,12 +1,10 @@
 ---
-title: The Studio Showcase 2016
-date: '2016-03-30 00:00:00'
 layout: post
+title: The Studio Showcase 2016
+date: 2016-03-30 15:28
 author: tumblegamer
 comments: true
-categories:
-- Medification
-- Updates
+categories: [Medification, Updates]
 ---
 Me and the other people at SCONE are going to be part of the Studio Showcase 2016. We are going to be their showcasing our app.
 

@@ -2,7 +2,7 @@
 title: The Studio Showcase 2016
 date: '2016-03-30 00:00:00'
 layout: post
-author: tumblegamer
+author: tumble1999
 comments: true
 categories:
 - Medification

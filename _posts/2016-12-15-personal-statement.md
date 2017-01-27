@@ -1,10 +1,17 @@
 ---
-layout: post
 title: Personal Statement
-date: 2016-12-15 10:11
+date: '2016-12-15 00:00:00'
+layout: post
 author: tumblegamer
 comments: true
-categories: [Code, Creative, Digital, Entrepreneur, Professional Play, Studio KPIs, Updates]
+categories:
+- Code
+- Creative
+- Digital
+- Entrepreneur
+- Professional Play
+- Studio KPIs
+- Updates
 ---
 http://wp.me/P6MqiQ-ha
 

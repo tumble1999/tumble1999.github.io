@@ -1,10 +1,13 @@
 ---
-layout: post
 title: The Studio Showcase 2016 - Outcome
-date: 2016-04-01 10:20
+date: '2016-04-01 00:00:00'
+layout: post
 author: tumblegamer
 comments: true
-categories: [featured, Medification, Updates]
+categories:
+- featured
+- Medification
+- Updates
 ---
 <a href="https://10trowc.wordpress.com/?attachment_id=668" rel="attachment wp-att-661"><img class="alignleft wp-image-668 size-full" src="https://10trowc.files.wordpress.com/2016/03/medification-with-slogon.png" alt="" width="944" height="215" /></a>
 

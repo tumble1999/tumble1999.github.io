@@ -1,10 +1,11 @@
 ---
-layout: jetpack-portfolio
 title: Medfication
-date: 2016-02-12 14:10
+date: '2016-02-12 00:00:00'
+layout: jetpack-portfolio
 author: tumblegamer
 comments: true
-categories: [PBL Projects]
+categories:
+- PBL Projects
 ---
 <h4 style="text-align:left;"><img class="wp-image-668 size-full alignnone" src="https://10trowc.files.wordpress.com/2016/03/medification-with-slogon.png" alt="Medification WITH SLOGON" width="944" height="215" /></h4>
 

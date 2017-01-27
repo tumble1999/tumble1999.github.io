@@ -1,10 +1,11 @@
 ---
-layout: jetpack-portfolio
 title: Pizza Parkour
-date: 2015-09-25 13:00
+date: '2015-09-25 00:00:00'
+layout: jetpack-portfolio
 author: tumblegamer
 comments: true
-categories: [PBL Projects]
+categories:
+- PBL Projects
 ---
 [caption id="attachment_544" align="alignright" width="300"]<a href="https://10trowc.wordpress.com/portfolio/pizza-parkour/pizza/" rel=" rel=&quot;attachment wp-att-544&quot;"><img class="size-medium wp-image-544" src="https://10trowc.files.wordpress.com/2015/09/pizza.png?w=300" alt="Main Logo" width="300" height="148" /></a> Main Logo[/caption]
 

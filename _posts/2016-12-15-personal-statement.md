@@ -2,7 +2,7 @@
 title: Personal Statement
 date: '2016-12-15 00:00:00'
 layout: post
-author: tumblegamer
+author: tumble1999
 comments: true
 categories:
 - Code

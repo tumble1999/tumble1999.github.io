@@ -2,7 +2,7 @@
 title: Industry Ready Student Cameron Trow - Term 3 2016
 date: '2016-03-07 00:00:00'
 layout: post
-author: tumblegamer
+author: tumble1999
 comments: true
 categories:
 - Code

@@ -24,7 +24,7 @@ layout: default
 
           </div>
           <div class="mdl-card__supporting-text post-content">
-           {{ post.content }}
+           {{ post.content | strip_html | truncatewords: 50 }}
           </div>
   
       </div>

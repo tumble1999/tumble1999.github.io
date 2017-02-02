@@ -36,3 +36,7 @@
 .comment__answers {
 	margin-left: 10%; 
 }
+
+footer {
+	z-index: 100;
+}

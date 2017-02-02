@@ -40,3 +40,6 @@
 footer {
 	z-index: 100;
 }
+user-info, modal-toggle {
+z-index: 4;
+}

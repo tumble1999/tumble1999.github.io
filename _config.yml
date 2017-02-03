@@ -31,7 +31,7 @@ collections:
   output: true
  portfolio:
   output: true
-author:
+authors:
   output: true
 
 gems:

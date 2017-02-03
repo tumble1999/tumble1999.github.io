@@ -8,7 +8,6 @@ layout: default
   {{ content }}
 
 {% for collection in site.collections %}
-  {% if site.[collection] | where: "author", page.title %}
 <h2>{{ collection.collection }}</h2>
     {% for post in site.[collection] | where: "author", page.title %}
   
@@ -30,8 +29,6 @@ layout: default
   
       </div>
     {% endfor %}
-  
-  {% endif %}
     {% endfor %}
 
 </div>

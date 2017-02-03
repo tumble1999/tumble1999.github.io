@@ -31,6 +31,8 @@ collections:
   output: true
  portfolio:
   output: true
+author:
+  output: true
 
 gems:
    - jekyll-mentions

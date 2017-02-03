@@ -7,9 +7,11 @@ layout: default
   
   {{ content }}
 
-{% for collection in site.collections %}
+{% for collection in site.collections %}#
+  {% if site.[collection] | where: "author", page.title %}
 <h2>{{ collection }}</h2>
     {% for post in site.[collection] | where: "author", page.title %}
+  
   <div class="mdl-layout-spacer"></div>
        <div class="mdl-card mdl-shadow--4dp post-container">  
     
@@ -27,6 +29,7 @@ layout: default
           </div>
   
       </div>
+  {% endif %}
     {% endfor %}
     {% endfor %}
 

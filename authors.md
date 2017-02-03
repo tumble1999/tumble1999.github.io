@@ -2,4 +2,6 @@
 layout: page
 title: Authors
 ---
-hi
+{% for author in site.authors %}
+[{{ author.name }}]({{ site.url }}/author/{{ author.name }})
+{% endfor %}

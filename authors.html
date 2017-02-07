@@ -3,67 +3,43 @@ layout: basic
 title: Authors
 ---
 {% for item in site.pages %}
-{% if item.author %}
-{% assign authors=authors | push: item.author %}
-{% endif %}
+	{% if item.author %}
+		{% assign authors=authors | push: item.author %}
+	{% endif %}
 {% endfor %}
+
 {% for item in site.posts %}
-{% if item.author %}
-{% assign authors=authors | push: item.author %}
-{% endif %}
+	{% if item.author %}
+		{% assign authors=authors | push: item.author %}
+	{% endif %}
 {% endfor %}
+
 {% for item in site.documents %}
-{% if item.author %}
-{% assign authors=authors | push: item.author %}
-{% endif %}
+	{% if item.author %}
+		{% assign authors=authors | push: item.author %}
+	{% endif %}
 {% endfor %}
+
 (% if authors %}
 	{% assign authors=authors | sort %}
 	{% assign authors=authors | uniq %}
 
 	{% for author in authors %}
-	<div class="home">
-
-	  <h1 class="page-heading">Posts by {{ author.title }}</h1>
-
-	{% for collection in site.collections %}
-	<h2>{{ collection.collection }}</h2>
-	    {% for post in site.[collection] | where: "author", author %}
-
-	  <div class="mdl-layout-spacer"></div>
-	       <div class="mdl-card mdl-shadow--4dp post-container">  
-
-		  <div class="mdl-card__title">
-		    <h2 class="mdl-card__title-text post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-		  </div>
-		  <div class="mdl-card__supporting-text post-meta">
-		    {% include user-card.html user=post.author date=post.date %}
-
-		    <div class="mdl-layout-spacer"></div>
-
-		  </div>
-		  <div class="mdl-card__supporting-text post-content">
-		   {{ post.content | strip_html | truncatewords: 50 }}
-		  </div>
-
-	      </div>
-	    {% endfor %}
-	    {% endfor %}
-	</div>
+	
 	{% endfor %}
 
 
-<script>
-var authors = {{ authors | jsonify }}
-</script>
+	<script>
+	var authors = {{ authors | jsonify }}
+	</script>
 
 {% else %}
-<div class="mdl-card__title">
-	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
-</div>
-<div class="mdl-card__supporting-text post-content">
-	There Are no authors
-</div>
+	<div class="mdl-card__title">
+		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
+	</div>
+	<div class="mdl-card__supporting-text post-content">
+		There Are no authors
+	</div>
 {% endif %}
 
 

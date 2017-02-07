@@ -2,3 +2,23 @@
 layout: basic
 title: face
 ---
+{% assign authors = "" | split:"," %}
+{% for item in site.pages %}
+{% if item.author %}
+{% assign authors=authors | push: item.author %}
+{% endif %}
+{% endfor %}
+{% for item in site.posts %}
+{% if item.author %}
+{% assign authors=authors | push: item.author %}
+{% endif %}
+{% endfor %}
+{% for item in site.documents %}
+{% if item.author %}
+{% assign authors=authors | push: item.author %}
+{% endif %}
+{% endfor %}
+{% assign authors=authors | uniq %}
+
+<script>
+var authors = {{ authors | jsonify }}

@@ -1,7 +1,7 @@
 ---
 title: Pizza Parkour
 date: '2015-09-25 00:00:00'
-layout: jetpack-portfolio
+layout: portfolio
 author: tumblegamer
 comments: true
 categories:

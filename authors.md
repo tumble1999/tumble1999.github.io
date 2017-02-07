@@ -18,7 +18,7 @@ title: face
 {% assign authors=authors | push: item.author %}
 {% endif %}
 {% endfor %}
-{% assign authors=authors | uniq %}
+{% assign authors=authors | uniq | sort %}
 
 <script>
 var authors = {{ authors | jsonify }}

@@ -17,7 +17,8 @@ title: face
 {% assign authors=authors | push: item.author %}
 {% endif %}
 {% endfor %}
-{% assign authors=authors | uniq | sort %}
+{% assign authors=authors | sort %}
+{% assign authors=authors | uniq %}
 
 {% for author in authors %}
 <div class="home">

@@ -52,7 +52,7 @@ defaults:
         author: ""
   - scope:
         path: ""
-        type: post
+        type: posts
     values:
         thumbnail: ""
         categories: []

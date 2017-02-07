@@ -17,6 +17,7 @@ title: face
 {% assign authors=authors | push: item.author %}
 {% endif %}
 {% endfor %}
+(% if authors %}
 {% assign authors=authors | sort %}
 {% assign authors=authors | uniq %}
 
@@ -50,7 +51,14 @@ title: face
     {% endfor %}
 </div>
 {% endfor %}
-
+{% else %}
+<div class="mdl-card__title">
+	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
+</div>
+<div class="mdl-card__supporting-text post-content">
+	There Are no authors
+</div>
+{% endif %}
 
 
 <script>

@@ -32,14 +32,14 @@ title: Authors
 	<script>
 	var authors = {{ authors | jsonify }}
 	</script>
-
-{% else %}
+{% endif 5}
+{% unless authors %}
 	<div class="mdl-card__title">
 		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 	</div>
 	<div class="mdl-card__supporting-text post-content">
 		There Are no authors
 	</div>
-{% endif %}
+{% endunless %}
 
 

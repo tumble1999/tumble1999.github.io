@@ -67,9 +67,9 @@ title: Authors
 
 
 <script>
-	$("authors-all").hide();
+	$(".authors-all").hide();
 	{% for author in authors %}
-	$("authors-{{ author }}").hide();
+	$(".authors-{{ author }}").hide();
 	{% endfor %}
 	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');

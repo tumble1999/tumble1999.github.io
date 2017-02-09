@@ -71,19 +71,18 @@ title: Authors
 	{% for author in authors %}
 	$(".authors-{{ author }}").hide();
 	{% endfor %}
-	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');
 	{% for author in authors %}
 	{% if forloop.first %}
 	//if (author=="{{ author }}") {
 	//$('.authors-{{ author }}').show();
-	//} {% else %} else if (author=="{{ author }}") {
+	//} {% else %} //else if (author=="{{ author }}") {
 	//	$('.authors-{{ author }}').show();
 	//}{% endif %}{% endfor %} else {
 	//	$('.authors-all').show();
 	//}
 	
-	if ( author != "" ) {
+	if ( author ) {
 		$(".authors-" + author).show();
 	} else {
 		$('.authors-all').show();

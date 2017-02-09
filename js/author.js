@@ -81,6 +81,7 @@ $(function() {
 			$('.user-logged-in, #user-logged-in').hide();
 			$('.user-logged-out, #user-logged-out').show();
 			$('.user-admin-only, #user-admin-only').hide();
+			$('.user-author-only, #user-author-only').hide();
 			callback();
 		}
 	}

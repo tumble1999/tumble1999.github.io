@@ -67,7 +67,10 @@ title: Authors
 
 
 <script>
-	$("[class*='author-']").hide();
+	$("author-all").hide();
+	{% for author in authors %}
+	$("author-{{ author }}").hide();
+	{% endif %}
 	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');
 	{% for author in authors %}

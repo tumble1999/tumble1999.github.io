@@ -9,6 +9,7 @@ title: Authors
 {% else %}
 	{% assign authors=item.author %}
 {% endif %}
+{{ authors | array_to_sentence_string }}
 {% endfor %}
 
 
@@ -19,6 +20,7 @@ title: Authors
 {% else %}
 	{% assign authors=item.author %}
 {% endif %}
+{{ authors | array_to_sentence_string }}
 {% endfor %}
 
 
@@ -29,6 +31,7 @@ title: Authors
 {% else %}
 	{% assign authors=item.author %}
 {% endif %}
+{{ authors | array_to_sentence_string }}
 {% endfor %}
 
 {% if authors %}

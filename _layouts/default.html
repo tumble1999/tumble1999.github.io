@@ -1,9 +1,29 @@
 ---
 layout: null
 ---
+
 <!doctype html>
 <html>
 	{% include head.html %}
+	{% for item in site.documents %}
+	{% if item.author %}
+		{% unless item.author == "" %}
+			{% if authors %}
+				{% assign authors=authors | push: item.author %}
+			{% else %}
+				{% assign authors=item.author | split:"," %}
+			{% endif %}
+		{% endunless %}
+	{% endif %}
+	{% endfor %}
+
+	{% if authors %}
+		{% assign authors=authors | sort %}
+		{% assign authors=authors | uniq %}
+	<script>
+		var authors = {{ authors | jsonify }};
+		</script>
+	{% endif %}
 
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

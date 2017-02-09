@@ -8,7 +8,7 @@ title: Authors
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
 {% else %}
-	{% assign authors=item.author %}
+	{% assign authors=item.author | split:"," %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
 {% endif %}
@@ -21,7 +21,7 @@ title: Authors
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
 {% else %}
-	{% assign authors=item.author %}
+	{% assign authors=item.author | split:"~" %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
 {% endif %}
@@ -34,14 +34,14 @@ title: Authors
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
 {% else %}
-	{% assign authors=item.author %}
+	{% assign authors=item.author | split:"~" %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
 {% endif %}
 {% endfor %}
 
 {% if authors %}
-	{% assign authors=authors | sort %}
+	{% assign authors=authors | split:"~" | sort %}
 	{% assign authors=authors | uniq %}
 
 	{% for author in authors %}

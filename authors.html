@@ -3,6 +3,7 @@ layout: basic
 title: Authors
 ---
 {% for item in site.pages %}
+{% if item.author %}
 <br>{{ item.title }}:{{ item.author }}<br>
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
@@ -10,10 +11,12 @@ title: Authors
 	{% assign authors=item.author %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
+{% endif %}
 {% endfor %}
 
 
 {% for item in site.posts %}
+{% if item.author %}
 <br>{{ item.title }}:{{ item.author }}<br>
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
@@ -21,10 +24,11 @@ title: Authors
 	{% assign authors=item.author %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
-{% endfor %}
+{% endif %}
 
 
 {% for item in site.documents %}
+{% if item.author %}
 <br>{{ item.title }}:{{ item.author }}<br>
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
@@ -32,6 +36,7 @@ title: Authors
 	{% assign authors=item.author %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
+{% endif %}
 {% endfor %}
 
 {% if authors %}

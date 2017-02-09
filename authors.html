@@ -2,14 +2,14 @@
 layout: tumble1999-width
 title: Authors
 ---
-{% for item in site.documents %}
-{% unless item.author == "" %}
+{% for item in site.documents 
+{% if item.author and (item.author != "") %}
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
 {% else %}
 	{% assign authors=item.author | split:"," %}
 {% endif %}
-{% endunless %}
+{% endif %}
 {% endfor %}
 
 {% if authors %}

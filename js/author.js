@@ -34,7 +34,7 @@ $(function() {
 					    }
 					}
 					
-					if ($.inArray(loggedInUser, _SITE_AUTHORS_) != 1) {
+					if ($.inArray(loggedInUser, _SITE_AUTHORS_) != -1) {
 						author = true;
 					}
 					

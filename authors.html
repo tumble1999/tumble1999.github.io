@@ -59,7 +59,7 @@ title: Authors
 	{% for author in authors %}
 	$(".authors-{{ author }}").hide();
 	{% endfor %}
-	author = getQueryVariable('a');
+	authorQuery = getQueryVariable('a');
 	{% for author in authors %}
 	{% if forloop.first %}
 	//if (author=="{{ author }}") {
@@ -70,8 +70,8 @@ title: Authors
 	//	$('.authors-all').show();
 	//}
 	
-	if ( author ) {
-		$(".authors-" + author).show();
+	if ( authorQuery ) {
+		$(".authors-" + authorQuery).show();
 	} else {
 		$('.authors-all').show();
 	}

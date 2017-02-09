@@ -19,19 +19,54 @@ title: Authors
 	{% assign authors=authors | uniq %}
 {{ authors | array_to_sentence_string }}
 
-	{% for author in authors %}
-	hi
-	{% endfor %}
+{% for author in authors %}
+
+
+<div class="{{ author }}">
+
+  <h1 class="page-heading">Posts by {{ author }}</h1>
+  
+    {% for item in site.documents %}
+	{% if item.author == author %}
+  <div class="mdl-layout-spacer"></div>
+       <div class="mdl-card mdl-shadow--4dp post-container">  
+    
+    
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          </div>
+          <div class="mdl-card__supporting-text post-meta">
+            {% include user-card.html date=item.date %}
+
+            <div class="mdl-layout-spacer"></div>
+
+          </div>
+          <div class="mdl-card__supporting-text post-content">
+           {{ item.content | strip_html | truncatewords: 50 }}
+          </div>
+  
+      </div>
+	{% endif %}
+    {% endfor %}
+
+</div>
+
+
+
+{% endfor %}
 <script>
 	var authors = {{ authors | jsonify }};
 	</script>
 {% else %}
+
+<div class="mdl-card mdl-shadow--4dp post-container">
 	<div class="mdl-card__title">
 		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 	</div>
 	<div class="mdl-card__supporting-text post-content">
 		There Are no authors
 	</div>
+</div>
 {% endif %}
 
 

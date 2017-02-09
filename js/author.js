@@ -2,6 +2,7 @@ var access_token
 var admin = false;
 var loggedIn = "";
 var loggedInUser = "";
+var author = false;
 $(function() {
 	var url = "";
 	var admins_url = "";
@@ -32,12 +33,26 @@ $(function() {
 						break;
 					    }
 					}
+					
+					if ($.inArray(loggesInUser, authors)) {
+						author = true;
+					}
+					
 					console.log("ADMIN: " + admin);
+					console.log("author: " + author);
 					if (admin) {
 						$('.user-admin-only, #user-admin-only').show();
 						//$('.user-logged-out, #user-logged-out').show();
 					} else {
 						$('.user-admin-only, #user-admin-only').hide();
+						//$('.user-logged-out, #user-logged-out').hide();
+					}
+					
+					if (author) {
+						$('.user-author-only, #user-author-only').show();
+						//$('.user-logged-out, #user-logged-out').show();
+					} else {
+						$('.user-author-only, #user-author-only').hide();
 						//$('.user-logged-out, #user-logged-out').hide();
 					}
 					$('.user-logged-in, #user-logged-in').show();

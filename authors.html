@@ -70,7 +70,7 @@ title: Authors
 	$("author-all").hide();
 	{% for author in authors %}
 	$("author-{{ author }}").hide();
-	{% endif %}
+	{% endfor %}
 	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');
 	{% for author in authors %}

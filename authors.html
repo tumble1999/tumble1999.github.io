@@ -4,13 +4,11 @@ title: Authors
 ---
 {% for item in site.documents %}
 {% unless item.author == "" %}
-<br>{{ item.title }}:{{ item.author }}<br>
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
 {% else %}
 	{% assign authors=item.author | split:"," %}
 {% endif %}
-{{ authors | array_to_sentence_string }}
 {% endunless %}
 {% endfor %}
 

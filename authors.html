@@ -2,21 +2,8 @@
 layout: tumble1999-width
 title: Authors
 ---
-{% for item in site.documents %}
-{% if item.author %}
-	{% unless item.author == "" %}
-		{% if authors %}
-			{% assign authors=authors | push: item.author %}
-		{% else %}
-			{% assign authors=item.author | split:"," %}
-		{% endif %}
-	{% endunless %}
-{% endif %}
-{% endfor %}
 
 {% if authors %}
-	{% assign authors=authors | sort %}
-	{% assign authors=authors | uniq %}
 <div class="mdl-card mdl-shadow--4dp post-container authors-all">
 	<div class="mdl-card__title">
 		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>

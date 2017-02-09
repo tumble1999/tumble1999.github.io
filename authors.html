@@ -68,7 +68,27 @@ title: Authors
 {% endfor %}
 <script>
 	var authors = {{ authors | jsonify }};
-	</script>
+	author = getQueryVariable('a');
+	
+	$('.authors-all').show();
+	 {% for author in authors %}
+	 $('.authors-{{ author }}').hide();
+	 {% endfor %}
+	
+	
+function getQueryVariable(variable) {
+     var query = window.location.search.substring(1);
+     var vars = query.split('&');
+ 
+     for (var i = 0; i < vars.length; i++) {
+       var pair = vars[i].split('=');
+ 
+       if (pair[0] === variable) {
+         return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+       }
+     }
+   }
+</script>
 {% else %}
 
 <div class="mdl-card mdl-shadow--4dp post-container">

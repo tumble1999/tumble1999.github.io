@@ -4,7 +4,25 @@ layout: null
 
 <!doctype html>
 <html>
-	
+	{% for item in site.documents %}
+	{% if item.author %}
+		{% unless item.author == "" %}
+			{% if authors %}
+				{% assign authors=authors | push: item.author %}
+			{% else %}
+				{% assign authors=item.author | split:"," %}
+			{% endif %}
+		{% endunless %}
+	{% endif %}
+	{% endfor %}
+
+	{% if authors %}
+		{% assign authors=authors | sort %}
+		{% assign authors=authors | uniq %}
+	<script>
+		var _SITE_AUTHORS_ = {{ authors | jsonify }};
+		</script>
+	{% endif %}
 	{% include head.html %}
 	
 

@@ -1,37 +1,56 @@
 <head class="githubAuthor" data-user>
-		<script>
-			var _PAGE_AUTHOR_ = "{{ page.author }}";
+	{% for item in site.documents %}
+	{% if item.author %}
+		{% unless item.author == "" %}
+			{% if authors %}
+				{% assign authors=authors | push: item.author %}
+			{% else %}
+				{% assign authors=item.author | split:"," %}
+			{% endif %}
+		{% endunless %}
+	{% endif %}
+	{% endfor %}
+
+	{% if authors %}
+		{% assign authors=authors | sort %}
+		{% assign authors=authors | uniq %}
+	<script>
+		authors = {{ authors | jsonify }};
 		</script>
-		
-		<!-- Site Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="theme-color" content="#FFC107">
-		<link rel="icon" class="favicon" sizes="192x192" href="favicon.gif">
-		 <!-- noindex -->
-		 {% if page.noindex %}
-		 <meta name="robots" content="noindex" />
-		 {% endif %}
-		
-		<!-- Sylesheets -->
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/material.min.css">
-		<link rel="stylesheet" href="/css/style.css">
-		
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		
-		<!-- Scripts -->
-		<script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-		<script src="/js/material.min.js"></script>
-		<script src="/js/github.js"></script>
-		<script src="/js/author.js"></script>
-		<script src="/js/openDialog.js"></script>
-		{% if page.url contains "/no-ie/" %}<script src="/js/no-ie.js"></script>
-		{% else %}<script src="/js/ie.js"></script>	
-		{% endif %}
-		<script src="/js/init.js"></script>
-		
-		{% seo %}
-		
+	{% endif %}
+	<script>
+		var _PAGE_AUTHOR_ = "{{ page.author }}";
+	</script>
+
+	<!-- Site Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#FFC107">
+	<link rel="icon" class="favicon" sizes="192x192" href="favicon.gif">
+	 <!-- noindex -->
+	 {% if page.noindex %}
+	 <meta name="robots" content="noindex" />
+	 {% endif %}
+
+	<!-- Sylesheets -->
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/material.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!-- Scripts -->
+	<script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script src="/js/material.min.js"></script>
+	<script src="/js/github.js"></script>
+	<script src="/js/author.js"></script>
+	<script src="/js/openDialog.js"></script>
+	{% if page.url contains "/no-ie/" %}<script src="/js/no-ie.js"></script>
+	{% else %}<script src="/js/ie.js"></script>	
+	{% endif %}
+	<script src="/js/init.js"></script>
+
+	{% seo %}
+
 		
 	</head>

@@ -70,12 +70,26 @@ title: Authors
 	$("[class*='author-']").hide();
 	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');
+	{% for author in authors %}
+	{% if forloop.first %}
+	//if (author=="{{ author }}") {
+	//$('.authors-{{ author }}').show();
+	//}
+	{% else %}
+  	//else if (author=="{{ author }}") {
+	//	$('.authors-{{ author }}').show();
+	//}
+	{% endif %}
+	{% endfor %}
+	//else {
+	//	$('.authors-all').show();
+	//}
 	
-	$('.authors-all').show();
-	 {% for author in authors %}
-	 $('.authors-{{ author }}').hide();
-	 {% endfor %}
-	
+	if ( author != "" ) {
+		$('.authors-'+author).show();
+	} else {
+		$('.authors-all').show();
+	}
 	
 function getQueryVariable(variable) {
      var query = window.location.search.substring(1);

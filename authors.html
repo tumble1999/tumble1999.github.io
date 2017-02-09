@@ -74,14 +74,9 @@ title: Authors
 	{% if forloop.first %}
 	//if (author=="{{ author }}") {
 	//$('.authors-{{ author }}').show();
-	//}
-	{% else %}
-  	//else if (author=="{{ author }}") {
+	//} {% else %} else if (author=="{{ author }}") {
 	//	$('.authors-{{ author }}').show();
-	//}
-	{% endif %}
-	{% endfor %}
-	//else {
+	//}{% endif %}{% endfor %} else {
 	//	$('.authors-all').show();
 	//}
 	

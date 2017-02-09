@@ -20,7 +20,7 @@ title: Authors
 	{% endif %}
 {% endfor %}
 
-(% if authors %}
+{% if authors %}
 	{% assign authors=authors | sort %}
 	{% assign authors=authors | uniq %}
 
@@ -30,14 +30,13 @@ title: Authors
 <script>
 	var authors = {{ authors | jsonify }}
 	</script>
-{% endif %}
-{% unless authors %}
+{% else %}
 	<div class="mdl-card__title">
 		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 	</div>
 	<div class="mdl-card__supporting-text post-content">
 		There Are no authors
 	</div>
-{% endunless %}
+{% endif %}
 
 

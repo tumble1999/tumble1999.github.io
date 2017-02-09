@@ -50,6 +50,7 @@ $(function() {
 					
 					if (author) {
 						$('.user-author-only, #user-author-only').show();
+						$('.myPosts').attr("href", "/authors/?a=" + loggedInUser);
 						//$('.user-logged-out, #user-logged-out').show();
 					} else {
 						$('.user-author-only, #user-author-only').hide();

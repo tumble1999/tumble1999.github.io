@@ -17,7 +17,6 @@ title: Authors
 {% if authors %}
 	{% assign authors=authors | sort %}
 	{% assign authors=authors | uniq %}
-{{ authors | array_to_sentence_string }}
 <div class="mdl-card mdl-shadow--4dp post-container authors-all">
 	<div class="mdl-card__title">
 		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
@@ -25,7 +24,7 @@ title: Authors
 	<div class="mdl-card__supporting-text post-content">
 		<ul>
 		{% for author in authors %}
-		<li><a href="{{ site.url }}{{ page.url }}/?a={{ author }}">{{ author }}</a></li>
+		<li><a href="{{ site.url }}{{ page.url }}?a={{ author }}">{{ author }}</a></li>
 		{% endfor %}
 			</ul>
 	</div>

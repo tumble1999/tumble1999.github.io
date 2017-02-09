@@ -4,7 +4,6 @@ layout: null
 
 <!doctype html>
 <html>
-	{% include head.html %}
 	{% for item in site.documents %}
 	{% if item.author %}
 		{% unless item.author == "" %}
@@ -24,6 +23,8 @@ layout: null
 		var authors = {{ authors | jsonify }};
 		</script>
 	{% endif %}
+	{% include head.html %}
+	
 
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

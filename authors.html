@@ -3,15 +3,15 @@ layout: basic
 title: Authors
 ---
 {% for item in site.pages %}
-{ item.title }:{ item.author }
+{{ item.title }}:{{ item.author }}
 	{% assign authors=authors | push: item.author %}
 {% endfor %}
 {% for item in site.posts %}
-{ item.title }:{ item.author }
+{{ item.title }}:{{ item.author }}
 	{% assign authors=authors | push: item.author %}
 {% endfor %}
 {% for item in site.documents %}
-{ item.title }:{ item.author }
+{{ item.title }}:{{ item.author }}
 	{% assign authors=authors | push: item.author %}
 {% endfor %}
 

@@ -4,15 +4,31 @@ title: Authors
 ---
 {% for item in site.pages %}
 <br>{{ item.title }}:{{ item.author }}<br>
+{% if authors %}
 	{% assign authors=authors | push: item.author %}
+{% else %}
+	{% assign authors=item.author %}
+{% endif %}
 {% endfor %}
+
+
 {% for item in site.posts %}
 <br>{{ item.title }}:{{ item.author }}<br>
+{% if authors %}
 	{% assign authors=authors | push: item.author %}
+{% else %}
+	{% assign authors=item.author %}
+{% endif %}
 {% endfor %}
+
+
 {% for item in site.documents %}
 <br>{{ item.title }}:{{ item.author }}<br>
+{% if authors %}
 	{% assign authors=authors | push: item.author %}
+{% else %}
+	{% assign authors=item.author %}
+{% endif %}
 {% endfor %}
 
 {% if authors %}

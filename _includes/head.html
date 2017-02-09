@@ -15,7 +15,7 @@
 		{% assign authors=authors | sort %}
 		{% assign authors=authors | uniq %}
 	<script>
-		authors = {{ authors | jsonify }};
+		var authors = {{ authors | jsonify }};
 		</script>
 	{% endif %}
 	<script>

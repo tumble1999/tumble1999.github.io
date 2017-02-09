@@ -2,23 +2,14 @@
 layout: basic
 title: Authors
 ---
-{% assign authors= %}
 {% for item in site.pages %}
-	{% if item.author %}
-		{% assign authors=authors | push: item.author %}
-	{% endif %}
+	{% assign authors=authors | push: item.author %}
 {% endfor %}
-
 {% for item in site.posts %}
-	{% if item.author %}
-		{% assign authors=authors | push: item.author %}
-	{% endif %}
+	{% assign authors=authors | push: item.author %}
 {% endfor %}
-
 {% for item in site.documents %}
-	{% if item.author %}
-		{% assign authors=authors | push: item.author %}
-	{% endif %}
+	{% assign authors=authors | push: item.author %}
 {% endfor %}
 
 {% if authors %}

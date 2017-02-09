@@ -49,8 +49,9 @@ layout: null
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 					    for="user-logged-in">
 						<a href class="loggedInUserProfile mdl-menu__item">Profile</a>
-						<a href="/edit" class="user-author-only mdl-menu__item">Author Dashboard</a>
-						<a href="{{site.github.repository_url}}" class="user-admin-only mdl-menu__item">Admin Dashboard</a>
+						<a href="/edit" class="user-author-only mdl-menu__item">Dashboard</a>
+						<a href class="user-author-only mdl-menu__item myPosts">My Posts</a>
+						<a href="{{site.github.repository_url}}" class="user-admin-only mdl-menu__item">GitHub</a>
 						<a href="/logout" class="mdl-menu__item">Logout</a>
 					</ul>
 					{% endunless %}

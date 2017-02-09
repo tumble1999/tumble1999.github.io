@@ -63,10 +63,11 @@ title: Authors
 
 </div>
 
-
-
 {% endfor %}
+
+
 <script>
+	$("[class*='author-']").hide();
 	var authors = {{ authors | jsonify }};
 	author = getQueryVariable('a');
 	

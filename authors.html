@@ -27,9 +27,7 @@ title: Authors
 	{% for author in authors %}
 	hi
 	{% endfor %}
-
-
-	<script>
+<script>
 	var authors = {{ authors | jsonify }}
 	</script>
 {% endif %}

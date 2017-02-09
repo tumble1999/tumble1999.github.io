@@ -67,6 +67,7 @@ title: Authors
 
 
 <script>
+	$(function() {
 	$(".authors-all").hide();
 	{% for author in authors %}
 	$(".authors-{{ author }}").hide();
@@ -87,7 +88,7 @@ title: Authors
 	} else {
 		$('.authors-all').show();
 	}
-	
+	});
 function getQueryVariable(variable) {
      var query = window.location.search.substring(1);
      var vars = query.split('&');

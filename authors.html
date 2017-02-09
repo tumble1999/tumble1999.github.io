@@ -2,8 +2,8 @@
 layout: tumble1999-width
 title: Authors
 ---
-{% for item in site.pages %}
-{% if item.author %}
+{% for item in site.documents %}
+{% unless item.author == "" %}
 <br>{{ item.title }}:{{ item.author }}<br>
 {% if authors %}
 	{% assign authors=authors | push: item.author %}
@@ -11,37 +11,11 @@ title: Authors
 	{% assign authors=item.author | split:"," %}
 {% endif %}
 {{ authors | array_to_sentence_string }}
-{% endif %}
-{% endfor %}
-
-
-{% for item in site.posts %}
-{% if item.author %}
-<br>{{ item.title }}:{{ item.author }}<br>
-{% if authors %}
-	{% assign authors=authors | push: item.author %}
-{% else %}
-	{% assign authors=item.author | split:"~" %}
-{% endif %}
-{{ authors | array_to_sentence_string }}
-{% endif %}
-{% endfor %}
-
-
-{% for item in site.documents %}
-{% if item.author %}
-<br>{{ item.title }}:{{ item.author }}<br>
-{% if authors %}
-	{% assign authors=authors | push: item.author %}
-{% else %}
-	{% assign authors=item.author | split:"~" %}
-{% endif %}
-{{ authors | array_to_sentence_string }}
-{% endif %}
+{% endunless %}
 {% endfor %}
 
 {% if authors %}
-	{% assign authors=authors | split:"~" | sort %}
+	{% assign authors=authors | sort %}
 	{% assign authors=authors | uniq %}
 {{ authors | array_to_sentence_string }}
 

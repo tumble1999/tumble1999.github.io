@@ -43,6 +43,7 @@ title: Authors
 {% if authors %}
 	{% assign authors=authors | split:"~" | sort %}
 	{% assign authors=authors | uniq %}
+{{ authors | array_to_sentence_string }}
 
 	{% for author in authors %}
 	hi

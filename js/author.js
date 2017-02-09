@@ -33,7 +33,7 @@ $(function() {
 						break;
 					    }
 					}
-					console.log("Authors:" + _SITE_AUTHORS_);
+					console.log("Authors: " + _SITE_AUTHORS_);
 					if ($.inArray(loggedInUser, _SITE_AUTHORS_) != -1) {
 						author = true;
 					}

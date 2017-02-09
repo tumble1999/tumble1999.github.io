@@ -35,7 +35,7 @@ title: Authors
             <h2 class="mdl-card__title-text post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           </div>
           <div class="mdl-card__supporting-text post-meta">
-            {% include user-card.html date=item.date %}
+            {% include user-card.html author=author date=item.date %}
 
             <div class="mdl-layout-spacer"></div>
 

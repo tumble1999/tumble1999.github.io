@@ -1,11 +1,8 @@
 var access_token
-var admin = false;
-var adminStatus;
-var adminStatusMessage;
+var adminStatus = false;
 var loggedIn = "";
 var loggedInUser = "";
 var authorStatus = false;
-var authorStatusMessage = false;
 $(function() {
 	var url = "";
 	var admins_url = "";

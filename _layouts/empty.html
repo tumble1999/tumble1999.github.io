@@ -3,36 +3,7 @@ layout: null
 ---
 <!doctype html>
 <html>
-	<head>
-		<script>
-			var _PAGE_AUTHOR_ = "{{ page.author }}";
-		</script>
-		<!-- Site Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Sylesheets -->
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/material.min.css">
-		<link rel="stylesheet" href="/css/style.css">
-		
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		
-		<!-- Scripts -->
-		<script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-		<script src="/js/material.min.js"></script>
-		<script src="/js/github.js"></script>
-		<script src="/js/author.js"></script>
-		<script src="/js/share-btn.js"></script>
-		{% if page.url contains "/no-ie/" %}<script src="/js/no-ie.js"></script>
-		{% else %}<script src="/js/ie.js"></script>	
-		{% endif %}
-		<script src="/js/init.js"></script>
-		
-		{% seo %}
-		
-		
-	</head>
+	{% include head.html %}
 
 	<body>
 		{{ content }}

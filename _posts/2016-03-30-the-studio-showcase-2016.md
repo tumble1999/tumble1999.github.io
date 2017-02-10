@@ -8,7 +8,6 @@ categories:
 - Medification
 - Updates
 ---
-![/uploads/2017/02/10/medification-with-slogon-4.png](/uploads/2017/02/10/medification-with-slogon-4.png)
 
 Me and the other people at SCONE are going to be part of the Studio Showcase 2016\. We are going to be their showcasing our app.
 

@@ -133,7 +133,7 @@ function refresh() {
 				    }
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
-					authorStatusMessage = "</a><a href='/authors?=" + userInfo.name + "'>[AUTHOR] </a><a href='http://github.com/" + userInfo.name + "'>"
+					authorStatusMessage = "</a><a href='/authors?=" + userInfo.name + "'>[AUTHOR] </a><a href='http://github.com/" + userInfo.login + "'>"
 				}
 				
 				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name);

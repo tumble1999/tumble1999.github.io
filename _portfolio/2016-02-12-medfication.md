@@ -1,7 +1,7 @@
 ---
 title: Medfication
 date: '2016-02-12 00:00:00'
-layout: jetpack-portfolio
+layout: portfolio
 author: tumblegamer
 comments: true
 categories:

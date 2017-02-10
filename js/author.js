@@ -133,11 +133,12 @@ function refresh() {
 				    }
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
-					author = "[AUTHOR] "
+					authorStatus = "[AUTHOR] "
 				}
 				
-				$(object).find('.userName').text(admin + author + userInfo.name);
+				$(object).find('.userName').text(admin + authorStatus + userInfo.name);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
+				$(object).find('.userImg').attr("alt", userInfo.name);
 				$(object).find('.favicon').attr("href", userInfo.avatar_url);
 
 			});

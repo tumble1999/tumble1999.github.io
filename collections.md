@@ -16,7 +16,7 @@ author: tumble1999
 <h2>{{ item.collection }}</h2>
 {{ collection | jsonify }}
 {% endfor %}
-{% endfor %}#
+{% endfor %}
 
 <h2>Collections</h2>
 {{ site.collections | jsonify }}

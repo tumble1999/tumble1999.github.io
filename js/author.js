@@ -1,8 +1,11 @@
 var access_token
 var admin = false;
+var adminStatus;
+var adminStatusMessage;
 var loggedIn = "";
 var loggedInUser = "";
-var author = false;
+var authorStatus = false;
+var authorStatusMessage = false;
 $(function() {
 	var url = "";
 	var admins_url = "";
@@ -29,18 +32,18 @@ $(function() {
 					//console.log(colabs);
 					for(var i = 0; i < colabs.length; i++) {
 					    if (colabs[i].login == loggedInUser) {
-						admin = true;
+						adminStatus = true;
 						break;
 					    }
 					}
 					console.log("Authors: " + _SITE_AUTHORS_);
 					if ($.inArray(loggedInUser, _SITE_AUTHORS_) != -1) {
-						author = true;
+						authorStatus = true;
 					}
 					
 					console.log("ADMIN: " + admin);
-					console.log("author: " + author);
-					if (admin) {
+					console.log("author: " + adminStatus);
+					if (adminStatus) {
 						$('.user-admin-only, #user-admin-only').show();
 						//$('.user-logged-out, #user-logged-out').show();
 					} else {
@@ -48,7 +51,7 @@ $(function() {
 						//$('.user-logged-out, #user-logged-out').hide();
 					}
 					
-					if (author) {
+					if (authorStatus) {
 						$('.user-author-only, #user-author-only').show();
 						$('.myPosts').attr("href", "/authors/?a=" + loggedInUser);
 						//$('.user-logged-out, #user-logged-out').show();
@@ -119,8 +122,8 @@ function refresh() {
 		var admin_code_1 = "ab85ff5428f26f488cd0";
 			var admin_code_2 = "3d7057b8ee5e536a4d06";
 			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
-		var admin = "";
-		var author = "";
+		var adminStatusMessage = "";
+		var authorStatusMessage = "";
 		$.getJSON(url, function(userInfo) {
 			console.log(userInfo);
 			
@@ -128,15 +131,15 @@ function refresh() {
 			$.getJSON(admins_url, function(colabs) {
 				for(var i = 0; i < colabs.length; i++) {
 				    if (colabs[i].login == userInfo.login) {
-					admin =  "[ADMIN] ";
+					adminStatusMessage = "[ADMIN] ";
 					break;
 				    }
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
-					authorStatus = "[AUTHOR] "
+					authorStatusMessage = "[AUTHOR] "
 				}
 				
-				$(object).find('.userName').text(admin + authorStatus + userInfo.name);
+				$(object).find('.userName').text(adminStatusMessage + authorStatusMessage + userInfo.name);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
 				$(object).find('.userImg').attr("alt", userInfo.name);
 				$(object).find('.favicon').attr("href", userInfo.avatar_url);

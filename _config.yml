@@ -44,6 +44,10 @@ gems:
    
 defaults:
   - scope:
+      path: ""
+    values:
+      image: favicon.gif
+  - scope:
         path: ""
         type: pages
     values:

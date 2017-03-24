@@ -51,14 +51,12 @@ defaults:
         path: ""
         type: pages
     values:
-        thumbnail: ""
         categories: []
         author: ""
   - scope:
         path: ""
         type: posts
     values:
-        thumbnail: ""
         categories: []
         tags: []
         author: ""

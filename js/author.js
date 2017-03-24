@@ -38,8 +38,8 @@ $(function() {
 						authorStatus = true;
 					}
 					
-					console.log("ADMIN: " + admin);
-					console.log("author: " + adminStatus);
+					console.log("ADMIN: " + adminStatus);
+					console.log("author: " + authorStatus);
 					if (adminStatus) {
 						$('.user-admin-only, #user-admin-only').show();
 						//$('.user-logged-out, #user-logged-out').show();

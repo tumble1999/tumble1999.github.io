@@ -9,6 +9,8 @@ categories:
 - Medification
 - Updates
 image: "/uploads/2017/03/28/studio-showcase2-1.png"
+excerpt: see the outcome of the showcase and also see people's opinions of diferent
+  things todo with medifircation.
 ---
 ![/uploads/2017/02/10/medification-with-slogon-3.png](/uploads/2017/02/10/medification-with-slogon-3.png)
 

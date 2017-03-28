@@ -12,6 +12,7 @@ categories:
 - Professional Play
 - Studio KPIs
 - Updates
+image: ""
 ---
 http://wp.me/P6MqiQ-ha
 

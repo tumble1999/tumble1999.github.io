@@ -7,6 +7,7 @@ comments: true
 categories:
 - Medification
 - Updates
+image: "/uploads/2017/03/28/studio-showcase1.png"
 ---
 
 Me and the other people at SCONE are going to be part of the Studio Showcase 2016\. We are going to be their showcasing our app.

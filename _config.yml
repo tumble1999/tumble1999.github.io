@@ -61,6 +61,7 @@ defaults:
         tags: []
         author: ""
         excerpt: >
+        image:
   - scope:
         path: ""
         type: projects

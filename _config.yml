@@ -24,7 +24,7 @@ twitter_username: TumbleGamer
 github_username:  tumble1999
 permalink: pretty
 production: true
-favicon: favicon.gif
+favicon: /favicon.gif
 
 collections:
  projects:
@@ -46,7 +46,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: favicon.gif
+      image: /favicon.gif
   - scope:
         path: ""
         type: pages

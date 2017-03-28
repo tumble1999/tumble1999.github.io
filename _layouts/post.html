@@ -2,14 +2,17 @@
 layout: basic
 ---
 {% if page.image %}
+{% if page.image != '{{ site.favicon }}' %}
 <style>
 .page-title-{{ page.title | slugify }} {
   color: #fff;
-  height: 176px;
+  height: 100%;
 	background: url('{{ page.image }}') center / cover;
 }
 </style>
 {% endif %}
+{% endif %}
+
 <div class="page-title-{{ page.title | slugify }} mdl-card__title">
 	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 </div>

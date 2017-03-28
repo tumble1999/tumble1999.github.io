@@ -5,14 +5,9 @@ layout: post
 author: tumble1999
 comments: true
 categories:
-- Code
-- Creative
-- Digital
-- Entrepreneur
-- Professional Play
-- Studio KPIs
 - Updates
-image: ''
+image: "/uploads/2017/03/28/portfolio-1.jpg"
+excerpt: My portfolio
 ---
 http://wp.me/P6MqiQ-ha
 

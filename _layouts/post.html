@@ -1,7 +1,16 @@
 ---
 layout: basic
 ---
-<div class="mdl-card__title">
+{% if page.image %}
+<style>
+.page-title-{{ page.title | slugify }} {
+  color: #fff;
+  background:
+	  url('{{ page.image }}') bottom right 15% no-repeat #46B6AC;
+}
+</style>
+{% endif %}
+<div class="page-title-{{ page.title | slugify }} mdl-card__title">
 	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 </div>
 <div class="mdl-card__supporting-text post-meta">

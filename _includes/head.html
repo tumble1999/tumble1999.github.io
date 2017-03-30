@@ -8,8 +8,8 @@
 				{% assign authors=item.author | split:"," %}
 			{% endif %}
 		{% endunless %}
-	{% endif %}
-	{% endfor %}
+	{% endif %}	
+{% endfor %}
 
 	{% if authors %}
 		{% assign authors=authors | sort %}
@@ -50,7 +50,10 @@
 	{% endif %}
 	<script src="/js/init.js"></script>
 
-	{% seo %}
+	{% capture seo %}
+    {% seo %}
+{% endcapture %}
 
-		
+	
+{{ seo | replace: "summary", "summary_large_image" }}		
 	</head>

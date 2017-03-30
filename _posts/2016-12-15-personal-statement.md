@@ -6,7 +6,7 @@ author: tumble1999
 comments: true
 categories:
 - Updates
-image: "/uploads/2017/03/28/portfolio-1.jpg"
+image: /uploads/2017/03/28/portfolio-1.jpg
 excerpt: My portfolio
 ---
 http://wp.me/P6MqiQ-ha

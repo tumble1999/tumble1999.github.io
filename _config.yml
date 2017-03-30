@@ -14,17 +14,30 @@
 # You can create7 any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tumble
-
-email: tumblegamer@tumblenet.tk
 description: > # this means to ignore newlines until "baseurl:"
   My Github Website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tumble1999.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: TumbleGamer
-github_username:  tumble1999
+
+logo: /favicon.gif
+
+social:
+  name: Cameron Trow
+  links:
+    - https://twitter.com/camerontrow
+    - https://www.facebook.com/TumbleGamer
+    - https://www.linkedin.com/in/CameronTrow
+    - https://plus.google.com/+BenBalter
+    - https://github.com/tumble1999
+
+webmaster_verifications:
+  google: 1234
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+
 permalink: pretty
 production: true
-favicon: /favicon.gif
 
 collections:
  projects:

@@ -32,6 +32,10 @@ height: 100%;
 	float: right;
 }
 
+.post-title {
+text-shadow: 0 0 20px #000, 0 0 20px #000;
+}
+
 .comments {
 	background-color: #EEE;
 }

@@ -6,8 +6,7 @@ layout: basic
 <style>
 .page-title-{{ page.title | slugify }} {
   color: #fff;
-  height: 100%;
-	background: url('{{ page.image }}') center / cover;
+  background: url('{{ page.image }}') center / cover;
 }
 </style>
 {% endunless %}
@@ -15,6 +14,7 @@ layout: basic
 
 <div class="page-title-{{ page.title | slugify }} mdl-card__title">
 	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
+	<img src="{{ page.image }}" style="visibility: hidden;" />
 </div>
 <div class="mdl-card__supporting-text post-meta">
 	{% include user-card.html user=page.author date=page.date %}

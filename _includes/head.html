@@ -54,7 +54,7 @@
     {% seo %}
 {% endcapture %}
 <meta name="twitter:card" content="summary{% if page.image %}{% unless page.image == site.logo %}_large_image{% endunless %}{% endif %}">
-{% if page.image %}if page.image == site.logo %}
+{% if page.image %}{%if page.image == site.logo %}
 {{ seo }}
 {% else %}
 {{ seo | replace: "summary", "summary_large_image" }}

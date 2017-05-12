@@ -135,10 +135,11 @@ function refresh() {
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
 					authorStatusMessage = "[AUTHOR]";
-					authorPostsLink = "</a><p>[</p><a href='/authors?=" + userInfo.login + "'>view other posts</a><p>]</p><a>";
+					authorPostsLink = "[<a href='/authors?=" + userInfo.login + "'>view other posts</a>]";
 				}
 				
-				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name + authorPostsLink);
+				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name);
+				$(object).find('.postsLink').html(authorPostsLink);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
 				$(object).find('.userImg').attr("alt", userInfo.name);
 				$(object).find('.favicon').attr("href", userInfo.avatar_url);

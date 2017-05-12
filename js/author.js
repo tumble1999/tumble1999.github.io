@@ -121,6 +121,7 @@ function refresh() {
 			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
 		var adminStatusMessage = "";
 		var authorStatusMessage = "";
+		var authorPostsLink = "";
 		$.getJSON(url, function(userInfo) {
 			console.log(userInfo);
 			
@@ -133,10 +134,11 @@ function refresh() {
 				    }
 				}
 				if(_PAGE_AUTHOR_ == userInfo.login) {
-					authorStatusMessage = "</a><a href='/authors?=" + userInfo.name + "'>[AUTHOR] </a><a href='http://github.com/" + userInfo.login + "'>"
+					authorStatusMessage = "[AUTHOR]";
+					authorPostsLink = "</a>[<a href='/authors?=" + userInfo.login + "'>view other posts</a>]<a>";
 				}
 				
-				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name);
+				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name + authorPostsLink);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
 				$(object).find('.userImg').attr("alt", userInfo.name);
 				$(object).find('.favicon').attr("href", userInfo.avatar_url);

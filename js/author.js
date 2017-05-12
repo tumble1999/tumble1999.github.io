@@ -136,7 +136,7 @@ function refresh() {
 				if(_PAGE_AUTHOR_ == userInfo.login) {
 					authorStatusMessage = "[AUTHOR]";
 					authorPostsLink = "     [<a href='/authors?a=" + userInfo.login + "'>view other posts</a>]";
-				}a
+				}
 				
 				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name);
 				$(object).find('.postsLink').html(authorPostsLink);

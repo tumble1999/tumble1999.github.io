@@ -1,13 +1,9 @@
 ---
 image: "/uploads/2017/05/14/thumbnail-3.PNG"
 categories:
-- computers
-- making
-- old-about
-- passion
-- portfolio
-- The Studio
-- Updates
+- How-to
+- Cisco Packet Tracer
+- Networks
 tags:
 - dns
 - hierarchy
@@ -138,3 +134,4 @@ In conclusion, you can recreate the internet in cisco packet tracer. By using th
 
 ## Download Links
 
+Packet Tracer Save ([internet.pkt](/downloads/internet.pkt))

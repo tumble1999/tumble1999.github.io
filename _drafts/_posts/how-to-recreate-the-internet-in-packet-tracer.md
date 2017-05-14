@@ -1,21 +1,48 @@
 ---
-image: ''
+image: "/uploads/2017/05/14/thumbnail-3.PNG"
 categories:
 - computers
-- cv
-- featured
 - making
 - old-about
 - passion
 - portfolio
 - The Studio
 - Updates
-- updates
-- website
-tags: []
+tags:
+- dns
+- hierarchy
+- ns
+- soa
+- packet
+- tracer
+- cisco
+- internet
+- nameserver
+- name server
+- how
+- 'to '
+- make
+- your
+- own
+- 'internet '
+- in
+- cisco
+- packet
+- tracer
+- make
+- your
+- own
+- internet
+- in
+- '3'
+- seconds
+- step
+- by
+- step
+- steps
 author: tumble1999
-excerpt: ''
-title: How to recreate the internet in packet tracer
+excerpt: Have you always wanted to know how to simulate your own internet?
+title: Make your own internet in packet tracer
 date: 2017-05-14 14:19
 layout: post
 comments: true
@@ -26,6 +53,8 @@ pin: ''
 Cisco packet tracer is a great tool for simulating small-scale networks to see how they may work in practice. You can create; email servers, web servers, DNS servers, routers and more with this simple tool for students to learn about networking. You may be wondering, well some people have and that is how to make the internet.
 
 When I was searching how to do this I have seen bits and pieces of how to do it and people on forums asking how to do it. So with the information, I could find attempted to make the internet.
+
+![](/uploads/2017/05/14/my%20internet.PNG)
 
 ## How to create a network
 
@@ -51,9 +80,11 @@ In this case, we will be adding the .com TLD you can just add any TLD just swap 
 
 Add a server to an existing network and same as the root name server; set all of its options off except for DNS. Now in the DNS add an SOA record with these properties;
 
-[[image of SOA properties of com.ns]
+![](/uploads/2017/05/14/soa-com.ns.PNG)
 
 Then in the Root name server add two records; add an A record called "com.ns" pointing to the IP address of the new TLD server and then add an NS record call com pointing to com.ns.
+
+![](/uploads/2017/05/14/com.ns%20ns.PNG)
 
 ## How to register and set up a domain
 

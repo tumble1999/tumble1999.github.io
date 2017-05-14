@@ -33,7 +33,7 @@ layout: tumble1999-width
   <div class="mdl-layout-spacer"></div><div class="mdl-layout-spacer"></div><div class="mdl-layout-spacer"></div>
  <h2>The rest</h2>
     {% for post in site.posts %}
-    {% unless post.pin %}
+    {% unless post.pin==true %}
   <div class="mdl-layout-spacer"></div>
        <div class="mdl-card mdl-shadow--4dp post-container">  
     

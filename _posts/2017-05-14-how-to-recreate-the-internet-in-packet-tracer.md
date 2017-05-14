@@ -42,7 +42,7 @@ title: Make your own internet in packet tracer
 date: 2017-05-14 14:19
 layout: post
 comments: true
-pin: true
+pin: ''
 ---
 
 

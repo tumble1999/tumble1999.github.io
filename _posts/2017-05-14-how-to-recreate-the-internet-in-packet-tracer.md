@@ -2,6 +2,7 @@
 image: "/uploads/2017/05/14/thumbnail-3.PNG"
 categories:
 - How-to
+- cisco-packet-tracer
 tags:
 - dns
 - hierarchy

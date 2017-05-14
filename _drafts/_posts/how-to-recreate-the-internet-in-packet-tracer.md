@@ -98,25 +98,37 @@ In ns.exmple.com make  records;
 
 SOA
 
-[image]
+![](/uploads/2017/05/14/soa%20ns.example.com.png)
 
 A - point this record to the example.com server IP address.
 
-[image]
+![](/uploads/2017/05/14/a%20ns.example.com.png)
 
 ### Registering the domain
 
 In the com name server add an A record and point it to ns.example.com, and then create an NS record called example.com and point it to ns.example.com.
 
+![](/uploads/2017/05/14/a%20ns.example.com-1.png)
+
+![](/uploads/2017/05/14/root%20example.com%20ns.PNG)
+
 ## How to make an ISP
 
 An ISP is an internet service provider that lets people connect to the internet. In the real life; everyone including companies and their websites, are connected to the internet through an ISP.
 
-Put a router in a cluster and call it the name of the isp you want to create. Then in the cluster create a cloud connected to the router with copper straight through cable. In the router add an IP address to the router and then add the IP address to the router’s RIP settings. Then highlight the cloud and make a cluster called “ISP”. Edit the cloud and give it 8 PT-CLOUD-NM-1AM module, then make 8 DSL modems connected to the 8 PT-CLOUD-NM-1AMs.
+Put a router in a cluster and call the cluster the name of the isp you want to create. Then in the cluster create a cloud connected to the router with copper straight through cable. In the router add an IP address to the router and then add the IP address to the router’s RIP settings. Then highlight the cloud and make a cluster called “ISP”. Edit the cloud and give it 8 PT-CLOUD-NM-1AM module, then make 8 DSL modems connected to the 8 PT-CLOUD-NM-1AMs.
+
+![](/uploads/2017/05/14/isp%20network.PNG)
+
+![](/uploads/2017/05/14/isp%20dsl%20modems.PNG)
 
 ## How to make a Household
 
 Create a WRT300N and put it in a cluster if you want then connect a computer using DHCP and then connect the router to one of the modems in an isp. On the WRT3000N add a static IP to the internet section. In the future, I will add a section on how to add DHCP to the isp so the WRT3000N can be set to DHCP on the internet tab.
+
+![](/uploads/2017/05/14/household%201.PNG)
+
+![](/uploads/2017/05/14/household%202.PNG)
 
 ## Conclusion
 

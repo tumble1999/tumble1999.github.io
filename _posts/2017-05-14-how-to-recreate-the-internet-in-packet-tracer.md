@@ -3,7 +3,6 @@ image: "/uploads/2017/05/14/thumbnail-3.PNG"
 categories:
 - How-to
 - Cisco Packet Tracer
-- Networks
 tags:
 - dns
 - hierarchy

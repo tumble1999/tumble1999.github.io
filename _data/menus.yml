@@ -1,6 +1,8 @@
 ---
 - name: Navbar
   items:
+  - name: Artwork
+    href: https://tumble1999.artstation.com
   - name: Home
     href: "/"
   - name: About

@@ -11,11 +11,11 @@ My GCSE results
 ===
 |Subject|Grade|
 |---|---|
-|Maths|A|
-|ICT|C|
-|Art|C|
-|Spanish|C|
-|English Language|D|
-|Geography|E|
-|Core Science|C|
-|Additional Science|C|
+| Maths | A |
+| ICT | C |
+| Art | C |
+| Spanish | C |
+| English Language | D |
+| Geography | E |
+| Core Science | C |
+| Additional Science | C |

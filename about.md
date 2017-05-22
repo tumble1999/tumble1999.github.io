@@ -5,12 +5,30 @@ permalink: "/about/"
 author: tumble-test
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with computers. I am currently studying in The Studio.  I mainly want to apply for jobs related to computers because the *industry is heading towards using computer related stuff such as robots and automated stuff. I am on the autism spectrum as ADHD and I also approach life in a different angle.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+What I'm studying in The Studio.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+A Level Maths
+A Level Computers (Computer Science)
+BTEC ICT
+English resist
+My GCSE results.
+
+Subject|Grade
+
+Maths|A
+=======
+ICT|C
+---
+Art|C
+---
+Spanish|C
+---
+English Language|D
+---
+Geography|E
+---
+Core Science|C
+---
+Additional Science|C

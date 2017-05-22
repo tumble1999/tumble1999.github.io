@@ -9,12 +9,12 @@ I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with compute
 
 My GCSE results
 ===
-Subject|Grade
-Maths|A
-ICT|C
-Art|C
-Spanish|C
-English Language|D
-Geography|E
-Core Science|C
-Additional Science|C
+|Subject|Grade|
+|Maths|A|
+|ICT|C|
+|Art|C|
+|Spanish|C|
+|English Language|D|
+|Geography|E|
+|Core Science|C|
+|Additional Science|C|

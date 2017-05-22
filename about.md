@@ -22,3 +22,6 @@ My GCSE results
 | Geography | E </tr>
 | Core Science | C </tr>
 | Additional Science | C </tr>
+
+
+{% include download | url= %}

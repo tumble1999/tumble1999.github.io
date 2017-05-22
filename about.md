@@ -10,6 +10,7 @@ I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with compute
 My GCSE results
 ===
 |Subject|Grade|
+|---|---|
 |Maths|A|
 |ICT|C|
 |Art|C|

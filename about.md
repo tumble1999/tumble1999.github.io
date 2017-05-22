@@ -9,6 +9,7 @@ I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with compute
 
 My GCSE results
 ===
+---
 |Subject|Grade|
 |---|---|
 | Maths | A |
@@ -19,3 +20,4 @@ My GCSE results
 | Geography | E |
 | Core Science | C |
 | Additional Science | C |
+---

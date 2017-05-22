@@ -7,16 +7,9 @@ author: tumble-test
 
 I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with computers. I am currently studying in The Studio.  I mainly want to apply for jobs related to computers because the *industry is heading towards using computer related stuff such as robots and automated stuff. I am on the autism spectrum as ADHD and I also approach life in a different angle.
 
-What I'm studying in The Studio.
-
-A Level Maths
-A Level Computers (Computer Science)
-BTEC ICT
-English resist
-My GCSE results.
-
+My GCSE results
+===
 Subject|Grade
-
 Maths|A
 ICT|C
 Art|C

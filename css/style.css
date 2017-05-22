@@ -48,3 +48,20 @@ footer {
 .forestry {
 	padding-top: 70px
 }
+
+
+.download > * {
+	float: left;
+}
+
+.download-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+    margin-right: 16px;
+}
+
+.download-info {
+	display: flex;
+	flex-direction: column;
+}

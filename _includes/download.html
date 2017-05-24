@@ -1,5 +1,5 @@
 {% capture image_url %}{{ include.image | default:"/img/ext/{{ include.url | split:'.' | last }}.png" }}{% endcapture %}
-{% capture image_url_ %}{% for static_file in site.static_files %}{% if static_file.path == image_url %}{{ image_url }}{% endif %}{% endfor %}{% endcapture %}
+{% capture image_url_ %}{% comment %}{% for static_file in site.static_files %}{% if static_file.path == image_url %}{% endcomment %}{{ image_url }}{% comment %}{% endif %}{% endfor %}{% endcomment %}{% endcapture %}
 <div class="download">
 		<img src="{{ image_url_ | default:'/img/ext/blank_.png' }}" class="download-image">
 		<div class="download-info">

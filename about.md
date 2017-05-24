@@ -51,4 +51,4 @@ My GCSE results
 
 
 {% include download.html name=CV url=CameronTrowCV ext=pdf %}
-{% include download.html name=Personal Statement url=CameronTrowStatement ext=pdf %}
+{% include download.html name=Personal-Statement url=CameronTrowStatement ext=pdf %}

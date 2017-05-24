@@ -1,10 +1,8 @@
-{% comment %}{% for static_file in site.static_files %}{% if static_file.path == image_url %}{% endcomment %}
-{% comment %}{% endif %}{% endfor %}{% endcomment %}
 Extention: {{ include.url | split:'.' | last }}
 {% capture image_url %}{{ include.image | default:"/img/ext/{{ include.url | split:'.' | last }}.png" }}{% endcapture %}
-{% capture image_url_ %}{{ image_url }}{% endcapture %}
+{% capture image_url_ %}{% for static_file in site.static_files %}{% if static_file.path == image_url %}{{ image_url }}{% endif %}{% endfor %}{% endcapture %}
 <div class="download">
-		<img src="{{ image_url_ | default:'/img/ext/blank_.png' }}" class="download-image">
+		<img src="{{ image_url | default:'/img/ext/blank_.png' }}" class="download-image">
 		<div class="download-info">
       <span class="download-name">{{ include.name }}</span>
       <span><a href="/downloads/{{ include.url }}" class="download-link">download</a></span>

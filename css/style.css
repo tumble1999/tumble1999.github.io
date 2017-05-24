@@ -49,6 +49,9 @@ footer {
 	padding-top: 70px
 }
 
+.download {
+margin: 25px 0;
+}
 
 .download > * {
 	float: left;

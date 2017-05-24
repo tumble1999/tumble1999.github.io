@@ -1,5 +1,5 @@
 <div class="download">
-		<img src="{{ include.image }}" class="download-image">
+		<img src="{{ include.image | default:'/img/ext/{{ include.url | split:'.' | last | default:'_blank' }}.png' }}" class="download-image">
 		<div class="download-info">
       <span class="download-name">{{ include.name }}</span>
       <span><a href="/downloads/{{ include.url }}" class="download-link">download</a></span>

@@ -1,5 +1,6 @@
+{% capture image_url %}{{ include.image | default:'/img/ext/{{ include.url | split:'.' | last }}.png' }}{% endcapture %}
 <div class="download">
-		<img src="{{ include.image | default:'/img/ext/{{ include.url | split:'.' | last | default:'_blank' }}.png' }}" class="download-image">
+		<img src="{% for static_file in site.static_files %}{% if static_file.path == image_url %}{{ image_url }}{% else %}_blank.png{% endif %}{% endfor %}" class="download-image">
 		<div class="download-info">
       <span class="download-name">{{ include.name }}</span>
       <span><a href="/downloads/{{ include.url }}" class="download-link">download</a></span>

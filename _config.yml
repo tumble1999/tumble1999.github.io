@@ -44,8 +44,6 @@ collections:
   output: true
  portfolio:
   output: true
- unity:
- output: true
 
 gems:
    - jekyll-mentions

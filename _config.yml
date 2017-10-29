@@ -40,7 +40,7 @@ permalink: pretty
 production: true
 
 collections:
- projects:
+ github:
   output: true
  portfolio:
   output: true
@@ -78,7 +78,7 @@ defaults:
         image:
   - scope:
         path: ""
-        type: projects
+        type: github
     values:
         user: 
         repo: 

@@ -1,0 +1,79 @@
+---
+pages:
+- _posts/2017-05-14-how-to-recreate-the-internet-in-packet-tracer.md
+- _posts/2015-10-16-welcome.md
+- _posts/hello-employers.md
+- _posts/2016-04-01-the-studio-showcase-2016-outcome.md
+- _posts/2016-03-30-the-studio-showcase-2016.md
+- _posts/2016-12-15-personal-statement.md
+- _posts/2016-03-07-industry-ready-student-cameron-trow-term-3-2016.md
+hide_body: false
+fields:
+- name: title
+  default: Welcome to my Portfolio
+  label: Title
+  type: text
+  hidden: false
+- name: date
+  default: 2015-10-16 00:00:00 +0000
+  label: Date
+  type: datetime
+  hidden: false
+- name: layout
+  default: post
+  label: Layout
+  type: text
+  hidden: true
+  config:
+    required: true
+- type: boolean
+  label: Featured
+  name: pin
+  description: Puts the post to the top of the list of posts
+- name: author
+  default: tumble1999
+  label: Author
+  type: text
+  hidden: false
+  config:
+    source:
+      type: pages
+      section: posts
+    options: []
+    required: true
+- name: comments
+  default: true
+  label: Comments
+  type: boolean
+  hidden: false
+- name: categories
+  default:
+  - computers
+  - cv
+  - featured
+  - making
+  - old-about
+  - passion
+  - portfolio
+  - The Studio
+  - Updates
+  - updates
+  - website
+  label: Categories
+  type: tag_list
+  hidden: false
+- name: image
+  default: ''
+  label: Image
+  type: file
+  hidden: false
+- name: tags
+  default: 
+  label: Tags
+  type: tag_list
+  hidden: false
+- name: excerpt
+  default: ''
+  label: Excerpt
+  type: text
+  hidden: false

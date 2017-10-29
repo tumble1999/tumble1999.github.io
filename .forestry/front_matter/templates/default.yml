@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: image
+  default: favicon.gif
+  label: Image
+  type: file
+  hidden: false

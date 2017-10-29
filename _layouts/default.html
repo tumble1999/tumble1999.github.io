@@ -4,9 +4,9 @@ layout: null
 
 <!doctype html>
 <html>
-	
+
 	{% include head.html %}
-	
+
 
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -17,11 +17,11 @@ layout: null
 					  <i class="material-icons">home</i>
 					</a>
 					<span class="mdl-layout__title">{{ site.title }}</span>
-					
+
 			{% unless page.url contains "/no-ie/" %}
 					<div class="mdl-layout-spacer"></div>
-					
-						
+
+
 					<form action="/search" method="get" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
 											mdl-textfield--floating-label mdl-textfield--align-right">
 						<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
@@ -36,7 +36,7 @@ layout: null
 					</a>
 					<!-- Right aligned menu below button -->
 					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect githubAuthor" id="user-logged-in" data-user>
-						<img src="https://mail.google.com/mail/c/u/0/static/images/NoPicture.gif" class="user-avatar userImg" alt="userPicture">
+						{% include image.html src="https://mail.google.com/mail/c/u/0/static/images/NoPicture.gif" class="user-avatar userImg" alt="userPicture" %}
 					</button>
 					<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="user-logged-out">
 						<i class="material-icons">account_circle</i>
@@ -57,7 +57,7 @@ layout: null
 					{% endunless %}
 				</div>
 		</header>
-			
+
 		{% unless page.url contains "/no-ie/" %}
 			<div class="mdl-layout__drawer">
 				<span class="mdl-layout__title">{{ site.title}}</span>
@@ -73,10 +73,10 @@ layout: null
 			</div>
 		{% endunless %}
 			<main class="mdl-layout__content">
-					
+
 					{{ content }}
 			</main>
-		
+
 			<footer class="mdl-mini-footer">
 				<div class="mdl-mini-footer__left-section">
 					<div class="mdl-logo">{{ site.title }}</div>

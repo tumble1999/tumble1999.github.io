@@ -1,13 +1,4 @@
 ---
-pages:
-- _projects/ram-size-calculator.md
-- _projects/tumblenet-css.md
-- _projects/www-tumblenet-tk.md
-- _projects/tumblecraft.md
-- _projects/epq-project.md
-- _projects/downloads-tumblenet-tk.md
-- _projects/beta-tumblenet-tk.md
-- _projects/batch-arrays.md
 hide_body: false
 fields:
 - name: title

@@ -38,7 +38,7 @@ tags:
 author: tumble1999
 excerpt: Have you always wanted to know how to simulate your own internet?
 title: Make your own internet in packet tracer
-date: 2017-05-14 14:19
+date: 2017-05-14 00:00:00 +0000
 layout: post
 comments: true
 pin: ''

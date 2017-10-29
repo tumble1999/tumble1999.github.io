@@ -1,6 +1,6 @@
 ---
 title: Pizza Parkour
-date: '2015-09-25 00:00:00'
+date: 2015-09-25 00:00:00 +0000
 layout: portfolio
 author: tumblegamer
 comments: true

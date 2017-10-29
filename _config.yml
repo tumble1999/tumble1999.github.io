@@ -44,7 +44,7 @@ collections:
   output: true
  portfolio:
   output: true
- portfolio:
+ projects:
   output: true
  unity:
 

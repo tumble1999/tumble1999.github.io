@@ -40,7 +40,7 @@ permalink: pretty
 production: true
 
 collections:
- github:
+ gh-projects:
   output: true
  portfolio:
   output: true
@@ -55,9 +55,9 @@ gems:
    - jekyll-sitemap
    - jekyll-feed
    - jekyll-seo-tag
-   
-   
-   
+
+
+
 defaults:
   - scope:
       path: ""
@@ -82,8 +82,8 @@ defaults:
         path: ""
         type: github
     values:
-        user: 
-        repo: 
+        user:
+        repo:
 
 # Build settings
 markdown: kramdown
@@ -99,8 +99,8 @@ excludes:
   - gulffile.js
   - package.json
   - vendor
-  
-  
+
+
 # STATICMAN
 staticman:
   allowedFields: ["name", "message", "email", "url", "reply"]

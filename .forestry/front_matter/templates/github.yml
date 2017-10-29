@@ -1,4 +1,6 @@
 ---
+pages:
+- _github/batch-arrays.md
 hide_body: false
 fields:
 - name: image

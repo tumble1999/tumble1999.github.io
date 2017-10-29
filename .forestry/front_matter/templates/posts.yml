@@ -1,12 +1,12 @@
 ---
 pages:
 - _posts/2017-05-14-how-to-recreate-the-internet-in-packet-tracer.md
-- _posts/2015-10-16-welcome.md
-- _posts/hello-employers.md
+- _posts/2016-12-15-personal-statement.md
 - _posts/2016-04-01-the-studio-showcase-2016-outcome.md
 - _posts/2016-03-30-the-studio-showcase-2016.md
-- _posts/2016-12-15-personal-statement.md
 - _posts/2016-03-07-industry-ready-student-cameron-trow-term-3-2016.md
+- _posts/2015-10-16-welcome.md
+- _posts/hello-employers.md
 hide_body: false
 fields:
 - name: title

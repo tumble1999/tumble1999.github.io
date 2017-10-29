@@ -1,13 +1,4 @@
 ---
-pages:
-- _github/ram-size-calculator.md
-- _github/tumblenet-css.md
-- _github/www-tumblenet-tk.md
-- _github/tumblecraft.md
-- _github/epq-project.md
-- _github/downloads-tumblenet-tk.md
-- _github/beta-tumblenet-tk.md
-- _github/batch-arrays.md
 hide_body: false
 fields:
 - name: image

@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: GitHub Projects
 layout: page
 author: tumble1999
 ---
@@ -9,10 +9,10 @@ author: tumble1999
 </head>
 
 
-{% for project in site.projects %}
-<div class="github" data-user="{{ project.user }}" data-repo="{{ project.repo }}" >
-<a href="{{ project.url }}"><h2 class="projectTitle">{{ project.repo }}</h2></a>
-<p class="projectDescription">A github project made by {{ project.user }}.</p>
+{% for github in site.github %}
+<div class="github" data-user="{{ github.user }}" data-repo="{{ github.repo }}" >
+<a href="{{ github.url }}"><h2 class="projectTitle">{{ github.repo }}</h2></a>
+<p class="projectDescription">A github project made by {{ github.user }}.</p>
   <a class="projectLanguageURL"><span class="projectLanguage"></span></a> | 
    <a class="projectStarsURL">Stars: <span class="projectStars"></span></a> | 
   <a class="projectForksURL">Forks: <span class="projectForks"></span></a>

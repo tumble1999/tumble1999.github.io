@@ -1,13 +1,15 @@
 ---
 - name: Navbar
   items:
-  - name: Artwork
-    href: https://tumble1999.artstation.com
   - name: Home
     href: "/"
   - name: About
     href: "/about"
   - name: Projects
-    href: "/github"
+    href: "/projects"
+  - name: Art
+    href: https://tumble1999.artstation.com
+  - name: News
+    href: "/blog"
   - name: Older News
     href: https://10trowc.wordpress.com

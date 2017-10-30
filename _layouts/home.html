@@ -4,57 +4,7 @@ layout: tumble1999-width
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-<h2>Featured</h2>
-{% for post in site.posts %}
-  {% if post.pin==true %}
-  <div class="mdl-layout-spacer"></div>
-       <div class="mdl-card mdl-shadow--4dp post-container">  
-    
-    
-          <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          </div>
-          <div class="mdl-card__supporting-text post-meta">
-            {% include user-card.html user=post.author date=post.date %}
+  <h1 class="page-heading">{{ page.title }}</h1>
 
-            <div class="mdl-layout-spacer"></div>
-
-          </div>
-          <div class="mdl-card__supporting-text post-content">
-           {{ post.content | strip_html | truncatewords: 50 }}
-          </div>
-  
-      </div>
-  {% endif %}
-    {% endfor %}  
-  <div class="mdl-layout-spacer"></div><div class="mdl-layout-spacer"></div><div class="mdl-layout-spacer"></div>
- <h2>The rest</h2>
-    {% for post in site.posts %}
-    {% unless post.pin==true %}
-  <div class="mdl-layout-spacer"></div>
-       <div class="mdl-card mdl-shadow--4dp post-container">  
-    
-    
-          <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          </div>
-          <div class="mdl-card__supporting-text post-meta">
-            {% include user-card.html user=post.author date=post.date %}
-
-            <div class="mdl-layout-spacer"></div>
-
-          </div>
-          <div class="mdl-card__supporting-text post-content">
-           {{ post.content | strip_html | truncatewords: 50 }}
-          </div>
-  
-      </div>
-  {% endunless %}
-    {% endfor %}
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div>

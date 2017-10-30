@@ -5,5 +5,8 @@ author: tumble1999
 ---
 
 {% for collection in site.collections %}
-{{ collection.label }}
+### {{ collection.label }}
+{% for item in collection %}
+#### {{ item.name }}
+{% endfor %}
 {% endfor %}

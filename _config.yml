@@ -40,10 +40,6 @@ permalink: pretty
 production: true
 
 collections:
- gh-projects:
-  output: true
- portfolio:
-  output: true
  projects:
   output: true
  unity:
@@ -63,27 +59,71 @@ defaults:
       path: ""
     values:
       image: /favicon.gif
+      layout: basic
   - scope:
-        path: ""
-        type: pages
+      path: ""
+      type: pages
     values:
-        categories: []
-        author: ""
+      layout: page
+      categories: []
+      author: ""
   - scope:
-        path: ""
-        type: posts
+      path: ""
+      type: posts
     values:
-        categories: []
-        tags: []
-        author: ""
-        excerpt: >
-        image:
+      layout: post
+      categories: []
+      tags: []
+      author: ""
+      excerpt: >
+      image:
   - scope:
-        path: ""
-        type: github
+      path: ""
+      type: projects
     values:
-        user:
-        repo:
+      layout: project
+      categories: []
+      tags: []
+      author: ""
+      excerpt: >
+      image:
+  - scope:
+      path: "github"
+      type: project
+    values:
+      layout: project\github
+      user: tumble1999
+      repo:
+  - scope:
+      path: "collage"
+      type: projects
+    values:
+      layout: project\collage
+      categories: []
+      tags: []
+      author: ""
+      excerpt: >
+      image:
+  - scope:
+      path: "university"
+      type: projects
+    values:
+      layout: project\university
+      categories: []
+      tags: []
+      author: ""
+      excerpt: >
+      image:
+  - scope:
+      path: "self"
+      type: projects
+    values:
+      layout: project\self
+      categories: []
+      tags: []
+      author: ""
+      excerpt: >
+      image:
 
 # Build settings
 markdown: kramdown

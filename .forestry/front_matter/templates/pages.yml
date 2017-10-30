@@ -1,5 +1,6 @@
 ---
 pages:
+- projects.md
 - collections.md
 - blog.md
 - unity/SpaceShooter/index.html

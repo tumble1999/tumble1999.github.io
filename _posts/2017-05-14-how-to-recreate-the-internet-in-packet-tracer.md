@@ -134,4 +134,4 @@ In conclusion, you can recreate the internet in cisco packet tracer. By using th
 ## Download Links
 
 Packet Tracer Save ([internet.pkt](/downloads/internet.pkt))
-{% include download.html name='Packet Tracer save' url='/downloads/internet.pkt' %}
+{% include download.html name='Packet Tracer save' url='internet.pkt' %}

@@ -91,14 +91,14 @@ defaults:
       path: "github"
       type: project
     values:
-      layout: project\github
+      layout: project/github
       user: tumble1999
       repo:
   - scope:
       path: "collage"
       type: projects
     values:
-      layout: project\collage
+      layout: project/collage
       categories: []
       tags: []
       author: ""
@@ -108,7 +108,7 @@ defaults:
       path: "university"
       type: projects
     values:
-      layout: project\university
+      layout: project/university
       categories: []
       tags: []
       author: ""

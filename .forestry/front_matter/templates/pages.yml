@@ -1,5 +1,6 @@
 ---
 pages:
+- collections.md
 - blog.md
 - unity/SpaceShooter/index.html
 - github.md
@@ -15,7 +16,6 @@ pages:
 - index.md
 - dialog.html
 - contact-me.md
-- collections.md
 - authors.html
 - about-avatars.md
 - 404.md

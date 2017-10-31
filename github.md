@@ -9,7 +9,7 @@ author: tumble1999
 </head>
 
 
-{% for github in site.gh-projects %}
+{% for github in site.projects %}
 <div class="github" data-user="{{ github.user }}" data-repo="{{ github.repo }}" >
 <a href="{{ github.url }}"><h2 class="projectTitle">{{ github.repo }}</h2></a>
 <p class="projectDescription">A github project made by {{ github.user }}.</p>

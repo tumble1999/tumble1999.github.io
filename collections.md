@@ -12,9 +12,6 @@ author: tumble1999
 * permalink: {{ collection.permalink }}
 
 {% for item in collection %}
-#### {{ item.name }}
-{% for p in item %}
-{{ p.name }}
-{% endfor %}
+#### {{ item }}
 {% endfor %}
 {% endfor %}

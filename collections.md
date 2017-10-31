@@ -8,8 +8,8 @@ author: tumble1999
 ## {{collection.label }}
 {% for item in site.[collection.label] %}
 * {{ item.permalink}} {{ item.title }}
-~~~
+``` html
 {{item}}
-~~~
+```
 {% endfor %}
 {% endfor %}

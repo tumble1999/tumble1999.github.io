@@ -37,7 +37,7 @@ webmaster_verifications:
   yandex: 1234
 
 permalink: pretty
-production: false
+production: true
 
 collections:
  projects:

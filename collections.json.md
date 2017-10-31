@@ -1,4 +1,3 @@
 ---
 permalink: collections.json
 ---
-hi

@@ -5,6 +5,7 @@ author: tumble1999
 ---
 
 {% for collection in site.collections %}
+<!-- {{collection-->
 ### {{ collection.label }}
 * files: {{ collection.files }}
 * dir: {{ collection.directory }}

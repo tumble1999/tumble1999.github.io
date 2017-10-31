@@ -10,6 +10,7 @@ author: tumble1999
 
 
 {% for github in site.projects %}
+{% if github.layout=='github' %}
 <div class="github" data-user="{{ github.user }}" data-repo="{{ github.repo }}" >
 <a href="{{ github.url }}"><h2 class="projectTitle">{{ github.repo }}</h2></a>
 <p class="projectDescription">A github project made by {{ github.user }}.</p>
@@ -17,4 +18,5 @@ author: tumble1999
    <a class="projectStarsURL">Stars: <span class="projectStars"></span></a> |
   <a class="projectForksURL">Forks: <span class="projectForks"></span></a>
 </div>
+{% endif}
 {% endfor %}

@@ -1,7 +1,6 @@
 ---
+layout: null
 permalink: collections.json
 noindex: true
 ---
-{
-{{site.documents | jsonify}}
-}
+{{site.collections | jsonify}}

@@ -1,4 +1,3 @@
-{% if include.author %}
 <div class="user githubAuthor" data-user="{{ include.user | escape }}">
 		<img src="https://github.com/identicons/{{ include.user | escape }}.png" class="user-avatar userImg" alt="userIamge {{ include.user }}">
 		<div class="user-info">
@@ -6,4 +5,3 @@
 			{% if include.date %}<span>{{ include.date | date: "%b %-d, %Y" }}</span>{% endif %}
 		</div>
 	</div>
-{% endif %}

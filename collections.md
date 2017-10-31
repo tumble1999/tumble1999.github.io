@@ -7,6 +7,6 @@ author: tumble1999
 {% for collection in site.collections %}
 ## {{collection.label }}
 {% for item in site.[collection.label] %}
-* {{item.title }}
+* {{ item.permalink | split:'/' | first }}{{ item.title }}
 {% endfor %}
 {% endfor %}

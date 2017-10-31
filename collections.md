@@ -6,7 +6,7 @@ author: tumble1999
 
 {% for collection in site.collections %}
 ### {{ collection.label }}
-{% for item in collection %}
+{% for item in collection.files %}
 #### {{ item }}
 {% endfor %}
 {% endfor %}

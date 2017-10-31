@@ -18,5 +18,5 @@ author: tumble1999
    <a class="projectStarsURL">Stars: <span class="projectStars"></span></a> |
   <a class="projectForksURL">Forks: <span class="projectForks"></span></a>
 </div>
-{% endif}
+{% endif %}
 {% endfor %}

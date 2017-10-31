@@ -1,5 +1,6 @@
 ---
 pages:
+- collections.json.html
 - collections.md
 - projects.md
 - blog.md

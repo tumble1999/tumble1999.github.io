@@ -1,7 +1,12 @@
 ---
 permalink: collections.json
 ---
+[
 {% for collection in site.collections %}
-  {{ collection | jsonify }}
+{{collection.label}}
+{
+{{ collection | jsonify }}
+},
 {% endfor %}
+]
 

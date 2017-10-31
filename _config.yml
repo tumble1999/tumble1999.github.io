@@ -44,7 +44,7 @@ collections:
   output: true
  unity:
 
-gems:
+plugins:
    - jekyll-mentions
    - jemoji
    - jekyll-redirect-from

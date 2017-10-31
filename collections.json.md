@@ -1,6 +1,6 @@
 ---
 permalink: collections.json
-noindex
+noindex: true
 ---
 {
 {{site.documents | jsonify}}

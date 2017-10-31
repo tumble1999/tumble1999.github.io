@@ -1,4 +1,4 @@
 ---
 permalink: collections.json
 ---
-{{ site | jsonify }}
+{{ site.collections | jsonify }}

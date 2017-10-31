@@ -2,6 +2,6 @@
 		<img src="https://github.com/identicons/{{ include.user | escape }}.png" class="user-avatar userImg" alt="userIamge {{ include.user }}">
 		<div class="user-info">
 			<span><a href="http://github.com/{{ include.user }}" class="userName">{{ include.user }}</a><span class="postsLink"></span></span>
-			{% if include.date %}<span>{{ include.date | date: "%b %-d, %Y" }}</span>{% endif %}
+			<span>{{ include.date | date: "%b %-d, %Y" }}</span>
 		</div>
 	</div>

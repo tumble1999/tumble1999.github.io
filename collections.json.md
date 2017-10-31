@@ -3,4 +3,9 @@ layout: null
 permalink: collections.json
 noindex: true
 ---
-{{site.collections | jsonify}}
+[
+{% for collection in site.collections %}  {
+    {{ collection | jsonify }}
+  },
+{% endfor %}
+]

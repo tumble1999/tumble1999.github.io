@@ -7,11 +7,8 @@ author: tumble1999
 {% for collection in site.collections %}
 <!-- {{collection-->
 ### {{ collection.label }}
-* files: {{ collection.files }}
-* dir: {{ collection.directory }}
-* permalink: {{ collection.permalink }}
 
-{% for item in collection %}
-#### {{ item }}
+{% for item in collection.files %}
+#### {{ item.title }}
 {% endfor %}
 {% endfor %}

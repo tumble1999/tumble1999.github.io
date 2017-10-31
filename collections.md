@@ -9,7 +9,7 @@ author: tumble1999
 {% for item in site.[collection.label] %}
 {% capture start %}{{ collection.label }}/{% endcapture %}
 {% capture start_url %}{{ item.url | remove_first: '/' | remove_first: start }}{% endcapture %}
-{% capture word_count %}{{ start_url | split: '/' |  }}{% endcapture %}
+{% capture word_count %}{{ start_url | split: '/' | size }}{% endcapture %}
 {% assign word_count = word_count | minus: '1' %}
 *  {{ item.url }} 
   *  {{ item.url | remove_first: '/' }}

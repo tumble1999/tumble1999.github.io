@@ -10,6 +10,11 @@ author: tumble1999
 {% capture start %}{{ collection.label }}/{% endcapture %}
 {% capture word_count %}{{ item.url | split: '/' |  }}{% endcapture %}
 {% assign word_count = word_count | minus: '1' %}
-*  {{ item.url | remove_first: '/' | remove_first: start | replace: '/',' ' | truncate_words: word_count }} => {{ item.title }}
+*  {{ item.url }} 
+  *  {{ item.url | remove_first: '/' }}
+  *  {{ item.url | remove_first: '/' | remove_first: start }}
+  *  {{ item.url | remove_first: '/' | remove_first: start | replace: '/',' '}}
+  *  {{ item.url | remove_first: '/' | remove_first: start | replace: '/',' ' | truncate_words: word_count }}
+  *  {{ item.url | remove_first: '/' | remove_first: start | replace: '/',' ' | truncate_words: word_count }} => {{ item.title }}
 {% endfor %}
 {% endfor %}

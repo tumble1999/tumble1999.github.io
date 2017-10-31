@@ -5,6 +5,6 @@ author: tumble1999
 ---
 [
 {% for collection in site.collections %}
-{{ collection | jsonify }}
+  {{ collection | jsonify }}
 {% endfor %}
 ]

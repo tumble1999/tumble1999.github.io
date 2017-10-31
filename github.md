@@ -1,7 +1,6 @@
 ---
 title: GitHub Projects
 layout: page
-author: tumble1999
 ---
 <head>
 <script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>

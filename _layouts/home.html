@@ -1,7 +1,7 @@
 ---
 layout: tumble1999-width
 ---
-{% assign all=(site.documents | sort: "date","last") | reverse  %}
+{% assign all=(site.documents | sort: "date","last") | reverse %}
 
 
 {% assign pinned=(all | where: "featured","true") %}

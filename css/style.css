@@ -12,6 +12,10 @@ height: 100%;
 	width: 100%;
 }
 
+.mdl-card__supporting-text {
+	width: inherit;
+}
+
 .user > * {
 	float: left;
 }
@@ -38,7 +42,7 @@ height: 100%;
 }
 
 .comment__answers {
-	margin-left: 10%; 
+	margin-left: 10%;
 }
 
 footer {

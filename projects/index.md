@@ -6,6 +6,7 @@ title: Projects
 {% for project in site.projects %}
 {% capture project_type %}{{ project.layout | remove_first: 'project/' }}{% endcapture %}
 {% unless project_type == project.layout %}
+Project Type: {{ project_type }}
 {% assign project_types = project_types | push: project.layout %}
 {% endunless %}
 {% endfor %}

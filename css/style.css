@@ -9,11 +9,11 @@ height: 100%;
 
 
 .post-container {
-	width: auto;
+	width: 100%;
 }
 
 .mdl-card__supporting-text {
-	width: inherit;
+	width: initial;
 }
 
 .user > * {

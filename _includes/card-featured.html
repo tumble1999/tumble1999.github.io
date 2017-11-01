@@ -3,7 +3,7 @@
         <img class="article-image" src="{{ item.image }}" border="0" alt="">
     </div>{% endunless %}{% endif %}
     <div class="mdl-cell mdl-cell--8-col">
-        <h2 class="mdl-card__title-text"><a href="include.item.url">{{ include.item.title }}</a></h2>
+        <h2 class="mdl-card__title-text"><a href="{{include.item.url}}">{{ include.item.title }}</a></h2>
         <div class="mdl-card__supporting-text padding-top">
             <span><strong>{{ include.item.collection | capitalize }}</strong> - Posted on {{ include.item.date | date: "%x" }}</span>
         </div>

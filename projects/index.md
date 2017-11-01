@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 ---
-
+{% assign project_types="" %}
 {% for project in site.projects %}
 {% capture project_type %}{{ project.layout }}{% endcapture %}
 {% unless project_type == project.layout %}

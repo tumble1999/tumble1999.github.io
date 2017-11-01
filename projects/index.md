@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 ---
 
 {% for project in site.projects %}

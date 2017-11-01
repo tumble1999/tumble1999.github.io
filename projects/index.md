@@ -14,7 +14,12 @@ title: projects
 
 {% for project_type in project_types %}
 ## {{ project_type | remove_first: 'project/'}}
-{% for project in site.projects | where: "layout",project_type %}
+{% assign projects = site.projects | where: "layout",project_type %}
+{% for project in projects | limit: 5 %}
 - {{ project.title }}
+{% else %}
 {% endfor %}
+
+{% else %}
+No projects.
 {% endfor %}

@@ -1,0 +1,15 @@
+<div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+    {% if include.item.image %}{% unless  include.item.image == site.logo %}<div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
+        <img class="article-image" src="{{ item.image }}" border="0" alt="">
+    </div>{% endunless %}{% endif %}
+    <div class="mdl-cell mdl-cell--8-col">
+        <h2 class="mdl-card__title-text"><a href="include.item.url">{{ include.item.title }}</a></h2>
+        <div class="mdl-card__supporting-text padding-top">
+            <span><strong>{{ include.item.collection | capitalize }}</strong> - Posted on {{ include.item.date | date: "%x" }}</span>
+        </div>
+        <div class="mdl-card__supporting-text no-left-padding">
+            <p>{{ include.item.excerpt | default: include.item.content | strip_html | truncatewords: 50  }}</p>
+            <span>Category: <a href="#">{{ include.item.categories | join: ',' }}</a></span>
+        </div>
+    </div>
+</div>

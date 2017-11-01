@@ -5,3 +5,4 @@ user: tumblegamer
 repo: batch-arrays
 layout: project/github
 ---
+Added the high level programming feature of arrays into Batch.

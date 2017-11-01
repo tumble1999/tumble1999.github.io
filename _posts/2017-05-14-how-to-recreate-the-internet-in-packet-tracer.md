@@ -41,7 +41,7 @@ title: Make your own internet in packet tracer
 date: 2017-05-14 00:00:00 +0000
 layout: post
 comments: true
-pin: ''
+featured: true
 ---
 
 

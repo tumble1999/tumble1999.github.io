@@ -1,10 +1,12 @@
 ---
 layout: tumble1999-width
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">{{ page.title }}</h1>
+{% assign all=(site.documents | sort: "date","last") | reverse  %}
 
 
-</div>
+{% assign pinned=(all | where: "featured","true") %}
+{% assign rest=(all | where: "featured","false") %}
+
+{% include home-section.html name="Recommended" items=pinned limit=3 mode=1 %}
+
+{% include home-section.html name="Newest" items=rest %}

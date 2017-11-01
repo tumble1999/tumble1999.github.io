@@ -3,6 +3,7 @@ title: Medfication
 date: 2016-02-12 00:00:00 +0000
 layout: project/collage
 author: tumblegamer
+excerpt: Medification is an app for people who take medication that reminds people when to take their medication.
 comments: true
 categories:
 - PBL Projects
@@ -11,8 +12,6 @@ categories:
 
 <p style="text-align:left;"><a href="https://github.com/tumble1999/Medification/raw/master/Medifircation.apk" rel="attachment wp-att-602"><img class="alignnone wp-image-602 size-medium" src="https://10trowc.files.wordpress.com/2016/02/android-download-button.png?w=300" alt="android-download-button" width="300" height="101" /></a></p>
 
-<p style="text-align:left;">Under construction</p>
-
-<p style="text-align:left;"><a href="https://github.com/tumble1999/Medification/issues">Send bugs here</a></p>
+Medification is an app for people who take medication that reminds people when to take their medication.
 
 <p style="text-align:left;"><a href="https://10trowc.wordpress.com/category/medification/" target="_blank">Developement Progress</a></p>

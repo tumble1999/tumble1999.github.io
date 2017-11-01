@@ -5,7 +5,7 @@ permalink: "/about/"
 author: tumble1999
 ---
 
-I am Cameron Trow, an autistic Nintendo enthusiast that is obsessed with computers. I am currently studying in The Studio.  I mainly want to apply for jobs related to computers because the *industry is heading towards using computer related stuff such as robots and automated stuff. I am on the autism spectrum as ADHD and I also approach life in a different angle.
+I am Cameron Trow, a Nintendo enthusiast that is obsessed with computers. I am currently studying in The Studio.  I mainly want to apply for jobs related to computers because the *industry is heading towards using computer related stuff such as robots and automated stuff. 
 
 My GCSE results
 ---

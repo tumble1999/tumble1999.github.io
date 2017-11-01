@@ -1,0 +1,14 @@
+<div class="mdl-cell mdl-shadow--4dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text"><a href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
+    </div>
+    {% if include.post.image %}{% unless include.post.image == site.logo %}<div class="mdl-card__media">
+        <a href="{{ include.post.url }}"> <img class="article-image" src="{{ include.post.image }}" border="0" alt=""></a>
+    </div>{% endunless %}{% endif %}
+    <div class="mdl-card__supporting-text no-bottom-padding">
+        <span><strong>{{ include.post.collection | capitalize }}</strong> - Posted on {{ include.post.date | date: "%x" }}</span>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <p>{{ include.post.excerpt | default: include.post.content | strip_html | truncatewords: 50 }}</p>
+    </div>
+</div>

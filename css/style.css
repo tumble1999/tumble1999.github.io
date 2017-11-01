@@ -7,7 +7,10 @@ height: 100%;
 	margin: auto;
 }
 
-
+img.article-image {
+    width: 100%;
+    height: auto;
+}
 .post-container {
 	width: 100%;
 }

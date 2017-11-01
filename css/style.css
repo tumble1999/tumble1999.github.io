@@ -9,7 +9,7 @@ height: 100%;
 
 
 .post-container {
-	width: 100%;
+	width: auto;
 }
 
 .mdl-card__supporting-text {

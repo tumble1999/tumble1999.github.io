@@ -6,7 +6,7 @@
         <a href="{{ include.post.url }}"> <img class="article-image" src="{{ include.post.image }}" border="0" alt=""></a>
     </div>{% endunless %}{% endif %}
     <div class="mdl-card__supporting-text no-bottom-padding">
-        <span><strong>{{ include.post.collection | capitalize }}</strong> - Posted on {{ include.post.date | date: "%x" }}</span>
+        <span><strong>{{ include.post.collection | capitalize }}</strong> - {% include user-card.html user=include.post.author date=include.post.date %}</span>
     </div>
     <div class="mdl-card__supporting-text">
         <p>{{ include.post.excerpt | default: include.post.content | strip_html | truncatewords: 50 }}</p>

@@ -88,14 +88,14 @@ defaults:
       excerpt: >
       image:
   - scope:
-      path: "github"
+      path: "_projects/github"
       type: project
     values:
       layout: project/github
       user: tumble1999
       repo:
   - scope:
-      path: "collage"
+      path: "_projects/collage"
       type: projects
     values:
       layout: project/collage
@@ -105,7 +105,7 @@ defaults:
       excerpt: >
       image:
   - scope:
-      path: "university"
+      path: "_projects/university"
       type: projects
     values:
       layout: project/university
@@ -115,7 +115,7 @@ defaults:
       excerpt: >
       image:
   - scope:
-      path: "self"
+      path: "_projects/self"
       type: projects
     values:
       layout: project/self

@@ -118,7 +118,7 @@ defaults:
       path: "self"
       type: projects
     values:
-      layout: project\self
+      layout: project/self
       categories: []
       tags: []
       author: ""

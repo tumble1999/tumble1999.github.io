@@ -3,7 +3,7 @@ title: Pizza Parkour
 date: 2015-09-25 00:00:00 +0000
 layout: project/collage
 image: "/uploads/2015/09/pizza.png"
-author: tumblegamer
+author: tumble1999
 comments: true
 categories:
 - PBL Projects

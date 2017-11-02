@@ -1,6 +1,4 @@
 ---
-pages:
-- _projects/test-1.md
 hide_body: false
 fields:
 - name: image

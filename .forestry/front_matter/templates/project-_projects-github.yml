@@ -1,0 +1,28 @@
+---
+hide_body: false
+fields:
+- name: image
+  label: Image
+  type: file
+  hidden: false
+  default: "/favicon.gif"
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: project/github
+- name: featured
+  label: Featured
+  type: boolean
+  hidden: false
+  default: false
+- name: user
+  label: User
+  type: text
+  hidden: false
+  default: tumble1999
+- name: repo
+  label: Repo
+  type: text
+  hidden: false
+  default: 

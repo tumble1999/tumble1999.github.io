@@ -2,7 +2,7 @@
 title: Medfication
 date: 2016-02-12 00:00:00 +0000
 layout: project/collage
-author: tumblegamer
+author: tumble1999
 excerpt: Medification is an app for people who take medication that reminds people
   when to take their medication.
 comments: true

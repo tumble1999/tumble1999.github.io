@@ -1,13 +1,14 @@
 ---
 pages:
+- projects/index.html
+- about.md
+- contact-me.md
+- projects/github.md
 - collections.md
-- projects.md
 - blog.md
 - unity/SpaceShooter/index.html
-- github.md
 - unity/Roll_a_Ball/index.html
 - downloads/404.md
-- about.md
 - test.md
 - search.html
 - redirect.html
@@ -16,7 +17,6 @@ pages:
 - login.html
 - index.md
 - dialog.html
-- contact-me.md
 - authors.html
 - about-avatars.md
 - 404.md

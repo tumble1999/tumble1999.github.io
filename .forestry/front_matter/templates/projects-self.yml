@@ -1,4 +1,6 @@
 ---
+pages:
+- _projects/self-anti-cookie-clicker.md
 hide_body: false
 fields:
 - name: image

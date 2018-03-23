@@ -1,11 +1,11 @@
 ---
 layout: tumble1999-width
 ---
-{% assign all=(site.documents | sort: "date","last") | reverse %}
+{% assign all=site.documents | sort: "date","last" | reverse %}
 
 
-{% assign pinned=(all | where: "featured","true") %}
-{% assign rest=(all | where: "featured","false") %}
+{% assign pinned=all | where: "featured","true" %}
+{% assign rest=all | where: "featured","false" %}
 
 {% include home-section.html name="Recommended" items=pinned limit=3 mode=1 %}
 

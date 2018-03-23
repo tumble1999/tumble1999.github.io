@@ -18,7 +18,7 @@ description: > # this means to ignore newlines until "baseurl:"
   My Github Website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tumble1999.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: tumble1000/tumble1999.github.io
+repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif
 

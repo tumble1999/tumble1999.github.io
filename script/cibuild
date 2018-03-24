@@ -2,7 +2,7 @@
 set -e # halt script on error
 
 echo "JEKYLL BUILD"
-bundle exec jekyll build -V
+bundle exec jekyll build
 
 echo ""
 echo "HTML PROOFER"

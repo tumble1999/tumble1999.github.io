@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
-  publish_mode: editorial_workflow
-  media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+  name: github
+  repo: tumble1999/tumble1999.github.io
+
+publish_mode: editorial_workflow
+media_folder: "uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
   - name: "pages"

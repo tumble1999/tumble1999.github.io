@@ -8,7 +8,7 @@ $(function() {
 	var admins_url = "";
 
 	UserInit(refresh);
-	
+
 	function UserInit(callback) {
 		console.log("userInit");
 		loggedIn = localStorage.getItem("loggedIn");
@@ -18,58 +18,39 @@ $(function() {
 
 			access_token = localStorage.getItem("access_token");
 			url = "https://api.github.com/user?access_token=" + access_token;
-			var admin_code_1 = "ab85ff5428f26f488cd0";
-			var admin_code_2 = "3d7057b8ee5e536a4d06";
-			admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
+
 			$.getJSON(url, function(currentUser) {
 				loggedInUser = currentUser.login;
 				console.log("Logged in user: " + loggedInUser);
 
-				$.getJSON(admins_url, function(colabs) {
-					//console.log(colabs);
-					for(var i = 0; i < colabs.length; i++) {
-					    if (colabs[i].login == loggedInUser) {
-						adminStatus = true;
-						break;
-					    }
-					}
-					console.log("Authors: " + _SITE_AUTHORS_);
-					if ($.inArray(loggedInUser, _SITE_AUTHORS_) != -1) {
-						authorStatus = true;
-					}
-					
-					console.log("ADMIN: " + adminStatus);
-					console.log("author: " + authorStatus);
-					if (adminStatus) {
-						$('.user-admin-only, #user-admin-only').show();
-						//$('.user-logged-out, #user-logged-out').show();
-					} else {
-						$('.user-admin-only, #user-admin-only').hide();
-						//$('.user-logged-out, #user-logged-out').hide();
-					}
-					
-					if (authorStatus) {
-						$('.user-author-only, #user-author-only').show();
-						$('.myPosts').attr("href", "/authors/?a=" + loggedInUser);
-						//$('.user-logged-out, #user-logged-out').show();
-					} else {
-						$('.user-author-only, #user-author-only').hide();
-						//$('.user-logged-out, #user-logged-out').hide();
-					}
-					$('.user-logged-in, #user-logged-in').show();
-					$('.user-logged-out, #user-logged-out').hide();
-					$('#user-logged-in').attr("data-user", loggedInUser);
-					$('head').attr("data-user", loggedInUser);
-					$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
-					$('.favicon').attr("href", "https://github.com/identicons/" + loggedInUser + ".png");
-					$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+				console.log("Authors: " + _SITE_AUTHORS_);
+				if ($.inArray(loggedInUser, _SITE_AUTHORS_) != -1) {
+					authorStatus = true;
+				}
 
-					$('.newCommentUsername').val(loggedInUser);
-					$('.newCommentUsername').attr("value", loggedInUser );
-					$('.newCommentUsername').parent().addClass('is-dirty');
-					console.log("userLoggedIn pt2");
-					callback();
-				});
+				console.log("author: " + authorStatus);
+
+				if (authorStatus) {
+					$('.user-author-only, #user-author-only').show();
+					$('.myPosts').attr("href", "/authors/?a=" + loggedInUser);
+					//$('.user-logged-out, #user-logged-out').show();
+				} else {
+					$('.user-author-only, #user-author-only').hide();
+					//$('.user-logged-out, #user-logged-out').hide();
+				}
+				$('.user-logged-in, #user-logged-in').show();
+				$('.user-logged-out, #user-logged-out').hide();
+				$('#user-logged-in').attr("data-user", loggedInUser);
+				$('head').attr("data-user", loggedInUser);
+				$('#user-logged-in > img').attr("src", "https://github.com/identicons/" + loggedInUser + ".png");
+				$('.favicon').attr("href", "https://github.com/identicons/" + loggedInUser + ".png");
+				$('.loggedInUserProfile').attr("href", "http://github.com/" + loggedInUser);
+
+				$('.newCommentUsername').val(loggedInUser);
+				$('.newCommentUsername').attr("value", loggedInUser );
+				$('.newCommentUsername').parent().addClass('is-dirty');
+				console.log("userLoggedIn pt2");
+				callback();
 			});
 		} else {
 			console.log("user Logged out");
@@ -88,25 +69,25 @@ $(function() {
 	}
 
 	function userLoggedIn() {
-		
+
 	}
 	function userLoggedOut() {
-		
+
 	}
 	function userIsNotAdmin() {
-		
+
 	}
 	function userIsAdmin() {
-		
+
 	}
 	function getUserInfo(url, admins_url, callback) {
-		
+
 
 	}
 });
 
 
-function refresh() {		
+function refresh() {
 	var ghDiv;
 	var user;
 
@@ -115,7 +96,7 @@ function refresh() {
 	$('.githubAuthor').each(function(id, object) {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
-		
+
 		var admin_code_1 = "ab85ff5428f26f488cd0";
 			var admin_code_2 = "3d7057b8ee5e536a4d06";
 			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
@@ -124,7 +105,7 @@ function refresh() {
 		var authorPostsLink = "";
 		$.getJSON(url, function(userInfo) {
 			console.log(userInfo);
-			
+
 			var admins_url = "https://api.github.com/repos/tumble1999/tumble1999.github.io/collaborators?access_token=" + admin_code_1 + admin_code_2;
 			$.getJSON(admins_url, function(colabs) {
 				for(var i = 0; i < colabs.length; i++) {
@@ -137,7 +118,7 @@ function refresh() {
 					authorStatusMessage = "[AUTHOR]";
 					authorPostsLink = "     [<a href='/authors?a=" + userInfo.login + "'>view other posts</a>]";
 				}
-				
+
 				$(object).find('.userName').html(adminStatusMessage + authorStatusMessage + userInfo.name);
 				$(object).find('.postsLink').html(authorPostsLink);
 				$(object).find('.userImg').attr("src", userInfo.avatar_url);
@@ -146,7 +127,7 @@ function refresh() {
 
 			});
 
-			
+
 		});
 
 		/* githubAPI("repos/" + user + "/" + repo, function(data) {
@@ -181,5 +162,3 @@ function amILoggedIn() {
 		console.log("No. Go away stranger.");
 	}
 }
-
-

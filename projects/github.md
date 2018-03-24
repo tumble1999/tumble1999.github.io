@@ -3,7 +3,7 @@ title: GitHub Projects
 layout: page
 ---
 <head>
-<script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src=" https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
 <script src="/js/projects.js"></script>
 </head>
 

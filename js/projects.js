@@ -32,7 +32,7 @@ $(function() {
 						//where text will be the text returned by the ajax call
 						var converter = new showdown.Converter();
 						var htmlText = converter.makeHtml(mdText);
-						$(object).find('.projectReadMe').append(htmlText); //append this to a div with class outputDiv
+						$(object).find('.projectReadMe').append(htmlText); //append this to a div with class projectReadMe
 					}
 				});
 			});

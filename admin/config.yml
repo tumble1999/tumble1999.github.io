@@ -6,32 +6,36 @@ publish_mode: editorial_workflow
 media_folder: "uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "/"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Catergories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  # - name: "pages"
+  #   label: "Pages"
+  #   folder: "/"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Author", name: "author", widget: "string", default: "tumble1999"}
+  #     - {label: "Catergories", name: "categories", widget: "list"}
+  #     - {label: "Body", name: "content", widget: "html"}
   - name: "posts"
     label: "Blog"
     folder: "/_posts/"
+    media_folder: "media/{{year}}/{{month}}/{{day}}/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "text"}
+      - {label: "Author", name: "author", widget: "string", default: "tumble1999"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
       - {label: "Catergories", name: "categories", widget: "list"}
       - {label: "Tags", name: "categories", widget: "list"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: true}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects/collage"
+  - name: "projects-collage"
     label: "Collage Projects"
     folder: "/_projects/collage"
+    media_folder: "media/projects/collage/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields for each document, usually in front matter
@@ -39,25 +43,29 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Catergories", name: "categories", widget: "list"}
       - {label: "Tags", name: "categories", widget: "list"}
-      - {label: "Author", name: "author", widget: "text"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "tumble1999"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects/github"
+  - name: "projects-github"
     label: "GitHub Projects"
     folder: "/_projects/github"
+    media_folder: "media/projects/github/"
     create: true
     slug: "{{slug}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "project/collage"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "User", name: "author", widget: "text", default:"tumble1999"}
-      - {label: "Repo", name: "excerpt", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
+      - {label: "User", name: "author", widget: "string", default:"tumble1999"}
+      - {label: "Repo", name: "excerpt", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects/self"
+  - name: "projects-self"
     label: "Personal Projects"
     folder: "/_projects/self"
+    media_folder: "media/projects/self/"
     create: true
     slug: "{{slug}}"
     fields: # The fields for each document, usually in front matter
@@ -65,23 +73,26 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Catergories", name: "categories", widget: "list"}
       - {label: "Tags", name: "categories", widget: "list"}
-      - {label: "Author", name: "author", widget: "text"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "tumble1999"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Download Link", name: "download", widget: "string"}
       - {label: "Website", name: "website", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects/university"
+  - name: "projects-university"
     label: "University Projects"
     folder: "/_projects/university"
+    media_folder: "media/projects/university/"
     create: true
     slug: "{{slug}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "project/collage"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "tumble1999"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
       - {label: "Catergories", name: "categories", widget: "list"}
       - {label: "Tags", name: "categories", widget: "list"}
-      - {label: "Author", name: "author", widget: "text"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

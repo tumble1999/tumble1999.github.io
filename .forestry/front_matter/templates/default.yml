@@ -1,0 +1,18 @@
+---
+hide_body: false
+fields:
+- name: image
+  label: Image
+  type: file
+  hidden: false
+  default: "/favicon.gif"
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: basic
+- name: featured
+  label: Featured
+  type: boolean
+  hidden: false
+  default: false

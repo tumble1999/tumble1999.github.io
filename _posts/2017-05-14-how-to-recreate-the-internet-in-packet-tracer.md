@@ -43,6 +43,9 @@ tags:
 - lab
 - symbol
 - pc
+- 7.1
+- cisco
+- packet tracer
 author: tumble1999
 excerpt: Have you always wanted to know how to simulate your own internet?
 title: Make your own internet in packet tracer

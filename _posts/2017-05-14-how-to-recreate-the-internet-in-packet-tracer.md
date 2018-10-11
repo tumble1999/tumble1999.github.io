@@ -15,11 +15,11 @@ tags:
 - nameserver
 - name server
 - how
-- 'to '
+- to
 - make
 - your
 - own
-- 'internet '
+- internet
 - in
 - cisco
 - packet
@@ -34,7 +34,15 @@ tags:
 - step
 - by
 - step
+- real
 - steps
+- wan
+- access
+- icon
+- of things
+- lab
+- symbol
+- pc
 author: tumble1999
 excerpt: Have you always wanted to know how to simulate your own internet?
 title: Make your own internet in packet tracer

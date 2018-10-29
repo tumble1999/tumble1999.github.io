@@ -18,7 +18,7 @@ layout: basic
 </div>
 <div class="mdl-card__supporting-text post-meta">
 	{% include user-card.html user=page.author date=page.date %}
-  {% if include.download-link %}{% include download.html url=include.download-link %}{% endif %}
+  {% if page.download-link %}{% include download.html url=page.download-link %}{% endif %}
 
 	{% include share.html %}
 

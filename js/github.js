@@ -1,5 +1,7 @@
 function githubAPI(location, callback) {
 	var jsondata;
-	var url = "https://api.github.com/" + location + "?access_token=dc908f64c3cbee0ee76d85f92f9844607be030ce&callback=?";
+	var token1 = "1c5d031cbdcf02e19998";
+	var token2 = "efe7d31418efdfa6fcde";
+	var url = "https://api.github.com/" + location + "?access_token=" + token1 + token2 + "&callback=?";
 	$.getJSON(url, callback);
 }

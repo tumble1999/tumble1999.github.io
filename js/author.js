@@ -97,9 +97,9 @@ function refresh() {
 		console.log(object);
 		console.log("USER:" + this.dataset.user);
 
-		var admin_code_1 = "ab85ff5428f26f488cd0";
-			var admin_code_2 = "3d7057b8ee5e536a4d06";
-			url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
+		var admin_code_1 = "d51af1756d960c9627bf";
+		var admin_code_2 = "0883615323414fa749c3";
+		url = "https://api.github.com/users/" + this.dataset.user + "?access_token=" + admin_code_1 + admin_code_2;
 		var adminStatusMessage = "";
 		var authorStatusMessage = "";
 		var authorPostsLink = "";

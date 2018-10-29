@@ -7,7 +7,7 @@
          <div class="mdl-card__supporting-text post-meta">
 	  {% include user-card.html user=include.item.author date=include.item.date %}
 	  <div class="mdl-layout-spacer"></div>
-	  <strong>{{ include.item.collection | capitalize }}</strong>
+	  <strong> {{ include.item.collection | capitalize }}</strong>
   </div>
         <div class="mdl-card__supporting-text no-left-padding">
             <p>{{ include.item.excerpt | default: include.item.content | strip_html | truncatewords: 50  }}</p>

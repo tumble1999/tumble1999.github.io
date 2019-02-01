@@ -1,8 +1,6 @@
 ---
 image: "/uploads/2017/05/14/thumbnail-3.PNG"
-categories:
-- How-to
-- cisco-packet-tracer
+category: How-to
 tags:
 - dns
 - hierarchy
@@ -14,6 +12,7 @@ tags:
 - internet
 - nameserver
 - name server
+- cisco-packet-tracer
 - how
 - to
 - make

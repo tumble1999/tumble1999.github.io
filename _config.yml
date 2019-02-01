@@ -68,14 +68,14 @@ defaults:
       type: pages
     values:
       layout: page
-      categories: []
+      category: []
       author: ""
   - scope:
       path: ""
       type: posts
     values:
       layout: post
-      categories: []
+      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -85,7 +85,7 @@ defaults:
       type: projects
     values:
       layout: project
-      categories: []
+      category: "
       tags: []
       author: ""
       excerpt: >
@@ -102,7 +102,7 @@ defaults:
       type: projects
     values:
       layout: project/collage
-      categories: []
+      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -112,7 +112,7 @@ defaults:
       type: projects
     values:
       layout: project/university
-      categories: []
+      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -122,7 +122,7 @@ defaults:
       type: projects
     values:
       layout: project/self
-      categories: []
+      category: ""
       tags: []
       author: ""
       excerpt: >

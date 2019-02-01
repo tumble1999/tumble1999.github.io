@@ -2,6 +2,7 @@
 layout: tumble1999-width
 title: Authors
 ---
+{% comment %}
 {% for item in site.documents %}
 {% if item.author %}
 	{% unless item.author == "" %}
@@ -113,5 +114,16 @@ function getQueryVariable(variable) {
 	</div>
 </div>
 {% endif %}
+{% endcomment %}
+
+
+<div class="mdl-card mdl-shadow--4dp post-container">
+	<div class="mdl-card__title">
+		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
+	</div>
+	<div class="mdl-card__supporting-text post-content">
+		This page made an error and is being looked at.
+	</div>
+</div>
 
 

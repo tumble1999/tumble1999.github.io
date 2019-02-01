@@ -68,7 +68,7 @@ defaults:
       type: pages
     values:
       layout: page
-      category: []
+      category: ""
       author: ""
   - scope:
       path: ""

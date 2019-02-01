@@ -1,6 +1,6 @@
 ---
 image: "/favicon.gif"
-categories:
+tags:
 - computers
 - cv
 - featured
@@ -9,10 +9,8 @@ categories:
 - passion
 - portfolio
 - The Studio
-- Updates
-- updates
 - website
-tags: []
+category: Updates
 author: tumble1999
 excerpt: ''
 title: Hello employers!

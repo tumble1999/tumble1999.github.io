@@ -3,7 +3,7 @@ layout: page
 title: Collections
 author: tumble1999
 ---
-
+{% comment %}
 {% for collection in site.collections %}
 ## {{ collection.label }}
 {% capture current_collection %}{{ site[collection.label] }}{% endcapture %}
@@ -20,3 +20,4 @@ author: tumble1999
   *  {{ start_url | replace: '/',' ' | truncate_words: word_count }} => {{ item.title }}
 {% endfor %}
 {% endfor %}
+{% endcomment %}

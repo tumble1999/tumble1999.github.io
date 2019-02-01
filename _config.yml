@@ -68,7 +68,6 @@ defaults:
       type: pages
     values:
       layout: page
-      category: ""
       author: ""
   - scope:
       path: ""
@@ -85,7 +84,6 @@ defaults:
       type: projects
     values:
       layout: project
-      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -102,7 +100,6 @@ defaults:
       type: projects
     values:
       layout: project/collage
-      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -112,7 +109,6 @@ defaults:
       type: projects
     values:
       layout: project/university
-      category: ""
       tags: []
       author: ""
       excerpt: >
@@ -122,7 +118,6 @@ defaults:
       type: projects
     values:
       layout: project/self
-      category: ""
       tags: []
       author: ""
       excerpt: >

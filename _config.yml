@@ -85,7 +85,7 @@ defaults:
       type: projects
     values:
       layout: project
-      category: "
+      category: ""
       tags: []
       author: ""
       excerpt: >

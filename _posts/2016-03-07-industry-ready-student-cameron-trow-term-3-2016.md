@@ -4,7 +4,8 @@ date: 2016-03-07 00:00:00 +0000
 layout: post
 author: tumble1999
 comments: true
-categories:
+category:Updates
+tags:
 - Code
 - Creative
 - Digital
@@ -12,6 +13,5 @@ categories:
 - featured
 - Professional Play
 - Studio KPIs
-- Updates
 ---
 [googleapps domain="docs" dir="a/thestudio-liverpool.net/document/d/1AvYzIlfqVnjMi4WBL7_Px3BWEHnFViaEo-UN6kMPUxc/pub" query="embedded=true" /]

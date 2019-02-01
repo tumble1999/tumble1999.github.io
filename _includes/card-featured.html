@@ -11,7 +11,7 @@
   </div>
         <div class="mdl-card__supporting-text no-left-padding">
             <p>{{ include.item.excerpt | default: include.item.content | strip_html | truncatewords: 50  }}</p>
-            <span>Category: <a href="categories/?c={{ include.item.categories | first }}">{{ include.item.categories | join: ',' }}</a></span>
+            <span>Category: <a href="categories/?c={{ include.item.category }}">{{ include.item.category }}</a></span>
         </div>
     </div>
 </div>

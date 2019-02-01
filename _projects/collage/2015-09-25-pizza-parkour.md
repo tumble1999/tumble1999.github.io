@@ -5,7 +5,7 @@ layout: project/collage
 image: "/uploads/2015/09/pizza.png"
 author: tumble1999
 comments: true
-categories:
+tags:
 - PBL Projects
 ---
 

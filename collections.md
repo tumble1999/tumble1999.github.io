@@ -5,7 +5,7 @@ author: tumble1999
 ---
 {% for collection in site.collections %}
 ## {{ collection.label }}
-{% assign current_collection=site[collection.label] }
+{% assign current_collection=site[collection.label] %}
 {% for item in current_collection %}
 {% capture start %}{{ collection.label }}/{% endcapture %}
 {% capture start_url %}{{ item.url | remove_first: '/' | remove_first: start }}{% endcapture %}

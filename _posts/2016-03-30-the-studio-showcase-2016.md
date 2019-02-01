@@ -7,7 +7,6 @@ comments: true
 category: Updates
 tags:
 - Medification
-- 
 image: "/uploads/2017/03/28/studio-showcase1.png"
 ---
 

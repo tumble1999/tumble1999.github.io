@@ -4,9 +4,10 @@ date: 2016-03-30 00:00:00 +0000
 layout: post
 author: tumble1999
 comments: true
-categories:
+category: Updates
+tags:
 - Medification
-- Updates
+- 
 image: "/uploads/2017/03/28/studio-showcase1.png"
 ---
 

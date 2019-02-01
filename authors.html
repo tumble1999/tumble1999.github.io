@@ -2,8 +2,6 @@
 layout: tumble1999-width
 title: Authors
 ---
-<!--
-{% comment %}
 {% for item in site.documents %}
 {% if item.author %}
 	{% unless item.author == "" %}
@@ -38,12 +36,12 @@ title: Authors
 <div class="authors-{{ author }}">
 
   <h1 class="page-heading">Posts by {{ author }}</h1>
-  
+
     {% for item in site.documents %}
 	{% if item.author == author %}
-       <div class="mdl-card mdl-shadow--4dp post-container">  
-    
-    
+       <div class="mdl-card mdl-shadow--4dp post-container">
+
+
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           </div>
@@ -56,7 +54,7 @@ title: Authors
           <div class="mdl-card__supporting-text post-content">
            {{ item.content | strip_html | truncatewords: 50 }}
           </div>
-  
+
       </div>
 	<br>
 	<br>
@@ -84,7 +82,7 @@ title: Authors
 	//}{% endif %}{% endfor %} else {
 	//	$('.authors-all').show();
 	//}
-	
+
 	if ( authorQuery ) {
 		$(".authors-" + authorQuery).show();
 	} else {
@@ -94,10 +92,10 @@ title: Authors
 function getQueryVariable(variable) {
      var query = window.location.search.substring(1);
      var vars = query.split('&');
- 
+
      for (var i = 0; i < vars.length; i++) {
        var pair = vars[i].split('=');
- 
+
        if (pair[0] === variable) {
          return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
        }
@@ -115,16 +113,3 @@ function getQueryVariable(variable) {
 	</div>
 </div>
 {% endif %}
-{% endcomment %}-->
-
-
-<div class="mdl-card mdl-shadow--4dp post-container">
-	<div class="mdl-card__title">
-		<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
-	</div>
-	<div class="mdl-card__supporting-text post-content">
-		This page made an error and is being looked at.
-	</div>
-</div>
-
-

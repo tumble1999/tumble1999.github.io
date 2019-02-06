@@ -76,16 +76,6 @@ margin: 25px 0;
 	flex-direction: column;
 }
 
-.social-btn__twitter {
-    background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_white_24dp.png')
-}
-
-.social-btn__github {
-    background-image: url('github_white_24.svg');
-    width: 22px;
-    height: 22px
-}
-
-.social-btn__gplus {
-    background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_white_24dp.png')
+.social-btn {
+    font-size: 1.75em;
 }

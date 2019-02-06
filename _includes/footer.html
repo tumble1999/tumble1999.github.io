@@ -1,7 +1,7 @@
 <footer class="mdl-mega-footer">
    
    <!-- MDL footer Middle Section Container -->
-  <div class="mdl-mega-footer__middle-section">
+  <div class="mdl-mega-footer__top-section">
 
     <!-- MDL Footer Drop Down Section -->
     <!--<div class="mdl-mega-footer__drop-down-section">
@@ -17,7 +17,7 @@
     </div>
 
     <!-- MDL Footer Bottom Section -->
-  <div class="mdl-mega-footer__bottom-section">
+  <div class="mdl-mega-footer__middle-section">
     <div class="mdl-mega-footer__left-section">
 					<div class="mdl-logo">{{ site.title }}</div>
 					<ul class="mdl-mini-footer__link-list">
@@ -29,6 +29,9 @@
 					Last Updated: {{ site.time | date: '%c' }}
 				</div>
   </div>
+	<div class="mdl-mega-footer__bottom-section">
+		Last Updated: {{ site.time | date: '%c' }}
+	</div>
   
 
 </footer>

@@ -77,41 +77,7 @@ layout: null
 					{{ content }}
 			</main>
 
-			<footer class="mdl-mini-footer">
-				<ul>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
-          </li>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="#" class="social-btn social-btn__github" role="button" title="GitHub"></a>
-          </li>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="#" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
-          </li>
-        </ul>
-				<div class="mdl-mini-footer__left-section">
-					<div class="mdl-logo">{{ site.title }}</div>
-					<ul class="mdl-mini-footer__link-list">
-						<li><a href="https://github.com/tumble1999/tumble1999.github.io/blob/master/license.md">Licence</a></li>
-						<li><a href="">Privacy & Terms</a></li>
-					</ul>
-				</div>
-				<div class="mdl-mini-footer--center-section">
-					
-				    {% if site.twitter %}<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" onclick="location.href='{{site.twitter}}'">
-				      <span class="visuallyhidden">Twitter</span>
-				    </button>{% endif %}
-			            {% if site.linkedin %}<button class="mdl-mini-footer--social-btn social-btn social-btn__linkedin" onclick="location.href='{{site.linkedin}}'">
-				      <span class="visuallyhidden">Twitter</span>
-				    </button>{% endif %}
-				    {% if site.github %}<button class="mdl-mini-footer--social-btn social-btn social-btn__github" onclick="location.href='{{site.github}}'">
-				      <span class="visuallyhidden">Twitter</span>
-				    </button>{% endif %}
-				  </div>
-				<div class="mdl-mini-footer__right-section">
-					Last Updated: {{ site.time | date: '%c' }}
-				</div>
-			</footer>
+			{% include footer.html %}
 		</div>
 		{{ page.outside-content }}
 	</body>

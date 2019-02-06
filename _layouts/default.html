@@ -78,6 +78,17 @@ layout: null
 			</main>
 
 			<footer class="mdl-mini-footer">
+				<ul>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="#" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="#" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
+          </li>
+        </ul>
 				<div class="mdl-mini-footer__left-section">
 					<div class="mdl-logo">{{ site.title }}</div>
 					<ul class="mdl-mini-footer__link-list">
@@ -86,6 +97,7 @@ layout: null
 					</ul>
 				</div>
 				<div class="mdl-mini-footer--center-section">
+					
 				    {% if site.twitter %}<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" onclick="location.href='{{site.twitter}}'">
 				      <span class="visuallyhidden">Twitter</span>
 				    </button>{% endif %}

@@ -22,15 +22,11 @@ repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif
 
-twitter:
-  username: tumble1999
 
-social:
-  name: Cameron Trow
-  links:
-    - https://twitter.com/tumble1999
-    - https://www.linkedin.com/in/CameronTrow
-    - https://github.com/tumble1999
+
+twitter:tumble1999
+linkedin: tumble1999
+github: tumble1999
 
 webmaster_verifications:
   google: 1234

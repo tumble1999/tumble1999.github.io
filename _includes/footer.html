@@ -1,15 +1,15 @@
 <footer class="mdl-mega-footer">
 	
   <div class="mdl-mega-footer__top-section">
-	  <button class="mdl-mega-footer__social-btn">
-		  <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
-	  </button>
-	  <button class="mdl-mega-footer__social-btn">
-		  <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
-	  </button>
-	  <button class="mdl-mega-footer__social-btn">
-		  <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
-	  </button>
+	  {% if site.twitter %}<button class="mdl-mega-footer__social-btn">
+		  <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"><i class="fab fa-twitter"></i></a>
+	  </button>{% endif %}
+	  {% if site.github %}<button class="mdl-mega-footer__social-btn">
+		  <a href="#" class="social-btn social-btn__github" role="button" title="Github"><i class="fab fa-github"></i></a>
+	  </button>{% endif %}
+	  {% if site.linkedin %}<button class="mdl-mega-footer__social-btn">
+		  <a href="{{ site.linkedin }}" class="social-btn social-btn__linkedin" role="button" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+	  </button>{% endif %}
 	  </div>
    
    <!-- MDL footer Middle Section Container -->

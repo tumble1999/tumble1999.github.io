@@ -2,6 +2,7 @@
 layout: page
 title: Collections
 author: tumble1999
+comments: false
 ---
 {% for collection in site.collections %}
 ## {{ collection.label }}

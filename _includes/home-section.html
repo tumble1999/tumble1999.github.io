@@ -11,10 +11,13 @@
 
 {% case mode %}
   {% when 1 %}
+  FEATURED
     {% include card-featured.html item=item %}
   {% when 2 %}
+  PROJECT
     {% include card-project.html project=item %}
   {% else %}
+  POST
     {% include card-post.html post=item %}
 {% endcase %}
 

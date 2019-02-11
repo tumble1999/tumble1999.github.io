@@ -80,6 +80,6 @@ margin: 25px 0;
     font-size: 1.75em;
 }
 
-.post-title {
+.post-title, .post-subtitle {
 	overflow: visible;
 }

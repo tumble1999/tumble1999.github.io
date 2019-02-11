@@ -1,4 +1,3 @@
-{% unless page.comments==false %}
 {% include new-comment.html %}
 {% if site.data.comments %}
 {% assign comments = site.data.comments | sort %}
@@ -41,4 +40,3 @@
 {% endunless %}
 {% endfor %}
 {% endif %}
-{% endunless %}

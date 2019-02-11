@@ -1,4 +1,6 @@
-{% unless page.comments==false %}
+{% if page.comments==false %}
+<p> Comments are disabled for this page</p>
+{% else %}
 <form class="comment-new js-form form user-logged-in" method="POST" action="https://api.staticman.net/v1/entry/tumble1999/tumble1999.github.io/master">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
   <input type="hidden" name="options[config]" value="_config.yml">
@@ -34,4 +36,4 @@
   Login with GitHub to comment
 </a>
 {% endunless%}
-{% endunless %}
+{% endif %}

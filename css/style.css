@@ -79,3 +79,7 @@ margin: 25px 0;
 .social-btn {
     font-size: 1.75em;
 }
+
+.post-title {
+	overflow: visible;
+}

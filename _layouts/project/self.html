@@ -10,13 +10,16 @@ layout: basic
 	height:400px;
  text-shadow: 0 0 20px #000, 0 0 20px #000;
 }
+	.post-subtitle {
+		text-align: right;
+	}
 </style>
 {% endunless %}
 {% endif %}
 <div class="project-title-{{ page.title | slugify }} mdl-card__title">
 	<h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
 	
-	{{page.excerpt}}
+	<h3 class="mdl-card__title-text post-subtitle">{{page.excerpt}}</h3>
 </div>
 <div class="mdl-card__supporting-text post-meta">
 	{% include user-card.html user=page.author date=page.date %}

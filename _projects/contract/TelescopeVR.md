@@ -1,7 +1,7 @@
 ---
 title: Liverpool Telescope VR application
 layout: project
-date: 29/08/2019
+date: 2019-08-29
 author: tumble1999
 comments: true
 ---

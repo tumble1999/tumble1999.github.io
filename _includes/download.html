@@ -9,7 +9,11 @@
 {%if include_type == 'external' %}
       <span><a href="{{ include.url }}" class="download-link">download</a></span>
 			{% else %}
-      <span><a href="/downloads/{{ include.url }}" class="download-link">download</a></span>
+			{% if import.http %}
+			<span><a href="{{ include.url }}" class="download-link">download</a></span>
+			{% else %}
+	  <span><a href="/downloads/{{ include.url }}" class="download-link">download</a></span>
+	  		{% endif %}
 			{% endif %}
 		</div>
 	</div>

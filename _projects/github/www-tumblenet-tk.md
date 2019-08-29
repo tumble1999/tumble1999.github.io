@@ -1,7 +1,7 @@
 ---
-title: tumblenet.tk
+title: tumblenet.ga
 date: 2017-01-19 00:00:00 +0000
 user: tumblenet
-repo: tumblenet.tk
+repo: tumblenet.ga
 layout: project/github
 ---

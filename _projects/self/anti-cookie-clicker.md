@@ -2,7 +2,7 @@
 layout: project/self
 title: Anti-CookieClicker
 featured: true
-category:
+category: Apps
 tags: []
 author: tumble1999
 excerpt: Cookies clicker but where you sell cookies.

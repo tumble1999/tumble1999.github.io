@@ -4,7 +4,7 @@ date: 2016-12-15 00:00:00 +0000
 layout: post
 author: tumble1999
 comments: true
-category: Updates
+category: Update
 image: "/uploads/2017/03/28/portfolio-1.jpg"
 excerpt: My portfolio
 description: hello world

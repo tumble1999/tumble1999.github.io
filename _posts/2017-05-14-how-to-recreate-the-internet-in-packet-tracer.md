@@ -85,11 +85,11 @@ In this case, we will be adding the .com TLD you can just add any TLD just swap 
 
 Add a server to an existing network and same as the root name server; set all of its options off except for DNS. Now in the DNS add an SOA record with these properties;
 
-![](/uploads/2017/05/14/soa-com.ns.PNG)
+![SOA](/uploads/2017/05/14/soa-com.ns.PNG)
 
 Then in the Root name server add two records; add an A record called "com.ns" pointing to the IP address of the new TLD server and then add an NS record call com pointing to com.ns.
 
-![](/uploads/2017/05/14/com.ns%20ns.PNG)
+![NS](/uploads/2017/05/14/com.ns%20ns.PNG)
 
 ## How to register and set up a domain
 
@@ -103,19 +103,19 @@ In ns.exmple.com make  records;
 
 SOA
 
-![](/uploads/2017/05/14/soa%20ns.example.com.png)
+![SOA-NS](/uploads/2017/05/14/soa%20ns.example.com.png)
 
 A - point this record to the example.com server IP address.
 
-![](/uploads/2017/05/14/a%20ns.example.com.png)
+![A-NS](/uploads/2017/05/14/a%20ns.example.com.png)
 
 ### Registering the domain
 
 In the com name server add an A record and point it to ns.example.com, and then create an NS record called example.com and point it to ns.example.com.
 
-![](/uploads/2017/05/14/a%20ns.example.com-1.png)
+![domain registring](/uploads/2017/05/14/a%20ns.example.com-1.png)
 
-![](/uploads/2017/05/14/root%20example.com%20ns.PNG)
+![root](/uploads/2017/05/14/root%20example.com%20ns.PNG)
 
 ## How to make an ISP
 
@@ -123,17 +123,17 @@ An ISP is an internet service provider that lets people connect to the internet.
 
 Put a router in a cluster and call the cluster the name of the isp you want to create. Then in the cluster create a cloud connected to the router with copper straight through cable. In the router add an IP address to the router and then add the IP address to the router’s RIP settings. Then highlight the cloud and make a cluster called “ISP”. Edit the cloud and give it 8 PT-CLOUD-NM-1AM module, then make 8 DSL modems connected to the 8 PT-CLOUD-NM-1AMs.
 
-![](/uploads/2017/05/14/isp%20network.PNG)
+![isp network](/uploads/2017/05/14/isp%20network.PNG)
 
-![](/uploads/2017/05/14/isp%20dsl%20modems.PNG)
+![moderms](/uploads/2017/05/14/isp%20dsl%20modems.PNG)
 
 ## How to make a Household
 
 Create a WRT300N and put it in a cluster if you want then connect a computer using DHCP and then connect the router to one of the modems in an isp. On the WRT3000N add a static IP to the internet section. In the future, I will add a section on how to add DHCP to the isp so the WRT3000N can be set to DHCP on the internet tab.
 
-![](/uploads/2017/05/14/household%201.PNG)
+![household](/uploads/2017/05/14/household%201.PNG)
 
-![](/uploads/2017/05/14/household%202.PNG)
+![household](/uploads/2017/05/14/household%202.PNG)
 
 ## Conclusion
 

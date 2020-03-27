@@ -1,7 +1,7 @@
 ---
 title: Everything
 layout: page
-author tumble1999
+author: tumble1999
 ---
 # Websites
 * Tumble1999 https://tumble1999.github.io/

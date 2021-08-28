@@ -22,7 +22,6 @@ repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif
 
-
 social:
   twitter: tumble1999
   linkedin: tumble1999
@@ -41,19 +40,17 @@ permalink: pretty
 production: true
 
 collections:
- projects:
-  output: true
- unity:
+  projects:
+    output: true
+  unity:
 
 plugins:
-   - jekyll-mentions
-   - jemoji
-   - jekyll-redirect-from
-   - jekyll-sitemap
-   - jekyll-feed
-   - jekyll-seo-tag
-
-
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 defaults:
   - scope:
@@ -135,17 +132,13 @@ kramdown:
   auto_ids: false
 
 excludes:
-  - lib
+  - script
+  - _config.yml
+  - .gitignore
+  - travis-old.yml
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - bower.json
-  - "*.sh"
-  - README.md
-  - gulffile.js
-  - package.json
-  - vendor
-
+  - LICENSE
 
 # STATICMAN
 staticman:

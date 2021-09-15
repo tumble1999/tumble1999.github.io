@@ -1,5 +1,11 @@
 main {
 	color: map.get($colors, "white");
+	.container {
+
+		display: flex;
+		flex-flow: column;
+		gap: #{$margin}px;
+	}
 }
 
 .page-section {

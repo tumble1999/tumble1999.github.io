@@ -1,9 +1,9 @@
-{% capture image_path %}/img/ext/{{ include.url | split:'.' | last }}.png{% endcapture %}
+{% capture image_path %}/assets/img/ext/{{ include.url | split:'.' | last }}.png{% endcapture %}
 {% capture image_url %}{{ include.image | default:image_path }}{% endcapture %}
 {% capture include_type %}{{ include.type | default:'internal' }}{% endcapture %}
 {% capture image_url_ %}{% for static_file in site.static_files %}{% if static_file.path == image_url %}{{ image_url }}{% endif %}{% endfor %}{% endcapture %}
 <div class="download">
-		<img src="{{ image_url_ | default:'/img/ext/blank_.png' }}" class="download-image" alt="{{ include.url | split:'.' | last }} file">
+		<img src="{{ image_url_ | default:'/assets/img/ext/blank_.png' }}" class="download-image" alt="{{ include.url | split:'.' | last }} file">
 		<div class="download-info">
       <span class="download-name">{{ include.name }}</span>
 {% if include_type == 'external' %}

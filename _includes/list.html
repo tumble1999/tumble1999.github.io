@@ -1,11 +1,10 @@
 {% comment %}
-list: site collection
+collection: site collection
 filter : tag to filter by
-template: template of object to use
 limit: item count
 {% endcomment %}
 
-{% assign items = site[include.list] | sort: "date" | reverse %}
+{% assign items = site[include.collection] | sort: "date" | reverse %}
 {% if include.filter %}
 {% assign items = items | where_exp:"item",include.filter %}
 {% endif %}

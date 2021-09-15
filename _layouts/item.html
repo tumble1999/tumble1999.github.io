@@ -8,6 +8,7 @@ layout: default
 			{{ page.collection }}
 		</a>
 	{% endif %}
+<!-- <div class="page-section"> -->
 	<!-- <h1>{{page.title}}</h1> -->
 	<div class="card">
 
@@ -25,23 +26,32 @@ layout: default
 			<p>{{ page.summary }}</p>
 		{% endif %}
 	</div>
-</div>
-
-<div class="page-section">
+<!-- </div> -->
+{% if page.experience %}
+<!-- <div class="page-section"> -->
 	<div class="list">
 		{% if page.languages %}
 			<div>
 				<h3>Langauges</h3>
-				{% include list.html list="languages"  %}
+				{% include list.html collection="languages"  %}
 			</div>
 		{% endif %}
 
 	</div>
-</div>
-
-<div class="page-section card">
+<!-- </div> -->
+{% endif %}
+<div class="card">
 	{% endif %}
 {{content}}
 {% if page.header %}
+</div>
+</div>
+{% endif %}
+
+{% if page.list %}
+<div class="page-section">
+	<div class="list">
+		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit %}
+	</div>
 </div>
 {% endif %}

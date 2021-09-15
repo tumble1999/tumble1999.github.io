@@ -1,5 +1,4 @@
 ---
-image: "/favicon.gif"
 user: tumble1999
 repo: ram-size-calculator
 title: Ram Size Calculator

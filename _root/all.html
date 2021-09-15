@@ -4,12 +4,18 @@ author: tumble1999
 comments: false
 ---
 
+<div class="page-section">
 <h2>Pages</h2>
-
-{% include list.html list="pages" %}
+<div class="list">
+{% include list.html collection="pages" %}
+</div>
+</div>
 
 {% for collection in site.collections %}
-
+<div class="page-section">
 <h2>{{ collection.label| capitalize }}</h2>
-{% include list.html list=collection.label %}
+<div class="list">
+{% include list.html collection=collection.label %}
+</div>
+</div>
 {% endfor %}

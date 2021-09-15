@@ -45,11 +45,13 @@ excludes:
 collections:
   projects:
     output: true
-  engine:
+  engines:
     output: true
   platforms:
     output: true
   jobs:
+    output: true
+  communities:
     output: true
   education:
     output: true
@@ -70,13 +72,10 @@ defaults:
       path: ""
       type: root
     values:
-      layout: item
       permalink: /:title
       header: false
   - scope:
       path: ""
       type: lists
     values:
-      layout: item
       permalink: /:title
-      header: false

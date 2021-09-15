@@ -7,14 +7,14 @@ permalink: /
 	<h1>Current Projects</h1>
 	<div class="list">
 
-		{% include list.html list="projects" filter="item.current==true"  limit=8 bean=true %}
+		{% include list.html collection="projects" filter="item.current==true"  limit=8 bean=true %}
 
 	</div>
 </div>
 <div class="page-section">
 	<h1>Past Projects</h1>
 	<div class="list">
-		{% include list.html list="projects" limit=8 filter="item.current!=true" bean=true %}
+		{% include list.html collection="projects" limit=8 filter="item.current!=true" bean=true %}
 	</div>
 </div>
 <div class="page-section">
@@ -23,23 +23,23 @@ permalink: /
 		<div>
 			<h2>Languages</h2>
 			<p>Languages I can develop in.</p>
-			{% include list.html list="languages" %}
+			{% include list.html collection="languages" %}
 		</div>
 
 		<div>
 			<h2>Platforms</h2>
 			<p>Platforms that I can develop for.</p>
-			{% include list.html list="platforms" %}
+			{% include list.html collection="platforms" %}
 		</div>
 		<div>
 			<h2>Work Experience</h2>
 			<p>Previous paid jobs</p>
-			{% include list.html list="jobs" %}
+			{% include list.html collection="jobs" %}
 		</div>
 		<div>
 			<h2>Past Education</h2>
 			<p>Previous Schools and Universities</p>
-			{% include list.html list="education" %}
+			{% include list.html collection="education" %}
 		</div>
 	</div>
 </div>

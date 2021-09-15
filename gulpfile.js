@@ -8,11 +8,11 @@ var gulp = require("gulp"),
 
 function js(cb) {
   return pipeline(
-    gulp.src("src/js/*.js"),
     sourcemaps.init(),
+    gulp.src("src/js/*.js"),
     uglify(),
     concat("tumble.min.js"),
-    sourcemaps.write({sourceMappingURLPrefix:"/src/js"}),
+    sourcemaps.write({sourceRoot:"/src/js"}),
     gulp.dest("assets/js"),
     cb
   );
@@ -24,7 +24,7 @@ function css(cb) {
     sourcemaps.init(),
     sass({ outputStyle: "compressed" }).on("error", sass.logError),
     concat("tumble.min.css"),
-    sourcemaps.write({sourceMappingURLPrefix:"/src/css"}),
+    sourcemaps.write({sourceRoot:"/src/scss"}),
     gulp.dest("assets/css"),
     cb
   );

@@ -1,0 +1,45 @@
+---
+title: Hello World
+permalink: /
+---
+
+<div class="page-section">
+	<h1>Current Projects</h1>
+	<div class="list">
+
+		{% include list.html list="projects" filter="item.current==true"  limit=8 bean=true %}
+
+	</div>
+</div>
+<div class="page-section">
+	<h1>Past Projects</h1>
+	<div class="list">
+		{% include list.html list="projects" limit=8 filter="item.current!=true" bean=true %}
+	</div>
+</div>
+<div class="page-section">
+	<h1>About Me</h1>
+	<div class="list">
+		<div>
+			<h2>Languages</h2>
+			<p>Languages I can develop in.</p>
+			{% include list.html list="languages" %}
+		</div>
+
+		<div>
+			<h2>Platforms</h2>
+			<p>Platforms that I can develop for.</p>
+			{% include list.html list="platforms" %}
+		</div>
+		<div>
+			<h2>Work Experience</h2>
+			<p>Previous paid jobs</p>
+			{% include list.html list="jobs" %}
+		</div>
+		<div>
+			<h2>Past Education</h2>
+			<p>Previous Schools and Universities</p>
+			{% include list.html list="education" %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+footer {
+	flex-shrink: 0;
+	flex-basis: 56px;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	text-align: center;
+	margin-top: auto;
+
+	a,a:visited {
+		font-weight: bold;
+		display: inline;
+	}
+}
+   

@@ -1,0 +1,15 @@
+---
+title: Site Map
+author: tumble1999
+comments: false
+---
+
+<h2>Pages</h2>
+
+{% include list.html list="pages" %}
+
+{% for collection in site.collections %}
+
+<h2>{{ collection.label| capitalize }}</h2>
+{% include list.html list=collection.label %}
+{% endfor %}

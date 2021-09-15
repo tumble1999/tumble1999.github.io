@@ -1,0 +1,10 @@
+$d-count: 4;
+
+.list,
+.swipy-list {
+	& > *,
+	.card {
+		$d-width:calc(calc($container / $d-count) - $margin);
+		width: #{$d-width}px;
+	}
+}

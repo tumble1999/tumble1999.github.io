@@ -1,0 +1,34 @@
+body {
+	display: flex;
+	flex-flow: column;
+	min-height: 100%;
+	background-color: map.get($colors, "black");
+}
+header,
+footer {
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: map.get($colors, "yellow");
+	color: map.get($colors, "black");
+	a,a:visited {
+		color:  map.get($colors, "black");
+	}
+}
+
+@import "header/all";
+@import "main/all";
+@import "footer/all";
+
+/*
+  TABLET
+  */
+@media (min-width: #{$mobile}px) {
+	@import "main/tablet";
+}
+
+/* 
+  DESKTOP
+  */
+@media (min-width: #{$tablet}px) {
+	@import "main/desktop";
+}

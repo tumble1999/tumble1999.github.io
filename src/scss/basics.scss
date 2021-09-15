@@ -1,0 +1,38 @@
+*{
+	font-family: sans-serif;
+}
+
+
+.container {
+	margin-top: #{$margin}px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: #{$container}px;
+	width: 90vw;
+}
+
+
+a,a:visited {
+	text-decoration: none;
+	color:  map.get($colors, "yellow");
+}
+
+img,video {
+	max-width: 100%;
+	height: auto;
+	
+}
+
+a.bean {
+	text-transform: uppercase;
+	display: inline;
+	background: map.get($colors, "yellow");
+	color: map.get($colors, "black");
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 5px 10px;
+	border-color: map.get($colors, "yellow");
+	font-weight: bold;
+	color:  map.get($colors, "black");
+  }
+  

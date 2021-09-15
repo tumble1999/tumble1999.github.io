@@ -1,7 +1,6 @@
 ---
 title: The Studio Showcase 2016 - Outcome
 date: 2016-04-01 00:00:00 +0000
-layout: post
 author: tumble1999
 comments: true
 category: Update
@@ -10,7 +9,7 @@ tags:
 - Medification
 - Updates
 image: "/uploads/2017/03/28/studio-showcase2-1.png"
-excerpt: see the outcome of the showcase and also see people's opinions of diferent
+summary: see the outcome of the showcase and also see people's opinions of diferent
   things todo with medifircation.
 ---
 ![/uploads/2017/02/10/medification-with-slogon-3.png](/uploads/2017/02/10/medification-with-slogon-3.png)

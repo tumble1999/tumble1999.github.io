@@ -1,0 +1,85 @@
+main {
+	color: map.get($colors, "white");
+}
+
+.page-section {
+	// min-height: 50vh;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+
+	& > .list,
+	& > .swipy-list {
+		list-style: none;
+		// flex: 1;
+
+		& > * {
+			background-color: map.get($colors, "blue");
+			color: map.get($colors, "white");
+			padding: #{$padding}px;
+		}
+	}
+
+	&> .bean {
+		margin-left: auto;
+	}
+}
+
+.list,
+.swipy-list {
+	display: flex;
+	gap: #{$margin}px;
+
+	&.vertical {
+		flex-flow: column;
+
+		& > * {
+			width: 100%;
+		}
+		& .img-container {
+			max-width: 20%;
+			height: 100%;
+			margin-right: #{$margin}px;
+			float: left;
+		}
+  
+	}
+
+	& > *{
+		// margin-right: #{$margin}px;
+		// margin-bottom: #{$margin}px;
+		flex-grow: 1;
+	}
+
+	& .img-container {
+		margin-bottom: #{$margin}px;
+	}
+}
+
+.list {
+	flex-wrap: wrap;
+}
+
+.swipy-list {
+	overflow: hidden;
+	& > * {
+		width: 100%;
+		flex-shrink: 0;
+	}
+}
+
+
+.card {
+	width: 100%;
+	background-color: map.get($colors, "blue");
+	color: map.get($colors, "white");
+	padding: #{$padding}px;
+
+
+	& .img-container {
+		max-width: 20%;
+		height: 100%;
+		margin-right: #{$margin}px;
+		float: left;
+	}
+}

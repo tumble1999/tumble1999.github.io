@@ -1,0 +1,27 @@
+// @use "sass:map";
+
+$colors: ();
+
+$margin: 20;
+$padding: 20;
+
+
+$mobile: 768;
+$tablet: 1200;
+$container: $tablet;
+
+$color-values: (
+	"black": black,
+	"white": white,
+	"yellow": #ffc107,
+	"blue": #112233,
+);
+@each $color, $i in $color-values {
+	$colors: map.set($colors, $color, var(--color-#{$color}));
+}
+
+:root {
+	@each $color, $i in $color-values {
+		--color-#{$color}: #{$i};
+	}
+}

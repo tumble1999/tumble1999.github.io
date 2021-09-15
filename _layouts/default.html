@@ -1,85 +1,42 @@
 ---
-layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html>
-<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{site.title}}</title>
 
-	{% include head.html %}
+	<!-- CSS -->
+	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/assets/css/tumble.min.css">
+</head>
 
-
-	<body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout-icon"></div>
-				<div class="mdl-layout__header-row">
-					<a class="mdl-button mdl-js-button mdl-button--icon" href="/">
-					  <i class="material-icons">home</i>
-					</a>
-					<span class="mdl-layout__title">{{ site.title }}</span>
-
-			{% unless page.url contains "/no-ie/" %}
-					<div class="mdl-layout-spacer"></div>
-
-
-					<form action="/search" method="get" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-											mdl-textfield--floating-label mdl-textfield--align-right">
-						<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-							<i class="material-icons">search</i>
-						</label>
-						<div class="mdl-textfield__expandable-holder">
-							<input class="mdl-textfield__input" type="text" name="q" id="fixed-header-drawer-exp">
-						</div>
-					</form>
-					<a href="/admin" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="user-author-only">
-						<i class="material-icons">dashboard</i>
-					</a>
-					<!-- Right aligned menu below button -->
-					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect githubAuthor" id="user-logged-in" data-user>
-						<img src="https://mail.google.com/mail/c/u/0/static/images/NoPicture.gif" class="user-avatar userImg" alt="userPicture">
-					</button>
-					<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="user-logged-out">
-						<i class="material-icons">account_circle</i>
-					</button>
-
-					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-					    for="user-logged-out" >
-					  <a href="/login?ref={{ site.url }}{{ page.url }}" class="mdl-menu__item">Login</a>
-					</ul>
-					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-					    for="user-logged-in">
-						<a href class="loggedInUserProfile mdl-menu__item">Profile</a>
-						<a href="/admin" class="user-author-only mdl-menu__item">Dashboard</a>
-						<a href class="user-author-only mdl-menu__item myPosts">My Posts</a>
-						<a href="{{site.github.repository_url}}" class="user-author-only mdl-menu__item">GitHub</a>
-						<a href="/logout" class="mdl-menu__item">Logout</a>
-					</ul>
-					{% endunless %}
-				</div>
-		</header>
-
-		{% unless page.url contains "/no-ie/" %}
-			<div class="mdl-layout__drawer">
-				<span class="mdl-layout__title">{{ site.title}}</span>
-				<nav class="mdl-navigation">
-					{% for menu in site.data.menus %}
-					{% if menu.name == "Navbar" %}
-					{% for item in menu.items %}
-					<a class="mdl-navigation__link" href="{{ item.href }}">{{ item.name }}</a>
-					{% endfor %}
-					{% endif %}
-					{% endfor %}
-				</nav>
-			</div>
-		{% endunless %}
-			<main class="mdl-layout__content">
-
-					{{ content }}
-
-			{% include footer.html %}
-			</main>
+<body>
+	<header>
+		<div class="container">
+			<a href="/">
+				<h3>{{site.title}}</h3>
+			</a>
 		</div>
-		{{ page.outside-content }}
-		{% include analytics.html %}
-	</body>
+	</header>
+	<main>
+		<div class="container">
+			{{content}}
+		</div>
+	</main>
+	<footer>
+		<p>Cameron Trow
+			<script>document.write(new Date().getFullYear());</script> - <a
+				href="https://github.com/tumble1999/tumble1999.github.io/blob/master/LICENSE">GPLv3</a> - <a
+				href="https://10trowc.wordpress.com/">Old Site</a>
+		</p>
+	</footer>
+
+	<!-- JS -->
+	<script src="/assets/js/tumble.min.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,27 @@
+<{{include.container | default:"div" }}>
+	{% if include.item.image %}
+		<div class="img-container">
+			<img src="{{ include.item.image }}" alt="{{ include.item.image }}">
+		</div>
+	{% endif %}
+	
+	{% if include.bean %}
+	{% if include.item.collection %}
+		<a href="/{{ include.item.collection }}" class="bean">
+			{{ include.item.collection }}
+		</a>
+	{% endif %}
+	{% endif %}
+	{% if include.item.title %}
+		<{{include.header | default:"h3" }}>
+			{% if include.item.url %}
+				<a href="{{item.url}}">
+			{% endif %}
+			{{ include.item.title }}
+			{% if include.item.url %}
+				</a>
+			{% endif %}
+		</{{ include.header | default:"h3" }}>
+	{% endif %}
+	{% if include.item.summary %}<p>{{ include.item.summary }}</p>{% endif %}
+</{{include.header | default:"div" }}>

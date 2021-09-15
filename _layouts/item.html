@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% if page.header %}
+<div class="page-section">
+	{% if page.collection %}
+		<a href="/{{ page.collection }}" class="bean">
+			{{ page.collection }}
+		</a>
+	{% endif %}
+	<!-- <h1>{{page.title}}</h1> -->
+	<div class="card">
+
+		{% if page.image %}
+		<div class="img-container">
+			<img src="{{ page.image }}" alt="{{ page.image }}">
+		</div>
+		{% endif %}
+		{% if page.title %}
+			<h1>
+				{{ page.title }}
+			</h1>
+		{% endif %}
+		{% if page.summary %}
+			<p>{{ page.summary }}</p>
+		{% endif %}
+	</div>
+</div>
+
+<div class="page-section">
+	<div class="list">
+		{% if page.languages %}
+			<div>
+				<h3>Langauges</h3>
+				{% include list.html list="languages"  %}
+			</div>
+		{% endif %}
+
+	</div>
+</div>
+
+<div class="page-section card">
+	{% endif %}
+{{content}}
+{% if page.header %}
+</div>
+{% endif %}

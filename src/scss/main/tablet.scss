@@ -1,0 +1,8 @@
+$t-count: 2;
+
+.list, .swipy-list {
+	& > *, .list-item {
+		$t-width:calc(calc($container / $t-count) - $margin);
+		width: #{$t-width}px;
+	}
+}

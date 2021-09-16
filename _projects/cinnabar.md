@@ -7,5 +7,6 @@ date: 2020-09-01T17:38:36Z
 current: yes
 experience:
   languages: [c++]
+  libraries: [opengl]
   platforms: [windows,debian,arch]
 ---

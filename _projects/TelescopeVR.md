@@ -1,9 +1,9 @@
 ---
-title: Liverpool Telescope VR application
+title: Liverpool New Robotic Telescope VR application
 date: 2019-08-29
 experience:
   languages: [c#]
-  engines: [unity]
+  libraries: [unity]
   platforms: [windows,web,android]
   jobs: [ari]
 ---

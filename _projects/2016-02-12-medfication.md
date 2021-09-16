@@ -7,7 +7,7 @@ tags:
  - PBL Projects
 experience:
   group: true
-  engines: [app-inventor]
+  libraries: [app-inventor]
   platforms: [android]
   education: [studio]
 ---

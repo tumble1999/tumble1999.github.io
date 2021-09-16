@@ -45,7 +45,7 @@ excludes:
 collections:
   projects:
     output: true
-  engines:
+  libraries:
     output: true
   platforms:
     output: true

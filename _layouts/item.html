@@ -42,10 +42,10 @@ layout: default
 					{% include list.html collection="languages" filter="page.experience.languages contains item.slug" %}
 				</div>
 			{% endif %}
-			{% if page.experience.engines %}
+			{% if page.experience.libraries %}
 				<div>
-					<h3>Engines</h3>
-					{% include list.html collection="engines" filter="page.experience.engines contains item.slug" %}
+					<h3>Libraries</h3>
+					{% include list.html collection="libraries" filter="page.experience.libraries contains item.slug" %}
 				</div>
 			{% endif %}
 			{% if page.experience.platforms %}

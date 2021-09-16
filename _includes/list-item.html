@@ -15,7 +15,7 @@
 	{% if include.item.title %}
 		<{{include.header | default:"h3" }}>
 			{% if include.item.url %}
-				<a href="{{item.url}}">
+				<a href="{{site.url}}{{item.url}}">
 			{% endif %}
 			{{ include.item.title }}
 			{% if include.item.url %}

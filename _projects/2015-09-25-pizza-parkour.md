@@ -1,16 +1,14 @@
 ---
 title: Pizza Parkour
 date: 2015-09-25 00:00:00 +0000
-education: studio
 image: "/uploads/2015/09/pizza.png"
-author: tumble1999
-comments: true
 tags:
 - PBL Projects
-group: true
-platforms: [windows]
-engines: [construct]
-
+experience:
+  group: true
+  engines: [construct]
+  platforms: [windows]
+  education: [studio]
 ---
 
 <i>Pizza Parkour</i> is a 2015 <span style="font-weight:400;">Action/Adventure game </span>designed by Cameron Trow (Sprites), Phillip Linsner (Level Design) and Callum Jones (Other/Unknown/Logo). The game is built in Construct and released on TBA, for <span style="font-weight:400;">any platform

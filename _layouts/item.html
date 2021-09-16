@@ -1,55 +1,100 @@
 ---
 layout: default
 ---
-{% if page.header %}
-<div class="page-section">
-	{% if page.collection %}
-		<a href="{{site.url}}/{{ page.collection }}" class="bean">
-			{{ page.collection }}
-		</a>
-	{% endif %}
-<!-- <div class="page-section"> -->
-	<!-- <h1>{{page.title}}</h1> -->
-	<div class="card">
+{% assign content = page.content | strip_newlines %}
 
-		{% if page.image %}
-		<div class="img-container">
-			<img src="{{ page.image }}" alt="{{ page.image }}">
-		</div>
+
+{% if page.header %}
+	<!-- HEADER -->
+	<div class="page-section">
+		{% if page.collection %}
+			<a href="{{site.url}}/{{ page.collection }}" class="bean">
+				{{ page.collection }}
+			</a>
 		{% endif %}
-		{% if page.title %}
-			<h1>
-				{{ page.title }}
-			</h1>
-		{% endif %}
-		{% if page.summary %}
-			<p>{{ page.summary }}</p>
-		{% endif %}
-	</div>
-<!-- </div> -->
-{% if page.experience %}
-<!-- <div class="page-section"> -->
-	<div class="list">
-		{% if page.languages %}
-			<div>
-				<h3>Langauges</h3>
-				{% include list.html collection="languages"  %}
+		<!-- <h1>{{page.title}}</h1> -->
+		<div class="card">
+
+			{% if page.image %}
+			<div class="img-container">
+				<img src="{{ page.image }}" alt="{{ page.image }}">
 			</div>
-		{% endif %}
-
+			{% endif %}
+			{% if page.title %}
+				<h1>
+					{{ page.title }}
+				</h1>
+			{% endif %}
+			{% if page.summary %}
+				<p>{{ page.summary }}</p>
+			{% endif %}
+		</div>
 	</div>
-<!-- </div> -->
-{% endif %}
-<div class="card">
+
+
+	{% if page.experience %}
+	<!-- EXPERIENCE -->
+	<div class="page-section">
+		<div class="list">
+			{% if page.experience.languages %}
+				<div>
+					<h3>Languages</h3>
+					{% include list.html collection="languages" filter="page.experience.languages contains item.slug" %}
+				</div>
+			{% endif %}
+			{% if page.experience.engines %}
+				<div>
+					<h3>Engines</h3>
+					{% include list.html collection="engines" filter="page.experience.engines contains item.slug" %}
+				</div>
+			{% endif %}
+			{% if page.experience.platforms %}
+				<div>
+					<h3>Platforms</h3>
+					{% include list.html collection="platforms" filter="page.experience.platforms contains item.slug" %}
+				</div>
+			{% endif %}
+			{% if page.experience.education %}
+				<div>
+					<h3>Education</h3>
+					{% include list.html collection="education" filter="page.experience.education contains item.slug" %}
+				</div>
+			{% endif %}
+			{% if page.experience.communities %}
+				<div>
+					<h3>Communities</h3>
+					{% include list.html collection="communities" filter="page.experience.communities contains item.slug" %}
+				</div>
+			{% endif %}
+			{% if page.experience.jobs %}
+				<div>
+					<h3>Jobs</h3>
+					{% include list.html collection="jobs" filter="page.experience.jobs contains item.slug" %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
 	{% endif %}
-{{content}}
+
+
+{% if content != "" %}
+<!-- CONTENT -->
+	<div class="page-section">
+		<div class="card">
+{% endif %}
+{% endif %}
+	{{ content }}
 {% if page.header %}
-</div>
-</div>
+{% if content != "" %}
+		</div>
+	</div>
+{% endif %}
 {% endif %}
 
 {% if page.list %}
+<!-- LIST -->
 <div class="page-section">
+	<h2>Projects</h2>
 	<div class="list">
 		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit %}
 	</div>

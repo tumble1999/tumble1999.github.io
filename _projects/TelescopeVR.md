@@ -1,12 +1,11 @@
 ---
 title: Liverpool Telescope VR application
 date: 2019-08-29
-author: tumble1999
-comments: true
-languages: [c#]
-jobs: [ari]
-platforms: [windows,web,android]
-engines: [unity]
+experience:
+  languages: [c#]
+  engines: [unity]
+  platforms: [windows,web,android]
+  jobs: [ari]
 ---
 <video width="1366" height="768" controls>
   <source src="/uploads/projects/contract/ARI_TelescopePreview.mp4" type="video/mp4">

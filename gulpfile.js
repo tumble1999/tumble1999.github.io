@@ -8,8 +8,8 @@ var gulp = require("gulp"),
 
 function js(cb) {
   return pipeline(
-    sourcemaps.init(),
     gulp.src("src/js/*.js"),
+    sourcemaps.init(),
     uglify(),
     concat("tumble.min.js"),
     sourcemaps.write({sourceRoot:"/src/js"}),

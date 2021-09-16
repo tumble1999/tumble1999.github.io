@@ -3,6 +3,8 @@ body {
 	flex-flow: column;
 	min-height: 100%;
 	background-color: map.get($colors, "black");
+	gap: #{$margin}px;
+	height: auto;
 }
 header,
 footer {

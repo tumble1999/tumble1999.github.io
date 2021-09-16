@@ -1,15 +1,15 @@
 ---
 title: Medfication
 date: 2016-02-12 00:00:00 +0000
-author: tumble1999
 summary: Medification is an app for people who take medication that reminds people
   when to take their medication.
-comments: true
 tags:
  - PBL Projects
-education: [studio]
-engine: [app-inventor]
-group: true
+experience:
+  group: true
+  engines: [app-inventor]
+  platforms: [android]
+  education: [studio]
 ---
 <h4 style="text-align:left;"><img class="wp-image-668 size-full alignnone" src="https://10trowc.files.wordpress.com/2016/03/medification-with-slogon.png" alt="Medification WITH SLOGON" width="944" height="215" /></h4>
 

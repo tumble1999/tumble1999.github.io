@@ -12,5 +12,5 @@ limit: item count
 {% for item in items limit:include.limit %}
 	{% include list-item.html item=item bean=include.bean %}
 	{% else %}
-	<em>None</em>
+	<em>No {{ include.collection | capitalize }}</em>
 {% endfor %}

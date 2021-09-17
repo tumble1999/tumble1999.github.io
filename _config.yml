@@ -68,6 +68,7 @@ defaults:
     values:
       layout: item
       header: true
+      date-label: Started
   - scope:
       path: ""
       type: root
@@ -79,3 +80,28 @@ defaults:
       type: lists
     values:
       permalink: /:title
+  - scope:
+      path: ""
+      type: jobs
+    values:
+      date-label: Joined
+  - scope:
+      path: ""
+      type: communities
+    values:
+      date-label: Joined
+  - scope:
+      path: ""
+      type: libraries
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
+      type: languages
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
+      type: platforms
+    values:
+      date-label: First Developed for

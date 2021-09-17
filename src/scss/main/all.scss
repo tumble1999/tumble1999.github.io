@@ -1,3 +1,15 @@
+/**
+ * Author: Cameron Trow
+ * License: GPL-3
+ * Source Code: https://github.com/tumble1999/tumble1999.github.io
+ * 
+ * You may copy, distribute and modify the software as long as you
+ * track changes/dates in source files. Any modifications to or
+ * software including (via compiler) GPL-licensed code must also
+ * be made available under the GPL along with build & install
+ * instructions.
+ */
+
 main {
 	color: map.get($colors, "white");
 	.container {
@@ -16,8 +28,6 @@ main {
 
 	& > .list,
 	& > .swipy-list {
-		list-style: none;
-		// flex: 1;
 
 		& > * {
 			background-color: map.get($colors, "blue");
@@ -35,6 +45,13 @@ main {
 .swipy-list {
 	display: flex;
 	gap: #{$margin}px;
+	list-style: none;
+
+	&.block {
+		h3 {
+			margin-top: 0;
+		}
+	}
 
 	&.vertical {
 		flex-flow: column;
@@ -87,5 +104,11 @@ main {
 		height: 100%;
 		margin-right: #{$margin}px;
 		float: left;
+	}
+}
+
+.project-meta {
+	&>* {
+		flex-grow: 0;
 	}
 }

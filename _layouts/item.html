@@ -4,6 +4,7 @@ layout: default
 {% assign content = page.content | strip_newlines %}
 
 
+
 {% if page.header %}
 	<!-- HEADER -->
 	<div class="page-section">
@@ -27,6 +28,42 @@ layout: default
 			{% endif %}
 			{% if page.summary %}
 				<p>{{ page.summary }}</p>
+			{% endif %}
+			
+			{% assign hasDate = false %}
+			{% if page.date %}
+				{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
+				{% capture itemDate %}{{page.date | date: '%s' }}{% endcapture %}
+				{% if currentDate != itemDate %}
+					{% assign hasDate = true %}
+				{% endif %}
+			{% endif %}
+
+			{% if hasDate or page.links %}
+				<!-- META -->
+				<div class="project-meta list">
+
+				{% if hasDate %}
+					<!-- DATE -->
+					<div class="project-date">
+					{% if page.date-label %} 
+						{{ page.date-label }}:
+					{% endif %}
+					{{ page.date | date_to_long_string }}
+					</div>
+				{% endif %}
+
+				{% if page.links %}
+				<!-- LINKS -->
+				<div class="project-links list">
+					{% for link in page.links %}
+					<a href="{{link.href}}">{{link.title}}</a>
+					{% else %}
+					<em>No Links</em>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
 			{% endif %}
 		</div>
 	</div>
@@ -94,9 +131,9 @@ layout: default
 {% if page.list %}
 <!-- LIST -->
 <div class="page-section">
-	<h2>Projects</h2>
-	<div class="list">
-		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit %}
+	{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
+	<div class="list block">
+		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit meta=true %}
 	</div>
 </div>
 {% endif %}

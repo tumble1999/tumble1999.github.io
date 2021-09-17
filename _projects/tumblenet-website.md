@@ -7,4 +7,9 @@ experience:
   languages: [html,css,js]
   platforms: [web]
   communities: [tumblenet]
+links:
+- title: GitHub
+  href: "https://github.com/tumblenet/www.tumblenet.ga"
+- title: Website
+  href: tumblenet.ga
 ---

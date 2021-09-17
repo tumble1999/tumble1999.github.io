@@ -1,6 +1,6 @@
 ---
-title: VR Intern
-summary: "at Astrophysics Research Institute of LJMU"
+title: Astrophysics Research Institute
+summary: "VR Developer Intern"
 list:
   collection: projects
   filter: "item.experience.jobs contains 'ari'"

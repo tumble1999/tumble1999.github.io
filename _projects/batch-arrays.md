@@ -1,8 +1,9 @@
 ---
 title: batch-arrays
 date: 2017-01-19 00:00:00 +0000
-user: tumblegamer
-repo: batch-arrays
+links:
+- title: "GitHub"
+  href: "https://github.com/tumblegamer/batch-arrays"
 experience:
   languages: [batch]
   platforms: [windows]

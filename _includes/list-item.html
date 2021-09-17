@@ -24,4 +24,41 @@
 		</{{ include.header | default:"h3" }}>
 	{% endif %}
 	{% if include.item.summary %}<p>{{ include.item.summary }}</p>{% endif %}
+
+	{% assign hasDate = false %}
+	{% if include.item.date %}
+		{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
+		{% capture itemDate %}{{include.item.date | date: '%s' }}{% endcapture %}
+		{% if currentDate != itemDate %}
+			{% assign hasDate = true %}
+		{% endif %}
+	{% endif %}
+
+	{% if include.meta and (hasDate or include.item.links) %}
+		<!-- META -->
+		<div class="project-meta list">
+
+		{% if hasDate %}
+			<!-- DATE -->
+			<div class="project-date">
+			{% if include.item.date-label %} 
+				{{ include.item.date-label }}:
+			{% endif %}
+			{{ include.item.date | date_to_long_string }}
+			</div>
+		{% endif %}
+
+		{% if include.item.links %}
+		<!-- LINKS -->
+		<div class="project-links list">
+			{% for link in include.item.links %}
+			<a href="{{link.href}}">{{link.title}}</a>
+			{% else %}
+			<em>No Links</em>
+			{% endfor %}
+		</div>
+		{% endif %}
+	</div>
+	{% endif %}
+
 </{{include.header | default:"div" }}>

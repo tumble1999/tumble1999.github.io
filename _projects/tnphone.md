@@ -8,4 +8,9 @@ experience:
   languages: [js]
   platforms: [nodejs]
   communities: [tumblenet]
+links:
+- title: "GitHub"
+  href: "https://github.com/tumblenet/discordPhoneBot"
+- title: "Website"
+  href: http://tnphone.tumblenet.ga/
 ---

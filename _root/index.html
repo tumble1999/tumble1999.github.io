@@ -5,21 +5,21 @@ permalink: /
 
 <div class="page-section">
 	<h1>Current Projects</h1>
-	<div class="list">
+	<div class="list block">
 
-		{% include list.html collection="projects" filter="item.current==true"  limit=8 %}
+		{% include list.html collection="projects" filter="item.current==true" limit=8 meta=true %}
 
 	</div>
 </div>
 <div class="page-section">
 	<h1>Past Projects</h1>
-	<div class="list">
-		{% include list.html collection="projects" limit=8 filter="item.current!=true" %}
+	<div class="list block">
+		{% include list.html collection="projects" filter="item.current!=true" limit=8 meta=true %}
 	</div>
 </div>
 <div class="page-section">
 	<h1>About Me</h1>
-	<div class="list">
+	<div class="list block">
 		<div>
 			<h2>Languages</h2>
 			<p>Languages I can develop in.</p>
@@ -39,7 +39,7 @@ permalink: /
 		<div>
 			<h2>Past Education</h2>
 			<p>Previous Schools and Universities</p>
-			{% include list.html collection="education" %}
+			{% include list.html collection="education"  %}
 		</div>
 	</div>
 </div>

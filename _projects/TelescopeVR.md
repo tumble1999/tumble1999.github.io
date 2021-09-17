@@ -12,5 +12,3 @@ experience:
 Your browser does not support the video tag.
 </video>
 I was tasked to create a VR application about the New Robotic Telescope which is a new telescope to be built by the ARI.
-
-[Try Demo](http://newrobotictelescope.github.io)

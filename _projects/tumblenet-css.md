@@ -8,4 +8,9 @@ experience:
   languages: [css]
   platforms: [web]
   communities: [tumblenet]
+links:
+- title: "GitHub"
+  href: "https://github.com/tumblenet/tumblenet-css"
+- title: Websites
+  href: tumblenet.github.io/tumblenet-css/
 ---

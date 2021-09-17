@@ -16,7 +16,7 @@ permalink: /
 	<div class="list block">
 		{% include list.html collection="projects" filter="item.current!=true" limit=8 meta=true %}
 		<div>
-			<h3><a href="/projects">See All Projects</a></h3>
+			<h3><a href="{{ site.url }}/projects">See all {% include list-count.html collection="projects" %}...</a></h3>
 		</div>
 	</div>
 </div>

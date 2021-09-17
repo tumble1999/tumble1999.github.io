@@ -8,4 +8,6 @@ links:
 experience:
   languages: [c#]
   libraries: [windows-forms]
+  platforms: [windows]
+  education: [studio]
 ---

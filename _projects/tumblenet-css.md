@@ -11,6 +11,6 @@ experience:
 links:
 - title: "GitHub"
   href: "https://github.com/tumblenet/tumblenet-css"
-- title: Websites
+- title: Website
   href: tumblenet.github.io/tumblenet-css/
 ---

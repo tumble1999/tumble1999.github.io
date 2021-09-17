@@ -10,19 +10,6 @@
  * instructions.
  */
 
-main {
-	color: map.get($colors, "white");
-	.container {
-
-		display: flex;
-		flex-flow: column;
-		gap: #{$margin}px;
-	}
+.page-section {
+	width: 100%;
 }
-
-@import "section.scss";
-@import "list.scss";
-@import "card.scss";
-@import "meta.scss";
-@import "comments.scss";
-@import "nav.scss";

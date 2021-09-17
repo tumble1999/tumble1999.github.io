@@ -29,13 +29,110 @@ instructions.
 	<header>
 		<div class="container">
 			<a href="{{site.url}}">
+				<img class="round" src="/assets/img/author/tumble.png" alt="{{site.url}}/assets/img/author/tumble.png">
 				<h3>{{site.title}}</h3>
 			</a>
 		</div>
 	</header>
 	<main>
 		<div class="container">
-			{{content}}
+			{% assign content = page.content | strip_newlines %}
+
+			{% if page.header %}
+			<!-- HEADER -->
+			<div class="page-section">
+				{% if page.collection and page.bean %}
+				<a href="{{site.url}}/{{ page.collection }}" class="bean">
+					{{ page.collection }}
+				</a>
+				{% endif %}
+				<!-- <h1>{{page.title}}</h1> -->
+				{% include item-info.html item=page class="card" header="h1" %}
+				
+			</div>
+			{% endif %}
+
+
+			{% if page.experience %}
+			<!-- EXPERIENCE -->
+			<div class="page-section">
+				<div class="list">
+					{% if page.experience.languages %}
+					<div class="card">
+						<h3>Languages</h3>
+						{% include list.html collection="languages" filter="page.experience.languages contains
+						item.slug" count=true %}
+					</div>
+					{% endif %}
+					{% if page.experience.libraries %}
+					<div class="card">
+						<h3>Libraries</h3>
+						{% include list.html collection="libraries" filter="page.experience.libraries contains
+						item.slug" count=true %}
+					</div class="card">
+					{% endif %}
+					{% if page.experience.platforms %}
+					<div class="card">
+						<h3>Platforms</h3>
+						{% include list.html collection="platforms" filter="page.experience.platforms contains
+						item.slug" count=true %}
+					</div>
+					{% endif %}
+					{% if page.experience.education %}
+					<div class="card">
+						<h3>Education</h3>
+						{% include list.html collection="education" filter="page.experience.education contains
+						item.slug" count=true %}
+					</div>
+					{% endif %}
+					{% if page.experience.communities %}
+					<div class="card">
+						<h3>Communities</h3>
+						{% include list.html collection="communities" filter="page.experience.communities contains
+						item.slug" count=true %}
+					</div>
+					{% endif %}
+					{% if page.experience.jobs %}
+					<div class="card">
+						<h3>Jobs</h3>
+						{% include list.html collection="jobs" filter="page.experience.jobs contains item.slug" %}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endif %}
+
+
+			{% if content != "" %}
+			<!-- CONTENT -->
+			{% if page.content-card %}
+			<div class="page-section">
+				<article class="card">
+					{% endif %}
+					{{ content }}
+					{% if page.content-card %}
+				</article>
+			</div>
+			{% endif %}
+			{% endif %}
+
+			{% if page.list %}
+			<!-- LIST -->
+			<div class="page-section">
+				{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
+				<div class="list block">
+					{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit
+					count=page.list.count meta=true class="card" %}
+				</div>
+			</div>
+			{% endif %}
+
+			{% if page.comments %}
+			<!-- COMMENTS -->
+			<div class="page-section">
+				{% include comments.html %}
+			</div>
+			{% endif %}
 		</div>
 	</main>
 	<footer>

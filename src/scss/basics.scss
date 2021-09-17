@@ -10,10 +10,9 @@
  * instructions.
  */
 
-*{
+* {
 	font-family: sans-serif;
 }
-
 
 .container {
 	margin-left: auto;
@@ -22,16 +21,20 @@
 	width: 90vw;
 }
 
-
-a,a:visited {
+a,
+a:visited {
 	text-decoration: none;
-	color:  map.get($colors, "yellow");
+	color: map.get($colors, "yellow");
 }
 
-img,video {
+img,
+video {
 	max-width: 100%;
 	height: auto;
-	
+
+	&.round {
+		border-radius: 50%;
+	}
 }
 
 a.bean {
@@ -44,6 +47,8 @@ a.bean {
 	border-width: 5px 10px;
 	border-color: map.get($colors, "yellow");
 	font-weight: bold;
-	color:  map.get($colors, "black");
-  }
-  
+	color: map.get($colors, "black");
+}
+
+
+@import "table.scss";

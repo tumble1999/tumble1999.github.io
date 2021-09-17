@@ -10,7 +10,9 @@ limit: item count
 {% endif %}
 
 {% for item in items limit:include.limit %}
-	{% include list-item.html item=item bean=include.bean meta=include.meta count=include.count %}
+	{% include item-info.html item=item bean=include.bean meta=include.meta count=include.count class=include.class link=true %}
 	{% else %}
-	<em>No {{ include.collection | capitalize }}</em>
+	<div class="card">
+		No {{ include.collection | capitalize }}
+	</div>
 {% endfor %}

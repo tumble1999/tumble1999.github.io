@@ -62,9 +62,12 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: item
+      layout: default
       header: true
+      comments: true
+      content-card: true
       date-label: Started
+      bean: true
   - scope:
       path: ""
       type: posts
@@ -76,9 +79,12 @@ defaults:
     values:
       permalink: /:title
       header: false
+      comments: false
+      bean: false
   - scope:
       path: ""
       type: lists
+      comments: false
     values:
       permalink: /:title
   - scope:

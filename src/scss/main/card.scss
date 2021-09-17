@@ -10,19 +10,29 @@
  * instructions.
  */
 
-main {
-	color: map.get($colors, "white");
-	.container {
 
-		display: flex;
-		flex-flow: column;
-		gap: #{$margin}px;
-	}
+.card {
+	background-color: map.get($colors, "blue");
+	color: map.get($colors, "white");
+	padding: #{$padding}px;
 }
 
-@import "section.scss";
-@import "list.scss";
-@import "card.scss";
-@import "meta.scss";
-@import "comments.scss";
-@import "nav.scss";
+div.card {
+		display: flex;
+		gap: #{$margin}px;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			display: inline;
+		}
+
+		.item-info {
+			display: flex;
+			flex-flow: column;
+			gap: #{$margin}px;
+		}
+}

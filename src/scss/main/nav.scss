@@ -10,19 +10,13 @@
  * instructions.
  */
 
-main {
-	color: map.get($colors, "white");
-	.container {
-
+header {
+	img {
+		height: 48px;
+	}
+	a {
 		display: flex;
-		flex-flow: column;
-		gap: #{$margin}px;
+		align-items: center;
+		gap: 10px;
 	}
 }
-
-@import "section.scss";
-@import "list.scss";
-@import "card.scss";
-@import "meta.scss";
-@import "comments.scss";
-@import "nav.scss";

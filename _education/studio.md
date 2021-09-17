@@ -5,3 +5,10 @@ list:
   collection: projects
   filter: "item.experience.education contains 'studio'"
 ---
+## Grades
+
+Type|Subject|Grade
+--|--|--|
+A-Level|Computer Science|D
+A-Level|Maths|C
+BTEC|ICT|Merit

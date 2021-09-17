@@ -5,3 +5,8 @@ list:
   collection: projects
   filter: "item.experience.education contains 'ljmu'"
 ---
+## Grades
+
+Type|Subject|Grade
+--|--|--|
+Bachelor of Science |Computer Games and Programming Skills|Class II Division II

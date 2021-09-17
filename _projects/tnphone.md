@@ -7,6 +7,7 @@ date: 2018-05-16T17:38:36Z
 experience:
   languages: [js]
   platforms: [nodejs]
+  libraries: [discordjs]
   communities: [tumblenet]
 links:
 - title: "GitHub"

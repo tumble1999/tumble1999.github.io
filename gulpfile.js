@@ -5,7 +5,10 @@ var gulp = require("gulp"),
   concat = require("gulp-concat"),
   pipeline = require("readable-stream").pipeline,
   sourcemaps = require("gulp-sourcemaps"),
-  prepend = require("gulp-prepend");
+  prepend = require("gulp-prepend"),
+  ghRaw = "https://raw.githubusercontent.com/tumble1999/beta/new-design/src",
+  tRaw = "tumble-src://",
+  smRoot = tRaw;
 
 function js(cb) {
   return pipeline(
@@ -13,7 +16,7 @@ function js(cb) {
     sourcemaps.init(),
     uglify(),
     concat("tumble.min.js"),
-    sourcemaps.write({sourceRoot:"/src/js"}),
+    sourcemaps.write({sourceRoot:smRoot+"/js"}),
 	prepend(`/**
 * Author: Cameron Trow
 * License: GPL-3
@@ -37,7 +40,7 @@ function css(cb) {
     sourcemaps.init(),
     sass({ outputStyle: "compressed" }).on("error", sass.logError),
     concat("tumble.min.css"),
-    sourcemaps.write({sourceRoot:"/src/scss"}),
+    sourcemaps.write({sourceRoot:smRoot+"/scss"}),
 	prepend(`/**
 * Author: Cameron Trow
 * License: GPL-3

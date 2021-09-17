@@ -29,40 +29,34 @@ kramdown:
   input: GFM
   auto_ids: false
 
-excludes:
-  - _config.yml
-  - .gitignore
-  - .git
-  - .parcel-cache
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - node_modules
-  - parcel
-  - yarn-error.log
-  - gemfiles
-  - parcel.js
-
-
 collections:
   projects:
     output: true
+    singular: project
   libraries:
     output: true
+    singular: library
   platforms:
     output: true
+    singular: platform
   jobs:
     output: true
+    singular: job
   communities:
     output: true
+    singular: community
   education:
     output: true
+    plural: places of education
+    singular: place of education
   languages:
     output: true
+    singular: language
   root:
     output: true
   lists:
     output: true
+    singular: list
 
 defaults:
   - scope:
@@ -71,6 +65,11 @@ defaults:
       layout: item
       header: true
       date-label: Started
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /posts/:year/:month/:day/:title
   - scope:
       path: ""
       type: root
@@ -84,19 +83,19 @@ defaults:
       permalink: /:title
   - scope:
       path: ""
-      type: jobs
-    values:
-      date-label: Joined
-  - scope:
-      path: ""
       type: communities
     values:
       date-label: Joined
   - scope:
       path: ""
-      type: libraries
+      type: education
     values:
-      date-label: Started Using
+      date-label: Joined
+  - scope:
+      path: ""
+      type: jobs
+    values:
+      date-label: Joined
   - scope:
       path: ""
       type: languages
@@ -104,6 +103,24 @@ defaults:
       date-label: Started Using
   - scope:
       path: ""
+      type: libraries
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
       type: platforms
     values:
       date-label: First Developed for
+
+
+exclude:
+- node_modules
+- Gemfile
+- Gemfile.lock
+- yarn.lock
+- LICENSE
+- plan.md
+- README.md
+- gulpfile.js
+- gemfiles
+- src

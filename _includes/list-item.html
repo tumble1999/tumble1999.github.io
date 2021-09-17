@@ -1,3 +1,11 @@
+{% comment %}
+container (default:div)
+item (jekyll page)
+bean (include collection type)
+header (default: h3)
+meta (include date and links)
+{% endcomment %}
+
 <{{include.container | default:"div" }}>
 	{% if include.item.image %}
 		<div class="img-container">
@@ -18,6 +26,10 @@
 				<a href="{{site.url}}{{item.url}}">
 			{% endif %}
 			{{ include.item.title }}
+			{% if include.count and include.item.list %}
+			({% include list-count.html collection=include.item.list.collection filter=include.item.list.filter limit=include.item.list.limit %})
+			{% endif %}
+
 			{% if include.item.url %}
 				</a>
 			{% endif %}

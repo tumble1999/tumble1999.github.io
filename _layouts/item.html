@@ -76,31 +76,31 @@ layout: default
 			{% if page.experience.languages %}
 				<div>
 					<h3>Languages</h3>
-					{% include list.html collection="languages" filter="page.experience.languages contains item.slug" %}
+					{% include list.html collection="languages" filter="page.experience.languages contains item.slug" count=true %}
 				</div>
 			{% endif %}
 			{% if page.experience.libraries %}
 				<div>
 					<h3>Libraries</h3>
-					{% include list.html collection="libraries" filter="page.experience.libraries contains item.slug" %}
+					{% include list.html collection="libraries" filter="page.experience.libraries contains item.slug" count=true %}
 				</div>
 			{% endif %}
 			{% if page.experience.platforms %}
 				<div>
 					<h3>Platforms</h3>
-					{% include list.html collection="platforms" filter="page.experience.platforms contains item.slug" %}
+					{% include list.html collection="platforms" filter="page.experience.platforms contains item.slug" count=true %}
 				</div>
 			{% endif %}
 			{% if page.experience.education %}
 				<div>
 					<h3>Education</h3>
-					{% include list.html collection="education" filter="page.experience.education contains item.slug" %}
+					{% include list.html collection="education" filter="page.experience.education contains item.slug" count=true %}
 				</div>
 			{% endif %}
 			{% if page.experience.communities %}
 				<div>
 					<h3>Communities</h3>
-					{% include list.html collection="communities" filter="page.experience.communities contains item.slug" %}
+					{% include list.html collection="communities" filter="page.experience.communities contains item.slug" count=true %}
 				</div>
 			{% endif %}
 			{% if page.experience.jobs %}
@@ -133,7 +133,7 @@ layout: default
 <div class="page-section">
 	{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
 	<div class="list block">
-		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit meta=true %}
+		{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit count=page.list.count meta=true %}
 	</div>
 </div>
 {% endif %}

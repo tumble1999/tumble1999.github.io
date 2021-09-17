@@ -6,6 +6,6 @@ links:
   href: "crosscavern.netlify.app"
 experience:
   languages: [js]
-  libraries: [createjs]
+  libraries: [createjs,socket,io]
   communities: [cross-cavern]
 ---

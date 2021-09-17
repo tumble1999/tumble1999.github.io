@@ -44,7 +44,7 @@
 			{% if include.item.date-label %} 
 				{{ include.item.date-label }}:
 			{% endif %}
-			{{ include.item.date | date_to_long_string }}
+			{{ include.item.date | date:site.date-format }}
 			</div>
 		{% endif %}
 

@@ -49,7 +49,7 @@ layout: default
 					{% if page.date-label %} 
 						{{ page.date-label }}:
 					{% endif %}
-					{{ page.date | date_to_long_string }}
+					{{ page.date | date:site.date-format }}
 					</div>
 				{% endif %}
 

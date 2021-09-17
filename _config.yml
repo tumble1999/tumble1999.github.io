@@ -11,6 +11,8 @@ permalink: pretty
 production: true
 safe: true
 
+date-format: "%e %b %Y"
+
 plugins:
   - jekyll-mentions
   - jemoji

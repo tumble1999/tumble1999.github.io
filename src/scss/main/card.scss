@@ -21,6 +21,10 @@ div.card {
 		display: flex;
 		gap: #{$margin}px;
 
+		img {
+			max-height: 250px;
+		}
+
 		h1,
 		h2,
 		h3,

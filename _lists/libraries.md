@@ -2,5 +2,5 @@
 title: Libraries
 list:
   collection: libraries
-  count: true
+  counter: true
 ---

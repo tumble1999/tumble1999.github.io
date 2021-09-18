@@ -2,5 +2,5 @@
 title: Jobs
 list:
   collection: jobs
-  count: true
+  counter: true
 ---

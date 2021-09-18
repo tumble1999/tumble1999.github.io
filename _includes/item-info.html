@@ -1,6 +1,7 @@
 {% comment %}
 container (default:div)
 class container classes
+counter  include counter
 item (jekyll page)
 bean (include collection type)
 header info header element type (default: h3)
@@ -42,6 +43,9 @@ link : be a link
 			<a href="{{site.url}}{{item.url}}">
 				{% endif %}
 				{{ include.item.title }}
+				{% if include.counter and include.item.list %}
+				({% include list-count.html collection=include.item.list.collection filter=include.item.list.filter limit=include.item.list.limit %})
+				{% endif %}
 
 				{% if include.item.url and include.link %}
 			</a>

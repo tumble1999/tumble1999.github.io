@@ -61,35 +61,35 @@ instructions.
 					<div class="card">
 						<h3>Languages</h3>
 						{% include list.html collection="languages" filter="page.experience.languages contains
-						item.slug" count=true %}
+						item.slug" counter=true %}
 					</div>
 					{% endif %}
 					{% if page.experience.libraries %}
 					<div class="card">
 						<h3>Libraries</h3>
 						{% include list.html collection="libraries" filter="page.experience.libraries contains
-						item.slug" count=true %}
+						item.slug" counter=true %}
 					</div class="card">
 					{% endif %}
 					{% if page.experience.platforms %}
 					<div class="card">
 						<h3>Platforms</h3>
 						{% include list.html collection="platforms" filter="page.experience.platforms contains
-						item.slug" count=true %}
+						item.slug" counter=true %}
 					</div>
 					{% endif %}
 					{% if page.experience.education %}
 					<div class="card">
 						<h3>Education</h3>
 						{% include list.html collection="education" filter="page.experience.education contains
-						item.slug" count=true %}
+						item.slug" counter=true %}
 					</div>
 					{% endif %}
 					{% if page.experience.communities %}
 					<div class="card">
 						<h3>Communities</h3>
 						{% include list.html collection="communities" filter="page.experience.communities contains
-						item.slug" count=true %}
+						item.slug" counter=true %}
 					</div>
 					{% endif %}
 					{% if page.experience.jobs %}
@@ -122,7 +122,7 @@ instructions.
 				{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
 				<div class="list block">
 					{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit
-					count=page.list.count meta=true class="card" %}
+					counter=page.list.counter meta=true class="card" %}
 				</div>
 			</div>
 			{% endif %}

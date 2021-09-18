@@ -2,16 +2,16 @@
 {% for item in include.items limit=(include.limit|default:(include.items|size)) %}
 {% if forloop.first %}
 <h1>{{ include.name }}</h1>
+<div class="mdl-grid">
 {% if include.name=="Recommended" %}
-<div style="display: flex;flex-flow: column;gap: 20px;background: #112233;font-family: sans-serif;color: white;padding: 20px;width: 100%;justify-content: center;"
-	class="mdl-card">
-	<a href="{{site.url}}/beta" style="text-decoration: none;color: #ffc107;">
+<div style="display: flex;flex-flow: column;gap: 20px;background: #112233;font-family: sans-serif;color: white;padding: 20px;/*! width: 100%; */justify-content: center;"
+	class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+	<a href="http://localhost:4000/beta" style="text-decoration: none;color: #ffc107;">
 		<h3 style="font-weight: bold;margin: 0;">Try the new beta</h3>
 	</a>
 	<p>I'm developing an overhall of the design and layout of this website from the ground up with my own CSS.</p>
 </div>
 {% endif %}
-<div class="mdl-grid">
 	{% endif %}
 	{% unless item.featured=="true" %}
 	{% if item.collection==site.projects.label %}{% assign mode="2" %}{% endif %}

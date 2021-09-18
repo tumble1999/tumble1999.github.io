@@ -1,5 +1,5 @@
 ---
-title: Auckland Collage
+title: Auckland College
 date: September 2008
 list:
   collection: projects

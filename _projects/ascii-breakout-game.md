@@ -1,5 +1,5 @@
 ---
-title: ASCII bREAKOUT Game
+title: ASCII Breakout Game
 summary: LJMU Coursework
 date: 11 Dec 2017
 links:

@@ -1,8 +1,6 @@
 ---
 title: The Studio Showcase 2016
 date: 2016-03-30 00:00:00 +0000
-author: tumble1999
-comments: true
 category: Update
 tags:
 - Medification

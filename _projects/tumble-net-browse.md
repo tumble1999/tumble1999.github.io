@@ -2,6 +2,7 @@
 title: Tumble NetBrowse
 summary: I made a Web Browser using Windows Forms
 date: 15 Nov 2015
+image: /uploads/projects/tn-browse.png
 links:
 - title: GitHub
   href: https://github.com/tumblegamer/Tumble-NetBrowse

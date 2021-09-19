@@ -13,7 +13,7 @@ links:
 - title: "Debian/Arch PPA"
   href: "https://cinnabar-engine.github.io/"
 experience:
-  languages: [c++]
-  libraries: [opengl]
+  languages: [c++,glsl]
+  libraries: [opengl,SDL,glm]
   platforms: [windows,debian,arch]
 ---

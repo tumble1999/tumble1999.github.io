@@ -1,7 +1,8 @@
 ---
-title: Discord Phone Bot
+title: Poly Pickle
 featured: false
 summary: Talk between servers
+image: /uploads/projects/poly-pickle.png
 download-link: http://tnphone.tumblenet.ga/
 date: 2018-05-16T17:38:36Z
 experience:

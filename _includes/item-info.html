@@ -14,14 +14,14 @@ link : be a link
 	{% if include.item.image %}
 	<!-- IMAGE -->
 	<div class="item-image">
-		<img src="{{ include.item.image }}" alt="{{ include.item.image }}">
+		<img src="{{site.url}}{{ include.item.image }}" alt="{{ include.item.image }}">
 	</div>
 	{% endif %}
 
 	{% assign hasDate = false %}
 	{% if include.item.date %}
-	{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
-	{% capture itemDate %}{{include.item.date | date: '%s' }}{% endcapture %}
+	{% capture currentDate %}{{ 'now' | date:site.date-format}}{% endcapture %}
+	{% capture itemDate %}{{include.item.date | date:site.date-format }}{% endcapture %}
 	{% if currentDate != itemDate %}
 	{% assign hasDate = true %}
 	{% endif %}

@@ -4,7 +4,7 @@ summary: This is one of my first uses of Socket.io
 date: 16 Dec 2017
 experience:
   languages: [js]
-  libraries: [express,socket-io]
+  libraries: [express,socketio]
   platforms: [nodejs,web]
 links:
 - title: GitHub

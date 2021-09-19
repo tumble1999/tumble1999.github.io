@@ -1,8 +1,6 @@
 ---
 title: Personal Statement
 date: 2016-12-15 00:00:00 +0000
-author: tumble1999
-comments: true
 category: Update
 image: "/uploads/2017/03/28/portfolio-1.jpg"
 summary: My portfolio

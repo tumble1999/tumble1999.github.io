@@ -45,12 +45,9 @@ tags:
 - 7.1
 - cisco
 - packet tracer
-author: tumble1999
 summary: Have you always wanted to know how to simulate your own internet?
 title: Make your own internet in packet tracer
 date: 2017-05-14 00:00:00 +0000
-comments: true
-featured: true
 ---
 
 

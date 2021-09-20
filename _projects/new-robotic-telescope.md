@@ -6,6 +6,11 @@ experience:
   libraries: [unity]
   platforms: [windows,web,android]
   jobs: [ari]
+links:
+- title: GitHub
+  href: https://github.com/tumble1999/NewRoboticTelescope
+- title: Demo
+  href: https://4mnrt.github.io/NewRoboticTelescope.github.io/
 ---
 <video width="1366" height="768" controls>
   <source src="{{site.url}}/uploads/projects/ARI_TelescopePreview.mp4" type="video/mp4">

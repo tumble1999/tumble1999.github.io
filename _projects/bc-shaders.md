@@ -2,6 +2,7 @@
 title: BC Shaders
 summary: Create shaders for boxcritters
 image: /uploads/projects/bc-shaders.png
+date: 30 April 2020
 links:
 - title: GitHub
   href: https://github.com/boxcrittersmods/bc-shaders

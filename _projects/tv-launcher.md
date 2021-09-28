@@ -8,6 +8,6 @@ links:
   href: https://github.com/tumble1999/tv-app-launcher
 experience:
   languages: [c++]
-  libraries: [gtk]
+  libraries: [gtk3,xdg-basedir]
   platforms: [debian]
 ---

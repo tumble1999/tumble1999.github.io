@@ -4,6 +4,26 @@
 [![Build Status](https://travis-ci.org/tumble1999/tumble1999.github.io.svg?branch=master)](https://travis-ci.org/tumble1999/tumble1999.github.io)
 This is my portfolio where I showcase my recent projects
 
+# Stack
+
+### Frontend
+
+- JS
+- HTML5
+- SCSS
+- Gulp
+- Uglify
+
+### APIs
+
+### Backend
+
+- Markdown
+- GitHub Pages
+- Jekyll
+- Ruby
+- NodeJS
+
 ## Settung Up
 
 First Install Ruby Version Manager
@@ -33,14 +53,10 @@ npm run build
 
 ## Authors
 
-- **Tumble** - _Jekyll, liquid, html, css and js_ - [tumble1999](https://github.com/tumble1999)
+- **Tumble** - _Jekyll, liquid, html, scss and js_ - [tumble1999](https://github.com/tumble1999)
 
 See also the list of [contributors](https://github.com/tumble1999/tumble1999.github.io/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the ### License - see the [LICENSE.md](LICENSE.md) file for details
-
-```
-
-```
+This project is licensed under the GPL License - see the [LICENSE.md](LICENSE.md) file for details

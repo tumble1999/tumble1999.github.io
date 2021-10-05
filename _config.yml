@@ -118,15 +118,15 @@ defaults:
     values:
       date-label: First Developed for
 
-
 exclude:
-- node_modules
-- Gemfile
-- Gemfile.lock
-- yarn.lock
-- LICENSE
-- plan.md
-- README.md
-- gulpfile.js
-- gemfiles
-- src
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - yarn.lock
+  - LICENSE
+  - plan.md
+  - README.md
+  - gulpfile.js
+  - gemfiles
+  - src
+  - package.json

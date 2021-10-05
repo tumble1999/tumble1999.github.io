@@ -2,7 +2,7 @@
  * Author: Cameron Trow
  * License: GPL-3
  * Source Code: https://github.com/tumble1999/tumble1999.github.io
- * 
+ *
  * You may copy, distribute and modify the software as long as you
  * track changes/dates in source files. Any modifications to or
  * software including (via compiler) GPL-licensed code must also
@@ -17,23 +17,22 @@ $colors: ();
 $margin: 20;
 $padding: 20;
 
-
 $mobile: 768;
 $tablet: 1200;
 $container: $tablet;
 
 $color-values: (
-	"black": black,
-	"white": white,
-	"yellow": #ffc107,
-	"blue": #112233,
+  "black": black,
+  "white": white,
+  "yellow": #ffc107,
+  "blue": #112233,
 );
 @each $color, $i in $color-values {
-	$colors: map.set($colors, $color, var(--color-#{$color}));
+  $colors: map.set($colors, $color, var(--color-#{$color}));
 }
 
 :root {
-	@each $color, $i in $color-values {
-		--color-#{$color}: #{$i};
-	}
+  @each $color, $i in $color-values {
+    --color-#{$color}: #{$i};
+  }
 }

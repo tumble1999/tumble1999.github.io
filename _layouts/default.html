@@ -44,11 +44,12 @@ instructions.
 				{% if page.collection and page.bean %}
 				<a href="{{site.url}}/{{ page.collection }}" class="bean">
 					{{ page.collection }}
-				</a>
-				{% endif %}
-				<!-- <h1>{{page.title}}</h1> -->
-				{% include item-info.html item=page class="card" header="h1" %}
-				
+				</a><span>
+					<-- Click here to see more {{ page.collection }}</span>
+						{% endif %}
+						<!-- <h1>{{page.title}}</h1> -->
+						{% include item-info.html item=page class="card" header="h1" %}
+
 			</div>
 			{% endif %}
 

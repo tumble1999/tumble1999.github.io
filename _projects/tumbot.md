@@ -9,7 +9,7 @@ links:
   - title: Bot (GitHub)
     href: https://github.com/tumble1999/tumbot
   - title: Website (Under Construction)
-    href: https://discord.com/channels/@me/717756587598676049/897258875051442216
+    href: https://tumble1999.github.io/tumbot-webpanel/
 experience:
   languages: [js, scss, html]
   platforms: [nodejs, web]

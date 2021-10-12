@@ -1,0 +1,54 @@
+/**
+ * Author: Cameron Trow
+ * License: GPL-3
+ * Source Code: https://github.com/tumble1999/tumble1999.github.io
+ * 
+ * You may copy, distribute and modify the software as long as you
+ * track changes/dates in source files. Any modifications to or
+ * software including (via compiler) GPL-licensed code must also
+ * be made available under the GPL along with build & install
+ * instructions.
+ */
+
+.list,
+.swipy-list {
+  @extend %flist;
+  flex-flow: row;
+  list-style: none;
+
+  &.block {
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  &.vertical {
+    flex-flow: column;
+
+    & > * {
+      @extend %w100p;
+    }
+    & .img-container {
+      max-width: 20%;
+      @extend %h100p;
+    }
+  }
+
+  & > *:not(.list) {
+    @extend %vertical-flist;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+}
+
+.list {
+  flex-wrap: wrap;
+}
+
+.swipy-list {
+  overflow: hidden;
+  & > * {
+    @extend %w100p;
+    flex-shrink: 0;
+  }
+}

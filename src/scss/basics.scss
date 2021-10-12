@@ -1,0 +1,61 @@
+/**
+ * Author: Cameron Trow
+ * License: GPL-3
+ * Source Code: https://github.com/tumble1999/tumble1999.github.io
+ * 
+ * You may copy, distribute and modify the software as long as you
+ * track changes/dates in source files. Any modifications to or
+ * software including (via compiler) GPL-licensed code must also
+ * be made available under the GPL along with build & install
+ * instructions.
+ */
+
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: #{$container}px;
+  width: 90vw;
+}
+a {
+  &,
+  &:hover,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+    font-weight: bold;
+    @extend %text-yellow;
+  }
+}
+
+.round {
+  border-radius: 50%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a.bean {
+  &,
+  &:hover,
+  &:focus,
+  &:visited {
+    text-transform: uppercase;
+    display: inline;
+    @extend %bg-yellow;
+    @extend %center-items;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px 10px;
+    border-color: map.get($colors, "yellow");
+    font-weight: bold;
+  }
+}
+
+@import "table.scss";

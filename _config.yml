@@ -1,20 +1,5 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create7 any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Cameron Trow
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   My Corner of the Internet
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tumble1999.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -22,27 +7,11 @@ repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif
 
-social:
-  twitter: tumble1999
-  linkedin: tumble1999
-  github: tumble1999
-  youtube: tumblegamer
-  artstation: tumble1999
-  codepen: tumble1999
-
-webmaster_verifications:
-  google: 1234
-  bing: 1234
-  alexa: 1234
-  yandex: 1234
-
 permalink: pretty
 production: true
+safe: true
 
-collections:
-  projects:
-    output: true
-  unity:
+date-format: "%e %b %Y"
 
 plugins:
   - jekyll-mentions
@@ -52,90 +21,112 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Build settings
+markdown: kramdown
+theme: minima
+
+kramdown:
+  input: GFM
+  auto_ids: false
+
+collections:
+  projects:
+    output: true
+    singular: project
+  libraries:
+    output: true
+    singular: library
+  platforms:
+    output: true
+    singular: platform
+  jobs:
+    output: true
+    singular: job
+  communities:
+    output: true
+    singular: community
+  education:
+    output: true
+    plural: places of education
+    singular: place of education
+  languages:
+    output: true
+    singular: language
+  root:
+    output: true
+  lists:
+    output: true
+    singular: list
+
 defaults:
   - scope:
       path: ""
     values:
-      image: /favicon.gif
-      layout: basic
-      featured: false
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: page
-      author: ""
+      layout: default
+      header: true
+      comments: true
+      content-card: true
+      date-label: Started
+      bean: true
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
-      category: ""
-      tags: []
-      author: ""
-      excerpt: >
-      image:
+      permalink: /posts/:year/:month/:day/:title
   - scope:
       path: ""
-      type: projects
+      type: root
     values:
-      layout: project
-      tags: []
-      author: ""
-      excerpt: >
-      image:
+      permalink: /:title
+      header: false
+      comments: false
+      bean: false
   - scope:
-      path: "github"
-      type: project
+      path: ""
+      type: lists
+      comments: false
     values:
-      layout: project/github
-      user: tumble1999
-      repo:
+      permalink: /:title
   - scope:
-      path: "collage"
-      type: projects
+      path: ""
+      type: communities
     values:
-      layout: project/collage
-      tags: []
-      author: ""
-      excerpt: >
-      image:
+      date-label: Joined
   - scope:
-      path: "university"
-      type: projects
+      path: ""
+      type: education
     values:
-      layout: project/university
-      tags: []
-      author: ""
-      excerpt: >
-      image:
+      date-label: Joined
   - scope:
-      path: "self"
-      type: projects
+      path: ""
+      type: jobs
     values:
-      layout: project/self
-      tags: []
-      author: ""
-      excerpt: >
-      download-link: ""
-      website: ""
-      image:
+      date-label: Joined
+  - scope:
+      path: ""
+      type: languages
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
+      type: libraries
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
+      type: platforms
+    values:
+      date-label: First Developed for
 
-# Build settings
-markdown: kramdown
-# theme: minima
-
-kramdown:
-  # Enable GitHub Flavored Markdown (fenced code blocks)
-  input: GFM
-  # Disable auto-generated ID's for headings
-  auto_ids: false
-
-excludes:
-  - script
-  - _config.yml
-  - .gitignore
-  - travis-old.yml
+exclude:
+  - node_modules
   - Gemfile
   - Gemfile.lock
+  - yarn.lock
   - LICENSE
+  - plan.md
+  - README.md
+  - gulpfile.js
+  - gemfiles
+  - src
+  - package.json

@@ -1,0 +1,18 @@
+---
+title: Legacy
+content-card: false
+---
+
+<div class="page-section">
+<h2>Recommended</h2>
+<div class="list vertical">
+{% include list.html collection="documents" filter="item.featured==true" bean=true class="card" %}
+</div>
+</div>
+
+<div class="page-section">
+<h2>Newest</h2>
+<div class="list block">
+{% include list.html collection="documents" filter="item.featured!=true" bean=true class="card" %}
+</div>
+</div>

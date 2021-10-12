@@ -1,0 +1,21 @@
+{
+  "name": "tumble1999.github.io",
+  "version": "1.0.0",
+  "repository": "https://github.com/tumble1999/tumble1999.github.io",
+  "author": "Tumble <tumblegamer@gmail.com>",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "start": "gulp build"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-prepend": "^0.3.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.6.0",
+    "sass": "^1.25.0"
+  }
+}

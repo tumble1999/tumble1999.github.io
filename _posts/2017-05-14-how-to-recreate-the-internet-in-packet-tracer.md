@@ -1,59 +1,55 @@
 ---
+title: Make your own internet in packet tracer
+summary: Have you always wanted to know how to simulate your own internet?
+date: 2017-05-14 00:00:00 +0000
+featured: true
 image: "/uploads/2017/05/14/thumbnail-3.PNG"
 category: How-to
 tags:
-- dns
-- hierarchy
-- ns
-- soa
-- packet
-- tracer
-- cisco
-- internet
-- nameserver
-- name server
-- cisco-packet-tracer
-- how
-- to
-- make
-- your
-- own
-- internet
-- in
-- cisco
-- packet
-- tracer
-- make
-- your
-- own
-- internet
-- in
-- '3'
-- seconds
-- step
-- by
-- step
-- real
-- steps
-- wan
-- access
-- icon
-- of things
-- lab
-- symbol
-- pc
-- 7.1
-- cisco
-- packet tracer
-author: tumble1999
-excerpt: Have you always wanted to know how to simulate your own internet?
-title: Make your own internet in packet tracer
-date: 2017-05-14 00:00:00 +0000
-layout: post
-comments: true
-featured: true
+  - dns
+  - hierarchy
+  - ns
+  - soa
+  - packet
+  - tracer
+  - cisco
+  - internet
+  - nameserver
+  - name server
+  - cisco-packet-tracer
+  - how
+  - to
+  - make
+  - your
+  - own
+  - internet
+  - in
+  - cisco
+  - packet
+  - tracer
+  - make
+  - your
+  - own
+  - internet
+  - in
+  - "3"
+  - seconds
+  - step
+  - by
+  - step
+  - real
+  - steps
+  - wan
+  - access
+  - icon
+  - of things
+  - lab
+  - symbol
+  - pc
+  - 7.1
+  - cisco
+  - packet tracer
 ---
-
 
 Cisco packet tracer is a great tool for simulating small-scale networks to see how they may work in practice. You can create; email servers, web servers, DNS servers, routers and more with this simple tool for students to learn about networking. You may be wondering, well some people have and that is how to make the internet.
 
@@ -99,7 +95,7 @@ For this example, we will be setting up example.com.
 
 In a new network create two servers with IP addresses and call one ns.exmple.com and the other www.example.com.
 
-In ns.exmple.com make  records;
+In ns.exmple.com make records;
 
 SOA
 

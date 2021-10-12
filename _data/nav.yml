@@ -1,0 +1,43 @@
+header:
+  - title: Projects
+    icon: mdi-xml
+    href: "/projects"
+  - title: Education
+    icon: mdi-school
+    href: "/education"
+  - title: Work
+    href: "/jobs"
+    icon: mdi-briefcase
+  - title: Communities
+    href: "/communities"
+    icon: mdi-account-group
+  - title: Libraries
+    href: "/libraries"
+    icon: mdi-bookshelf
+  - title: Languages
+    href: "/languages"
+    icon: mdi-application-parentheses-outline
+mobile:
+  - title: Projects
+    icon: mdi-xml
+    href: "/projects"
+  - title: Work
+    href: "/jobs"
+    icon: mdi-briefcase
+  - title: Education
+    icon: mdi-school
+    href: "/education"
+  - title: News
+    href: "/posts"
+    icon: mdi-newspaper
+footer:
+  - title: GPLv3
+    href: https://github.com/tumble1999/tumble1999.github.io/blob/master/LICENSE
+  - title: Art
+    href: https://tumble1999.artstation.com
+  - title: News
+    href: "/posts"
+  - title: Old Site
+    href: "/old"
+  - title: Older News
+    href: https://10trowc.wordpress.com

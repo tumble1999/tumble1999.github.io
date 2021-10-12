@@ -1,0 +1,18 @@
+{% comment %}
+collection: site collection
+filter : tag to filter by
+limit: item count
+{% endcomment %}
+
+{% assign items = site[include.collection] | sort: "date" | reverse %}
+{% if include.filter %}
+{% assign items = items | where_exp:"item",include.filter %}
+{% endif %}
+
+{% for item in items limit:include.limit %}
+	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true %}
+	{% else %}
+	<div class="card">
+		No {{ include.collection | capitalize }}
+	</div>
+{% endfor %}

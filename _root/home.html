@@ -1,0 +1,56 @@
+---
+title: Hello World
+header: true
+#image: /assets/img/author/tumble.png
+content-card: false
+permalink: /
+redirect_from:
+  - /beta
+summary: >
+  I am passionate about computers whether it is programming or building my own, my key skills include
+  problem-solving, teamwork, organisation and communication. I would like to apply for jobs in Computing as I
+  hope to pursue a career supporting and developing modern technology.
+---
+<div class="page-section">
+	<div class="list block">
+		<div class="card">
+			<h2>Languages</h2>
+			<p>Languages I can develop in.</p>
+			{% include list.html collection="languages" counter=true %}
+		</div>
+
+		<div class="card">
+			<h2>Platforms</h2>
+			<p>Platforms that I can develop for.</p>
+			{% include list.html collection="platforms" counter=true %}
+		</div>
+		<div class="card">
+			<h2>Work Experience</h2>
+			<p>Previous jobs</p>
+			{% include list.html collection="jobs" counter=true %}
+		</div>
+		<div class="card">
+			<h2>Past Education</h2>
+			<p>Previous Schools and Universities</p>
+			{% include list.html collection="education" counter=true %}
+		</div>
+	</div>
+</div>
+<div class="page-section">
+	<h1>Current Projects</h1>
+	<div class="list block">
+
+		{% include list.html collection="projects" filter="item.current==true" limit=8 meta=true class="card" %}
+
+	</div>
+</div>
+<div class="page-section">
+	<h1>Past Projects</h1>
+	<div class="list block">
+		{% include list.html collection="projects" filter="item.current!=true" limit=8 meta=true class="card" %}
+		<div class="card">
+			<h3><a href="{{ site.url }}/projects">See all {% include list-count.html collection="projects" %}...</a>
+			</h3>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+{% comment %}
+collection: site collection
+filter : tag to filter by
+limit: item count
+{% endcomment %}
+{% assign items = site[include.collection] | sort: "date" | reverse %}{% if include.filter %}{% assign items = items | where_exp:"item",include.filter %}{% endif %}
+{% if include.limit and include.limit < items.size %} {% assign size=include.limit %}{% else %}{% assign size=items.size %}{% endif %}{% assign collection = site.collections | where:"label",include.collection | first %}
+{{ size }} 
+{% if size=="1" or size==1 %}
+{{ collection.singular | default:include.collection }}
+{% else %}
+{{ collection.plural | default:include.collection }}
+{% endif %}

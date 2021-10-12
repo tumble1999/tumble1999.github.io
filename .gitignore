@@ -1,1 +1,6 @@
 _site/
+tumble-css/
+node_modules/
+yarn-error.log
+dist
+.parcel-cache

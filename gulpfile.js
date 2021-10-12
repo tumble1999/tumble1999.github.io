@@ -16,7 +16,7 @@ function js(cb) {
     sourcemaps.init(),
     uglify(),
     concat("tumble.min.js"),
-    sourcemaps.write({sourceRoot:smRoot+"/js"}),
+    sourcemaps.write("./",{sourceRoot:smRoot+"/js"}),
 	prepend(`/**
 * Author: Cameron Trow
 * License: GPL-3
@@ -40,7 +40,7 @@ function css(cb) {
     sourcemaps.init(),
     sass({ outputStyle: "compressed" }).on("error", sass.logError),
     concat("tumble.min.css"),
-    sourcemaps.write({sourceRoot:smRoot+"/scss"}),
+    sourcemaps.write("./",{sourceRoot:smRoot+"/scss"}),
 	prepend(`/**
 * Author: Cameron Trow
 * License: GPL-3

@@ -30,9 +30,10 @@ header {
         flex: 1;
         @extend %bg-yellow-hover;
         display: grid;
-        gap: 5px;
+        //gap: 5px;
         //@extend %center-items;
         place-items: center;
+        grid-row-gap: 0;
         place-content: center;
         grid-template-rows: 24px auto;
         padding-left: 6px;

@@ -11,22 +11,30 @@
  */
 
 body {
-	display: flex;
-	flex-flow: column;
-	min-height: 100%;
-	background-color: map.get($colors, "black");
-	gap: #{$margin}px;
-	height: auto;
+  display: grid;
+  grid-template-rows: 56px auto 56px;
+  @extend %gap;
+  background-color: map.get($colors, "black");
+  min-height: 100%;
+  height: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 header,
 footer {
-	padding-left: 16px;
-	padding-right: 16px;
-	background-color: map.get($colors, "yellow");
-	color: map.get($colors, "black");
-	a,a:visited {
-		color:  map.get($colors, "black");
-	}
+  padding-left: 16px;
+  padding-right: 16px;
+  @extend %bg-yellow;
+  a {
+    &,
+    &:hover,
+    &:focus,
+    &:visited {
+      @extend %text-black;
+    }
+  }
 }
 
 @import "header/all";
@@ -37,12 +45,15 @@ footer {
   TABLET
   */
 @media (min-width: #{$mobile}px) {
-	@import "main/tablet";
+  @import "header/tablet";
+  @import "main/tablet";
+  @import "footer/tablet";
 }
 
 /* 
   DESKTOP
   */
 @media (min-width: #{$tablet}px) {
-	@import "main/desktop";
+  @import "header/desktop";
+  @import "main/desktop";
 }

@@ -1,4 +1,8 @@
 ---
+title: Make your own internet in packet tracer
+summary: Have you always wanted to know how to simulate your own internet?
+date: 2017-05-14 00:00:00 +0000
+featured: true
 image: "/uploads/2017/05/14/thumbnail-3.PNG"
 category: How-to
 tags:
@@ -45,10 +49,6 @@ tags:
   - 7.1
   - cisco
   - packet tracer
-summary: Have you always wanted to know how to simulate your own internet?
-title: Make your own internet in packet tracer
-date: 2017-05-14 00:00:00 +0000
-featured: true
 ---
 
 Cisco packet tracer is a great tool for simulating small-scale networks to see how they may work in practice. You can create; email servers, web servers, DNS servers, routers and more with this simple tool for students to learn about networking. You may be wondering, well some people have and that is how to make the internet.

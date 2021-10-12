@@ -11,37 +11,36 @@
  */
 
 table {
-	// border-spacing: 0;
-	border-collapse: collapse;
-	margin-top: #{$margin}px;
-	table-layout: fixed;
-	width: 100%;  
+  // border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: #{$margin}px;
+  table-layout: fixed;
+  @extend %w100p;
 
-	thead {
-		background-color: var(--color-yellow);
-		color: var(--color-black);
-	}
+  thead {
+    @extend %bg-yellow;
+  }
 
-	tbody {
-		tr:hover {
-			background-color: rgba(black,.3);
-		}
-	}
+  tbody {
+    tr:hover {
+      background-color: rgba(black, 0.3);
+    }
+  }
 
-	th,
-	td {
-		border-right: solid 0.5px;
-		border-left: solid 0.5px;
+  th,
+  td {
+    border-right: solid 0.5px;
+    border-left: solid 0.5px;
 
-		border-color: rgba(#808080, .7);
-		font-size: 1.3em;
+    border-color: rgba(#808080, 0.7);
+    font-size: 1.3em;
 
-		padding: .5em;
-		&:first-child {
-			border-left: none;
-		}
-		&:last-child {
-			border-right: none;
-		}
-	}
+    padding: 0.5em;
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
 }

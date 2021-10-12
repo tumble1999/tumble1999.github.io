@@ -10,33 +10,29 @@
  * instructions.
  */
 
-
 .card {
-	background-color: map.get($colors, "blue");
-	color: map.get($colors, "white");
-	padding: #{$padding}px;
+  background-color: map.get($colors, "blue");
+  color: map.get($colors, "white");
+  padding: #{$padding}px;
 }
 
 div.card {
-		display: flex;
-		gap: #{$margin}px;
+  @extend %flist;
 
-		img {
-			max-height: 250px;
-		}
+  img {
+    max-height: 250px;
+  }
 
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			display: inline;
-		}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: inline;
+  }
 
-		.item-info {
-			display: flex;
-			flex-flow: column;
-			gap: #{$margin}px;
-		}
+  .item-info {
+    @extend %vertical-flist;
+  }
 }

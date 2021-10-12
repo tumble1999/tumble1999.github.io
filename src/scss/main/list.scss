@@ -10,50 +10,45 @@
  * instructions.
  */
 
-
 .list,
 .swipy-list {
-	display: flex;
-	gap: #{$margin}px;
-	list-style: none;
-	flex-flow: row;
+  @extend %flist;
+  flex-flow: row;
+  list-style: none;
 
-	&.block {
-		h3 {
-			margin-top: 0;
-		}
-	}
+  &.block {
+    h3 {
+      margin-top: 0;
+    }
+  }
 
-	&.vertical {
-		flex-flow: column;
+  &.vertical {
+    flex-flow: column;
 
-		& > * {
-			width: 100%;
-		}
-		& .img-container {
-			max-width: 20%;
-			height: 100%;
-		}
-  
-	}
+    & > * {
+      @extend %w100p;
+    }
+    & .img-container {
+      max-width: 20%;
+      @extend %h100p;
+    }
+  }
 
-	& > *:not(.list){
-		display: flex;
-		flex-flow: column;
-		gap:#{$margin}px;
-		align-items: flex-start;
-		flex-grow: 1;
-	}
+  & > *:not(.list) {
+    @extend %vertical-flist;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
 }
 
 .list {
-	flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .swipy-list {
-	overflow: hidden;
-	& > * {
-		width: 100%;
-		flex-shrink: 0;
-	}
+  overflow: hidden;
+  & > * {
+    @extend %w100p;
+    flex-shrink: 0;
+  }
 }

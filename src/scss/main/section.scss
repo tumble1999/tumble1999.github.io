@@ -11,5 +11,5 @@
  */
 
 .page-section {
-	width: 100%;
+  @extend %w100p;
 }

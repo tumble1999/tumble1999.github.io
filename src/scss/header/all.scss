@@ -11,7 +11,40 @@
  */
 
 header {
-	height: 58px;
-	display: flex;
-	align-items: center;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+
+  .site-header {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 0;
+    nav {
+      @extend %flist;
+      display: none;
+      height: 58px;
+      gap: 0;
+      a {
+        flex: 1;
+        @extend %bg-yellow-hover;
+        display: grid;
+        gap: 5px;
+        //@extend %center-items;
+        place-items: center;
+        place-content: center;
+        grid-template-rows: 24px auto;
+        padding-left: 6px;
+        padding-right: 6px;
+        height: 100%;
+        &.active {
+          @extend %bg-dark-yellow;
+        }
+      }
+      i {
+        font-size: 24px;
+      }
+    }
+  }
 }

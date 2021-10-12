@@ -11,13 +11,11 @@
  */
 
 main {
-	color: map.get($colors, "white");
-	.container {
-
-		display: flex;
-		flex-flow: column;
-		gap: #{$margin}px;
-	}
+  color: map.get($colors, "white");
+  .container {
+    @extend %vertical-flist;
+  }
+  grid-area: main;
 }
 
 @import "section.scss";

@@ -1,0 +1,75 @@
+@mixin macros {
+  %bg-yellow {
+    background-color: map.get($colors, "yellow");
+    color: map.get($colors, "black");
+  }
+  %bg-blue {
+    background-color: map.get($colors, "blue");
+    color: map.get($colors, "white");
+  }
+  %bg-dark-yellow {
+    background-color: map.get($colors, "dark-yellow");
+    color: map.get($colors, "black");
+  }
+  %bg-light-blue {
+    background-color: map.get($colors, "light-blue");
+    color: map.get($colors, "white");
+  }
+  %text-yellow {
+    color: map.get($colors, "yellow");
+  }
+  %text-blue {
+    color: map.get($colors, "blue");
+  }
+  %text-black {
+    color: map.get($colors, "black");
+  }
+  %text-white {
+    color: map.get($colors, "white");
+  }
+
+  %bg-yellow-hover {
+    @extend %bg-yellow;
+    &:hover {
+      @extend %bg-dark-yellow;
+    }
+  }
+  %bg-blue-hover {
+    @extend %bg-blue;
+    &:hover {
+      @extend %bg-light-blue;
+    }
+  }
+
+  %center-items {
+    display: grid;
+    place-items: center;
+  }
+
+  %gap {
+    gap: #{$margin}px;
+  }
+
+  %flist {
+    display: flex;
+    @extend %gap;
+  }
+
+  %vertical-flist {
+    @extend %flist;
+    flex-flow: column;
+  }
+
+  %w100p {
+    width: 100%;
+  }
+
+  %h100p {
+    height: 100%;
+  }
+
+  %hw100p {
+    @extend %w100p;
+    @extend %h100p;
+  }
+}

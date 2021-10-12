@@ -16,6 +16,7 @@ $colors: ();
 
 $margin: 20;
 $padding: 20;
+$gap: 20;
 
 $mobile: 768;
 $tablet: 1200;
@@ -25,6 +26,8 @@ $color-values: (
   "black": black,
   "white": white,
   "yellow": #ffc107,
+  "dark-yellow": #d6a206,
+  "light-blue": #14273b,
   "blue": #112233,
 );
 @each $color, $i in $color-values {

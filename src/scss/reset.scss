@@ -11,29 +11,28 @@
  */
 
 html {
-	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	position: relative;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  @extend %hw100p;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @extend %hw100p;
+  position: relative;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin: 0;
   }
-  
-  body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	position: relative;
-  }
-  
-  * {  
-	&, &::before,
-	&::after {
-	  -webkit-box-sizing: border-box;
-	  -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	  word-wrap: break-word;
-	  margin: 0;
-	}
-  }
+}

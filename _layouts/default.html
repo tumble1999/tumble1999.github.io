@@ -22,16 +22,25 @@ instructions.
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="{{site.url}}/assets/css/normalize.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.2.95/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="{{site.url}}/assets/css/tumble.min.css">
 </head>
 
 <body>
 	<header>
-		<div class="container">
+		<div class="container site-header">
 			<a href="{{site.url}}">
 				<img class="round" src="{{site.url}}/assets/img/author/tumble.png" alt="Tumble Logo">
 				<h3>{{site.title}}</h3>
 			</a>
+			<nav>
+				{% for link in site.data.nav.header %}
+				<a href="{{link.href}}" {% if page.url contains link.href %} class="active" {% endif %}>
+					{% include icon.html icon=link.icon %}
+					{{link.title}}
+				</a>
+				{% endfor %}
+			</nav>
 		</div>
 	</header>
 	<main>
@@ -42,9 +51,7 @@ instructions.
 			<!-- HEADER -->
 			<div class="page-section">
 				{% if page.collection and page.bean %}
-				<a href="{{site.url}}/{{ page.collection }}" class="bean">
-					{{ page.collection }}
-				</a><span>
+				<a href="{{site.url}}/{{ page.collection }}" class="bean">{{ page.collection }}</a><span>
 					<-- Click here to see more {{ page.collection }}</span>
 						{% endif %}
 						<!-- <h1>{{page.title}}</h1> -->
@@ -99,6 +106,20 @@ instructions.
 						{% include list.html collection="jobs" filter="page.experience.jobs contains item.slug" %}
 					</div>
 					{% endif %}
+					{% if page.experience.projects %}
+					<div class="card">
+						<h3>Projects</h3>
+						{% include list.html collection="projects" filter="page.experience.projects contains item.slug"
+						%}
+					</div>
+					{% endif %}
+					{% if page.experience.posts %}
+					<div class="card">
+						<h3>News</h3>
+						{% include list.html collection="posts" filter="page.experience.posts contains item.slug"
+						%}
+					</div>
+					{% endif %}
 				</div>
 			</div>
 			{% endif %}
@@ -138,12 +159,22 @@ instructions.
 	</main>
 	<footer>
 		<p>Cameron Trow
-			<script>document.write(new Date().getFullYear());</script> - <a
-				href="https://github.com/tumble1999/tumble1999.github.io/blob/master/LICENSE">GPLv3</a> - <a
-				href="https://10trowc.wordpress.com/">Old Site</a>
+			<script>document.write(new Date().getFullYear());</script>
+			{% for link in site.data.nav.footer %}
+			- <a href="{{link.href}}">{{link.title}}</a>
+			{% endfor %}
 		</p>
 	</footer>
 
+
+	<nav class="mobile-nav">
+		{% for link in site.data.nav.mobile %}
+		<a href="{{link.href}}" {% if page.url contains link.href %}class="active" {% endif %}>
+			{% include icon.html icon=link.icon %}
+			{{link.title}}
+		</a>
+		{% endfor %}
+	</nav>
 	<!-- JS -->
 	<script src="{{site.url}}/assets/js/tumble.min.js"></script>
 </body>

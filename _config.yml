@@ -2,7 +2,7 @@ title: Cameron Trow
 description: >
   My Corner of the Internet
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tumble1999.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: //tumble1999.github.io # the base hostname & protocol for your site, e.g. http://example.com
 repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif

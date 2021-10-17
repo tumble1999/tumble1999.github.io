@@ -1,6 +1,6 @@
 ---
 title: Creators.TF
-summary: Frontend Developer
+summary: WebDev Lead
 date: 9 June 2021
 list:
   collection: projects

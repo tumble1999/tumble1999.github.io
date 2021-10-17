@@ -3,6 +3,7 @@ title: Tumbot
 date: 08 October 2021
 summary: a discord bot that combines the functionalities of every discord bot I've ever made, as well as having a web front end where you can manage what features a server has.
 current: true
+image: /tumbot-webpanel/assets/img/tumbot.svg
 links:
   - title: WebPanel (GitHub)
     href: https://github.com/tumble1999/tumbot-webpanel

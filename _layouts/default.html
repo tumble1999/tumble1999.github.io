@@ -24,6 +24,7 @@ instructions.
 	 <meta name="robots" content="noindex" />
 	 {% endif %}
 
+	 <link rel="icon" class="favicon" sizes="192x192" href="{{site.logo}}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% seo %}
 
@@ -38,7 +39,7 @@ instructions.
 	<header>
 		<div class="container site-header">
 			<a href="{{site.url}}">
-				<img class="round" src="{{site.url}}/assets/img/author/tumble.png" alt="Tumble Logo">
+				<img class="round" src="{{site.url}}{{site.logo}}" alt="Tumble Logo">
 				<h3>{{site.title}}</h3>
 			</a>
 			<nav>

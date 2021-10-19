@@ -7,6 +7,10 @@ repository: tumble1999/tumble1999.github.io
 
 logo: /favicon.gif
 
+twitter:
+  username: tumble1999
+  card: summary
+
 permalink: pretty
 production: true
 safe: true

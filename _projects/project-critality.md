@@ -1,6 +1,6 @@
 ---
 title: Project Critality
-summary: VR Client for Box Critters
+description: VR Client for Box Critters
 date: 14 Oct 2019
 links:
 - title: GitHub

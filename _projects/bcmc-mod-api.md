@@ -1,6 +1,6 @@
 ---
 title: BCMC Modding API Server
-summary: API Sever to help locate the ever changing asset urls in box critters
+description: API Sever to help locate the ever changing asset urls in box critters
 date: 26 April 2019
 links:
 - title: GitHub

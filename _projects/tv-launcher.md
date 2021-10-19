@@ -1,6 +1,6 @@
 ---
 name: Linux TV Launcher
-summary: I will attempt to create a Linux Application Launcher for Linux on the TV
+description: I will attempt to create a Linux Application Launcher for Linux on the TV
 date: 22 September 2021
 current: true
 links:

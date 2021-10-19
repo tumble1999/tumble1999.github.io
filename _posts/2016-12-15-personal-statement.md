@@ -3,7 +3,7 @@ title: Personal Statement
 date: 2016-12-15 00:00:00 +0000
 category: Update
 image: "/uploads/2017/03/28/portfolio-1.jpg"
-summary: My portfolio
+description: My portfolio
 ---
 http://wp.me/P6MqiQ-ha
 

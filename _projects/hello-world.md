@@ -1,6 +1,6 @@
 ---
 title: Hello World
-summary: Port hello world to every platform
+description: Port hello world to every platform
 date: 30 June 2021
 links:
 - title: GitHub

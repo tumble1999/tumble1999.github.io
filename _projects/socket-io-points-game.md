@@ -1,6 +1,6 @@
 ---
 title: Socket.IO Points Game
-summary: This is one of my first uses of Socket.io
+description: This is one of my first uses of Socket.io
 date: 16 Dec 2017
 experience:
   languages: [js]

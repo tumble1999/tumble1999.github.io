@@ -1,7 +1,7 @@
 ---
 title: MinGJ
 featured: false
-summary: Minimalistic GNU for JS
+description: Minimalistic GNU for JS
 date: 2020-08-01T17:38:36Z
 links:
 - title: Website

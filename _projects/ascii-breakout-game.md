@@ -1,6 +1,6 @@
 ---
 title: ASCII Breakout Game
-summary: LJMU Coursework
+description: LJMU Coursework
 date: 11 Dec 2017
 links:
 - title: GitHub

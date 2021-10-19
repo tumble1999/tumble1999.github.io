@@ -1,7 +1,7 @@
 ---
 title: Portfolio Redesign
 date: 16 September 2021
-summary: this website
+description: this website
 current: true
 experience:
   languages: [html, js, css, scss]

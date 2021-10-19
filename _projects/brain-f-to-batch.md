@@ -1,6 +1,6 @@
 ---
 title: Brain F*** to Batch Converter
-summary: Convert from BrainF*** to Batch
+description: Convert from BrainF*** to Batch
 date: 8 Nov 2016
 links:
 - title: GitHub

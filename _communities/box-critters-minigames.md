@@ -1,6 +1,6 @@
 ---
 title: The Critter Circle Minigame Collective
-summary: "Original Co-Founder"
+description: "Original Co-Founder"
 list:
   collection: projects
   filter: "item.experience.communities contains 'box-critters-minigames'"

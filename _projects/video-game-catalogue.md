@@ -1,6 +1,6 @@
 ---
 title: Video Game Catalogue
-summary: Catalogue your games collection
+description: Catalogue your games collection
 date: 7 Oct 2016
 links:
 - title: GitHub

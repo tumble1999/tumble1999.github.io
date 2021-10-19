@@ -1,6 +1,6 @@
 ---
 title: Astrophysics Research Institute
-summary: "VR Developer Intern"
+description: "VR Developer Intern"
 list:
   collection: projects
   filter: "item.experience.jobs contains 'ari'"

@@ -1,6 +1,6 @@
 ---
 title: Make your own internet in packet tracer
-summary: Have you always wanted to know how to simulate your own internet?
+description: Have you always wanted to know how to simulate your own internet?
 date: 2017-05-14 00:00:00 +0000
 featured: true
 image: "/uploads/2017/05/14/thumbnail-3.PNG"

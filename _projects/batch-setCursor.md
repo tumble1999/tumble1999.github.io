@@ -1,6 +1,6 @@
 ---
 title: Batch Set Cursor
-summary: Set the cursor position in batch
+description: Set the cursor position in batch
 date: 14 Sep 2017
 links:
 - title: GitHub

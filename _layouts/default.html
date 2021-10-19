@@ -15,10 +15,18 @@ instructions.
 <html lang="en">
 
 <head>
+	<!-- Site Meta -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="theme-color" content="#FFC107">
+	 <!-- noindex -->
+	 {% if page.noindex %}
+	 <meta name="robots" content="noindex" />
+	 {% endif %}
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{site.title}}</title>
+	{% seo %}
+
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="{{site.url}}/assets/css/normalize.css">
@@ -42,6 +50,7 @@ instructions.
 				{% endfor %}
 			</nav>
 		</div>
+
 	</header>
 	<main>
 		<div class="container">

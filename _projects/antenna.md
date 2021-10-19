@@ -1,6 +1,6 @@
 ---
 title: Antenna
-summary: Peer To Peer Messaging Service
+description: Peer To Peer Messaging Service
 date: 17 Mar 2021
 current: true
 links:

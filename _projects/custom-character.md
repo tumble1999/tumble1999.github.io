@@ -1,6 +1,6 @@
 ---
 title: Custom Character
-summary: Story based MMO where you can draw your own character
+description: Story based MMO where you can draw your own character
 date: 27 June 2020
 links:
 - title: GitHub

@@ -27,7 +27,7 @@ link : be a link
 	{% endif %}
 	{% endif %}
 
-	{% if include.bean or include.item.title or include.item.summary or hasDate or include.item.links %}
+	{% if include.bean or include.item.title or include.item.description or hasDate or include.item.links %}
 	<div class="item-info">
 		{% if include.bean %}
 		{% if include.item.collection %}
@@ -53,7 +53,7 @@ link : be a link
 		</{{include.header | default:"h3" }}>
 		{% endif %}
 
-		{% if include.item.summary %}<p>{{ include.item.summary }}</p>{% endif %}
+		{% if include.item.description %}<p>{{ include.item.description }}</p>{% endif %}
 
 		{% if hasDate or include.item.links %}
 		<!-- META -->

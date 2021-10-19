@@ -1,6 +1,6 @@
 ---
 title: WOAH
-summary: Wrapper for APT in the style of YAY
+description: Wrapper for APT in the style of YAY
 date: 8 Aug 2021
 current: true
 links:

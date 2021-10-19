@@ -1,6 +1,6 @@
 ---
 title: First Person Test
-summary: My First 3D Game Using Unity
+description: My First 3D Game Using Unity
 date: 6 Dec 2015
 links:
 - title: GitHub

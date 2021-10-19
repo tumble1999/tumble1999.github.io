@@ -1,6 +1,6 @@
 ---
 title: Box Critters Texture Pack Manager
-summary: This extention lets you easily switch between different themes, add
+description: This extention lets you easily switch between different themes, add
   new themes and create new themes.
 date: 2019-04-25
 image: /uploads/projects/box-critters-texture-pack-manager.png

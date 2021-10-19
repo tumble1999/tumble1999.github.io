@@ -1,6 +1,6 @@
 ---
 title: PPA Template
-summary: Create your own PPA for Debian and Arch LInux
+description: Create your own PPA for Debian and Arch LInux
 date: 23 Sep 2021
 links:
 - title: GitHub

@@ -41,3 +41,5 @@ footer:
     href: "/old"
   - title: Older News
     href: https://10trowc.wordpress.com
+  - title: RSS
+    href: /feed.xml

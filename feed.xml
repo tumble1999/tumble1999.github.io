@@ -1,0 +1,45 @@
+---
+layout: null
+permalink: ./feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title type="text" xml:lang="en">{{site.title}}</title>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<author>
+		<name>{{site.author}}</name>
+		<email>{{site.email}}</email>
+	</author>
+	<rights>GPLv3</rights>
+	{% for document in site.documents %}
+
+		{% if document.date %}
+			{% capture currentDate %}{{ 'now' | date:site.date-format}}{% endcapture %}
+			{% capture itemDate %}{{ document.date | date:site.date-format }}{% endcapture %}
+			{% if currentDate != itemDate %}
+			{% assign collection = site.collections | where:"label",document.collection | first %}
+			
+				<entry>
+					{% if document.id %}<id>{{ document.id }}</id>{% endif %}
+					{% if document.title %}<title type="text">{{'[' | escape }}{{collection.singular|defaut:collection.label|default:document.collection| capitalize }}{{']' | escape }} {{ document.title | escape }}</title>{% endif %}
+					{% if document.url %}<link href="{{ site.url }}{{ document.url }}"></link>{% endif %}
+					{% if document.date %}<published>{{ document.date | date_to_xmlschema }}</published>{% endif %}
+					{% if document.description %}<summary type="text">{{ document.description | escape }}</summary>{% endif %}
+					{% if document.collection %}<category term="{{ document.collection }}" label="{{ collection.label | escape }}"></category>{% endif %}
+					{% if document.experience %}
+					{% for collection in site.collections %}
+						{% assign experience = document.experience[collection.label] %}
+							{% if experience %}
+								{% assign categories = site[collection.label] | where_exp: "category","experience contains category.slug" %}
+								{% for category in categories %}
+					<category term="{{ category.slug }}" label="{{ category.title | escape }}"></category>
+								{% endfor %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+					{% if document.content %}<content type="html">{{ document.content | escape }}</content>{% endif %}
+				</entry>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+</feed>

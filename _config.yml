@@ -1,6 +1,8 @@
 title: Cameron Trow
+email: tumblegamer+portfolio@gmail.com
 tagline: >
   My Corner of the Internet
+author: tumble1999
 baseurl: "" # the subpath of your site, e.g. /blog
 url: //tumble1999.github.io # the base hostname & protocol for your site, e.g. http://example.com
 repository: tumble1999/tumble1999.github.io
@@ -10,6 +12,9 @@ logo: /assets/img/author/tumble.png
 twitter:
   username: tumble1999
   card: summary
+
+feed:
+  path: feed.xml
 
 permalink: pretty
 production: true
@@ -34,6 +39,9 @@ kramdown:
   auto_ids: false
 
 collections:
+  posts:
+    output: true
+    singular: post
   projects:
     output: true
     singular: project

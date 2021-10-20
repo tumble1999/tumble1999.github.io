@@ -27,6 +27,7 @@ instructions.
 	 <link rel="icon" class="favicon" sizes="192x192" href="{{site.logo}}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% seo %}
+	{% feed_meta %}
 
 
 	<!-- CSS -->
@@ -75,61 +76,15 @@ instructions.
 			<!-- EXPERIENCE -->
 			<div class="page-section">
 				<div class="list">
-					{% if page.experience.languages %}
-					<div class="card">
-						<h3>Languages</h3>
-						{% include list.html collection="languages" filter="page.experience.languages contains
-						item.slug" counter=true %}
-					</div>
-					{% endif %}
-					{% if page.experience.libraries %}
-					<div class="card">
-						<h3>Libraries</h3>
-						{% include list.html collection="libraries" filter="page.experience.libraries contains
-						item.slug" counter=true %}
-					</div class="card">
-					{% endif %}
-					{% if page.experience.platforms %}
-					<div class="card">
-						<h3>Platforms</h3>
-						{% include list.html collection="platforms" filter="page.experience.platforms contains
-						item.slug" counter=true %}
-					</div>
-					{% endif %}
-					{% if page.experience.education %}
-					<div class="card">
-						<h3>Education</h3>
-						{% include list.html collection="education" filter="page.experience.education contains
-						item.slug" counter=true %}
-					</div>
-					{% endif %}
-					{% if page.experience.communities %}
-					<div class="card">
-						<h3>Communities</h3>
-						{% include list.html collection="communities" filter="page.experience.communities contains
-						item.slug" counter=true %}
-					</div>
-					{% endif %}
-					{% if page.experience.jobs %}
-					<div class="card">
-						<h3>Jobs</h3>
-						{% include list.html collection="jobs" filter="page.experience.jobs contains item.slug" %}
-					</div>
-					{% endif %}
-					{% if page.experience.projects %}
-					<div class="card">
-						<h3>Projects</h3>
-						{% include list.html collection="projects" filter="page.experience.projects contains item.slug"
-						%}
-					</div>
-					{% endif %}
-					{% if page.experience.posts %}
-					<div class="card">
-						<h3>News</h3>
-						{% include list.html collection="posts" filter="page.experience.posts contains item.slug"
-						%}
-					</div>
-					{% endif %}
+					{% for collection in site.collections %}
+						{% assign experience=page.experience[collection.label] %}
+						{% if experience %}
+						<div class="card">
+							<h3>{{collection.plural|default:collection.label|capitalize}}</h3>
+							{% include list.html collection=collection.label filter="experience contains item.slug" counter=true %}
+						</div>
+						{% endif %}
+					{% endfor %}
 				</div>
 			</div>
 			{% endif %}

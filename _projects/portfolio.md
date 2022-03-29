@@ -2,7 +2,7 @@
 title: Portfolio Redesign
 date: 16 September 2021
 description: this website
-current: true
+current: false
 experience:
   languages: [html, js, css, scss]
   libraries: [jekyll, gulp]

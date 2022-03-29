@@ -64,6 +64,9 @@ collections:
   languages:
     output: true
     singular: language
+  skills:
+    output: true
+    singular: skill
   root:
     output: true
   lists:

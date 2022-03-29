@@ -4,7 +4,7 @@ featured: false
 description: Modular cross platform game engine from scratch
 download-link: https://tumble1999.github.io/cinnabar
 date: 2020-09-01T17:38:36Z
-current: yes
+current: false
 links:
 - title: "GitHub"
   href: "https://github.com/cinnabar-engine/cinnabar"

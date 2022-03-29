@@ -2,7 +2,7 @@
 title: Antenna
 description: Peer To Peer Messaging Service
 date: 17 Mar 2021
-current: true
+current: false
 links:
 - title: Client Source
   href: https://github.com/antenna-p2p/antenna-client

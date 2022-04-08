@@ -1,5 +1,5 @@
 ---
-title: CreatorsTF Posterity Websote
+title: CreatorsTF Posterity Website
 date: 28 March 2022
 description: A website to show the history of creators.tf and who worked on it to live on for all of time without costing them any money to host.
 current: false

@@ -129,6 +129,11 @@ defaults:
       date-label: Started Using
   - scope:
       path: ""
+      type: skills
+    values:
+      date-label: Started Using
+  - scope:
+      path: ""
       type: platforms
     values:
       date-label: First Developed for

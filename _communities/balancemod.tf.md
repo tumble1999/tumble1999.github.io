@@ -1,5 +1,5 @@
 ---
-title: Balance.TF
+title: Balancemod.TF
 description: WebDev
 date: 30 March 2022
 list:

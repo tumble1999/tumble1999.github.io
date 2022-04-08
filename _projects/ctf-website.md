@@ -8,7 +8,7 @@ links:
 experience:
   languages: [html, css, js, php]
   platforms: [web]
-  communities: [creators-tf]
+  communities: [creators.tf]
 ---
 
 Things I have done:

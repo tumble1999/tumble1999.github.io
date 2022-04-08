@@ -7,7 +7,7 @@ experience:
   languages: [html, js, css]
   libraries: [jekyll]
   platforms: [web]
-  communities: [creators-tf]
+  communities: [creators.tf]
 links:
   - title: Website
     href: https://creators.tf

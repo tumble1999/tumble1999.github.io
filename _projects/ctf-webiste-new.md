@@ -7,5 +7,5 @@ experience:
   languages: [html, css, js, scss, ts]
   libraries: [react, nextjs, passportjs]
   platforms: [web, nodejs, nginx]
-  communities: [creators-tf]
+  communities: [creators.tf]
 ---

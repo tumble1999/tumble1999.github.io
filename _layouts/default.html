@@ -1,6 +1,6 @@
 ---
 ---
-<!-- 
+<!--
 Author: Cameron Trow
 License: GPL-3
 Source Code: https://github.com/tumble1999/tumble1999.github.io
@@ -19,13 +19,13 @@ instructions.
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="theme-color" content="#FFC107">
-	 <!-- noindex -->
-	 {% if page.noindex %}
-	 <meta name="robots" content="noindex" />
-	 {% endif %}
+	<!-- noindex -->
+	{% if page.noindex %}
+	<meta name="robots" content="noindex" />
+	{% endif %}
 
-	 <link rel="icon" class="favicon" sizes="192x192" href="{{site.logo}}">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" class="favicon" sizes="192x192" href="{{site.logo}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	{% seo %}
 	{% feed_meta %}
 
@@ -77,13 +77,14 @@ instructions.
 			<div class="page-section">
 				<div class="list">
 					{% for collection in site.collections %}
-						{% assign experience=page.experience[collection.label] %}
-						{% if experience %}
-						<div class="card">
-							<h3>{{collection.plural|default:collection.label|capitalize}}</h3>
-							{% include list.html collection=collection.label filter="experience contains item.slug" counter=true %}
-						</div>
-						{% endif %}
+					{% assign experience=page.experience[collection.label] %}
+					{% if experience %}
+					<div class="card">
+						<h3>{{collection.plural|default:collection.label|capitalize}}</h3>
+						{% include list.html collection=collection.label filter="experience contains item.slug"
+						counter=true %}
+					</div>
+					{% endif %}
 					{% endfor %}
 				</div>
 			</div>

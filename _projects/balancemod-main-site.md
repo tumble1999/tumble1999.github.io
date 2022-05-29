@@ -7,8 +7,8 @@ experience:
   languages: [html, js, css]
   libraries: [jekyll]
   platforms: [web]
-  communities: [balancemod.tf]
+  communities: [bmod]
 links:
   - title: Website
-    href: https://balancemod.tf
+    href: https://bmod.tf
 ---

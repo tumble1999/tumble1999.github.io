@@ -2,16 +2,19 @@
 collection: site collection
 filter : tag to filter by
 limit: item count
+base: item count
 {% endcomment %}
-
-{% assign items = site[include.collection] | sort: "date" | reverse %}
-{% if include.filter %}
-{% assign items = items | where_exp:"item",include.filter %}
+{% if site[include.collection] %}
+{% assign items = site[include.collection] | sort:"date" | reverse %}
 {% endif %}
+{% if include.filter %}
+	{% assign items = items | where_exp:"item",include.filter %}
+{% endif %}
+{% assign list= include.base|default:items %}
 
 {% for item in items limit:include.limit %}
 	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true %}
-	{% else %}
+{% else %}
 	<div class="card">
 		No {{ include.collection | capitalize }}
 	</div>

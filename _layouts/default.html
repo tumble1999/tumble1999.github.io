@@ -73,21 +73,21 @@ instructions.
 
 
 			{% if page.experience %}
-			<!-- EXPERIENCE -->
-			<div class="page-section">
-				<div class="list">
-					{% for collection in site.collections %}
-					{% assign experience=page.experience[collection.label] %}
-					{% if experience %}
-					<div class="card">
-						<h3>{{collection.plural|default:collection.label|capitalize}}</h3>
-						{% include list.html collection=collection.label filter="experience contains item.slug"
-						counter=true %}
+				<!-- EXPERIENCE -->
+				<div class="page-section">
+					<div class="list">
+						{% for experienceData in page.experience %}
+							{% assign collection=site.collections | where_exp: "item","item.label == experienceData[0]"|first %}
+							{% assign collectionPlural=collection.plural| default:collection.label | default:experienceData[0] | capitalize %}
+							{% assign experience=experienceData[1] %}
+								<div class="card">
+									<h3>{{collectionPlural}}</h3>
+									{% include list.html collection=collection.label filter="experience contains item.slug"
+									counter=true items=experience bullet=true meta=false %}
+								</div>
+						{% endfor %}
 					</div>
-					{% endif %}
-					{% endfor %}
 				</div>
-			</div>
 			{% endif %}
 
 
@@ -110,7 +110,7 @@ instructions.
 				{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
 				<div class="list block">
 					{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit
-					counter=page.list.counter meta=true class="card" %}
+					counter=page.list.counter meta=true class="card" bean=page.list.bean %}
 				</div>
 			</div>
 			{% endif %}

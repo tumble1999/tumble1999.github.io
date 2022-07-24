@@ -10,90 +10,95 @@ link : be a link
 
 {% endcomment %}
 
+{% assign item=include.item %}
+{% assign itemTitle=item.title|default:item |capitalize%}
+
 <{{include.container|default:"div"}} {% if include.class %} class="{{ include.class }}" {% endif %}>
-    {% if include.item.image %}
-        <!-- IMAGE -->
-        <div class="item-image">
-            <img src="{{ include.item.image }}" alt="{{ include.item.image }}">
-        </div>
-    {% endif %}
+	{% if item.image %}
+		<!-- IMAGE -->
+		<div class="item-image">
+			<img src="{{ item.image }}" alt="{{ item.image }}">
+		</div>
+	{% endif %}
 
-    {% assign hasDate = false %}
-    {% if include.item.date %}
-        {% capture currentDate %}
-            {{ 'now' | date:site.date-format}}
-        {% endcapture %}
-        {% capture itemDate %}
-            {{include.item.date | date:site.date-format }}
-        {% endcapture %}
-        {% if currentDate != itemDate %}
-            {% assign hasDate = true %}
-        {% endif %}
-    {% endif %}
+	{% assign hasDate = false %}
+	{% if item.date %}
+		{% capture currentDate %}
+			{{ 'now' | date:site.date-format}}
+		{% endcapture %}
+		{% capture itemDate %}
+			{{item.date | date:site.date-format }}
+		{% endcapture %}
+		{% if currentDate != itemDate %}
+			{% assign hasDate = true %}
+		{% endif %}
+	{% endif %}
 
-    {% if include.bean or include.item.title or include.item.description or hasDate or include.item.links %}
-        <div class="item-info">
-            {% if include.bean %}
-                {% if include.item.collection %}
-                    <a href="{{site.url}}/{{ include.item.collection }}" class="bean">
-                        {{ include.item.collection }}
-                    </a>
-                {% endif %}
-            {% endif %}
+	{% if include.bean or itemTitle or item.description or hasDate or item.links %}
+		<div class="item-info">
+			{% if include.bean %}
+				{% if item.collection %}
+					<a href="{{site.url}}/{{ item.collection }}" class="bean">
+						{{ item.collection }}
+					</a>
+				{% endif %}
+			{% endif %}
 
-            {% if include.item.title %}
-                <{{include.header|default:"h3"}}>
-                    {% if include.item.url and include.link %}
-                        <a href="{{site.url}}{{item.url}}">
-                        {% endif %}
-                        {{ include.item.title }}
-                        {% if include.counter and include.item.list %}
-                            ({% include list-count.html collection=include.item.list.collection filter=include.item.list.filter limit=include.item.list.limit %})
-                        {% endif %}
+			{% if itemTitle %}
+				<{{include.header|default:"h3"}}>
+					{% if item.url and include.link %}
+						<a href="{{site.url}}{{item.url}}">
+						{% endif %}
+						{{ itemTitle }}
+						{% if include.counter and item.list %}
+							({% include list-count.html collection=item.list.collection filter=item.list.filter limit=item.list.limit %})
+						{% endif %}
 
-                        {% if include.item.url and include.link %}
-                        </a>
-                    {% endif %}
-                </{{include.header|default:"h3"}}>
-            {% endif %}
+						{% if item.url and include.link %}
+						</a>
+					{% endif %}
+				</{{include.header|default:"h3"}}>
+			{% endif %}
 
-            {% if include.item.description %}
-                <p>{{ include.item.description }}</p>
-            {% endif %}
+			{% if include.meta %}
+				{% if item.description %}
+					<p>{{ item.description }}</p>
+				{% endif %}
 
-            {% if hasDate or include.item.links %}
-                <!-- META -->
-                <div class="item-meta list">
+				{% if hasDate or item.links %}
+					<!-- META -->
+					<div class="item-meta list">
 
-                    {% if hasDate %}
-                        <!-- DATE -->
-                        <div class="item-date">
-                            {% if include.item.date-label %}
-                                {{ include.item.date-label }}:
-                            {% endif %}
-                            {{ include.item.date | date:site.date-format }}
-                        </div>
-                    {% endif %}
+						{% if hasDate %}
+							<!-- DATE -->
+							<div class="item-date">
+								{% if item.date-label %}
+									{{ item.date-label }}:
+								{% endif %}
+								{{ item.date | date:site.date-format }}
+							</div>
+						{% endif %}
 
-                    {% if include.item.links %}
-                        <!-- LINKS -->
-                        <div class="item-links list">
-                            {% for link in include.item.links %}
-                                {% if link.href %}
-                                    <a href="{{link.href}}">{{link.title}}</a>
-                                {% else %}
-                                    {% if link.title %}
-                                        <p style="font-weight: bold;">{{link.title}}</p>
-                                    {% endif %}
-                                {% endif %}
-                            {% else %}
-                                <em>No Links</em>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            {% endif %}
+						{% if item.links %}
+							<!-- LINKS -->
+							<div class="item-links list">
+								{% for link in item.links %}
+									{% if link.href %}
+										<a href="{{link.href}}">{{link.title}}</a>
+									{% else %}
+										{% if link.title %}
+											<p style="font-weight: bold;">{{link.title}}</p>
+										{% endif %}
+									{% endif %}
+								{% else %}
+									<em>No Links</em>
+								{% endfor %}
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+			{% endif %}
 
-        </div>
-    {% endif %}
+		</div>
+	{% endif %}
 </{{include.container|default:"div"}}>

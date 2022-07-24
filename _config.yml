@@ -72,6 +72,11 @@ collections:
   lists:
     output: true
     singular: list
+  companies:
+    output: true
+    singular: company
+  placements:
+    output: true
 
 defaults:
   - scope:
@@ -150,3 +155,4 @@ exclude:
   - gemfiles
   - src
   - package.json
+  - package-lock.json

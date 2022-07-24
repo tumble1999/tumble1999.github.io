@@ -1,19 +1,58 @@
 {% comment %}
-collection: site collection
+collection: site collection name
 filter : tag to filter by
 limit: item count
-base: item count
+items: collection items
+bullet: bulleted list
 {% endcomment %}
-{% if site[include.collection] %}
-{% assign items = site[include.collection] | sort:"date" | reverse %}
+{% if include.collection %}
+	{% assign collectionItems = site[include.collection] %}
 {% endif %}
-{% if include.filter %}
-	{% assign items = items | where_exp:"item",include.filter %}
-{% endif %}
-{% assign list= include.base|default:items %}
 
-{% for item in items limit:include.limit %}
-	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true %}
+{% assign working = "" | split: "" %}
+{% assign broken = "" | split: "" %}
+
+{% if include.items %}
+	{% for item in include.items %}
+		{% assign siteItem = collectionItems | where:"slug", item | first %}
+		{% if siteItem and siteItem.url %}
+			{% assign working = working | push: siteItem %}
+		{% else %}
+			{% assign broken = broken | push: item %}
+		{% endif %}
+	{% endfor %}
+{% else %}
+	{% assign working = collectionItems %}
+{% endif %}
+
+
+{% if include.filter %}
+	{% assign working = working | where_exp:"item",include.filter %}
+{% endif %}
+
+{% if working %}
+{% assign working = working | sort: "date" | reverse %}
+{% endif %}
+
+{% if working and broken %}
+{% assign items = broken | concat: working %}
+{% elsif working or noexists %}
+{% assign items = working | default: broken %}
+{% endif %}
+
+
+{% for item in items limit: include.limit %}
+	{% if include.bullet %}
+		{% if forloop.first %}<ul>{% endif %}
+		<li>
+	{% endif %}
+	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true header=header container=container %}
+
+
+	{% if include.bullet %}
+		</li>
+		{% if forloop.last %}</ul>{% endif %}
+	{% endif %}
 {% else %}
 	<div class="card">
 		No {{ include.collection | capitalize }}

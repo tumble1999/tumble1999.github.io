@@ -11,7 +11,7 @@ link : be a link
 {% endcomment %}
 
 {% assign item=include.item %}
-{% assign itemTitle=item.title|default:item |capitalize%}
+{% assign itemTitle=item.title|default:item %}
 
 <{{include.container|default:"div"}} {% if include.class %} class="{{ include.class }}" {% endif %}>
 	{% if item.image %}

@@ -127,7 +127,7 @@ instructions.
 		<p>Cameron Trow
 			<script>document.write(new Date().getFullYear());</script>
 			{% for link in site.data.nav.footer %}
-			- <a href="{{link.href}}">{{link.title}}</a>
+			- <a href="{{link.href}}">{% include icon.html icon=link.icon %}{{link.title}}</a>
 			{% endfor %}
 		</p>
 	</footer>

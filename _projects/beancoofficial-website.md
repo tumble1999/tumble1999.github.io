@@ -1,0 +1,15 @@
+---
+title: Bean Co Official Website
+date: 11/09/2022
+description: A website to host a collection of random things
+current: true
+links:
+- title: Website
+  href: https://beanofficial.co
+experience:
+  languages: [js,html,css]
+  platforms: [web,Alpine]
+  software:	[nginx, acme]
+  communities: [bean-co-official]
+  skills: [Teamwork, Planning, IT]
+---

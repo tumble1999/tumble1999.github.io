@@ -13,7 +13,7 @@ links:
   href: https://4mnrt.github.io/NewRoboticTelescope.github.io/
 ---
 <video width="1366" height="768" controls>
-  <source src="{{site.url}}/uploads/projects/ARI_TelescopePreview.mp4" type="video/mp4">
+  <source src="{{site.url}}/assets/projects/new-robotic-telescope/ARI_TelescopePreview.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 I was tasked to create a VR application about the New Robotic Telescope which is a new telescope to be built by the ARI.

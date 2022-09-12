@@ -10,29 +10,29 @@ var gulp = require("gulp"),
   tRaw = "tumble-src://",
   smRoot = tRaw;
 
-function js(cb) {
-  return pipeline(
-    gulp.src("src/js/*.js"),
-    sourcemaps.init(),
-    uglify(),
-    concat("tumble.min.js"),
-    sourcemaps.write("./",{sourceRoot:smRoot+"/js"}),
-// 	prepend(`/**
-// * Author: Cameron Trow
-// * License: GPL-3
-// * Source Code: https://github.com/tumble1999/tumble1999.github.io
-// * 
-// * You may copy, distribute and modify the software as long as you
-// * track changes/dates in source files. Any modifications to or
-// * software including (via compiler) GPL-licensed code must also
-// * be made available under the GPL along with build & install
-// * instructions.
-// */
-// `),
-    gulp.dest("assets/js"),
-    cb
-  );
-}
+// function js(cb) {
+//   return pipeline(
+//     gulp.src("src/js/*.js"),
+//     sourcemaps.init(),
+//     uglify(),
+//     concat("tumble.min.js"),
+//     sourcemaps.write("./",{sourceRoot:smRoot+"/js"}),
+// // 	prepend(`/**
+// // * Author: Cameron Trow
+// // * License: GPL-3
+// // * Source Code: https://github.com/tumble1999/tumble1999.github.io
+// // *
+// // * You may copy, distribute and modify the software as long as you
+// // * track changes/dates in source files. Any modifications to or
+// // * software including (via compiler) GPL-licensed code must also
+// // * be made available under the GPL along with build & install
+// // * instructions.
+// // */
+// // `),
+//     gulp.dest("assets/js"),
+//     cb
+//   );
+// }
 
 function css(cb) {
   return pipeline(
@@ -45,7 +45,7 @@ function css(cb) {
 // * Author: Cameron Trow
 // * License: GPL-3
 // * Source Code: https://github.com/tumble1999/tumble1999.github.io
-// * 
+// *
 // * You may copy, distribute and modify the software as long as you
 // * track changes/dates in source files. Any modifications to or
 // * software including (via compiler) GPL-licensed code must also
@@ -58,4 +58,5 @@ function css(cb) {
   );
 }
 
-exports.build = gulp.series(css, js);
+//exports.build = gulp.series(css, js);
+exports.build = gulp.series(css);

@@ -1,35 +1,38 @@
 header:
   - title: Projects
-    icon: mdi-xml
+    icon: x1F5BF
     href: "/projects"
   - title: Education
-    icon: mdi-school
+    icon: x1F393
     href: "/education"
   - title: Work
     href: "/jobs"
-    icon: mdi-briefcase
+    icon: x1F4CB
   - title: Communities
     href: "/communities"
-    icon: mdi-account-group
+    icon: x1f5a7
   - title: Libraries
     href: "/libraries"
-    icon: mdi-bookshelf
+    icon: x1F4DA
   - title: Languages
     href: "/languages"
-    icon: mdi-application-parentheses-outline
+    icon: x1F4BB
 mobile:
+
+
   - title: Projects
-    icon: mdi-xml
+    icon: x1F5BF
     href: "/projects"
   - title: Work
     href: "/jobs"
-    icon: mdi-briefcase
+    icon: x1F4CB
   - title: Education
-    icon: mdi-school
+    icon: x1F393
     href: "/education"
   - title: News
     href: "/posts"
-    icon: mdi-newspaper
+    icon: x1F5DE
+
 footer:
   - title: GPLv3
     href: https://github.com/tumble1999/tumble1999.github.io/blob/master/LICENSE

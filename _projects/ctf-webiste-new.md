@@ -6,6 +6,7 @@ current: false
 experience:
   languages: [html, css, js, scss, ts]
   libraries: [react, nextjs, passportjs]
-  platforms: [web, nodejs, nginx]
+  platforms: [web, nodejs]
+  software: [nginx]
   communities: [creators.tf]
 ---

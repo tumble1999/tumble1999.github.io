@@ -1,18 +1,18 @@
 ---
 title: Pizza Parkour
 date: 2015-09-25 00:00:00 +0000
-image: "/uploads/projects/pizza.png"
+image: "/assets/projects/pizza-parkour/pizza.png"
 tags:
 - PBL Projects
 experience:
-  group: true
+  group: ["Starfire Studios"]
   libraries: [construct]
   platforms: [windows]
   education: [studio]
 ---
 
 <video width="1366" height="768" controls>
-  <source src="{{site.url}}/uploads/projects/pizza-parkour.mp4" type="video/mp4">
+  <source src="{{site.url}}/assets/projects/pizza-parkour/pizza-parkour.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <i>Pizza Parkour</i> is a 2015 <span style="font-weight:400;">Action/Adventure game </span>designed by Cameron Trow (Sprites), Phillip Linsner (Level Design) and Callum Jones (Other/Unknown/Logo). The game is built in Construct and released on TBA, for <span style="font-weight:400;">any platform
@@ -42,13 +42,13 @@ In <i>Pizza Parkour</i>, the player controls a Pizza Guy, who is in <span styl
 <td>Jump</td>
 <td>
 
-[caption id="attachment_474" align="alignleft" width="57"]<a href="https://10trowc.wordpress.com/portfolio/pizza-parkour/haut/" rel="attachment wp-att-474"><img class=" wp-image-474" src="https://10trowc.files.wordpress.com/2015/11/haut1.png" alt="Up Key" width="57" height="57" /></a> Up Key[/caption]</td>
+<a href="https://10trowc.wordpress.com/portfolio/pizza-parkour/haut/" rel="attachment wp-att-474"><img class=" wp-image-474" src="https://10trowc.files.wordpress.com/2015/11/haut1.png" alt="Up Key" width="57" height="57" /></a> Up Key</td>
 </tr>
 <tr>
 <td>Double    Jump</td>
 <td>
 
-[caption id="attachment_474" align="alignleft" width="81"]<a href="https://10trowc.wordpress.com/portfolio/pizza-parkour/haut/" rel="attachment wp-att-474"><img class=" wp-image-474" src="https://10trowc.files.wordpress.com/2015/11/haut1.png" alt="Up Key" width="81" height="81" /></a> Up Key when in the air[/caption]</td>
+<a href="https://10trowc.wordpress.com/portfolio/pizza-parkour/haut/" rel="attachment wp-att-474"><img class=" wp-image-474" src="https://10trowc.files.wordpress.com/2015/11/haut1.png" alt="Up Key" width="81" height="81" /></a> Up Key when in the air</td>
 </tr>
 </tbody>
 </table>
@@ -74,7 +74,7 @@ The pizza may is the one YOU(the player) controls using the controld above.  He
 
 <h4>Seagull</h4>
 
-[caption id="attachment_527" align="alignleft" width="76"]<a href="https://10trowc.wordpress.com/2015/11/17/pizza-parkour-update-seagul/seagul/" rel="attachment wp-att-527"><img class=" wp-image-527" src="https://10trowc.files.wordpress.com/2015/11/seagul.png" alt="Seagull" width="76" height="76" /></a> Seagull[/caption]
+<a href="https://10trowc.wordpress.com/2015/11/17/pizza-parkour-update-seagul/seagul/" rel="attachment wp-att-527"><img class=" wp-image-527" src="https://10trowc.files.wordpress.com/2015/11/seagul.png" alt="Seagull" width="76" height="76" /></a> Seagull
 
 The seagull flies in the sky left and right to try and make jumps trickier for the player to make.
 
@@ -125,7 +125,3 @@ The seagull flies in the sky left and right to try and make jumps trickier for t
 <h3><span id="Producer" class="mw-headline">Producer</span></h3>
 
 <h3><span id="Executive_Producer" class="mw-headline">Executive Producer</span></h3>
-
-<h2><span id="Gallery" class="mw-headline">Gallery</span></h2>
-
-[gallery size="large" type="slideshow" ids="174,172,175,173,184,183,182,181,180,186,211,210,209,509,527"]

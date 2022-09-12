@@ -3,5 +3,5 @@ title: Bean Co Official
 description: "Co-Owner"
 list:
   collection: projects
-  filter: "item.experience.communities contains 'bean'"
+  filter: "item.experience.communities contains 'bean-co-official'"
 ---

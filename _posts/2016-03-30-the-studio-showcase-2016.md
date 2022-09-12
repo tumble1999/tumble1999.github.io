@@ -4,12 +4,14 @@ date: 2016-03-30 00:00:00 +0000
 category: Update
 tags:
   - Medification
-image: "/uploads/2017/03/28/studio-showcase1.png"
+image: "/assets/posts/2017/03/28/studio-showcase1.png"
+experience:
+  projects: [medfication]
 ---
 
 Me and the other people at SCONE are going to be part of the Studio Showcase 2016\. We are going to be their showcasing our app.
 
-![/uploads/2017/02/10/medification-with-slogon-5.png](/uploads/2017/02/10/medification-with-slogon-5.png)
+![/assets/posts/2017/02/10/medification-with-slogon-5.png](/assets/posts/2017/02/10/medification-with-slogon-5.png)
 
 [](https://10trowc.wordpress.com/?attachment_id=668)
 

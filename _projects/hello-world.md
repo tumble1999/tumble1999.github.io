@@ -7,5 +7,5 @@ links:
   href: https://github.com/tumble1999/hello-world
 experience:
   languages: [c++]
-  platforms: [windows,arch,debian,dos,devkitpro]
+  platforms: [windows,arch,debian,MS-DOS,devkitpro]
 ---

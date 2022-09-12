@@ -3,6 +3,7 @@ container (default:div)
 class container classes
 counter  include counter
 item (jekyll page)
+image (show image)
 bean (include collection type)
 header info header element type (default: h3)
 meta (include date and links)
@@ -14,7 +15,7 @@ link : be a link
 {% assign itemTitle=item.title|default:item %}
 
 <{{include.container|default:"div"}} {% if include.class %} class="{{ include.class }}" {% endif %}>
-	{% if item.image %}
+	{% if item.image and include.image %}
 		<!-- IMAGE -->
 		<div class="item-image">
 			<img src="{{ item.image }}" alt="{{ item.image }}">

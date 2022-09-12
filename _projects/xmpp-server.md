@@ -4,6 +4,7 @@ description: XMPP server ran by prosody
 date: 8 Aug 2021
 current: true
 experience:
-  languages: [c++]
-  platforms: [arch]
+  platforms: [alpine]
+  software: [prosody,jitsi-meet,nginx]
+  communities: [bean-co-official]
 ---

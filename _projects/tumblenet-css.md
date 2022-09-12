@@ -4,7 +4,7 @@ repo: tumblenet-css
 summarty: My First CSS Framework
 title: TumbleNet CSS
 date: 2017-03-24 00:00:00 +0000
-image: "/uploads/projects/tumblenet-css-alt.png"
+image: "/assets/projects/tumblenet-css/tumblenet-css-alt.png"
 experience:
   languages: [css, scss, js]
   libraries: [jekyll]

@@ -1,7 +1,7 @@
 ---
 title: Antenna BC
 date: 24 Sep 2020
-image: /uploads/projects/bc-antenna.png
+image: /assets/projects/bc-antenna/bc-antenna.png
 description: Proximety Voice Chat for Box Critters
 links:
 - title: GitHub

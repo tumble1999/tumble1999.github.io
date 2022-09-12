@@ -4,6 +4,7 @@ filter : tag to filter by
 limit: item count
 items: collection items
 bullet: bulleted list
+image: show image
 {% endcomment %}
 {% if include.collection %}
 	{% assign collectionItems = site[include.collection] %}
@@ -46,7 +47,7 @@ bullet: bulleted list
 		{% if forloop.first %}<ul>{% endif %}
 		<li>
 	{% endif %}
-	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true header=header container=container %}
+	{% include item-info.html item=item bean=include.bean meta=include.meta counter=include.counter class=include.class link=true header=header container=container image=include.image %}
 
 
 	{% if include.bullet %}

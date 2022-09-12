@@ -1,7 +1,7 @@
 ---
 title: BC Shaders
 description: Create shaders for boxcritters
-image: /uploads/projects/bc-shaders.png
+image: /assets/projects/bc-shaders/bc-shaders.png
 date: 30 April 2020
 links:
 - title: GitHub

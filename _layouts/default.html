@@ -32,7 +32,7 @@ instructions.
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="{{site.url}}/assets/css/normalize.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.2.95/css/materialdesignicons.min.css">
+	{%comment%} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.2.95/css/materialdesignicons.min.css"> {%endcomment%}
 	<link rel="stylesheet" href="{{site.url}}/assets/css/tumble.min.css">
 </head>
 
@@ -66,7 +66,7 @@ instructions.
 					<-- Click here to see more {{ page.collection }}</span>
 						{% endif %}
 						<!-- <h1>{{page.title}}</h1> -->
-						{% include item-info.html item=page class="card" header="h1" meta=true %}
+						{% include item-info.html item=page class="card" header="h1" meta=true image=true %}
 
 			</div>
 			{% endif %}
@@ -110,7 +110,7 @@ instructions.
 				{% unless page.collection=="lists" %}<h2>{{ page.list.collection | capitalize }}</h2>{% endunless %}
 				<div class="list block">
 					{% include list.html collection=page.list.collection filter=page.list.filter limit=page.list.limit
-					counter=page.list.counter meta=true class="card" bean=page.list.bean %}
+					counter=page.list.counter meta=true class="card" bean=page.list.bean image=true %}
 				</div>
 			</div>
 			{% endif %}
@@ -142,7 +142,7 @@ instructions.
 		{% endfor %}
 	</nav>
 	<!-- JS -->
-	<script src="{{site.url}}/assets/js/tumble.min.js"></script>
+	{%comment%}<script src="{{site.url}}/assets/js/tumble.min.js"></script>{%endcomment%}
 </body>
 
 </html>

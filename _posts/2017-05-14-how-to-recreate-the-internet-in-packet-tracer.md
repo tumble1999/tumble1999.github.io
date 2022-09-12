@@ -3,7 +3,7 @@ title: Make your own internet in packet tracer
 description: Have you always wanted to know how to simulate your own internet?
 date: 2017-05-14 00:00:00 +0000
 featured: true
-image: "/uploads/2017/05/14/thumbnail-3.PNG"
+image: "/assets/posts/2017/05/14/thumbnail-3.PNG"
 category: How-to
 tags:
   - dns
@@ -55,7 +55,7 @@ Cisco packet tracer is a great tool for simulating small-scale networks to see h
 
 When I was searching how to do this I have seen bits and pieces of how to do it and people on forums asking how to do it. So with the information, I could find attempted to make the internet.
 
-![](/uploads/2017/05/14/my%20internet.PNG)
+![](/assets/posts/2017/05/14/my%20internet.PNG)
 
 ## How to create a network
 
@@ -81,11 +81,11 @@ In this case, we will be adding the .com TLD you can just add any TLD just swap 
 
 Add a server to an existing network and same as the root name server; set all of its options off except for DNS. Now in the DNS add an SOA record with these properties;
 
-![SOA](/uploads/2017/05/14/soa-com.ns.PNG)
+![SOA](/assets/posts/2017/05/14/soa-com.ns.PNG)
 
 Then in the Root name server add two records; add an A record called "com.ns" pointing to the IP address of the new TLD server and then add an NS record call com pointing to com.ns.
 
-![NS](/uploads/2017/05/14/com.ns%20ns.PNG)
+![NS](/assets/posts/2017/05/14/com.ns%20ns.PNG)
 
 ## How to register and set up a domain
 
@@ -99,19 +99,19 @@ In ns.exmple.com make records;
 
 SOA
 
-![SOA-NS](/uploads/2017/05/14/soa%20ns.example.com.png)
+![SOA-NS](/assets/posts/2017/05/14/soa%20ns.example.com.png)
 
 A - point this record to the example.com server IP address.
 
-![A-NS](/uploads/2017/05/14/a%20ns.example.com.png)
+![A-NS](/assets/posts/2017/05/14/a%20ns.example.com.png)
 
 ### Registering the domain
 
 In the com name server add an A record and point it to ns.example.com, and then create an NS record called example.com and point it to ns.example.com.
 
-![domain registring](/uploads/2017/05/14/a%20ns.example.com-1.png)
+![domain registring](/assets/posts/2017/05/14/a%20ns.example.com-1.png)
 
-![root](/uploads/2017/05/14/root%20example.com%20ns.PNG)
+![root](/assets/posts/2017/05/14/root%20example.com%20ns.PNG)
 
 ## How to make an ISP
 
@@ -119,17 +119,17 @@ An ISP is an internet service provider that lets people connect to the internet.
 
 Put a router in a cluster and call the cluster the name of the isp you want to create. Then in the cluster create a cloud connected to the router with copper straight through cable. In the router add an IP address to the router and then add the IP address to the router’s RIP settings. Then highlight the cloud and make a cluster called “ISP”. Edit the cloud and give it 8 PT-CLOUD-NM-1AM module, then make 8 DSL modems connected to the 8 PT-CLOUD-NM-1AMs.
 
-![isp network](/uploads/2017/05/14/isp%20network.PNG)
+![isp network](/assets/posts/2017/05/14/isp%20network.PNG)
 
-![moderms](/uploads/2017/05/14/isp%20dsl%20modems.PNG)
+![moderms](/assets/posts/2017/05/14/isp%20dsl%20modems.PNG)
 
 ## How to make a Household
 
 Create a WRT300N and put it in a cluster if you want then connect a computer using DHCP and then connect the router to one of the modems in an isp. On the WRT3000N add a static IP to the internet section. In the future, I will add a section on how to add DHCP to the isp so the WRT3000N can be set to DHCP on the internet tab.
 
-![household](/uploads/2017/05/14/household%201.PNG)
+![household](/assets/posts/2017/05/14/household%201.PNG)
 
-![household](/uploads/2017/05/14/household%202.PNG)
+![household](/assets/posts/2017/05/14/household%202.PNG)
 
 ## Conclusion
 

@@ -2,7 +2,7 @@
 title: Poly Pickle
 featured: false
 description: Talk between servers
-image: /uploads/projects/poly-pickle.png
+image: /assets/projects/tn-phone/poly-pickle.png
 download-link: http://tnphone.tumblenet.ga/
 date: 2018-05-16T17:38:36Z
 experience:

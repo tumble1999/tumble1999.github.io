@@ -7,7 +7,7 @@ links:
 - title: Website
   href: https://beanofficial.co
 experience:
-  languages: [js,html,css]
+  languages: [html,css]
   platforms: [web,Alpine]
   software:	[nginx, acme]
   communities: [bean-co-official]

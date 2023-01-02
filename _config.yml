@@ -4,7 +4,7 @@ tagline: >
   My Corner of the Internet
 author: tumble1999
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https:tu//tumble1999.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://tumble1999.github.io # the base hostname & protocol for your site, e.g. http://example.com
 repository: tumble1999/tumble1999.github.io
 
 logo: /assets/img/author/tumble.png

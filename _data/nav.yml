@@ -48,3 +48,6 @@ footer:
     href: /feed.xml
   - title: Matrix
     href: https://matrix.to/#/@tumble1999:matrix.org
+  - title: Mastodon
+    rel: me
+    href: https://mastodonapp.uk/@tumble

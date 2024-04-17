@@ -8,7 +8,7 @@ experience:
   libraries: [jekyll,express]
   platforms: [web,nodejs,nixos]
   communities: [bmod]
-  software:[nginx,caddy]
+  software: [nginx,caddy]
 links:
   - title: Website
     href: https://bmod.tf

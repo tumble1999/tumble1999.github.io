@@ -2,34 +2,33 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=0343e3415784b2cd9c68924294794f7dbee12ab3";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs }: 
   let 
+    name = builtins.baseNameOf ./.;
   system = "x86_64-linux";
-  pkgs = import nixpkgs {
-    inherit system;
+  pkgs = import nixpkgs { inherit system; };
+  ruby = pkgs.ruby_2_7;
+  bundlerEnv = pkgs.bundlerEnv;
+  jekyll_env = bundlerEnv rec {
+    inherit name;
+    inherit ruby;
+    gemfile = ./Gemfile;
+    lockfile = ./Gemfile.lock;
+    gemset = ./gemset.nix;
   };
-  lib = nixpkgs.lib;
-  in
+  in 
   {
-
     devShell.${system} = pkgs.mkShell {
-      packages = with pkgs; [
-        bundler
-        nodePackages.pnpm
-      ];
       shellHook = ''
-        pnpm i 
-        pnpm start
-        
-        bundle install
-        
-        
-        bundle exec jekyll serve -w --config _config.yml,_config-dev.yml
+      ${jekyll_env}/bin/jekyll serve -w
       '';
     };
-
+    apps.${system}.bundle = {
+      type = "app";
+      program = "${pkgs.bundix}/bin/bundix";
+    };
   };
 }

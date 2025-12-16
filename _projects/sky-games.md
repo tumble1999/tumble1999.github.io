@@ -2,7 +2,7 @@
 title: Sky Games
 date: 2023-06-29
 description: Created a menu to navigate the archived games of british history.
-current: true
+current: false
 links:
 - title: GitHub
   href: "https://github.com/stb-gaming/sky-games"

@@ -2,7 +2,7 @@
 title: Bean Co Official Website
 date: 11/09/2022
 description: A website to host a collection of random things
-current: true
+current: false
 links:
 - title: Website
   href: https://beanofficial.co

@@ -46,7 +46,7 @@ link : be a link
 			{% endif %}
 
 			{% if itemTitle %}
-				<{{include.header|default:"h3"}}>
+				<{{include.header|default:"h2"}}>
 					{% if item.url and include.link %}
 						<a href="{{site.url}}{{item.url}}">
 						{% endif %}
@@ -58,7 +58,7 @@ link : be a link
 						{% if item.url and include.link %}
 						</a>
 					{% endif %}
-				</{{include.header|default:"h3"}}>
+				</{{include.header|default:"h2"}}>
 			{% endif %}
 
 			{% if include.meta %}
